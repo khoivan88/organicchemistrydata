@@ -2,9 +2,9 @@ body {
     /* font-family: sans-serif; */
 }
 
-/*
-* Go to top button
-*/
+/* ---------------------------------------------------
+    Go to top Button
+----------------------------------------------------- */
 #myBtn {
     display: none;
     position: fixed;
@@ -20,11 +20,13 @@ body {
     /* padding: 15px;
     border-radius: 4px; */
 }
-
 #myBtn:hover {
     background-color: #555;
 }
 
+/* ---------------------------------------------------
+    JUMBOTRON STYLE
+----------------------------------------------------- */
 .jumbotron.jumbotron-fluid {
     /* height: 80vh; */
     /* min-height: 80vh; */
@@ -42,8 +44,10 @@ img.img-fluid {
     /* width: auto; */
 }
 
-/*// Extra small devices (portrait phones, less than 576px)*/
-/*// No media query for `xs` since this is the default in Bootstrap*/
+/* ---------------------------------------------------
+    Extra small devices (portrait phones, less than 576px)
+    No media query for `xs` since this is the default in Bootstrap
+----------------------------------------------------- */
 
 /*// Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {
