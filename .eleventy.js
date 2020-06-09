@@ -27,6 +27,7 @@ module.exports = function(eleventyConfig) {
       input: "src",
       includes: "_includes",
       // layouts: "_includes/_layouts",
-    }
+    },
+    pathPrefix: "/reich_demo/"
   };
 };
