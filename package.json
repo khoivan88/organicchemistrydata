@@ -1,0 +1,14 @@
+{
+  "name": "static-site-template",
+  "version": "1.0.0",
+  "description": "Testing Eleventy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Khoi Van",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}
