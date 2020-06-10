@@ -1,17 +1,31 @@
 ---
 layout: layout.njk
 <!-- title: First page -->
+obit:
+    url: 'https://www.cressfuneralservice.com/obituary/Hans-Reich'
+    target: '_blank'
+    text_style: 'color: black;'
+
+doc_statement:
+    title: 'ACS - Division of Organic Chemistry Statement'
+
+acknowledgement:
+    title: 'Acknowledgement'
 ---
 
 <script src="js/main.js"></script>
 <div class="jumbotron jumbotron-fluid py-0 my-0 text-center">
   <div class="container-fluid">
-    <h1 class="display-4 text-center">In Memory of Prof. Hans J Reich</h1>
+    <h1 class="display-4 text-center">
+      <a href="{{ obit.url | url }}" style="{{ obit.text_style }}" target="{{ obit.target }}">
+        In Memory of Prof. Hans J Reich
+      </a>
+    </h1>
     <img src="img/collage.png" class="img-fluid" alt="Responsive image">
   </div>
 </div>
 
-<div class="container my-3">
+<div class="container my-3 inpage-link">
   <h1 id="{{ biography.id }}" class="text-center">{{ biography.title }}</h1>
   <p>
     Hans was born May 6, 1943 in Danzig, Germany, to Oswald and Martha (Adam) Reich.  Martha and her infant son fled the advancing Russian army during January 1945, making their way to a small village in western Germany.  Hans’ father was wounded in battle and remained in France as a forced laborer for three years following the war.  He rejoined the family in 1948 and they emigrated to Edmonton, Canada in 1950, initially living in a garage without electricity, shared with another family.  These formative years shaped Hans’ perspective on life.  After earning a B.Sc. at the University of Alberta in 1964, Hans entered graduate school at UCLA, receiving a Ph.D. in organic chemistry in 1968 (with D. J. Cram).  In graduate school, he met fellow organic chemistry student, Ieva Lazdins.  Hans and Ieva married in 1969.  The two were lifelong companions, socially and scientifically.  After graduate school, Hans spent two years as a postdoctoral associate supported by a Canadian National Research Council Postdoctoral Fellowship, the first at Cal Tech (with J. D. Roberts) and the second at Harvard (with R. B. Woodward).
@@ -22,4 +36,20 @@ layout: layout.njk
   <p>
     Hans enjoyed nature photography, snorkeling, and traveling.  He was a learned student of history.  He proudly retained his Canadian citizenship, in honor of the country that welcomed his family at a time of desperate need.
   </p>
+</div>
+
+<hr/>
+<div class="container my-5">
+  <h3 id="{{ doc_statement.id }}" class="text-center">{{ doc_statement.title }}</h3>
+  <p>
+      Reich's web site has a set of pages that are of great value to the organic community.
+      The Organic Division has been archiving similar resources to make sure that they remain available to the community.
+      In alignment with the wishes of his family, the department, his former group members, our interest is in preserving this resource.
+  </p>
+</div>
+
+<hr/>
+<div class="container my-5">
+  <h3 id="{{ acknowledgement.id }}" class="text-center">{{ acknowledgement.title }}</h3>
+  <p>ACS-DOC would like to acknowledge the following to make this website possible</p>
 </div>

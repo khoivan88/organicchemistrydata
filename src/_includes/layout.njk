@@ -1,17 +1,42 @@
 ---
+css:
+    url: "/css/style.css"
+
 biography:
     title: 'Biography'
     url: "/#biography"   # make it the same as 'id' (in-page section)
     id: 'biography'
 
-research:
-    title: 'Research'
-    url: 'research'
+nav_items:
+    list: [
+    {
+        title: 'Research',
+        url: '/research',
+    },
+    {
+        title: 'Ieva L. Reich',
+        url: 'https://www2.chem.wisc.edu/areas/reich/group/students/reich-il.htm',
+        target: '_blank',
+    },
+    {
+        title: 'Former Students',
+        url: '/former_students',
+    },
+    {
+        title: 'Pictures',
+        url: '/pictures',
+    }
+]
 
-ieva:
-    title: 'Ieva L. Reich'
-    url: 'https://www2.chem.wisc.edu/areas/reich/group/students/reich-il.htm'
-    target: '_blank'
+links:
+    title: 'Links'
+    list: [
+        {
+        title: 'Organic Solvents',
+        url: 'https://organicdivision.org/solvents',
+        target: '_blank',
+        },
+    ]
 
 resources:
     title: 'Resources'
@@ -50,17 +75,11 @@ resources:
         },
         {
         title: 'Reactive Intermediates',
-        url: '/resources/adv_org',
+        url: '/resources/reactive_intermediates',
         },
     ]
 
-former_students:
-    title: 'Former Students'
-    url: 'former_students'
 
-pictures:
-    title: 'Pictures'
-    url: 'pictures'
 ---
 
 <!doctype html>
@@ -71,7 +90,7 @@ pictures:
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ css.url | url }}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -85,7 +104,7 @@ pictures:
     <!--Navigation bar-->
     <!--source: https://stackoverflow.com/a/42333464-->
     <div id="nav-placeholder">
-      <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -94,38 +113,40 @@ pictures:
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{{ '/'  | url }}">Home</a>
+              <a class="nav-link" href="{{ '/' | url }}">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ biography.url | url }}">{{ biography.title }}</a>
             </li>
+
+            {%- for item in nav_items.list %}
             <li class="nav-item">
-              <a class="nav-link" href="{{ research.url }}">{{ research.title }}</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ ieva.url }}" target="{{ ieva.target }}">
-                {{ ieva.title }}
+              <a class="nav-link" href="{{ item.url | url }}" target="{{ item.target }}">
+                {{ item.title }}
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-target="projects.html">{{ resources.title }}</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                {%- for resource in resources.list %}
-                  <a class="dropdown-item" href="{{ resource.url }}">{{ resource.title }}</a>
-                {%- endfor %}
-                {# <div class="dropdown-divider"></div> #}
-              </div>
+            {%- endfor %}
 
-            <li class="nav-item">
-                <a class="nav-link" href="{{ former_students.url }}" target="{{ former_students.target }}">
-                  {{ former_students.title }}
-                </a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-target="projects.html">{{ resources.title }}</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {%- for resource in resources.list %}
+                    <a class="dropdown-item" href="{{ resource.url | url }}">{{ resource.title }}</a>
+                    {%- endfor %}
+                    {# <div class="dropdown-divider"></div> #}
+                </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ pictures.url }}" target="{{ pictures.target }}">
-                  {{ pictures.title }}
-                </a>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-target="projects.html">{{ links.title }}</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {%- for item in links.list %}
+                    <a class="dropdown-item" href="{{ item.url | url }}" target="{{ item.target }}">{{ item.title }}</a>
+                    {%- endfor %}
+                    {# <div class="dropdown-divider"></div> #}
+                </div>
             </li>
+
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

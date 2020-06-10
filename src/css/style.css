@@ -1,6 +1,19 @@
+/* ---------------------------------------------------
+    For any headings that have inpage-link, so that it is not covered by the nav-bar
+    ref: https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/
+----------------------------------------------------- */
+html {
+    scroll-padding-top: 70px; /* height of sticky header */
+}
+
+
 body {
     /* font-family: sans-serif; */
+    /* position: relative;
+    top: 60px; */
+    padding-top: 65px;    /* to prevent cover of content by the nav-bar */
 }
+
 
 /* ---------------------------------------------------
     Go to top Button
