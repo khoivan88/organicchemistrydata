@@ -57,6 +57,18 @@ img.img-fluid {
     /* width: auto; */
 }
 
+
+/* ---------------------------------------------------
+    For embed PDF viewer
+----------------------------------------------------- */
+.embed-pdf {
+    /* width: auto;
+    max-height: 100vh; */
+    width: 100%;
+    height: 80vh;
+}
+
+
 /* ---------------------------------------------------
     Extra small devices (portrait phones, less than 576px)
     No media query for `xs` since this is the default in Bootstrap
