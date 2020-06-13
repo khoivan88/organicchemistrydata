@@ -3,17 +3,53 @@
     ref: https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/
 ----------------------------------------------------- */
 html {
-    scroll-padding-top: 70px; /* height of sticky header */
+    scroll-padding-top: 110px; /* height of sticky header */
 }
-
 
 body {
     /* font-family: sans-serif; */
-    /* position: relative;
-    top: 60px; */
-    padding-top: 65px;    /* to prevent cover of content by the nav-bar */
+    /* position: relative; */
+    /* top: 60px; */
+    padding-top: 120px;    /* to prevent cover of content by the nav-bar */
+    padding-bottom: 10px;    /* to prevent cover of content by the nav-bar */
+    font-family: 'Work Sans', sans-serif;
 }
 
+body {
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Crimson Text', serif;
+}
+
+.page-title-static {
+    /* padding-top: 60px; */
+    position: fixed;
+    top: 58px;
+    background-color: white;
+    z-index: 100;
+
+    /* padding-bottom: 50px; */
+
+}
+/* ---------------------------------------------------
+    Navbar
+----------------------------------------------------- */
+#navbar {
+    background: #ba0000;
+}
+#navbar .nav-link {
+    color: white;
+    /* font-weight: 400; */
+    /* background: transparent; */
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-block;
+    font-size: 17px;
+    font-family: "Lato";
+    text-transform: uppercase;
+}
 
 /* ---------------------------------------------------
     Go to top Button
@@ -67,8 +103,272 @@ img.img-fluid {
     width: 100%;
     height: 80vh;
 }
+.embed-pdf {
+    /* width: auto;
+    max-height: 100vh; */
+    width: 100%;
+    height: 80vh;
+}
 
 
+/* ---------------------------------------------------
+    SIDEBAR STYLE (PKA page)
+----------------------------------------------------- */
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 200px;
+    position: fixed;
+    /* top: 0; */
+    left: 0;
+    height: 80vh;
+    z-index: 999;
+    transition: all 0.3s;
+    border-right: 1px black solid;
+    overflow: auto;
+}
+
+#sidebar.active {
+    margin-left: -200px;
+}
+
+#sidebar .sidebar-header {
+    /* padding: 5px; */
+    background: silver;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    /* padding: 10px; */
+    /* font-size: 1.1em; */
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+/* #sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+} */
+
+#sidebarCollapse {
+    /* right: 0; */
+    left: 5px;
+    top: 70px;
+    position: fixed;
+    z-index: 100;
+}
+/* ---------------------------------------------------
+    CONTENT STYLE (PKA page)
+----------------------------------------------------- */
+
+#content {
+    width: calc(100% - 200px);
+    max-height: 85vh;
+    transition: all 0.3s;
+    /* padding: 40px; */
+    /* min-height: 100vh; */
+    position: absolute;
+    /* top: 0; */
+    right: 0;
+}
+
+#content.active {
+    width: 100%;
+}
+
+a.list-group-item {
+    border: none;
+    color: blue
+}
+
+/* ---------------------------------------------------
+    Publication page
+----------------------------------------------------- */
+.research img {
+    /* background: #ba0000; */
+    border: solid 2px;
+    /* margin: auto; */
+    /* width: 100% !important; */
+}
+
+
+/* ---------------------------------------------------
+    Footer
+----------------------------------------------------- */
+footer {
+    z-index: -100;
+    padding-top: 70vh;
+}
+
+#bb-footer {
+    background-color: #fff;
+    color: #333;
+}
+
+#bb-footer .bb-footer__top {
+    background: #3a6486;
+    padding: 30px 0;
+    color: #fff;
+    /* font-family: "proxima-nova-condensed"; */
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+#bb-footer .bb-footer__bottom {
+    padding: 20px 0;
+}
+
+#bb-footer .bb-footer__top .footer-social .social-title {
+    float: left;
+    margin-right: 5px;
+}
+
+#bb-footer .bb-footer__top .menu-social-nav-container {
+    float: left;
+    margin: 0;
+}
+#bb-footer .bb-footer__top .menu-social-nav-container a {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1;
+}
+
+#bb-footer .bb-footer__top .menu-social-nav-container li{
+    margin-right: 2px;
+    line-height: 1;
+}
+
+#bb-footer .bb-footer__top #social-share {
+    float: left;
+}
+
+.menu-social-nav-container {
+    padding: 0;
+    list-style: none;
+    margin: 10px auto;
+    display: inline-block;
+}
+.menu-social-nav-container li {
+    display: inline-block;
+    margin-right: 10px;
+}
+.menu-social-nav-container li a {
+    color: #3a6486;
+    font-size: 24px;
+}
+.menu-social-nav-container li a span {
+    display: none;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.addthis-animated {
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    animation-duration: .3s;
+}
+.at4-show {
+    display: block!important;
+    opacity: 1!important;
+}
+.addthis-smartlayers, div#at4-follow, div#at4-share, div#at4-thankyou, div#at4-whatsnext {
+    padding: 0;
+    margin: 0;
+}
+.at-resp-share-element {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+}
+.at4-visually-hidden {
+    position: absolute;
+    clip: rect(1px,1px,1px,1px);
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+}
+
+#bb-footer .bb-footer__bottom .footer-bucket {
+    text-align: center;
+}
+
+#bb-footer .bb-footer__bottom .footer-bucket img {
+    display: inline-block;
+    max-width: 170px;
+}
+
+#bb-footer .bb-footer__bottom .footer-bucket:nth-child(2) img {
+    padding-top: 20px;
+}
+
+.aligncenter {
+    display: block;
+    margin: 10px auto;
+}
+
+#bb-footer .privacy {
+    font-size: 12px;
+    line-height: 1;
+    margin-top: 40px;
+}
+
+#bb-footer .privacy p {
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+#bb-footer .privacy a {
+    color: #333;
+}
+
+.privacy {
+    padding-top: 40px;
+}
+
+#bb-footer .privacy .bb-nav__footer-admin-wrap {
+    display: inline-block;
+    width: 100%;
+}
+
+#bb-footer .privacy ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-bottom: 0;
+}
+#bb-footer .privacy ul li {
+    float: left;
+}
+#bb-footer .privacy ul li a {
+    color: #333;
+    padding: 0 10px;
+}
 /* ---------------------------------------------------
     Extra small devices (portrait phones, less than 576px)
     No media query for `xs` since this is the default in Bootstrap
@@ -91,16 +391,38 @@ img.img-fluid {
 }
 
 /*// Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -200px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+
+    #content{
+        width: 100%;
+    }
+    #content.active{
+        width: calc(100% - 200px);
+    }
 
 }
 
 /*// Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
+@media (max-width: 992px) {
 
 }
 
 /*// Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
 
+}
+
+@media only screen and (min-width: 768px){
+    #bb-footer .privacy {
+        text-align: right;
+        margin-top: 0;
+        font-size: 14px;
+        line-height: 18px;
+    }
 }

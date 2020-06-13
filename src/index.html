@@ -1,55 +1,66 @@
 ---
 layout: layout.njk
-<!-- title: First page -->
-obit:
-    url: 'https://www.cressfuneralservice.com/obituary/Hans-Reich'
-    target: '_blank'
-    text_style: 'color: black;'
+#title: Organic Chemistry Info/Data
 
 doc_statement:
-    title: 'ACS - Division of Organic Chemistry Statement'
+    title: 'Organic Chemistry Info/Data'
 
-acknowledgement:
-    title: 'Acknowledgement'
+obit:
+    title: 'Professor Hans J Reich Obituary'
+    url: 'https://www.cressfuneralservice.com/obituary/Hans-Reich'
+    target: '_blank'
+
+hans:
+    bio_url: /about_reich
+
+ieva:
+    title: 'Ieva L. Reich'
+    url: 'https://www2.chem.wisc.edu/areas/reich/group/students/reich-il.htm'
+    target: '_blank'
+
+uwmadison:
+    url: 'https://www.wisc.edu/'
+    target: '_blank'
+    chemistry:
+        url: 'https://chem.wisc.edu/'
+        target: '_blank'
+
 ---
 
-<script src="js/main.js"></script>
-<div class="jumbotron jumbotron-fluid py-0 my-0 text-center">
-  <div class="container-fluid">
-    <h1 class="display-4 text-center">
-      <a href="{{ obit.url | url }}" style="{{ obit.text_style }}" target="{{ obit.target }}">
-        In Memory of Prof. Hans J Reich
-      </a>
-    </h1>
-    <img src="img/collage.png" class="img-fluid" alt="Responsive image">
-  </div>
+<!-- <script src="js/main.js"></script> -->
+
+<div class="jumbotron jumbotron-fluid py-0 my-0">
+    <div class="container-fluid">
+        <h1 class="display-4 text-center">{{ doc_statement.title }}</h1>
+        <p class="lead my-2 text-justify">
+            The idea and majority of the content of this website has come from the late
+            <a href="{{ hans.bio_url | url }}" target="{% if resource.target %}{{ hans.target }}{% else %}{{ '_self' }}{% endif %}">
+                Professor Hans J. Reich
+            </a>
+            who served his entire professional academic career at the University of Wisconsin-Madison.
+            Upon
+            <a href="{{ obit.url | url }}" target="{% if resource.target %}{{ obit.target }}{% else %}{{ '_self' }}{% endif %}">
+                his untimely death in 2020</a>, the
+            <a href="{{ doc.url | url }}" target="{% if resource.target %}{{ doc.target }}{% else %}{{ '_self' }}{% endif %}">
+                ACS Organic Division</a>
+            offered to assist in maintaining Professor Reich’s extensive online resources.
+            This website is a product of those efforts.<br>
+        </p>
+        <p class="lead my-2 text-justify">
+            We are grateful to the
+            <a href="{{ uwmadison.url | url }}"
+            target="{% if resource.target %}{{ uwmadison.target }}{% else %}{{ '_self' }}{% endif %}">University of Wisconsin-Madison</a>
+            (especially
+            <a href="{{ uwmadison.chemistry.url | url }}"
+                target="{% if resource.target %}{{ uwmadison.chemistry.target }}{% else %}{{ '_self' }}{% endif %}">
+                the Chemistry department</a>) for their support in this project.
+            We also graciously thank his wife,
+            <a href="{{ ieva.url | url }}"
+                target="{% if resource.target %}{{ ieva.target }}{% else %}{{ '_self' }}{% endif %}">
+                professor Ieva L. Reich</a>, and her family for supporting this project
+            where we are able to honor Professor Reich’s 25+ years of website efforts
+            in support the broader organic chemistry community.
+        </p>
+    </div>
 </div>
 
-<div class="container my-3 inpage-link">
-  <h1 id="{{ biography.id }}" class="text-center">{{ biography.title }}</h1>
-  <p>
-    Hans was born May 6, 1943 in Danzig, Germany, to Oswald and Martha (Adam) Reich.  Martha and her infant son fled the advancing Russian army during January 1945, making their way to a small village in western Germany.  Hans’ father was wounded in battle and remained in France as a forced laborer for three years following the war.  He rejoined the family in 1948 and they emigrated to Edmonton, Canada in 1950, initially living in a garage without electricity, shared with another family.  These formative years shaped Hans’ perspective on life.  After earning a B.Sc. at the University of Alberta in 1964, Hans entered graduate school at UCLA, receiving a Ph.D. in organic chemistry in 1968 (with D. J. Cram).  In graduate school, he met fellow organic chemistry student, Ieva Lazdins.  Hans and Ieva married in 1969.  The two were lifelong companions, socially and scientifically.  After graduate school, Hans spent two years as a postdoctoral associate supported by a Canadian National Research Council Postdoctoral Fellowship, the first at Cal Tech (with J. D. Roberts) and the second at Harvard (with R. B. Woodward).
-  </p>
-  <p>
-    In 1970, Hans joined the faculty at the University of Wisconsin-Madison, establishing what soon became an internationally recognized research program in physical-organic chemistry.  Fittingly, Hans received the James Flack Norris Award in Physical-Organic Chemistry from the American Chemical Society in 2012.  He gave generously of his time, serving as chair of the organic chemistry division and associate chair of the chemistry department.  Drawing on materials developed for his exceptional graduate-level courses in organic chemistry, Hans curated a website of detailed, practical chemistry resources that is used by organic chemists around the world.  Hans was an exceptional mentor to students, department staff, and faculty colleagues.  He was universally respected for his good judgement and wise counsel.
-  </p>
-  <p>
-    Hans enjoyed nature photography, snorkeling, and traveling.  He was a learned student of history.  He proudly retained his Canadian citizenship, in honor of the country that welcomed his family at a time of desperate need.
-  </p>
-</div>
-
-<hr/>
-<div class="container my-5">
-  <h3 id="{{ doc_statement.id }}" class="text-center">{{ doc_statement.title }}</h3>
-  <p>
-      Reich's web site has a set of pages that are of great value to the organic community.
-      The Organic Division has been archiving similar resources to make sure that they remain available to the community.
-      In alignment with the wishes of his family, the department, his former group members, our interest is in preserving this resource.
-  </p>
-</div>
-
-<hr/>
-<div class="container my-5">
-  <h3 id="{{ acknowledgement.id }}" class="text-center">{{ acknowledgement.title }}</h3>
-  <p>ACS-DOC would like to acknowledge the following to make this website possible</p>
-</div>

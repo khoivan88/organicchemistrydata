@@ -1,11 +1,12 @@
 const fs = require("fs");
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.setTemplateFormats(["html", "liquid", "njk", "ejs", "md", "hbs", "mustache", "haml", "pug", "11ty.js", "pdf"]);
-  eleventyConfig.addPassthroughCopy("src/resources");
+  eleventyConfig.setTemplateFormats(["html", "liquid", "njk", "ejs", "md", "hbs", "mustache", "haml", "pug", "11ty.js", "pdf", "gif"]);
+  // eleventyConfig.addPassthroughCopy("src/resources");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/data");
 
   // For 404 redirecting:
   eleventyConfig.setBrowserSyncConfig({
@@ -30,6 +31,7 @@ module.exports = function(eleventyConfig) {
       includes: "_includes",
       // layouts: "_includes/_layouts",
     },
-    pathPrefix: "/reich_demo/"
+    pathPrefix: "/reich_demo/",
+    htmlTemplateEngine: "njk"
   };
 };
