@@ -3,24 +3,24 @@
     ref: https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/
 ----------------------------------------------------- */
 html {
-    scroll-padding-top: 110px; /* height of sticky header */
+    scroll-padding-top: 130px; /* height of sticky header */
 }
 
 body {
     /* font-family: sans-serif; */
     /* position: relative; */
     /* top: 60px; */
-    padding-top: 120px;    /* to prevent cover of content by the nav-bar */
-    padding-bottom: 10px;    /* to prevent cover of content by the nav-bar */
+    padding-top: 130px;    /* to prevent cover of content by the nav-bar
+    /* padding-bottom: 10px;    /* to prevent cover of content by the nav-bar */
     font-family: 'Work Sans', sans-serif;
-}
-
-body {
-    min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Crimson Text', serif;
+}
+
+.lead {
+    font-weight: 350 !important;
 }
 
 .page-title-static {
@@ -29,10 +29,11 @@ h1, h2, h3, h4, h5, h6 {
     top: 58px;
     background-color: white;
     z-index: 100;
-
+    min-height: 45px;
     /* padding-bottom: 50px; */
-
 }
+
+
 /* ---------------------------------------------------
     Navbar
 ----------------------------------------------------- */
@@ -54,22 +55,22 @@ h1, h2, h3, h4, h5, h6 {
 /* ---------------------------------------------------
     Go to top Button
 ----------------------------------------------------- */
-#myBtn {
+#toTopButton {
     display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    /* z-index: 99;
-    font-size: 18px;
+    z-index: 99;
+    background-color: transparent;
+    /* font-size: 18px;
     border: none;
     outline: none;
-    background-color: red;
     color: white; */
     cursor: pointer;
-    /* padding: 15px;
-    border-radius: 4px; */
+    /* padding: 5px 10px; */
+    border-radius: 4px;
 }
-#myBtn:hover {
+#toTopButton:hover {
     background-color: #555;
 }
 
@@ -117,6 +118,7 @@ img.img-fluid {
 .wrapper {
     display: flex;
     width: 100%;
+    /* z-index: 100; */
 }
 
 #sidebar {
@@ -129,6 +131,8 @@ img.img-fluid {
     transition: all 0.3s;
     border-right: 1px black solid;
     overflow: auto;
+    margin-top: -15px;
+    background-color: white;
 }
 
 #sidebar.active {
@@ -136,7 +140,7 @@ img.img-fluid {
 }
 
 #sidebar .sidebar-header {
-    /* padding: 5px; */
+    padding: 5px 0px 0px 0px;
     background: silver;
 }
 
@@ -160,21 +164,17 @@ img.img-fluid {
     background: #fff;
 }
 
-/* #sidebar ul li.active>a,
-a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
-} */
-
 #sidebarCollapse {
     /* right: 0; */
-    left: 5px;
-    top: 70px;
+    left: 4px;
+    top: 62px;
     position: fixed;
     z-index: 100;
 }
+
+
 /* ---------------------------------------------------
-    CONTENT STYLE (PKA page)
+    CONTENT STYLE (for pages with toggle side list)
 ----------------------------------------------------- */
 
 #content {
@@ -197,6 +197,7 @@ a.list-group-item {
     color: blue
 }
 
+
 /* ---------------------------------------------------
     Publication page
 ----------------------------------------------------- */
@@ -212,8 +213,8 @@ a.list-group-item {
     Footer
 ----------------------------------------------------- */
 footer {
-    z-index: -100;
-    padding-top: 70vh;
+    /* z-index: -1; */
+    /* padding-top: 70vh; */
 }
 
 #bb-footer {
@@ -223,16 +224,15 @@ footer {
 
 #bb-footer .bb-footer__top {
     background: #3a6486;
-    padding: 30px 0;
+    padding: 5px 0;
     color: #fff;
-    /* font-family: "proxima-nova-condensed"; */
     font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
 }
 
 #bb-footer .bb-footer__bottom {
-    padding: 20px 0;
+    /* padding: 20px 0; */
 }
 
 #bb-footer .bb-footer__top .footer-social .social-title {
@@ -246,8 +246,12 @@ footer {
 }
 #bb-footer .bb-footer__top .menu-social-nav-container a {
     color: #fff;
-    font-size: 20px;
+    font-size: 32px;
     line-height: 1;
+}
+
+#bb-footer .bb-footer__top .menu-social-nav-container a:hover {
+    color: #ba0000;
 }
 
 #bb-footer .bb-footer__top .menu-social-nav-container li{
@@ -259,20 +263,34 @@ footer {
     float: left;
 }
 
+a.at-icon-wrapper.at-share-btn.at-svc-facebook span.at-icon-wrapper {
+    line-height: 24px !important;
+    height: 24px !important;
+    width: 24px !important;
+}
+
+a.at-icon-wrapper.at-share-btn.at-svc-facebook span.at-icon-wrapper > svg {
+    height: 24px !important;
+    width: 24px !important;
+}
+
 .menu-social-nav-container {
     padding: 0;
     list-style: none;
     margin: 10px auto;
     display: inline-block;
 }
+
 .menu-social-nav-container li {
     display: inline-block;
     margin-right: 10px;
 }
+
 .menu-social-nav-container li a {
     color: #3a6486;
     font-size: 24px;
 }
+
 .menu-social-nav-container li a span {
     display: none;
 }
@@ -285,19 +303,31 @@ footer {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 .addthis-animated {
     animation-fill-mode: both;
     animation-timing-function: ease-out;
     animation-duration: .3s;
 }
+
 .at4-show {
     display: block!important;
     opacity: 1!important;
 }
-.addthis-smartlayers, div#at4-follow, div#at4-share, div#at4-thankyou, div#at4-whatsnext {
+
+.addthis-smartlayers,
+div#at4-follow,
+div#at4-share,
+div#at4-thankyou,
+div#at4-whatsnext {
     padding: 0;
     margin: 0;
 }
+
+.at-image-sharing-tool {
+    z-index: 10 !important;
+}
+
 .at-resp-share-element {
     position: relative;
     padding: 0;
@@ -305,6 +335,36 @@ footer {
     font-size: 0;
     line-height: 0;
 }
+
+.at-resp-share-element .at-share-btn {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin: 0 2px 5px;
+    padding: 0;
+    overflow: hidden;
+    line-height: 0;
+    text-decoration: none;
+    text-transform: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    border: 0;
+    font-family: helvetica neue,helvetica,arial,sans-serif;
+    background-color: transparent;
+}
+
+.at-resp-share-element .at-share-btn:focus,
+.at-resp-share-element .at-share-btn:hover {
+    transform: translateY(-4px);
+    color: #fff;
+    text-decoration: none;
+}
+
+.at-style-responsive .at-share-btn {
+    /* padding: 5px; */
+}
+
 .at4-visually-hidden {
     position: absolute;
     clip: rect(1px,1px,1px,1px);
@@ -320,21 +380,14 @@ footer {
 #bb-footer .bb-footer__bottom .footer-bucket img {
     display: inline-block;
     max-width: 170px;
+    max-height: 80px;
 }
 
-#bb-footer .bb-footer__bottom .footer-bucket:nth-child(2) img {
-    padding-top: 20px;
-}
-
-.aligncenter {
-    display: block;
-    margin: 10px auto;
-}
 
 #bb-footer .privacy {
     font-size: 12px;
     line-height: 1;
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 
 #bb-footer .privacy p {
@@ -344,10 +397,6 @@ footer {
 
 #bb-footer .privacy a {
     color: #333;
-}
-
-.privacy {
-    padding-top: 40px;
 }
 
 #bb-footer .privacy .bb-nav__footer-admin-wrap {
@@ -362,13 +411,26 @@ footer {
     display: inline-block;
     margin-bottom: 0;
 }
+
 #bb-footer .privacy ul li {
     float: left;
 }
+
 #bb-footer .privacy ul li a {
     color: #333;
     padding: 0 10px;
 }
+
+#bb-footer .privacy ul li:after {
+    content: "|";
+    float: right;
+}
+
+#bb-footer .privacy a:hover {
+    color: #ba0000;
+}
+
+
 /* ---------------------------------------------------
     Extra small devices (portrait phones, less than 576px)
     No media query for `xs` since this is the default in Bootstrap
@@ -378,7 +440,7 @@ footer {
 @media (max-width: 576px) {
     .jumbotron.jumbotron-fluid {
         /* height: 80vh; */
-        min-height: 80vh;
+        /* min-height: 80vh; */
         max-height: calc(100vh - 100px);
     }
 
@@ -388,13 +450,44 @@ footer {
         /* width: auto; */
     }
 
-}
+    .display-4 {
+        font-size: 2.0rem !important;
+        font-weight: 300 !important;
+        line-height: 1.2 !important;
+    }
 
-/*// Medium devices (tablets, 768px and up)*/
-@media (max-width: 768px) {
+    .lead {
+        font-size: 1.0rem !important;
+        font-weight: 350 !important;
+    }
+
+    #bb-footer .bb-footer__top .menu-social-nav-container a {
+        color: #fff;
+        font-size: 24px;
+        line-height: 1;
+    }
+
     #sidebar {
         margin-left: -200px;
     }
+
+    #sidebar.active {
+        margin-left: 0;
+        width: 100%;
+    }
+
+}
+
+/*// Medium devices (tablets, 768px and down)*/
+@media (max-width: 768px) {
+    h1 {
+        font-size: 5.6vmin !important;
+    }
+
+    #sidebar {
+        margin-left: -200px;
+    }
+
     #sidebar.active {
         margin-left: 0;
     }
@@ -402,8 +495,9 @@ footer {
     #content{
         width: 100%;
     }
+
     #content.active{
-        width: calc(100% - 200px);
+        /* width: calc(100% - 200px); */
     }
 
 }
@@ -426,3 +520,7 @@ footer {
         line-height: 18px;
     }
 }
+
+@media only screen and (max-width: 992px){
+}
+

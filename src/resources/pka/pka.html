@@ -1,7 +1,11 @@
 ---
-layout: layout.njk
+#layout: layout.njk
+layout: page_with_side_menu.njk
 
-title: 'Bordwell pKa Table (Acidity in DMSO)'
+header:
+    title: 'Bordwell pKa Table'
+
+title: 'Bordwell pKa (in DMSO)'
 
 data_path: &data_path 'pka_data/'
 
@@ -11,10 +15,8 @@ references: &references
     id: references
     title: References
 
-pkas:
+items:
     list:
-    - id: kaacetyl
-      title: Acetylenes
     - id: kaacetyl
       title: Acetylenes
     - id: kainorgacid
@@ -200,135 +202,79 @@ pkas:
 
 ---
 
-<!-- <script src="js/main.js"></script> -->
-<div class="wrapper">
-    <!-- Sidebar -->
-    <nav id="sidebar">
-        <div class="sidebar-header text-center">
-            <h6 style="margin-bottom: 0;">List</h6>
-            <ul class="list-group">
-                {%- for item in pkas.list %}
-                <li class="list-group-item px-0 py-0" >
-                    <a href="#{{ item.id }}" target="{{ item.target }}">
-                        {{ item.title }}
-                    </a>
-                </li>
-                {%- endfor %}
-            </ul>
-        </div>
-    </nav>
+<!-- Reference section -->
+<div class="container" id="{{ references.id }}">
+    <b><font color="#8b0000" size=3>
+        <A NAME = "REF">References (Bordwell et al.)</A>
+        </font>
+    </b><br>
+    1.  <i>J. Am. Chem. Soc.</i> <b>1975</b>, <i>97</i>, 7006.<br>
+    2.  <i>J. Am. Chem. Soc.</i> <b>1975</b>, <i>97</i>, 7160.<br>
+    3.  <i>J. Am. Chem. Soc.</i> <b>1975</b>, <i>97</i>, 442.<br>
+    4.  <i>J. Am. Chem. Soc.</i> <b>1967</b>, <i>89</i>, 2752.<br>
+    5.  <i>J. Org. Chem.</i> <b>1976</b>, <i>41</i>, 1885.<br>
+    6.  <i>J. Org. Chem.</i> <b>1976</b>, <i>41</i>, 1883.<br>
+    7.  <i>J. Org. Chem.</i> <b>1976</b>, <i>41</i>, 2786.<br>
+    8.  <i>J. Org. Chem.</i> <b>1976</b>, <i>41</i>, 2508.<br>
+    9.  <i>J. Org. Chem.</i> <b>1977</b>, <i>42</i>, 321.<br>
+    10.  <i>J. Org. Chem.</i> <b>1977</b>, <i>42</i>, 326.<br>
+    11.  <i>J. Org. Chem.</i> <b>1977</b>, <i>42</i>, 1817.<br>
+    12.  <i>J. Org. Chem.</i> <b>1978</b>, <i>43</i>, 3113.<br>
+    13.  <i>J. Org. Chem.</i> <b>1978</b>, <i>43</i>, 3095.<br>
+    14.  <i>J. Org. Chem.</i> <b>1978</b>, <i>43</i>, 1764.<br>
+    15.  <i>J. Org. Chem.</i> <b>1980</b>, <i>45</i>, 3884.<br>
+    16.  <i>J. Org. Chem.</i> <b>1980</b>, <i>45</i>, 3305.<br>
+    17.  <i>J. Org. Chem.</i> <b>1980</b>, <i>45</i>, 3325.<br>
+    18.  <i>J. Org. Chem.</i> <b>1981</b>, <i>46</i>, 4327.<br>
+    19.  <i>J. Org. Chem.</i> <b>1981</b>, <i>46</i>, 632.<br>
+    20.  <i>J. Org. Chem.</i> <b>1982</b>, <i>47</i>, 3224.<br>
+    21.  <i>J. Org. Chem.</i> <b>1982</b>, <i>47</i>, 2504.<br>
+    22.  <i>J. Am. Chem. Soc.</i> <b>1983</b>, <i>105</i>, 6188.<br>
+    23.  <i>J. Am. Chem. Soc.</i> <b>1986</b>, <i>108</i>, 7310.<br>
+    24.  <i>J. Org. Chem.</i> <b>1980</b>, <i>45</i>, 3295.<br>
+    25.  <i>J. Org. Chem.</i> <b>1984</b>, <i>49</i>, 1424.<br>
+    26.  <i>J. Am. Chem. Soc.</i> <b>1995</b>, <i>117</i>, 602.<br>
+    27.  <i>J. Org. Chem.</i> <b>1990</b>, <i>55</i>, 3330.<br>
+    28.  <i>J. Am. Chem. Soc.</i> <b>1996</b>, <i>118</i>, 8777.<br>
+    29.  <i>J. Org. Chem.</i> <b>1996</b>, <i>61</i>, 4103.<br>
+    30.  <i>J. Am. Chem. Soc.</i> <b>1991</b>, <i>113</i>, 985.<br>
+    31.  <i>J. Org. Chem.</i> <b>1992</b>, <i>57</i>, 3019.<br>
+    32.  <i>J. Org. Chem.</i> <b>1998</b>, <i>63</i>, 7574.<br>
+    33.  <i>J. Am. Chem. Soc.</i> <b>1994</b>, <i>116</i>, 968.<br>
+    34.  <i>J. Am. Chem. Soc.</i> <b>1989</b>, <i>111</i>, 7558.<br>
+    35.  <i>J. Am. Chem. Soc.</i> <b>1992</b>, <i>114</i>, 7623.<br>
+    36.  <i>J. Am. Chem. Soc.</i> <b>1994</b>, <i>116</i>, 973.<br>
+    37.  <i>J. Org. Chem.</i> <b>1988</b>, <i>53</i>, 780.<br>
+    38.  <i>J. Am. Chem. Soc.</i> <b>1988</b>, <i>110</i>, 8520<br>
+    39.  <i>J. Org. Chem.</i> <b>1976</b>, <i>41</i>, 2507.<br>
+    40.  <i>J. Am. Chem. Soc.</i> <b>1990</b>, <i>112</i>, 792<br>
+    41.  <i>J. Am. Chem. Soc.</i> <b>1991</b>, <i>113</i>, 8398<br>
+    42.  <i>J. Org. Chem.</i> <b>1980</b>, <i>45</i>,3299.<br>
+    43.  Arnett <i>J. Am. Chem. Soc.</i> <b>1984</b>, <i>106</i>, 6759<br>
+    44.  <i>J. Org. Chem.</i> <b>1993</b>, <i>58</i>, 3060.<br>
+    45.  Benoit  <i>Can. J. Chem.</i> <b>1987</b>, <i>65</i>, 996.<br>
+    46.  Kreevoy <i>J. Phys. Chem.</i> <b>1977</b>, <i>81</i>, 1924.<br>
+    47.  Kolthoff <i>J. Am. Chem. Soc.</i> <b>1968</b>, <i>90</i>, 23.<br>
+    48.  Bausch <i>J. Org. Chem.</i> <b>1990</b>, <i>55</i>, 5806.<br>
+    49.  Alder <i>Chem. Commun,</i> <b>1995</b>, 1267<br>
+    50. <i>J. Org. Chem.</i> <b>1978</b>, <i>43</i>, 1763.<br>
+    51. <i>J. Org. Chem.</i> <b>1991</b>, <i>56</i>, 4218.<br>
+    52. <i>Acc. Chem. Res.</i> <b>1988</b>, <i>21</i>, 456, 463.<br>
+    53. <i>J. Org. Chem.</i> <b>1991</b>, <i>56</i>, 4448.<br>
+    54. <i>J. Am. Chem. Soc.</i> <b>1988</b>, <i>110</i>, 2964.<br>
+    55. <i>J. Am. Chem. Soc.</i> <b>1974</b>, <i>76</i>, 1214.<br>
+    56. <i>J. Am. Chem. Soc.</i> <b>1997</b>, <i>119</i>, 9125.<br>
+    57. <i>J. Org. Chem.</i> <b>1990</b>, <i>55</i>, 3337.<br>
+    58. <i>Can. J. Chem.</i> <b>1990</b>, <i>68</i>, 1714.<br>
+    59. Arnett  <i>J. Am. Chem. Soc.</i> <b>1987</b>, <i>109</i>, 809.<br>
+    60. <i>J. Phys. Org. Chem.</i> <b>1988</b>, <i>1</i>, 209.<br>
+    61. Terrier <i>J. Org. Chem.</i> <b>2003</b>, <i>68</i>, 6566.<br>
+    62. Courtet-Coupez <i>Bull. Soc. Chim. Fr.</i> <b>1969</b>, 1033.<br>
+    63. Curtis <i>J. Am. Chem. Soc.</i> <b>1969</b>, <i>91</i>, 6011.<br>
+    64. Crampton <i>J. Chem. Res. (S)</i> <b>1997</b>, 22.
 
-
-    <div id="content">
-        <button type="button" id="sidebarCollapse"
-            class="btn btn-info d-inline-block ml-auto mr-3"
-            title="Toggle List">
-            <i class="fas fa-list-ul"></i>
-        </button>
-
-        <div class="container px-0 mx-0">
-            <ul class="list-group">
-                {%- for item in pkas.list %}
-                  {% if item.id != 'references' %}
-                  <li class="list-group-item" id="{{ item.id }}" >
-                      <!-- <a id="{{ item.id }}" class="list-group-item" href="{{ item.url | url }}" target="{{ item.target }}"> -->
-                          <!-- {{ item.title }} -->
-                      <!-- </a> -->
-                      {% set img_url = data_path + item.id + gif_type %}
-                      <img src="{{ img_url | url }}" class="img-fluid" alt="{{ item.title }}">
-                  </li>
-                  {% endif %}
-                {%- endfor %}
-            </ul>
-        </div>
-
-        <!-- Reference section -->
-        <div class="container" id="{{ references.id }}">
-            <b><font color="#8b0000" size=3>
-                <A NAME = "REF">References (Bordwell et al.)</A>
-                </font>
-            </b><br>
-            1.  <i>J. Am. Chem. Soc.</i> <b>1975</b>, <i>97</i>, 7006.<br>
-            2.  <i>J. Am. Chem. Soc.</i> <b>1975</b>, <i>97</i>, 7160.<br>
-            3.  <i>J. Am. Chem. Soc.</i> <b>1975</b>, <i>97</i>, 442.<br>
-            4.  <i>J. Am. Chem. Soc.</i> <b>1967</b>, <i>89</i>, 2752.<br>
-            5.  <i>J. Org. Chem.</i> <b>1976</b>, <i>41</i>, 1885.<br>
-            6.  <i>J. Org. Chem.</i> <b>1976</b>, <i>41</i>, 1883.<br>
-            7.  <i>J. Org. Chem.</i> <b>1976</b>, <i>41</i>, 2786.<br>
-            8.  <i>J. Org. Chem.</i> <b>1976</b>, <i>41</i>, 2508.<br>
-            9.  <i>J. Org. Chem.</i> <b>1977</b>, <i>42</i>, 321.<br>
-            10.  <i>J. Org. Chem.</i> <b>1977</b>, <i>42</i>, 326.<br>
-            11.  <i>J. Org. Chem.</i> <b>1977</b>, <i>42</i>, 1817.<br>
-            12.  <i>J. Org. Chem.</i> <b>1978</b>, <i>43</i>, 3113.<br>
-            13.  <i>J. Org. Chem.</i> <b>1978</b>, <i>43</i>, 3095.<br>
-            14.  <i>J. Org. Chem.</i> <b>1978</b>, <i>43</i>, 1764.<br>
-            15.  <i>J. Org. Chem.</i> <b>1980</b>, <i>45</i>, 3884.<br>
-            16.  <i>J. Org. Chem.</i> <b>1980</b>, <i>45</i>, 3305.<br>
-            17.  <i>J. Org. Chem.</i> <b>1980</b>, <i>45</i>, 3325.<br>
-            18.  <i>J. Org. Chem.</i> <b>1981</b>, <i>46</i>, 4327.<br>
-            19.  <i>J. Org. Chem.</i> <b>1981</b>, <i>46</i>, 632.<br>
-            20.  <i>J. Org. Chem.</i> <b>1982</b>, <i>47</i>, 3224.<br>
-            21.  <i>J. Org. Chem.</i> <b>1982</b>, <i>47</i>, 2504.<br>
-            22.  <i>J. Am. Chem. Soc.</i> <b>1983</b>, <i>105</i>, 6188.<br>
-            23.  <i>J. Am. Chem. Soc.</i> <b>1986</b>, <i>108</i>, 7310.<br>
-            24.  <i>J. Org. Chem.</i> <b>1980</b>, <i>45</i>, 3295.<br>
-            25.  <i>J. Org. Chem.</i> <b>1984</b>, <i>49</i>, 1424.<br>
-            26.  <i>J. Am. Chem. Soc.</i> <b>1995</b>, <i>117</i>, 602.<br>
-            27.  <i>J. Org. Chem.</i> <b>1990</b>, <i>55</i>, 3330.<br>
-            28.  <i>J. Am. Chem. Soc.</i> <b>1996</b>, <i>118</i>, 8777.<br>
-            29.  <i>J. Org. Chem.</i> <b>1996</b>, <i>61</i>, 4103.<br>
-            30.  <i>J. Am. Chem. Soc.</i> <b>1991</b>, <i>113</i>, 985.<br>
-            31.  <i>J. Org. Chem.</i> <b>1992</b>, <i>57</i>, 3019.<br>
-            32.  <i>J. Org. Chem.</i> <b>1998</b>, <i>63</i>, 7574.<br>
-            33.  <i>J. Am. Chem. Soc.</i> <b>1994</b>, <i>116</i>, 968.<br>
-            34.  <i>J. Am. Chem. Soc.</i> <b>1989</b>, <i>111</i>, 7558.<br>
-            35.  <i>J. Am. Chem. Soc.</i> <b>1992</b>, <i>114</i>, 7623.<br>
-            36.  <i>J. Am. Chem. Soc.</i> <b>1994</b>, <i>116</i>, 973.<br>
-            37.  <i>J. Org. Chem.</i> <b>1988</b>, <i>53</i>, 780.<br>
-            38.  <i>J. Am. Chem. Soc.</i> <b>1988</b>, <i>110</i>, 8520<br>
-            39.  <i>J. Org. Chem.</i> <b>1976</b>, <i>41</i>, 2507.<br>
-            40.  <i>J. Am. Chem. Soc.</i> <b>1990</b>, <i>112</i>, 792<br>
-            41.  <i>J. Am. Chem. Soc.</i> <b>1991</b>, <i>113</i>, 8398<br>
-            42.  <i>J. Org. Chem.</i> <b>1980</b>, <i>45</i>,3299.<br>
-            43.  Arnett <i>J. Am. Chem. Soc.</i> <b>1984</b>, <i>106</i>, 6759<br>
-            44.  <i>J. Org. Chem.</i> <b>1993</b>, <i>58</i>, 3060.<br>
-            45.  Benoit  <i>Can. J. Chem.</i> <b>1987</b>, <i>65</i>, 996.<br>
-            46.  Kreevoy <i>J. Phys. Chem.</i> <b>1977</b>, <i>81</i>, 1924.<br>
-            47.  Kolthoff <i>J. Am. Chem. Soc.</i> <b>1968</b>, <i>90</i>, 23.<br>
-            48.  Bausch <i>J. Org. Chem.</i> <b>1990</b>, <i>55</i>, 5806.<br>
-            49.  Alder <i>Chem. Commun,</i> <b>1995</b>, 1267<br>
-            50. <i>J. Org. Chem.</i> <b>1978</b>, <i>43</i>, 1763.<br>
-            51. <i>J. Org. Chem.</i> <b>1991</b>, <i>56</i>, 4218.<br>
-            52. <i>Acc. Chem. Res.</i> <b>1988</b>, <i>21</i>, 456, 463.<br>
-            53. <i>J. Org. Chem.</i> <b>1991</b>, <i>56</i>, 4448.<br>
-            54. <i>J. Am. Chem. Soc.</i> <b>1988</b>, <i>110</i>, 2964.<br>
-            55. <i>J. Am. Chem. Soc.</i> <b>1974</b>, <i>76</i>, 1214.<br>
-            56. <i>J. Am. Chem. Soc.</i> <b>1997</b>, <i>119</i>, 9125.<br>
-            57. <i>J. Org. Chem.</i> <b>1990</b>, <i>55</i>, 3337.<br>
-            58. <i>Can. J. Chem.</i> <b>1990</b>, <i>68</i>, 1714.<br>
-            59. Arnett  <i>J. Am. Chem. Soc.</i> <b>1987</b>, <i>109</i>, 809.<br>
-            60. <i>J. Phys. Org. Chem.</i> <b>1988</b>, <i>1</i>, 209.<br>
-            61. Terrier <i>J. Org. Chem.</i> <b>2003</b>, <i>68</i>, 6566.<br>
-            62. Courtet-Coupez <i>Bull. Soc. Chim. Fr.</i> <b>1969</b>, 1033.<br>
-            63. Curtis <i>J. Am. Chem. Soc.</i> <b>1969</b>, <i>91</i>, 6011.<br>
-            64. Crampton <i>J. Chem. Res. (S)</i> <b>1997</b>, 22.
-
-            <p>All others are F. G. Bordwell, private communication.
-            For a review, see: F. G. Bordwell <i>Acc. Chem. Res.</i> <b>1988</b>, <i>21</i>, 456, 463.
-            <hr>(c) Copyright 2001-2012 Hans J. Reich
-            <br>All Rights Reserved<br>
-        </div>
-    </div>
-
+    <p>All others are F. G. Bordwell, private communication.
+    For a review, see: F. G. Bordwell <i>Acc. Chem. Res.</i> <b>1988</b>, <i>21</i>, 456, 463.
+    <hr>(c) Copyright 2001-2012 Hans J. Reich
+    <br>All Rights Reserved<br>
 </div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const sidebar = document.querySelector('#sidebar');
-        const mainContent = document.querySelector('#content');
-        document.querySelector('#sidebarCollapse').onclick = function () {
-            sidebar.classList.toggle('active');
-            mainContent.classList.toggle('active')
-        }
-    })
-</script>

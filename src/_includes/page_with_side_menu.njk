@@ -1,0 +1,55 @@
+---
+layout: layout.njk
+
+---
+
+
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="nav-collapse collapse show">
+        <div class="sidebar-header text-center">
+            <h6>List</h6>
+            <ul class="list-group">
+                {%- for item in items.list %}
+                <li class="list-group-item px-0 py-0" >
+                    <a href="#{{ item.id }}" target="{% if item.target %}{{ item.target }}{% else %}{{ '_self' }}{% endif %}"
+                        data-target="#content">
+                        {{ item.title }}
+                    </a>
+                </li>
+                {%- endfor %}
+            </ul>
+        </div>
+    </nav>
+
+
+    <div id="content">
+        <button type="button" id="sidebarCollapse"
+            class="btn btn-info d-inline-block ml-auto mr-3"
+            title="Toggle List">
+            <i class="fas fa-list-ul"></i>
+        </button>
+
+        <div class="full-list container px-0 mx-0">
+            <ul class="list-group list-group-flush">
+                {%- for item in items.list %}
+                    {% if item.id != 'references' %}
+                    <li class="list-group-item" id="{{ item.id }}">
+                        {% if display_link %}
+                        <a id="{{ item.id }}" class="list-group-item" href="{{ item.url | url }}" target="{{ item.target }}">
+                            {{ item.title }}
+                        </a>
+                        {% endif %}
+                        {% set img_url = data_path + item.id + gif_type %}
+                        <img src="{{ img_url | url }}" class="img-fluid" alt="{{ item.title }}">
+                    </li>
+                    {% endif %}
+                {%- endfor %}
+            </ul>
+        </div>
+
+        <!-- Extra content -->
+        {{ content | safe }}
+    </div>
+
+</div>

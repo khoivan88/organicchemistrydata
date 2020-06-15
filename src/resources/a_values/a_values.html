@@ -1,6 +1,11 @@
 ---
 layout: layout.njk
+
+header:
+    title: 'Conformational Energies (A-Values)'
+
 title: 'Conformational Energies (A-Values)'
+
 image:
     url: '/resources/a_values/avalue.gif'
 ---
@@ -15,24 +20,17 @@ image:
     <div class="row justify-content-center">
         <div class="col-auto">
         <!-- <div class="container"> -->
-            <table class="table table-responsive">
+            <table class="table table-responsive table-sm">
                 <thead style='border-bottom: thick,solid,red'>
                     <tr>
-
-                        <th><b>
-                                <font size=+1 color="#ab0000">Group</font>
-                            </b></th>
-                        <th><b>
-                                <font size=+1 color="#ab0000">A-Value (kcal/mol)</font>
-                            </b></th>
-                        <th><b>
-                                <font size=+1 color="#ab0000">Group</font>
-                            </b></th>
-                        <th><b>
-                                <font size=+1 color="#ab0000">A-Value (kcal/mol)</font>
-                            </b></th>
+                        <th><b><font size=+1 color="#ab0000">Group</font></b></th>
+                        <th><b><font size=+1 color="#ab0000">A-Value (kcal/mol)</font></b></th>
+                        <th><b><font size=+1 color="#ab0000">Group</font></b></th>
+                        <th><b><font size=+1 color="#ab0000">A-Value (kcal/mol)</font></b></th>
                     </tr>
+                </thead>
 
+                <tbody>
                     <tr VALIGN=TOP BGCOLOR="#CCFFFF">
                         <td>Me</td>
                         <td>1.70</td>
@@ -216,18 +214,10 @@ image:
                     </tr>
                     <!--============= Another Heading ===========-->
                     <tr>
-                        <th><b>
-                                <font size=+1 color="#ab0000">Group</font>
-                            </b></th>
-                        <th><b>
-                                <font size=+1 color="#ab0000">A-Value (kcal/mol)</font>
-                            </b></th>
-                        <th><b>
-                                <font size=+1 color="#ab0000">Group</font>
-                            </b></th>
-                        <th><b>
-                                <font size=+1 color="#ab0000">A-Value (kcal/mol)</font>
-                            </b></th>
+                        <th><b><font size=+1 color="#ab0000">Group</font></b></th>
+                        <th><b><font size=+1 color="#ab0000">A-Value (kcal/mol)</font></b></th>
+                        <th><b><font size=+1 color="#ab0000">Group</font></b></th>
+                        <th><b><font size=+1 color="#ab0000">A-Value (kcal/mol)</font></b></th>
                     </tr>
 
                     <tr VALIGN=TOP BGCOLOR="#CCFFFF">
@@ -342,18 +332,18 @@ image:
                         <td>-</td>
                     </tr>
 
-
                     <tr VALIGN=TOP BGCOLOR="#FFFFCC">
                         <td>MgBr (Et<sub>2</sub>O)</td>
                         <td>0.78<sup>2c</sup></td>
                         <td>Mg-C<sub>6</sub>H<sub>11</sub></td>
                         <td>0.53<sup>2c</sup></td>
                     </tr>
+                </tbody>
             </table>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container text-left">
         <p>* Solvent dependent.
         <br>General:&nbsp; Hirsch, <i>Topics in
         Stereochemistry</i>, <b>1967</b>, <i>3</i>, 199;&nbsp; Jensen, F. R.; Bushweller,

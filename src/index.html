@@ -1,6 +1,8 @@
 ---
 layout: layout.njk
-#title: Organic Chemistry Info/Data
+
+header:
+    title: Organic Chemistry Info/Data
 
 doc_statement:
     title: 'Organic Chemistry Info/Data'
@@ -26,13 +28,10 @@ uwmadison:
         target: '_blank'
 
 ---
-
-<!-- <script src="js/main.js"></script> -->
-
-<div class="jumbotron jumbotron-fluid py-0 my-0">
-    <div class="container-fluid">
+<div class="jumbotron jumbotron-fluid pt-1">
+    <div class="container">
         <h1 class="display-4 text-center">{{ doc_statement.title }}</h1>
-        <p class="lead my-2 text-justify">
+        <p class="lead text-justify">
             The idea and majority of the content of this website has come from the late
             <a href="{{ hans.bio_url | url }}" target="{% if resource.target %}{{ hans.target }}{% else %}{{ '_self' }}{% endif %}">
                 Professor Hans J. Reich
@@ -46,7 +45,7 @@ uwmadison:
             offered to assist in maintaining Professor Reich’s extensive online resources.
             This website is a product of those efforts.<br>
         </p>
-        <p class="lead my-2 text-justify">
+        <p class="lead text-justify">
             We are grateful to the
             <a href="{{ uwmadison.url | url }}"
             target="{% if resource.target %}{{ uwmadison.target }}{% else %}{{ '_self' }}{% endif %}">University of Wisconsin-Madison</a>
@@ -63,4 +62,3 @@ uwmadison:
         </p>
     </div>
 </div>
-
