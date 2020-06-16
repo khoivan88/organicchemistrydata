@@ -5,6 +5,9 @@ domain:
 css:
     url: "/css/style.css"
 
+homepage_logo:
+    url: '/img/ReichSiteIcon.jpg'
+
 doc:
     url: "https://www.organicdivision.org/"
     target: '_blank'
@@ -123,7 +126,7 @@ resources:
     <div id="nav-placeholder">
         <nav id="navbar" class="navbar fixed-top navbar-expand-sm py-0 navbar-dark">
             <a class="navbar-brand py-1" href="{{ '/' | url }}" target="_self">
-                <img src="{{ doc.logo_url | url }}" height="50" alt="DOC Logo" loading="lazy">
+                <img src="{{ homepage_logo.url | url }}" height="50" alt="DOC Logo" loading="lazy">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
