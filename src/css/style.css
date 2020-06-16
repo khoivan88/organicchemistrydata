@@ -383,7 +383,7 @@ div#at4-whatsnext {
 #bb-footer .bb-footer__bottom .footer-bucket img {
     display: inline-block;
     max-width: 170px;
-    max-height: 80px;
+    max-height: 150px;
 }
 
 
@@ -421,7 +421,7 @@ div#at4-whatsnext {
 
 #bb-footer .privacy ul li a {
     color: #333;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 #bb-footer .privacy ul li:after {
