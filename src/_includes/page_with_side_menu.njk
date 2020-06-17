@@ -38,7 +38,7 @@ specific_page_js:
             <ul class="list-group list-group-flush">
                 {%- for item in items.list %}
                     {% if item.id != 'references' %}
-                    <li class="list-group-item" id="{{ item.id }}">
+                    <li class="list-group-item py-5" id="{{ item.id }}">
                         {% if display_link %}
                         {# <a id="{{ item.id }}" class="list-group-item" href="{{ item.url | url }}" target="{{ item.target }}"> #}
                             <p class="text-primary">{{ item.title }}</p>

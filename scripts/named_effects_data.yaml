@@ -1,0 +1,38 @@
+items:
+  list:
+  - id: effect-baldwin
+    title: Baldwin Rules for Ring Closure
+  - id: effect-bredt
+    title: Bredt's Rule
+  - id: Effects-Burgi-Dunitz
+    title: 'Burgi-Dunitz Trajectory  '
+  - id: effects-cieplak
+    title: Cieplak Model for Nucleophilic Addition to Double Bonds
+  - id: effects-cornforth
+    title: Cornforth Model for Asymmetric Induction
+  - id: effects-cram-chelation
+    title: "Cram-Chelation Model for Nucleophilic Addition to \u03B1-Chiral Aldehydes."
+  - id: effects-curtin-hammett
+    title: 'Curtin-Hammett Principle  '
+  - id: effects-platt-furstner
+    title: "F\xFCrst-Plattner Rule (Trans Diaxial Effect)"
+  - id: Effects-Felkin
+    title: Felkin Model for Stereochemistry of Nucleophilic Addition to Cyclohexanone
+  - id: effects-felkin-ahn
+    title: Felkin-Anh Model for Non-Chelated Aldehydes
+  - id: effects-hammond
+    title: 'Hammond''s Postulate  '
+  - id: effects-henbest
+    title: Henbest Effect
+  - id: effect-markovnikov
+    title: Markovnikov's Rule.
+  - id: effects-stork-eschenmoser
+    title: Stork-Eschenmoser Hypothesis
+  - id: effects-thorpe-ingold
+    title: Thorpe-Ingold Effect (Gem Dimethyl Effect)
+  - id: effects-woodward
+    title: Woodward's Rules for Conj. Carbonyls UV-Vis
+  - id: effects-woodward-fieser
+    title: Woodward-Fieser Rules for Dienes UV-Vis Absorption Maxima
+  - id: effects-zimmerman-traxler
+    title: 'Zimmerman-Traxler Transition State for Aldol Condensation '

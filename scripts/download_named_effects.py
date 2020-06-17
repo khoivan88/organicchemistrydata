@@ -11,18 +11,24 @@ headers = {
 }
 
 
-def download_pka_gif():
+def download_named_effects():
     try:
-        title_id = []
-        for file_name, url, id_field, title in find_gif_urls():
+        root_url = 'https://www2.chem.wisc.edu/areas/reich/handouts/Nameeffect'
+        page_name = 'named-effects-cont.htm'
+        data_filename = 'named_effects_data'
+
+        data = {'items': {'list': []}}
+
+        for file_name, url, id_field, title in find_gif_urls(root_url=root_url, page_name=page_name):
             # print(file_name, url, id_field, title)
-            title_id.append({'title': title, 'id': id_field})
 
-            download(file_name=file_name, url=url, rel_download_path='pka_data')
+            data['items']['list'].append({'title': title, 'id': id_field})
+            download(file_name=file_name, url=url, rel_download_path=data_filename)
 
-        # print(title_id)
-        with open('pka_info.yaml', 'w') as fout:
-            yaml.dump(title_id, fout)
+        # print(data)
+        data_file = Path(__file__).resolve().parent / f'{data_filename}.yaml'
+        with open(data_file, 'w') as fout:
+            yaml.dump(data, fout)
 
     except Exception as error:
         if debug:
@@ -30,22 +36,22 @@ def download_pka_gif():
             print(traceback_str)
 
 
-def find_gif_urls():
-    root_url = 'https://www2.chem.wisc.edu/areas/reich/pkatable'
-    adv_search_url = f'{root_url}/kacont.htm'
+def find_gif_urls(root_url, page_name):
+    page_url = f'{root_url}/{page_name}'
 
     try:
         with requests.Session() as s:
-            res = s.get(adv_search_url, headers=headers, timeout=10)
+            res = s.get(page_url, headers=headers, timeout=10)
             if res.status_code == 200 and len(res.history) == 0:
                 # res.text
                 html = BeautifulSoup(res.text, 'html.parser')
                 # print(html.prettify()); exit(1)
 
-                a_tags = html.find_all('a', attrs={'href': re.compile(r'(.+?\.gif)')})
+                filename_reg = re.compile(r'(.+?)\.gif')
+                # a_tags = html.find_all('a', attrs={'href': re.compile(r'(.+?\.gif)')})
+                a_tags = html.find_all('a', attrs={'href': filename_reg})
                 # print(a_tags)
 
-                filename_reg = re.compile(r'(.+?)\.gif')
                 # gif_urls = (f'{root_url}/{url_suffix.search(a_tag["src"]).group(1)}' for img_tag in a_tags)
                 for a_tag in a_tags:
                     file_name = a_tag["href"]
@@ -61,7 +67,7 @@ def find_gif_urls():
 
 
 def download(file_name: str, url: str, abs_download_path: str = None, rel_download_path: str = None):
-    """Download SDS from variety of sources
+    """Download file
 
     Parameters
     ----------
@@ -104,4 +110,4 @@ def download(file_name: str, url: str, abs_download_path: str = None, rel_downlo
 
 
 if __name__ == "__main__":
-    download_pka_gif()
+    download_named_effects()
