@@ -3,7 +3,8 @@
     ref: https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/
 ----------------------------------------------------- */
 html {
-    scroll-padding-top: 130px; /* height of sticky header */
+    /* height of sticky header */
+    /* scroll-padding-top: 130px; */ /* no need anymore with clickToSection.js */
 }
 
 body {
