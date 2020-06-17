@@ -1,22 +1,48 @@
 ---
-layout: layout.njk
+layout: page_with_side_menu.njk
 
 header:
     title: 'Organic Acronyms'
 
 title: 'Organic Acronyms'
 
-acronyms:
-    url: '/resources/acronyms/acronyms.pdf'
+# acronyms:
+#     url: '/resources/acronyms/acronyms.pdf'
+
+data_path: &data_path 'acronyms_data/'
+gif_type: &gif_type '.gif'
+
+items:
+  list:
+  - id: acronyms_table
+    title: 'Organic Acronyms Table'
+    extra: true
+    url: 'acronyms_data/acronyms.pdf'
+    target: '_blank'
+  - id: acronyms-A-C
+    title: Organic Acronyms Structure A-C
+  - id: acronyms-D-G
+    title: Organic Acronyms Structure D-G
+  - id: acronyms-H-P
+    title: Organic Acronyms Structure H-P
+  - id: acronyms-Q-Z
+    title: Organic Acronyms Structure Q-Z
+  - id: acronyms-Not-Used
+    title: Organic Acronyms Structure Not Used
+  - id: statistics
+    title: Organic Acronyms Statistics
+
+display_link: false
+
 ---
 
 <!-- <script src="js/main.js"></script> -->
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <embed src="{{ acronyms.url | url }}"
         type="application/pdf"
         frameBorder="0"
         scrolling="auto"
         class="embed-pdf">
         </embed>
-</div>
+</div> -->
