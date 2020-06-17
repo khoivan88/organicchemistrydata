@@ -37,17 +37,21 @@ specific_page_js:
         <div class="full-list container px-0 mx-0">
             <ul class="list-group list-group-flush">
                 {%- for item in items.list %}
-                    {% if item.id != 'references' %}
+                    {%- if (item.id != 'references') and not (item.extra) %}
                     <li class="list-group-item py-5" id="{{ item.id }}">
-                        {% if display_link %}
-                        {# <a id="{{ item.id }}" class="list-group-item" href="{{ item.url | url }}" target="{{ item.target }}"> #}
-                            <p class="text-primary">{{ item.title }}</p>
-                        {# </a> #}
-                        {% endif %}
-                        {% set img_url = data_path + item.id + gif_type %}
-                        <img src="{{ img_url | url }}" class="img-fluid" alt="{{ item.title }}">
+                        {%- if display_link %}
+                            {# <a id="{{ item.id }}" class="list-group-item" href="{{ item.url | url }}" target="{{ item.target }}"> #}
+                                <p class="text-primary">{{ item.title }}</p>
+                            {# </a> #}
+                        {%- endif %}
+                        {% if item.url %}
+                            <img src="{{ item.url | url }}" class="img-fluid" alt="{{ item.title }}">
+                        {% else %}
+                            {% set img_url = data_path + item.id + gif_type %}
+                            <img src="{{ img_url | url }}" class="img-fluid" alt="{{ item.title }}">
+                        {%- endif %}
                     </li>
-                    {% endif %}
+                    {%- endif %}
                 {%- endfor %}
             </ul>
         </div>

@@ -1,0 +1,150 @@
+---
+layout: page_with_side_menu.njk
+
+header:
+    title: 'Organolithium Reagents'
+
+title: 'Organolithium Reagents'
+
+data_path: &data_path 'organolithium_data/'
+gif_type: &gif_type '.gif'
+
+items:
+  list:
+  - id: additives-orgli
+    title: Organolithium Additives
+  - id: orglireag{08}
+    title: "Alkyllithium, \u03B1-Alkoxy"
+  - id: orglireag{14}
+    title: "Alkyllithium, \u03B1-Amino - 1"
+  - id: orglireag{15}
+    title: "Alkyllithium, \u03B1-Amino - 2"
+  - id: orglireag{11}
+    title: "Alkyllithium, \u03B1-Halo"
+  - id: orglireag{12}
+    title: "Alkyllithium, \u03B1-Phosphorus, \u03B1-Arsenic"
+  - id: orglireag{09}
+    title: "Alkyllithium, \u03B1-Silyl, \u03B1-Stannyl"
+  - id: orglireag{13}
+    title: "Alkyllithium, \u03B1-Thio \u03B1-Seleno \u03B1-Telluro"
+  - id: orglireag{02}
+    title: "Alkyllithium, \u03B2-Alkoxy"
+  - id: orglireag{03}
+    title: "Alkyllithium, \u03B3-Alkoxy"
+  - id: orglireag{01}
+    title: Alkyllithium, Homoallyl-Homopropargyl
+  - id: aa-01intro-v18
+    title: Alkyllithium, Primary
+  - id: orglireag{04}
+    title: Alkyllithium, Secondary
+  - id: orglireag{05}
+    title: Alkyllithium, Tertiary
+  - id: orglireag{17}
+    title: Allyllithium
+  - id: orglireag{19}
+    title: "Allyllithium, \u03B1-Amino"
+  - id: orglireag{18}
+    title: "Allyllithium, \u03B1-Phosphorus"
+  - id: orglireag{20}
+    title: Allyllithium, Alkoxy
+  - id: orglireag{23}
+    title: Allyllithium, Boron
+  - id: orglireag{23}
+    title: Allyllithium, Halo
+  - id: orglireag{23}
+    title: Allyllithium, Silyl
+  - id: orglireag{22}
+    title: Allyllithium, Thio, Seleno
+  - id: orglireag{33}
+    title: Aryllithium - 1
+  - id: orglireag{34}
+    title: Aryllithium - 2
+  - id: orglireag{39}
+    title: Aryllithium, Furyl
+  - id: orglireag{38}
+    title: Aryllithium, Imidazolyl
+  - id: orglireag{37}
+    title: Aryllithium, Indolyl
+  - id: orglireag{34}
+    title: Aryllithium, Naphthyl, Anthryl
+  - id: orglireag{38}
+    title: Aryllithium, Oxazole
+  - id: orglireag{38}
+    title: Aryllithium, Pyrazolyl
+  - id: orglireag{35}
+    title: Aryllithium, Pyridyl
+  - id: orglireag{36}
+    title: Aryllithium, Pyrimidyl
+  - id: orglireag{40}
+    title: Aryllithium, Thienyl
+  - id: orglireag{16}
+    title: Aziridinyllithium
+  - id: orglireag{06}
+    title: Cyclopropyllithium-1
+  - id: orglireag{07}
+    title: Cyclopropyllithium-2
+  - id: orglireag{21}
+    title: Dienyllithium
+  - id: orglireag{31}
+    title: Dienyllithium
+  - id: orglireag{10}
+    title: Epoxylithium
+  - id: orglireag{29}
+    title: "Vinyllithium, \u03B1-Alkoxy"
+  - id: orglireag{24}
+    title: "Vinyllithium, \u03B1-Alkyl"
+  - id: orglireag{30}
+    title: "Vinyllithium, \u03B1-S, Se, Te"
+  - id: orglireag{33}
+    title: "Vinyllithium, \u03B1-Silyl, Stannyl"
+  - id: orglireag{26}
+    title: "Vinyllithium, \u03B2,\u03B2-Disubstituted"
+  - id: orglireag{25}
+    title: "Vinyllithium, \u03B2-Substituted"
+  - id: orglireag{27}
+    title: Vinyllithium, Cyclobutenyl
+  - id: orglireag{28}
+    title: Vinyllithium, Cyclohexenyl
+  - id: orglireag{27}
+    title: Vinyllithium, Cyclopentenyl
+  - id: organolithium_primer
+    title: Organolithium Reagent Primer
+    extra: true
+  - id: lithium_amide_bases_primer
+    title: Lithium Amide Bases Primer
+    extra: true
+
+organolithium_primer:
+    title: Organolithium Reagent Primer
+    id: 'organolithium_primer'
+    url: 'organolithium_data/orgli-primer.pdf'
+
+lithium_amide_bases_primer:
+    title: Lithium Amide Bases Primer
+    id: 'lithium_amide_bases_primer'
+    url: 'organolithium_data/amidebases.pdf'
+
+display_link: false
+---
+
+<hr/>
+<div class="container-fluid py-5" id="{{ organolithium_primer.id }}">
+    <h3 class="px-3 py-3 text-primary">{{ organolithium_primer.title }}</h3>
+    <iframe class="embed-responsive-item embed-pdf"
+        src="{{ organolithium_primer.url | url }}"
+        frameBorder="0"
+        scrolling="auto"
+        class="embed-pdf">
+    </iframe>
+</div>
+
+<hr/>
+<div class="container-fluid py-5" id="{{ lithium_amide_bases_primer.id }}">
+    <h3 class="px-3 py-3 text-primary">{{ lithium_amide_bases_primer.title }}</h3>
+    <iframe class="embed-responsive-item embed-pdf"
+        src="{{ lithium_amide_bases_primer.url | url }}"
+        frameBorder="0"
+        scrolling="auto"
+        class="embed-pdf">
+    </iframe>
+</div>
