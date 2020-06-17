@@ -1,4 +1,5 @@
 const fs = require("fs");
+const lazyImagesPlugin = require('eleventy-plugin-lazyimages');  // https://www.npmjs.com/package/eleventy-plugin-lazyimages
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setTemplateFormats(["html", "liquid", "njk", "ejs", "md", "hbs", "mustache", "haml", "pug", "11ty.js", "pdf", "gif"]);
@@ -7,6 +8,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/data");
+
+  // Plugins
+  eleventyConfig.addPlugin(lazyImagesPlugin);
 
   // For 404 redirecting:
   eleventyConfig.setBrowserSyncConfig({
