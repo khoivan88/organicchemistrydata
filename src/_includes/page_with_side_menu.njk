@@ -20,9 +20,18 @@ specific_page_js:
 
         <ul class="list-group list-unstyled">
             {%- for item in items.list %}
-            <li class="list-group-item px-1 py-0" >
-                <a href="#{{ item.id }}">{{ item.title }}</a>
-            </li>
+                <li class="list-group-item px-1 py-0" >
+                {# {%- if item.extra %}
+                    <a href="{{ item.url | url }}"
+                {% else %} #}
+                    <a href="#{{ item.id }}"
+                {# {%- endif %} #}
+                        {# {%- if item.target %}
+                            target="{{ item.target }}"
+                        {%- endif %} #}
+                        >{{ item.title }}
+                    </a>
+                </li>
             {%- endfor %}
         </ul>
     </nav>
@@ -39,18 +48,25 @@ specific_page_js:
         <div class="full-list container px-0 mx-0">
             <ul class="list-group list-group-flush">
                 {%- for item in items.list %}
-                    {%- if (item.id != 'references') and not (item.extra) %}
+                    {%- if (item.id != 'references') %}
                     <li class="list-group-item py-5" id="{{ item.id }}">
                         {%- if display_link %}
                             {# <a id="{{ item.id }}" class="list-group-item" href="{{ item.url | url }}" target="{{ item.target }}"> #}
-                                <p class="text-primary">{{ item.title }}</p>
+                                <h4 class="text-primary">{{ item.title }}</h4>
                             {# </a> #}
+                        {%- elif item.extra %}
+                            <h4 class="text-primary">{{ item.title }}</h4>
+                            <p>For more info, see
+                                <a href="{{ item.url | url }}" {% if item.target %}target="{{ item.target }}"{% endif %}>this</a>.
+                            </p>
                         {%- endif %}
-                        {% if item.url %}
-                            <img src="{{ item.url | url }}" class="img-fluid" alt="{{ item.title }}">
-                        {% else %}
-                            {% set img_url = data_path + item.id + gif_type %}
-                            <img src="{{ img_url | url }}" class="img-fluid" alt="{{ item.title }}">
+                        {%- if not item.extra %}
+                            {% if item.url %}
+                                <img src="{{ item.url | url }}" class="img-fluid" alt="{{ item.title }}">
+                            {% else %}
+                                {% set img_url = data_path + item.id + gif_type %}
+                                <img src="{{ img_url | url }}" class="img-fluid" alt="{{ item.title }}">
+                            {%- endif %}
                         {%- endif %}
                     </li>
                     {%- endif %}
