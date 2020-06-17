@@ -56,8 +56,8 @@ specific_page_js:
                             {# </a> #}
                         {%- elif item.extra %}
                             <h4 class="text-primary">{{ item.title }}</h4>
-                            <p>For more info, see
-                                <a href="{{ item.url | url }}" {% if item.target %}target="{{ item.target }}"{% endif %}>this</a>.
+                            <p>This document is available in PDF only, click
+                                <a href="{{ item.url | url }}" {% if item.target %}target="{{ item.target }}"{% endif %}>here</a> to open in a new tab
                             </p>
                         {%- endif %}
                         {%- if not item.extra %}
