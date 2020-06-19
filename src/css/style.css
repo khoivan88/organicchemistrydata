@@ -9,7 +9,7 @@ html {
 
 body {
     /* font-family: sans-serif; */
-    /* position: relative; */
+    position: relative;    /* for scrollspy to work properly */
     /* top: 60px; */
     padding-top: 130px;    /* to prevent cover of content by the nav-bar
     /* padding-bottom: 10px;    /* to prevent cover of content by the nav-bar */
@@ -137,6 +137,10 @@ img.img-fluid {
     margin-top: -30px;
     /* padding-top: 15px; */
     /* padding-bottom: 15px; */
+}
+
+#sidebar>div:first-child {
+    width: -webkit-fill-available;    /* To make this div span entire width on small and xs devices */
 }
 
 #sidebar.active {

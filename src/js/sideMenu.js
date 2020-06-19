@@ -18,7 +18,7 @@ function checkForChanges () {
 
 // Close the side menu on small screen (when the side menu display full width) after a link is click
 function closeNavOnSmallScreen () {
-  document.querySelectorAll('.nav-collapse a').forEach(function (link) {
+  document.querySelectorAll('#sidebar a').forEach(function (link) {
     link.onclick = function () {
       let width = document.querySelector('#sidebar').offsetWidth + 50
       // console.log(width)
@@ -43,8 +43,40 @@ function adjustFooterPosition () {
   }
 }
 
+/**
+ * Add bootstrap scrollspy
+ * Ref: https://getbootstrap.com/docs/4.5/components/scrollspy/#via-javascript
+*/
+function addScrollSpy () {
+  // Activate Bootstrap scrollspy (methods using HTML and CSS only does not work)
+  $('body').scrollspy({
+    target: '#navbar-left', // The element with link that will be highlighted
+    offset: 170 // Offset from top due to headers
+  })
+
+  // Trying to bring the a tag in the side menu into view
+  // Original example from Bootstrap 4 does not work, this is from: https://stackoverflow.com/a/48694139/6596203
+  $(window).on('activate.bs.scrollspy', function (e, obj) {
+    // console.log(obj);  // !DEBUG
+    // Scroll the first active a tag into view if needed
+    $(`#navbar-left .nav-item a[href="${obj.relatedTarget}"]`)[0].scrollIntoViewIfNeeded()
+  })
+}
+
 $(document).ready(function () {
   // console.log('Side Menu JS working!')  // !DEBUG
+
+  // Add bootstrap scrollspy
+  // Ref: https://getbootstrap.com/docs/4.5/components/scrollspy/#via-javascript
+  $('body').scrollspy({ target: '#navbar-left', offset: 170 })
+
+  // Trying to bring the a tag in the side menu into view
+  // Original example from Bootstrap 4 does not work, this is from: https://stackoverflow.com/a/48694139/6596203
+  $(window).on('activate.bs.scrollspy', function (e, obj) {
+    // console.log(obj);  // !DEBUG
+    // Scroll the first active a tag into view if needed
+    $(`#navbar-left .nav-item a[href="${obj.relatedTarget}"]`)[0].scrollIntoViewIfNeeded()
+  })
 
   adjustFooterPosition()
 

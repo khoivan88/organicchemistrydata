@@ -13,27 +13,29 @@ specific_page_js:
 
 <div class="wrapper">
     <!-- Sidebar -->
-    <nav id="sidebar" class="nav-collapse collapse show pt-2 pb-4">
+    <nav id="sidebar" class="navbar px-0 pt-2 pb-4">
         <div class="sidebar-header text-center">
             <h6 class="d-inline-flex align-self-center my-1">List</h6>
         </div>
 
-        <ul class="list-group list-unstyled">
-            {%- for item in items.list %}
-                <li class="list-group-item px-1 py-0" >
-                {# {%- if item.extra %}
-                    <a href="{{ item.url | url }}"
-                {% else %} #}
-                    <a href="#{{ item.id }}"
-                {# {%- endif %} #}
-                        {# {%- if item.target %}
-                            target="{{ item.target }}"
-                        {%- endif %} #}
-                        >{{ item.title }}
-                    </a>
-                </li>
-            {%- endfor %}
-        </ul>
+        <div id="navbar-left">
+            <ul class="nav nav-pills flex-column">
+                {%- for item in items.list %}
+                    <li class="nav-item border-bottom">
+                    {# {%- if item.extra %}
+                        <a href="{{ item.url | url }}"
+                    {% else %} #}
+                        <a href="#{{ item.id }}" class="nav-link px-1 py-1"
+                    {# {%- endif %} #}
+                            {# {%- if item.target %}
+                                target="{{ item.target }}"
+                            {%- endif %} #}
+                            >{{ item.title }}
+                        </a>
+                    </li>
+                {%- endfor %}
+            </ul>
+        </div>
     </nav>
 
 
@@ -45,7 +47,7 @@ specific_page_js:
             <i class="fas fa-angle-double-left"></i>
         </button>
 
-        <div class="full-list container px-0 mx-0">
+        <div class="full-list container px-0 mx-0 >
             <ul class="list-group list-group-flush">
                 {%- for item in items.list %}
                     {%- if (item.id != 'references') %}
