@@ -56,7 +56,8 @@ def find_gif_urls(root_url, page_name):
                 for a_tag in a_tags:
                     file_name = a_tag["href"]
                     url = f'{root_url}/{file_name}'
-                    id_field = filename_reg.search(file_name).group(1)
+                    # Sanitize this because we change the downloaded file_name
+                    id_field = filename_reg.search(file_name).group(1).replace('{', '-').replace('}', '')
                     title = a_tag.text
                     yield file_name, url, id_field, title
 
@@ -80,6 +81,10 @@ def download(file_name: str, url: str, abs_download_path: str = None, rel_downlo
     -------
     None
     """
+
+    # Sanitize filename
+    file_name = file_name.replace('{', '-').replace('}', '')
+
     download_path = ''
     if not abs_download_path and not rel_download_path:
         download_path = Path(__file__).resolve().parent / 'downloads'
