@@ -33,7 +33,9 @@ function closeNavOnSmallScreen () {
   })
 }
 
-// Put footer section at the end of pages with toggle side menu
+/**
+ * Put footer section at the end of pages with toggle side menu
+ */
 function adjustFooterPosition () {
   let footer = document.querySelector('footer')
   let fullList = document.querySelector('.full-list')
@@ -54,10 +56,10 @@ function addScrollSpy () {
     offset: 170 // Offset from top due to headers
   })
 
-  // Trying to bring the a tag in the side menu into view
   // Original example from Bootstrap 4 does not work, this is from: https://stackoverflow.com/a/48694139/6596203
   $(window).on('activate.bs.scrollspy', function (e, obj) {
     // console.log(obj);  // !DEBUG
+
     // Scroll the first active a tag into view if needed
     $(`#navbar-left .nav-item a[href="${obj.relatedTarget}"]`)[0].scrollIntoViewIfNeeded()
   })
@@ -67,16 +69,7 @@ $(document).ready(function () {
   // console.log('Side Menu JS working!')  // !DEBUG
 
   // Add bootstrap scrollspy
-  // Ref: https://getbootstrap.com/docs/4.5/components/scrollspy/#via-javascript
-  $('body').scrollspy({ target: '#navbar-left', offset: 170 })
-
-  // Trying to bring the a tag in the side menu into view
-  // Original example from Bootstrap 4 does not work, this is from: https://stackoverflow.com/a/48694139/6596203
-  $(window).on('activate.bs.scrollspy', function (e, obj) {
-    // console.log(obj);  // !DEBUG
-    // Scroll the first active a tag into view if needed
-    $(`#navbar-left .nav-item a[href="${obj.relatedTarget}"]`)[0].scrollIntoViewIfNeeded()
-  })
+  addScrollSpy()
 
   adjustFooterPosition()
 
