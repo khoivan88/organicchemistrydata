@@ -16,6 +16,10 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 
+body section.flex-fill {
+    margin-top: -25px;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Crimson Text', serif;
 }
@@ -29,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     top: 58px;
     background-color: white;
-    z-index: 900;
+    z-index: 950;
     min-height: 45px;
     /* padding-bottom: 50px; */
 }
@@ -48,10 +52,28 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 20px;
     padding-right: 20px;
     display: inline-block;
-    font-size: 17px;
+    font-size: 20px;
     font-family: "Lato";
     text-transform: uppercase;
 }
+
+
+/* ---------------------------------------------------
+    TOTAL SYNTHESES SECTION
+----------------------------------------------------- */
+
+.syntheses-navbar {
+    z-index: 900;
+    /* padding-top: 60px; */
+    position: fixed;
+    top: 102px;
+    background-color: white;
+    /* z-index: 950; */
+    /* min-height: 45px; */
+    /* padding-bottom: 50px; */
+}
+
+
 
 /* ---------------------------------------------------
     Go to top Button
@@ -123,7 +145,7 @@ img.img-fluid {
 }
 
 #sidebar {
-    width: 200px;
+    width: 250px;
     position: fixed;
     top: 130px;
     bottom: 0px;
@@ -144,7 +166,7 @@ img.img-fluid {
 }
 
 #sidebar.active {
-    margin-left: -200px;
+    margin-left: -250px;
 }
 
 #sidebar .sidebar-header {
@@ -186,7 +208,7 @@ img.img-fluid {
 ----------------------------------------------------- */
 
 #content {
-    width: calc(100% - 200px);
+    width: calc(100% - 250px);
     max-height: 85vh;
     transition: all 0.3s;
     /* padding: 40px; */
@@ -597,7 +619,7 @@ div#at4-whatsnext {
     }
 
     #sidebar {
-        margin-left: -200px;
+        margin-left: -250px;
     }
 
     #sidebar.active {
@@ -614,7 +636,7 @@ div#at4-whatsnext {
     }
 
     #sidebar {
-        margin-left: -200px;
+        margin-left: -250px;
     }
 
     #sidebar.active {
@@ -626,7 +648,7 @@ div#at4-whatsnext {
     }
 
     #content.active{
-        /* width: calc(100% - 200px); */
+        /* width: calc(100% - 250px); */
     }
 
 }

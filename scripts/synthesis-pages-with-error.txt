@@ -1,0 +1,14 @@
+syntheses_data_original\syntheses-comp.html
+syntheses_data_original\syntheses-cont.html
+syntheses_data_original\syntheses-defkeys.html
+syntheses_data_original\syntheses-index.html
+syntheses_data_original\syntheses-info.html
+syntheses_data_original\syntheses-keys.html
+syntheses_data_original\syntheses-namerx.html
+syntheses_data_original\syntheses-rings.html
+syntheses_data_original\syntheses-showname.html
+syntheses_data_original\syntheses-showreag.html
+syntheses_data_original\syntheses-year.html
+syntheses_data_original\syntheses.html
+syntheses_data_original\syntheses{keys}.html
+syntheses_data_original\syntheses{namerx}.html

@@ -12,6 +12,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "eleventy-plugin-lazyimages": "^1.1.2",
-    "gh-pages": "^3.0.0"
+    "gh-pages": "^3.0.0",
+    "html-minifier": "^4.0.0"
   }
 }
