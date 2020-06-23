@@ -10,7 +10,7 @@ specific_page_js:
 
 ---
 
-
+{% block content %}
 <div class="wrapper">
     <!-- Sidebar -->
     <nav id="sidebar" class="navbar px-0 pt-2 pb-4">
@@ -49,8 +49,13 @@ specific_page_js:
 
         <div class="full-list container px-0 mx-0">
             <ul class="list-group list-group-flush">
+                {%- block extra_top -%}
+                    {%- if extra_top %}
+                        {{ content | safe }}
+                    {%- endif %}
+                {%- endblock %}
                 {%- for item in items.list %}
-                    {%- if (item.id != 'references') %}
+                    {%- if (item.id != 'references') and (not item.leave_empty) %}
                     <li class="list-group-item py-5" id="{{ item.id }}">
                         {%- if display_link %}
                             {# <a id="{{ item.id }}" class="list-group-item" href="{{ item.url | url }}" target="{{ item.target }}"> #}
@@ -76,8 +81,11 @@ specific_page_js:
             </ul>
         </div>
 
-        <!-- Extra content -->
-        {{ content | safe }}
+        <!-- Reference section -->
+        {%- if references %}
+            {{ content | safe }}
+        {%- endif %}
     </div>
 
 </div>
+{% endblock %}

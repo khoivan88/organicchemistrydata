@@ -1,0 +1,311 @@
+---
+layout: page_with_side_menu.njk
+
+header:
+    title: 'Electron Pushing in Organic Chemistry'
+
+title: 'Electron Pushing in Organic Chemistry'
+
+data_path: &data_path 'electron_pushing_data/'
+gif_type: &gif_type '.gif'
+
+extra_top:
+  epush-general: &epush-general
+    id: epush-general
+    title: 'General Info'
+  epush-acid: &epush-acid
+    id: epush-acidcatalysis
+    title: 'Acid Catalysis'
+  epush-base: &epush-base
+    id: epush-basecatalysis
+    title: 'Base Catalysis'
+
+items:
+  list:
+  - <<: *epush-general
+    leave_empty: true
+  - <<: *epush-acid
+    leave_empty: true
+  - <<: *epush-base
+    leave_empty: true
+  - id: example_questions
+    title: Example Questions
+    extra: true
+    url: 'electron_pushing_data/epush-examplequestions.pdf'
+    target: '_blank'
+  - id: example_questions_answers
+    title: Example Questions-Answers
+    extra: true
+    url: 'electron_pushing_data/epush-examplequestions-answers.pdf'
+    target: '_blank'
+  - id: ep-acetal-formation
+    title: Acetal formation
+  - id: ep-acetal-hydrolysis
+    title: Acetal Hydrolysis
+  - id: ep-anomeric-substitution
+    title: Acetal Interchange - Anomeric Substitution
+  - id: ep-acetoacetic-este-synthesis
+    title: Acetoacetic ester alkylation w. epoxide
+  - id: ep-acetylation-alcohol
+    title: Acetylation of Alcohol
+  - id: ep-amine-acylation
+    title: Acetylation of Amine
+  - id: ep-aldol
+    title: Aldol Condensation
+  - id: ep-Intramolecular-aldol
+    title: Aldol, Intramolecular
+  - id: ep-azlactone
+    title: Azlactone Formation
+  - id: ep-baeyer-villiger
+    title: Baeyer-Villiger Oxidation
+  - id: ep-chlorination-ketone
+    title: Chlorination of a ketone - acid catalyzed
+  - id: ep-decarboxylation
+    title: "Decarboxylation of a \u03B2-Keto Acid "
+  - id: ep-edman-degradation
+    title: Edman Degradation
+  - id: ep-fc-alkylation
+    title: Electrophilic Aromatic Substitution - Alkylation
+  - id: ep-electrophilic-nitration
+    title: Electrophilic Aromatic Substitution - Nitration
+  - id: ep-enone-isomerization
+    title: Enone Isomerization
+  - id: ep-ketal-hydrolysis
+    title: Ethylene Ketal Hydrolysis
+  - id: ep-amide-hydrolysis
+    title: Hydrolysis of Carboxylic Amide - Acid Catalyzed
+  - id: ep-kolbe
+    title: Kolbe Reaction - Salicylic Acid
+  - id: ep-phthalimide-hydrolysis
+    title: Phthalimide Hydrolysis - Base Catalyzed
+  - id: ep-reductive-amination
+    title: Reductive Amination
+  - id: ep-retro-aldol
+    title: Retro-Aldol -- Aldol
+  - id: ep-retro-dieckmann-dieckmannn
+    title: Retro-Dieckmann-Dieckmann
+  - id: ep-robinson-annulation
+    title: Robinson annelation
+  - id: ep-sn1
+    title: SN1 Substitution
+  - id: ep-wolff-kishner
+    title: Wolff-Kishner Reduction
+
+
+display_link: false
+---
+
+{%- block extra_top %}
+  <!-- <li class="list-group-item py-5" id="epush-general"> -->
+  <li class="list-group-item py-5" id="epush-general">
+    <div class="container-fluid">
+      <p align=center><b><span style="font-size:13pt; color:#0000FF;">Electron Pushing in Organic Chemistry</span></b>
+      </p>
+      <p align=center><span style="font-size:8pt;">Hans Reich<br>
+          U. Wisconsin, Madison</span></p>
+
+      <p>This handout deals with electron pushing arrows: the movement of a pair of electrons from an electron rich site
+        (a lone pair of electrons or a bond) to an electron poor site. Electron pushing arrows are used as a
+        &#34;bookkeeping&#34; device to easily keep track of bonding and formal charges when interconverting resonance
+        structures or depicting reactions. Used properly, they have tremendous value not just for understanding
+        reactions, but also for for predicting chemical reactivity</p>
+      <p>There are two fundamental types of electron pushing processes:</p>
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'epush-1-00.gif') | url }}" alt="" class="img-fluid">
+
+      <p>In each case, the formal charge becomes one unit more positive at the starting atom and one unit more negative
+        at the terminal atom.</p>
+      <p>A third very commonly used type, Bond Movement, is used to depict synchronous processes. A Bond Movement arrow
+        starts at a &sigma; or &pi; bond, and ends at a sextet atom, forming a new &sigma; or &pi; bond:</p>
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'epush-1-01.gif') | url }}" alt="" class="img-fluid">
+
+      <p>It is really shorthand for consecutive or simultaneous bond breaking and bond making processes:</p>
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'epush-1-02.gif') | url }}" alt="" class="img-fluid">
+
+      <p>When a Bond Making or Bond Movement arrow ends at an octet atom, then a Bond Breaking or a second Bond Movement
+        processes has to &#34;clear out&#34; the extra pair of electron. If this cannot be done in an electronically
+        reasonable fashion, then the process is not feasible. In this way a series of electron movements can be strung
+        together. Again, all of the central carbons have no change in their charges or number of bonds, the first and
+        last atoms change as for Bond Making and Bond Breaking processes. Note that the last arrow in a chain
+        <b>must</b> be either a bond making arrow terminating at a sextet atom, or a bond breaking arrow.</p>
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'epush-1-03.gif') | url }}" alt="" class="img-fluid">
+
+      <p><b><span style="font-size:11pt;">Common problems with electron pushing</span></b></p>
+
+      <p>Watch for violations of the octet rule - always specifically draw in all of the atoms (including hydrogens and
+        lone pairs) at any atom undergoing a transformation.</p>
+      <p>Draw arrows in the right direction (from donor to acceptor). We may think of a proton as attacking a double
+        bond, but in electron-pushing terms, it is the double bond that is attacking the proton.</p>
+
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'epush-1-04.gif') | url }}" alt="" class="img-fluid">
+
+      <p>Clearly distinguish formal positive charge and electron deficiency (a sextet atom). Cationic species like
+        oxonium ions, ammonium ions and the like are usually NOT electrophilic at the atom bearing the formal positive
+        charge. Each of the species below has electrophilic properties, but the positively charged O and N atoms are not
+        electrophilic - it is the atoms attached to O and N that are electrophilic and thus subject to attack by bases
+        and nucleophiles.</p>
+
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'epush-1-05.gif') | url }}" alt="" class="img-fluid">
+
+      <p>However, this stricture has to be relaxed for heavier elements like P and S which are capable of forming
+        compounds that formally violate the octet rule</p>
+
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'epush-1-06.gif') | url }}" alt="" class="img-fluid">
+
+      <p>Similarly, make a clear distinction between formal negative charges and lone pairs of electrons - they are not
+        always synonymous. For boron and aluminum ate complexes, there are no lone pairs. Any donor character arises
+        from the sigma bonds attached to the negatively charged atom.</p>
+      <p>For delocalized structures, you must pick a specific resonance structure to do any electron pushing - the
+        &#34;dotted line&#34; formulas and circle structures for aromatic systems do not work, since bonds and electron
+        pairs are not shown.</p>
+
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'epush-1-07.gif') | url }}" alt="" class="img-fluid">
+
+      <p>Do not combine multiple steps into one long series of arrows. An experienced chemist may be able to get away
+        with this sort of behavior, but such mechanisms are confusing and can contain fatal errors. If a reaction
+        involves a true intermediate, your mechanism should reflect that.</p>
+
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'epush-1-08.gif') | url }}" alt="" class="img-fluid">
+
+    </div>
+  </li>
+
+  <li class="list-group-item py-5" id="epush-acidcatalysis">
+    <div class="container-fluid">
+      <p align=center><b><span style="font-family:arial; font-size:14pt; color:#8b0000">Electron Pushing -- Acid
+            Catalysis</span></b></p>
+      <p align=center><span style="font-size:8pt;">Hans Reich<br>
+          U. Wisconsin, Madison</span></p>
+      <p>&nbsp;&nbsp;<b>Br&oslash;nsted Acids</b>: basically proton donors.</p>
+      <p>&nbsp;&nbsp;&nbsp;H<sub>3</sub>O<sup>+</sup>, H<sub>2</sub>SO<sub>4</sub>, HBr, HCl, H<sub>3</sub>PO<sub>4</sub>,
+        etc</p>
+      <p>&nbsp;&nbsp;<b>Lewis Acids</b>: Neutral molecules or cations with a low lying vacant orbital. Often a metal with
+        several electronegative ligands (F, Cl, Br, OTf, OAc, etc)</p>
+      <p>&nbsp;&nbsp;&nbsp;BF<sub>3</sub>, MgBr<sub>2</sub>, SnCl<sub>4</sub>, TiCl<sub>4</sub>, FeCl<sub>3</sub>,
+        AlCl<sub>3</sub>, MeAlCl<sub>2</sub>, Me<sub>2</sub>AlCl, LiClO<sub>4</sub>, etc</p>
+      <p>&nbsp;&nbsp;&nbsp;Ag<sup>+</sup> (special affinity for Cl, Br, I), Hg<sup>++</sup> (special affinity for S, C=C,
+        C&#8801;C)</p>
+      <p>&nbsp;&nbsp;In addition to these inorganic Lewis acids, there are many chiral &#34;designer&#34; Lewis acids for
+        initiating acid catalyzed reactions with asymmetric induction:</p>
+
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'ep-acidcatalysis-00.gif') | url }}" alt="" class="img-fluid">
+
+      <p>&nbsp;&nbsp;Related to Lewis acids are powerful alkylating (Me<sub>3</sub>O<sup>+</sup> BF<sub>4</sub><sup>-</sup>
+        and MeOTf) or silylating (Me<sub>3</sub>SiOTf) agents which initiate similar chemistry, but the first step is a
+        methyl or silyl transfer.</p>
+      <p>&nbsp;&nbsp;Bronsted and Lewis acids catalyze reactions by attaching to nucleophilic sites (lone pairs on O, N, S,
+        &pi;-bonds) in molecules, and activating the molecule to attack by nucleophiles. The equilibrium favoring the
+        product cation (and thus the rate of subsequent reactions) is determined by the strength of the acid and the
+        stability of the cation produced (among other factors). </p>
+
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'ep-acidcatalysis-01.gif') | url }}" alt="" class="img-fluid">
+
+      <p>Normally a positively charged atom is an electrophilic site only if it has a sextet of electrons or is otherwise
+        electron deficient. Oxonium O and ammonium N atoms are not normally electrophilic centers. On the other hand, onium
+        ions of the heavier elements (e.g., P, As, Se, Te, Br, I) are subject to nucleophilic attack.</p>
+      <p>&nbsp;&nbsp;Electrophilic catalysis is very closely related to oxidation.</p>
+
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'ep-acidcatalysis-02.gif') | url }}" alt="" class="img-fluid">
+
+      <p><b>&nbsp;&nbsp;Carbenium ions readily undergo rearrangement (Wagner-Meerwein)</b></p>
+
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'ep-acidcatalysis-03.gif') | url }}" alt="" class="img-fluid">
+
+      <p>Some named reactions which involve carbocation intermediates: <br>&nbsp;&nbsp;&nbsp; Wagner-Meerwein Rearrangement,
+        <br>&nbsp;&nbsp;&nbsp; Pinacol Rearrangement, <br>&nbsp;&nbsp;&nbsp; Friedel-Crafts Acylation and
+        Alkylation,<br>&nbsp;&nbsp;&nbsp; Bischler-Napieralski Reaction,<br>&nbsp;&nbsp;&nbsp; Pictet-Spengler Reaction,
+        <br>&nbsp;&nbsp;&nbsp; Beckmann Rearrangement,<br>&nbsp;&nbsp;&nbsp; Tiffaneau-Demjanov
+        Rearrangement,<br>&nbsp;&nbsp;&nbsp; Ferrier Rearrangement,<br>&nbsp;&nbsp;&nbsp; Nazarov Cyclization,
+        <br>&nbsp;&nbsp;&nbsp; Pechmann Reaction,<br>&nbsp;&nbsp;&nbsp; Prins Reaction,<br>&nbsp;&nbsp;&nbsp; Ritter
+        Reaction,<br>&nbsp;&nbsp;&nbsp; Leuckhart-Wallach Reaction,<br>&nbsp;&nbsp;&nbsp; Meyer-Schuster
+        Rearrangement,<br>&nbsp;&nbsp;&nbsp; Rupe Reaction</p>
+
+      <p><a href="http://orgchem.chem.uconn.edu/namereact/named.html" target="_blank">Name Reactions</a></p>
+      <!-- BJM-Also add link to the new Name reactions page on this site  -->
+
+      <p><b>&nbsp;&nbsp;Carbenium Ions with unusual properties</b></p>
+
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'ep-unusual-cation.gif') | url }}" alt="" class="img-fluid">
+
+      <p><b>&nbsp;&nbsp;Common Stabilized Carbenium Ion Reaction Intermediates</b></p>
+
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'ep-stabilized.gif') | url }}" alt="" class="img-fluid">
+    </div>
+  </li>
+
+  <li class="list-group-item py-5" id="epush-basecatalysis">
+    <div class="container-fluid">
+      <p align=center><b><span style="font-size:13pt; color:#0000FF;">Electron Pushing -- Basic and Nucleophilic
+            Catalysis</span></b></p>
+      <p align=center><span style="font-size:8pt;">Hans Reich<br>
+          U. Wisconsin, Madison</span></p>
+
+      <p>&nbsp;&nbsp;A basic atom is one bearing a lone pair of electrons, or a strongly polarized sigma bond (such as C-Li
+        or C-MgBr) or pi bond (such as an enamine).</p>
+      <p>&nbsp;&nbsp;Common bases: NaOH, NaOAc, Na<sub>2</sub>CO<sub>3</sub>, KO<sup>t</sup>Bu, NaNH<sub>2</sub>, n-BuLi,
+        <sup>t</sup>BuLi, NEt<sub>3</sub>, N(iPr)<sub>2</sub>Et (H&uuml;nig's base)</p>
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'ep-basecatalysis-00.gif') | url }}" alt="" class="img-fluid">
+
+      <p>&nbsp;&nbsp;Bases/nucleophiles interact with molecules in four main ways. All of these reactions are especially
+        facile when the charge ends up on an electronegative heteroatom (O, N, S, Cl, Br, F)</p>
+      <p>&nbsp;&nbsp;1. Deprotonation of acidic hydrogens. To form finite amounts of the anionic product X<sup>-</sup> from
+        X-H at equilibrium, the pK<sub>A</sub> of X-H must be comparable or lower than the pK<sub>A</sub> of B-H. To get
+        reasonable rates of formation of the anionic product, the X-H bond being broken must have a pK<sub>A</sub> that is
+        no more than about 10 pK<sub>A</sub> units higher than that of B-H; e.g., hydroxide ion (pK<sub>A</sub> of
+        H<sub>2</sub>O ca 15) can effectively catalyze the formation ketone enolates (pK<sub>A</sub> of ketones ca 20) but
+        not those of alkyl sulfones (pK<sub>A</sub> ca 30).</p>
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'ep-basecatalysis-01.gif') | url }}" alt="" class="img-fluid">
+
+      <p>&nbsp;&nbsp;2. Nucleophilic addition to C=X and activated C=C multiple bonds (e.g., Michael Reaction). These
+        reactions also work best when a reasonably stabilized anion is being formed. The reverse reaction (retro-Michael)
+        occurs readily if the nucleophile was a stabilized anion.</p>
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'ep-basecatalysis-02.gif') | url }}" alt="" class="img-fluid">
+
+      <p>&nbsp;&nbsp;3. Nucleophilic substitutions.</p>
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'ep-basecatalysis-03.gif') | url }}" alt="" class="img-fluid">
+
+      <p>It is permissible to violate the octet rule with heavier elements, but always be careful not to lose track of
+        charges and electrons when you do so.</p>
+
+      <p>Aromatic nucleophilic substitution - requires strong anion stabilizing groups on the aromatic ring.</p>
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'ep-basecatalysis-04.gif') | url }}" alt="" class="img-fluid">
+
+      <p>&nbsp;&nbsp;4. Nucleophilic additions to sextet atoms:</p>
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'ep-basecatalysis.gif') | url }}" alt="" class="img-fluid">
+
+      <p><b>&nbsp;&nbsp;Carbanion rearrangements are much less common than those of carbocations. Here are a few name
+          reactions:</b></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;Ramberg-Backlund Reaction</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;Grovenstein-Zimmerman Rearrangement</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;Favorskii Rearrangement</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;Stevens Rearrangement</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;Wittig ([2,3] sigmatropic) Rearrangement</p>
+      <p><b>&nbsp;&nbsp;Carbanions with unusual properties:</b></p>
+      &nbsp;&nbsp;<br>
+      <img src="{{ (data_path + 'ep-basecatalysis-06.gif') | url }}" alt="" class="img-fluid">
+
+
+    </div>
+  </li>
+{%- endblock %}
+
