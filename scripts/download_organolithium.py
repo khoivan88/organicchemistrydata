@@ -22,7 +22,7 @@ def download_named_effects():
         for file_name, url, id_field, title in find_gif_urls(root_url=root_url, page_name=page_name):
             # print(file_name, url, id_field, title)
 
-            data['items']['list'].append({'title': title, 'id': id_field})
+            data['items']['list'].append({'title': title, 'id': id_field.replace('{', '-').replace('}', '')})
             download(file_name=file_name, url=url, rel_download_path=data_filename)
 
         # print(data)
@@ -80,6 +80,9 @@ def download(file_name: str, url: str, abs_download_path: str = None, rel_downlo
     -------
     None
     """
+    # Sanitize filename
+    file_name = file_name.replace('{', '-').replace('}', '')
+
     download_path = ''
     if not abs_download_path and not rel_download_path:
         download_path = Path(__file__).resolve().parent / 'downloads'
