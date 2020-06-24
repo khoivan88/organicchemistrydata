@@ -10,23 +10,25 @@ data_path: &data_path 'electron_pushing_data/'
 gif_type: &gif_type '.gif'
 
 extra_top:
-  epush-general: &epush-general
+  epush_general: &epush_general
     id: epush-general
     title: 'General Info'
-  epush-acid: &epush-acid
+  epush_acid: &epush_acid
     id: epush-acidcatalysis
     title: 'Acid Catalysis'
-  epush-base: &epush-base
+  epush_base: &epush_base
     id: epush-basecatalysis
     title: 'Base Catalysis'
 
 items:
   list:
-  - <<: *epush-general
+  - menu_heading: true
+    title: 'Electron Pushing'
+  - <<: *epush_general
     leave_empty: true
-  - <<: *epush-acid
+  - <<: *epush_acid
     leave_empty: true
-  - <<: *epush-base
+  - <<: *epush_base
     leave_empty: true
   - id: example_questions
     title: Example Questions
@@ -38,6 +40,11 @@ items:
     extra: true
     url: 'electron_pushing_data/epush-examplequestions-answers.pdf'
     target: '_blank'
+  - menu_heading: true
+    title: 'Electron Pushing Mechanisms'
+  # - id: "specific-reaction-examples"
+  #   title: "Specific Reaction Examples:"
+  #   leave_empty: true
   - id: ep-acetal-formation
     title: Acetal formation
   - id: ep-acetal-hydrolysis
@@ -97,12 +104,11 @@ display_link: false
 
 {%- block extra_top %}
   <!-- <li class="list-group-item py-5" id="epush-general"> -->
-  <li class="list-group-item py-5" id="epush-general">
+  <li class="list-group-item py-5" id="{{ extra_top.epush_general.id }}">
     <div class="container-fluid">
-      <p align=center><b><span style="font-size:13pt; color:#0000FF;">Electron Pushing in Organic Chemistry</span></b>
-      </p>
-      <p align=center><span style="font-size:8pt;">Hans Reich<br>
-          U. Wisconsin, Madison</span></p>
+      <h4 class="text-primary">General Info</h4>
+      <!-- <p align=center><span style="font-size:8pt;">Hans Reich<br>
+          U. Wisconsin, Madison</span></p> -->
 
       <p>This handout deals with electron pushing arrows: the movement of a pair of electrons from an electron rich site
         (a lone pair of electrons or a bond) to an electron poor site. Electron pushing arrows are used as a
@@ -178,12 +184,11 @@ display_link: false
     </div>
   </li>
 
-  <li class="list-group-item py-5" id="epush-acidcatalysis">
+  <li class="list-group-item py-5" id="{{ extra_top.epush_acid.id }}">
     <div class="container-fluid">
-      <p align=center><b><span style="font-family:arial; font-size:14pt; color:#8b0000">Electron Pushing -- Acid
-            Catalysis</span></b></p>
-      <p align=center><span style="font-size:8pt;">Hans Reich<br>
-          U. Wisconsin, Madison</span></p>
+      <h4 class="text-primary">Electron Pushing -- Acid Catalysis</h4>
+      <!-- <p align=center><span style="font-size:8pt;">Hans Reich<br>
+          U. Wisconsin, Madison</span></p> -->
       <p>&nbsp;&nbsp;<b>Br&oslash;nsted Acids</b>: basically proton donors.</p>
       <p>&nbsp;&nbsp;&nbsp;H<sub>3</sub>O<sup>+</sup>, H<sub>2</sub>SO<sub>4</sub>, HBr, HCl, H<sub>3</sub>PO<sub>4</sub>,
         etc</p>
@@ -247,12 +252,11 @@ display_link: false
     </div>
   </li>
 
-  <li class="list-group-item py-5" id="epush-basecatalysis">
+  <li class="list-group-item py-5" id="{{ extra_top.epush_base.id }}">
     <div class="container-fluid">
-      <p align=center><b><span style="font-size:13pt; color:#0000FF;">Electron Pushing -- Basic and Nucleophilic
-            Catalysis</span></b></p>
-      <p align=center><span style="font-size:8pt;">Hans Reich<br>
-          U. Wisconsin, Madison</span></p>
+      <h4 class="text-primary">Electron Pushing -- Basic and Nucleophilic Catalysis</h4>
+      <!-- <p align=center><span style="font-size:8pt;">Hans Reich<br>
+          U. Wisconsin, Madison</span></p> -->
 
       <p>&nbsp;&nbsp;A basic atom is one bearing a lone pair of electrons, or a strongly polarized sigma bond (such as C-Li
         or C-MgBr) or pi bond (such as an enamine).</p>
