@@ -91,11 +91,11 @@ def download(file_name: str, url: str, abs_download_path: str = None, rel_downlo
     file_name = file_name.replace('{', '-').replace('}', '')
 
     download_path = ''
-    if not abs_download_path and not rel_download_path:
+    if not (abs_download_path or rel_download_path):
         download_path = Path(__file__).resolve().parent / 'downloads'
     elif rel_download_path:
         download_path = Path(__file__).resolve().parent / rel_download_path
-    elif abs_download_path:
+    else:
         download_path = Path(abs_download_path).resolve()
 
     # Check if download path directory exists. If not, create it
