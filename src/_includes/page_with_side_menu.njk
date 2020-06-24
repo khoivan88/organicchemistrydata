@@ -21,18 +21,22 @@ specific_page_js:
         <div id="navbar-left">
             <ul class="nav nav-pills flex-column">
                 {%- for item in items.list %}
-                    <li class="nav-item border-bottom">
-                    {# {%- if item.extra %}
-                        <a href="{{ item.url | url }}"
-                    {% else %} #}
-                        <a href="#{{ item.id }}" class="nav-link px-1 py-1"
-                    {# {%- endif %} #}
-                            {# {%- if item.target %}
-                                target="{{ item.target }}"
-                            {%- endif %} #}
-                            >{{ item.title }}
-                        </a>
-                    </li>
+                    {%- if item.menu_heading %}
+                        <h5 class="text-white bg-dark my-0 py-1 px-1">{{ item.title }}</h5>
+                    {%- else %}
+                        <li class="nav-item border-bottom">
+                        {# {%- if item.extra %}
+                            <a href="{{ item.url | url }}"
+                        {% else %} #}
+                            <a href="#{{ item.id }}" class="nav-link px-1 py-1"
+                        {# {%- endif %}
+                                {%- if item.target %}
+                                    target="{{ item.target }}"
+                                {%- endif %} #}
+                                >{{ item.title }}
+                            </a>
+                        </li>
+                    {%- endif %}
                 {%- endfor %}
             </ul>
         </div>
@@ -55,7 +59,7 @@ specific_page_js:
                     {%- endif %}
                 {%- endblock %}
                 {%- for item in items.list %}
-                    {%- if (item.id != 'references') and (not item.leave_empty) %}
+                    {%- if (item.id != 'references') and (not item.leave_empty) and (not item.menu_heading) %}
                     <li class="list-group-item py-5" id="{{ item.id }}">
                         {%- if display_link %}
                             {# <a id="{{ item.id }}" class="list-group-item" href="{{ item.url | url }}" target="{{ item.target }}"> #}
