@@ -63,15 +63,22 @@ specific_page_js:
                     <li class="list-group-item py-5" id="{{ item.id }}">
                         {%- if display_link %}
                             {# <a id="{{ item.id }}" class="list-group-item" href="{{ item.url | url }}" target="{{ item.target }}"> #}
-                                <h4 class="text-primary">{{ item.title }}</h4>
-                            {# </a> #}
-                        {%- elif item.extra %}
                             <h4 class="text-primary">{{ item.title }}</h4>
-                            <p>This document is available in PDF only, click
-                                <a href="{{ item.url | url }}" {% if item.target %}target="{{ item.target }}"{% endif %}>here</a> to open in a new tab
+                            {# </a> #}
+                        {%- endif %}
+                        {%- if item.extra %}
+                            {# <h4 class="text-primary">{{ item.title }}</h4> #}
+                            <p>{%- if item.title | startsWithVowel %}An{%- else %}A{%- endif %}
+                                <a href="{{ item.url | url }}" {% if item.target %}target="{{ item.target }}"{% endif %}>{{ item.title }}</a>
+                                is available as a PDF file.
                             </p>
                         {%- endif %}
-                        {%- if not item.extra %}
+                        {%- if item.external_link %}
+                            <p> A link to this external source is
+                                <a href="{{ item.url | url }}" {% if item.target %}target="{{ item.target }}"{% endif %}>here</a>.
+                            </p>
+                        {%- endif %}
+                        {%- if not (item.extra or item.external_link) %}
                             {% if item.url %}
                                 <img src="{{ item.url | url }}" class="img-fluid" alt="{{ item.title }}">
                             {% else %}
