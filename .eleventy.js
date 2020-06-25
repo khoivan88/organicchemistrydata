@@ -1,12 +1,12 @@
 const fs = require("fs");
 // const lazyImagesPlugin = require('eleventy-plugin-lazyimages');  // https://www.npmjs.com/package/eleventy-plugin-lazyimages
-// const htmlmin = require("html-minifier");  // https://www.11ty.dev/docs/config/#transforms-example-minify-html-output
+const htmlmin = require("html-minifier");  // https://www.11ty.dev/docs/config/#transforms-example-minify-html-output
 
 module.exports = {
   google_analytic: false
 }
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats(["html", "liquid", "njk", "ejs", "md", "hbs", "mustache", "haml", "pug", "11ty.js", "pdf", "gif"]);
   // eleventyConfig.addPassthroughCopy("src/resources");
   eleventyConfig.addPassthroughCopy("src/css");
@@ -20,28 +20,35 @@ module.exports = function(eleventyConfig) {
   // Plugins
   // eleventyConfig.addPlugin(lazyImagesPlugin);
 
-  // // Minify HTML output
-  // eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-  //   if( outputPath.endsWith(".html") ) {
-  //     let minified = htmlmin.minify(content, {
-  //       useShortDoctype: true,
-  //       removeComments: false,
-  //       collapseWhitespace: true
-  //     });
-  //     return minified;
-  //   }
-  //   return content;
-  // });
+  // Minify HTML output
+  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+    if( outputPath.endsWith(".html") ) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: false,
+        collapseWhitespace: true
+      });
+      return minified;
+    }
+    return content;
+  });
 
   // Custom filters
-  eleventyConfig.addFilter("toUpperCase", function(value) {
+  eleventyConfig.addFilter("toLowerCase", function (value) {
+    return value.toLowerCase();
+  });
+  eleventyConfig.addFilter("toUpperCase", function (value) {
     return value.toUpperCase();
   });
-  eleventyConfig.addFilter("toTitleCase", function(value) {
-    value = value.replace(/-|_/gi, ' ').split(" ").map(([firstChar,...rest]) =>
-      firstChar.toUpperCase()+rest.join("").toLowerCase()).join(" ")
+  eleventyConfig.addFilter("toTitleCase", function (value) {
+    value = value.replace(/-|_/gi, ' ').split(" ").map(([firstChar, ...rest]) =>
+      firstChar.toUpperCase() + rest.join("").toLowerCase()).join(" ")
     return value;
   });
+  eleventyConfig.addFilter("startsWithVowel", function (value) {
+    let regex = new RegExp('^[aeiou].*', 'i')
+    return regex.test(value)
+  })
 
   // For 404 redirecting:
   eleventyConfig.setBrowserSyncConfig({
