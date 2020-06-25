@@ -37,7 +37,7 @@ function closeNavOnSmallScreen () {
  * Put footer section at the end of pages with toggle side menu
  */
 function adjustFooterPosition () {
-  let footer = document.querySelector('footer')
+  let footer = document.querySelector('footer#bb-footer')
   let fullList = document.querySelector('.full-list')
   let references = document.querySelector('#references')
   if (fullList || references) {
