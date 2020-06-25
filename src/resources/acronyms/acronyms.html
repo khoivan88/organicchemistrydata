@@ -12,37 +12,160 @@ title: 'Organic Acronyms'
 data_path: &data_path 'acronyms_data/'
 gif_type: &gif_type '.gif'
 
+extra_top:
+  acronyms_general: &acronyms_general
+    id: acronyms_general
+    title: 'General Info in Acronyms'
+
 items:
   list:
+  - <<: *acronyms_general
+    leave_empty: true
   - id: acronyms_table
     title: 'Organic Acronyms Table'
     extra: true
     url: 'acronyms_data/acronyms.pdf'
     target: '_blank'
   - id: acronyms-A-C
-    title: Organic Acronyms Structure A-C
+    title: "Organic Acronyms Structure A\u2013C"
   - id: acronyms-D-G
-    title: Organic Acronyms Structure D-G
+    title: "Organic Acronyms Structure D\u2013G"
   - id: acronyms-H-P
-    title: Organic Acronyms Structure H-P
+    title: "Organic Acronyms Structure H\u2013P"
   - id: acronyms-Q-Z
-    title: Organic Acronyms Structure Q-Z
+    title: "Organic Acronyms Structure Q\u2013Z"
   #- id: acronyms-Not-Used
   #  title: Organic Acronyms Structure Not Used
   #- id: statistics
   #  title: Organic Acronyms Statistics
+  - id: 'joc_acronyms'
+    title: 'J. Org. Chem. Acronyms Table'
+    extra: true
+    url: 'https://pubs.acs.org/userimages/ContentEditor/1218717864819/joceah_abbreviations.pdf'
+    target: '_blank'
+  - id: 'cheminform_acronyms'
+    title: 'ChemInform-Acronym Finder (Wiley)'
+    external_link: true
+    url: 'http://www.cheminform.com/acronyms/'
+    target: '_blank'
 
-display_link: false
+display_link: true
 
 ---
 
-<!-- <script src="js/main.js"></script> -->
+{%- block extra_top %}
+<li class="list-group-item py-5" id="{{ extra_top.acronyms_general.id }}">
+  <div class="container-fluid">
+    <h4 class="text-primary pb-3">{{ extra_top.acronyms_general.title }}</h4>
+    <blockquote class="blockquote">
+      <!-- <header class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></header> -->
+      <p class="mb-0 small">
+        "Unfortunately, the synthetic community has become infatuated with using acronyms even for
+        reagents where no valid reason exists (i.e. to save space in a scheme). The following commonly used acronyms, which save
+        almost no space and in some cases are actually longer than a chemical formula readable by any organic chemist, serve
+        only to confuse the non-specialist reader and are not used in <a href="{{ '/resources/syntheses' | url }}">this collection</a>.
+        Below are given the acronym, the formulation typically used in the synthetic schemes.
+        A number of trade names are unfortunately used by the synthetic community,
+        and these are also avoided when possible, since they do not have the staying power or comprehensibility of
+        real names (e.g. Superhydride, Selectride, Vitride, Red-Al, Freon, etc)."
+      </p>
+      <footer class="blockquote-footer">The late Professor Hans Reich's made these comments on acronyms in relation to those
+        not used on his <cite title="Source Title"><a href="{{ '/resources/syntheses' | url }}">Total Syntheses summary pages</a></cite>
+      </footer>
+    </blockquote>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <td><b>Acronym</b></td>
+            <td><b>Schemes</b></td>
+            <td><b>Reagent Index</b></td>
+          </tr>
+        </thead>
+        <tr>
+          <td>DMS</td>
+          <td>SMe<sub>2</sub></td>
+          <td>Me<sub>2</sub>S</td>
+        </tr>
+        <tr>
+          <td>DCM</td>
+          <td>CH<sub>2</sub>Cl<sub>2</sub></td>
+          <td>Not indexed unless reactant</td>
+        </tr>
+        <tr>
+          <td>DIBAL</td>
+          <td><sup><i>i</i></sup>BuAlH</td>
+          <td>AlH<sup><i>i</i></sup>Bu<sub>2</sub></td>
+        </tr>
+        <tr>
+          <td>DIPEA</td>
+          <td>NEt<sup><i>i</i></sup>Pr<sub>2</sub></td>
+          <td>NEt<sup><i>i</i></sup>Pr<sub>2</sub></td>
+        </tr>
+        <tr>
+          <td>HMDS</td>
+          <td>HN(SiMe<sub>3</sub>)<sub>2</sub></td>
+          <td>NH(SiMe<sub>3</sub>)<sub>2</sub></td>
+        </tr>
+        <tr>
+          <td>KHMDS</td>
+          <td>KN(SiMe<sub>3</sub>)<sub>2</sub></td>
+          <td>KN(SiMe<sub>3</sub>)<sub>2</sub></td>
+        </tr>
+        <tr>
+          <td>LAH</td>
+          <td>LiAIH<sub>4</sub></td>
+          <td>AlH<sub>4</sub>Li</td>
+        </tr>
+        <tr>
+          <td>LDA</td>
+          <td>LiN<sup><i>i</i></sup>Pr<sub>2</sub></td>
+          <td>LiN<sup><i>i</i></sup>Pr<sub>2</sub></td>
+        </tr>
+        <tr>
+          <td>LIHMDS</td>
+          <td>LiN(SiMes)<sub>2</sub></td>
+          <td>LiN(SiMes)<sub>2</sub></td>
+        </tr>
+        <tr>
+          <td>PPTS</td>
+          <td>TsOH•Py</td>
+          <td>TsOH•Py</td>
+        </tr>
+        <tr>
+          <td>TBAF</td>
+          <td>Bu<sub>4</sub>N<sup>+</sup> F<sup>–</sup></td>
+          <td>Fluoride, Bu<sub>4</sub>N<sup>+</sup></td>
+        </tr>
+        <tr>
+          <td>TEA</td>
+          <td>NEt<sub>3</sub></td>
+          <td>NEt<sub>3</sub></td>
+        </tr>
+        <tr>
+          <td>TES</td>
+          <td>SiEt<sub>3</sub></td>
+          <td>SiEt<sub>2</sub>-X</td>
+        </tr>
+        <tr>
+          <td>TIPS</td>
+          <td>Si<sup><i>i</i></sup>Pr<sub>3</sub></td>
+          <td>Si<sup><i>i</i></sup>Pr<sub>3</sub>-X</td>
+        </tr>
+        <tr>
+          <td>TMS</td>
+          <td>SiMe<sub>3</sub></td>
+          <td>SiMe<sub>3</sub>-X</td>
+        </tr>
+        <tr>
+          <td colspan="3">TBS (<sup><i>t</i></sup>BuMe<sub>2</sub>Si) and TBDPS (<sup><i>t</i></sup>BuPh<sub>2</sub>Si) are
+            used only very rarely when a scheme becomes too cluttered.</td>
+        </tr>
+      </table>
+    </div>
 
-<!-- <div class="container-fluid">
-    <embed src="{{ acronyms.url | url }}"
-        type="application/pdf"
-        frameBorder="0"
-        scrolling="auto"
-        class="embed-pdf">
-        </embed>
-</div> -->
+
+  </div>
+</li>
+
+{%- endblock %}
