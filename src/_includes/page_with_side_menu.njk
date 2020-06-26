@@ -53,15 +53,18 @@ specific_page_js:
 
         <div class="full-list container px-0 mx-0">
             <ul class="list-group list-group-flush">
-                {%- block extra_top -%}
+                {%- block extratop -%}
                     {%- if extra_top %}
+                    {# {%- for item in extra_top %} #}
                         {{ content | safe }}
+                        {# {{ item.content | safe }} #}
+                    {# {%- endfor %} #}
                     {%- endif %}
                 {%- endblock %}
                 {%- for item in items.list %}
                     {%- if (item.id != 'references') and (not item.leave_empty) and (not item.menu_heading) %}
                     <li class="list-group-item py-5" id="{{ item.id }}">
-                        {%- if display_link %}
+                        {%- if display_link or item.display_link %}
                             {# <a id="{{ item.id }}" class="list-group-item" href="{{ item.url | url }}" target="{{ item.target }}"> #}
                             <h4 class="text-primary">{{ item.title }}</h4>
                             {# </a> #}
@@ -94,7 +97,10 @@ specific_page_js:
 
         <!-- Reference section -->
         {%- if references %}
-            {{ content | safe }}
+        {% block references %}
+            {# {{ content | safe }} #}
+            {{ references.content | safe }}
+        {% endblock %}
         {%- endif %}
     </div>
 
