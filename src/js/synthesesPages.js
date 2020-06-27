@@ -45,11 +45,17 @@ function loadSideIndex () {
   document.querySelectorAll('.syntheses-navbar a').forEach(function (link) {
     link.onclick = function () {
       // link.classList.toggle('active')
-      let url = 'groupby/' + link.dataset.groupedby
-      // console.log(url)  // !DEBUG
-      loadPage(url, '.syntheses-groupedby')
+      let url = ''
+      if (!link.dataset.groupedby) {
+        // Handle link without 'groupedby' dataset, just load using the href
+        window.location.href = link.href
+      } else {
+        url = 'groupby/' + link.dataset.groupedby
+        // console.log(url)  // !DEBUG
+        loadPage(url, '.syntheses-groupedby')
+      }
 
-      // loadSynthesis()
+      openSideBarIfClosed()
 
       // waitUntilElementsLoaded('#fnt a', 100000).then(function (elements) {
       //   for (const element of elements) {
@@ -68,16 +74,62 @@ function loadSideIndex () {
   })
 }
 
+// Close the side menu on small screen (when the side menu display full width) after a link is click
+function closeNavOnSmallScreen1 () {
+  // console.log('closeNavOnSmallScreen1 JS working') // !DEBUG
+  let width = document.querySelector('#sidebar').offsetWidth + 50
+  // console.log(width)
+  if (width >= window.innerWidth) {
+    document.querySelector('#sidebar').classList.toggle('active')
+  }
+
+  checkForChanges1()
+}
+
+// Use the correct icon on the toggle button
+// Ref: https://stackoverflow.com/questions/19142762/changing-an-icon-inside-a-toggle-button
+function checkForChanges1 () {
+  setTimeout(function () {
+    // console.log('checkForChanges1 function is working!') // !DEBUG
+    let marginLeft = parseInt($('#sidebar').css('marginLeft').replace('px', ''))
+    // console.log(marginLeft)  // !DEBUG
+    if (marginLeft < 0) {
+      // When the side menu is hiding
+      // console.log('margin-left < 0')  // !DEBUG
+      $('#sidebarCollapse').children().addClass('fa-angle-double-right').removeClass('fa-angle-double-left')
+    } else {
+      // When the side menu is being displayed
+      // console.log('margin-left >= 0')  // !DEBUG
+      $('#sidebarCollapse').children().addClass('fa-angle-double-left').removeClass('fa-angle-double-right')
+    }
+  }, 300)
+}
+
+// Use the correct icon on the toggle button
+function openSideBarIfClosed () {
+  // console.log('openSideBarIfClosed function is working!') // !DEBUG
+  let marginLeft = parseInt($('#sidebar').css('marginLeft').replace('px', ''))
+  // console.log(marginLeft)  // !DEBUG
+  if (marginLeft < 0) {
+    // When the side menu is hiding
+    // console.log('margin-left < 0')  // !DEBUG
+    $('#sidebar, #content').toggleClass('active')
+    checkForChanges1()
+  }
+}
+
 async function loadSynthesis () {
   // console.log('something1') // !DEBUG
   document.querySelectorAll('.syntheses-groupedby a').forEach(function (link) {
   // $('.syntheses-groupedby a').on('click', function (link) {
     link.onclick = function () {
-      // console.log('something2') // !DEBUG
+      console.log('something2') // !DEBUG
       // link.classList.toggle('active')
       let url = link.dataset.url
       // console.log(url) // !DEBUG
       loadPage(url, '#content .full-list')
+
+      closeNavOnSmallScreen1()
     }
   })
 }
@@ -97,9 +149,9 @@ function deepLink () {
     // Check the hash for 'groupby' indices first;
     // if not found, load default indexed by 'names' and then try to load the total synthesis page
     loadPage(`groupby/${hash[1]}`, '.syntheses-groupedby')
-      // .then(function (response) {
-      //   console.log(response)
-      //   if (response.ok) {
+    // .then(function (response) {
+    //   console.log(response)
+    //   if (response.ok) {
 
       //   } else {
       //     return Promise.reject(response);
