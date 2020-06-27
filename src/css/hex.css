@@ -1,0 +1,106 @@
+/* ---------------------------------------------------
+    JUMBOTRON STYLE
+----------------------------------------------------- */
+.jumbotron.jumbotron-fluid {
+	padding-top: 0px;
+	padding-bottom: 1rem;
+}
+
+.hex-container {
+	background:rgb(58, 100, 134);
+	margin: auto;
+}
+
+.hex-col {
+	padding-top: 2.5%;
+}
+.hex-holder {
+  position: relative;
+  width: 75%;
+  height: 57.7px;
+  vertical-align: center;
+  background-color: white;
+  color: rgb(186, 0, 0);
+  margin: 10px 0;
+  border-left: 0px;
+  border-right: 0px; }
+
+.hex-holder:hover {
+	background-color: rgb(58, 100, 134);
+	color: white;
+}
+
+.hex-content {
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	font-weight: bold;
+    height: 56px;
+    text-align: center;
+}
+
+/* hexagon */
+@media screen and (min-width: 576px) {
+    .hex-container {
+        background: url('/organicchemistrydata/img/orgn-bkg.jpg') no-repeat;
+        max-width: 1400px;
+        margin: auto;
+    }
+
+    .hex-holder {
+    position: relative;
+    width: 200px;
+    height: 115.47px;
+    background-color: white;
+    color: rgb(186, 0, 0);
+    margin: 57.74px 0;
+    border-left: 0px;
+    border-right: 0px;
+    }
+
+    .hex-holder:before,
+    .hex-holder:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        left: 0;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+    }
+
+    .hex-holder:before {
+        bottom: 100%;
+        border-bottom: 57.74px solid white;
+    }
+
+    .hex-holder:after {
+        top: 100%;
+        width: 0;
+        border-top: 57.74px solid white;
+    }
+
+    .hex-holder:hover {
+        background-color: #0E2D46;
+        color: white;
+    }
+
+    .hex-holder:hover:before {
+        bottom: 100%;
+        border-bottom: 57.74px solid #0E2D46;
+    }
+
+    .hex-holder:hover:after {
+        top: 100%;
+        width: 0;
+        border-top: 57.74px solid #0E2D46;
+    }
+
+    .hex-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        height: 56px;
+    }
+
+}

@@ -1,0 +1,228 @@
+---
+domain:
+    name: 'organicchemistrydata.org'
+
+main_css:
+    url: "/css/style.css"
+
+homepage_logo:
+    #url: '/img/ReichSiteIcon.jpg'
+    src: '/img/logo-white@2x.png'
+    url: 'https://www.organicdivision.org/'
+
+doc:
+    url: "https://www.organicdivision.org/"
+    target: '_blank'
+    logo_url: "/img/logo-white@2x.png"
+#    logo_url: "/img/DOC_Wordmark1_246px.png"
+#    logo_url: "/img/logo@2x.jpg"
+
+
+# resources:
+#     title: 'Resources'
+#     list:
+#     -
+#         title: 'A-Values'
+#         url: '/hansreich/resources/a_values'
+#     -
+#         title: 'Advanced Organic Chem'
+#         url: '/hansreich/resources/adv_org'
+#         disabled: 'disabled'
+#     -
+#         title: 'Electron Pushing'
+#         url: '/hansreich/resources/electron_pushing'
+#     -
+#         title: 'Named Reagents'
+#         url: '/hansreich/resources/named_reagents'
+#     -
+#         title: 'Named Rules and Effects'
+#         url: '/hansreich/resources/named_effects'
+#     -
+#         title: 'Natural Product Syntheses'
+#         url: '/hansreich/resources/syntheses'
+#         #disabled: 'disabled'
+#     -
+#         title: 'NMR'
+#         url: 'https://organicchemistrydata.org/NMRresources/nmr/'
+#         target: '_blank'
+#         #disabled: 'disabled'
+#     -
+#         title: 'Organic Acronyms'
+#         url: '/hansreich/resources/acronyms'
+#     -
+#         title: 'Organolithium Reagents'
+#         url: '/hansreich/resources/organolithium'
+#     -
+#         title: 'pKa'
+#         url: '/hansreich/resources/pka'
+#     -
+#         title: 'Reactive Intermediates'
+#         url: '/hansreich/resources/reactive_intermediates'
+#     -
+#         title: 'Organic Solvents'
+#         url: '/hansreich/resources/org_solvents'
+#         #target: '_blank'
+
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/1fb64b571b.js" crossorigin="anonymous"></script>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700|Lato:400,700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin@3.1.5/jquery.mCustomScrollbar.css">
+    <!-- Custom main CSS -->
+    <link rel="stylesheet" href="{{ main_css.url | url }}">
+    <!-- Custom page-specific CSS -->
+    <link rel="stylesheet" href="{{ page_css.url | url }}">
+
+    {%- if google_analytic %}
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-15582185-5"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-15582185-5');
+        </script>
+    {% endif %}
+
+    <title>{{ header.title }}</title>
+  </head>
+
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+    </header>
+
+    <!--Navigation bar-->
+    <!--source: https://stackoverflow.com/a/42333464-->
+    <div id="nav-placeholder">
+        <nav id="navbar" class="navbar fixed-top navbar-expand-sm py-0 navbar-dark">
+            <a class="navbar-brand py-1" href="{{ homepage_logo.url | url }}" target="_self">
+                <img src="{{ homepage_logo.src | url }}" height="50" alt="DOC Logo" loading="lazy">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-text d-inline d-md-none" href="#">Menu</a>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ '/' | url }}">Home</a>
+                    </li>
+
+                    {%- for item in nav_items.list %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ item.url | url }}"{%- if item.target %} target="{{ item.target }}"{%- endif %}>
+                            {{ item.title }}
+                        </a>
+                    </li>
+                    {%- endfor %}
+
+                    {%- if org_collections %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-target="projects.html">{{ org_collections.title }}</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                {%- for collection in org_collections.list %}
+                                <a class="dropdown-item {{ collection.disabled }}" href="{{ collection.url | url }}"
+                                    target="{% if collection.target %}{{ collection.target }}{% else %}{{ '_self' }}{% endif %}">
+                                    {{ collection.title }}
+                                </a>
+                                {%- endfor %}
+                                {# <div class="dropdown-divider"></div> #}
+                            </div>
+                        </li>
+                    {%- endif %}
+                </ul>
+
+                {# <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-target="projects.html">{{ reich_related.title }}</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            {%- for item in reich_related.list %}
+                            <a class="dropdown-item" href="{{ item.url | url }}"
+                                target="{% if item.target %}{{ item.target }}{% else %}{{ '_self' }}{% endif %}">
+                                {{ item.title }}
+                            </a>
+                            {%- endfor %}
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
+                </ul> #}
+
+                {# Search form #}
+                {# <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form> #}
+            </div>
+        </nav>
+    </div>
+    {# <script>
+    $(function(){
+      $("#nav-placeholder").load("navbar.html");
+    });
+    </script> #}
+
+    <!--end of Navigation bar-->
+
+    {% if title %}
+    <div class="container-fluid page-title-static mx-0 pt-1 pb-0 d-flex justify-content-center">
+        <h1 class="text-center ml-3 pl-3 my-auto">{{ title }}</h1>
+    </div>
+    {% endif %}
+
+    <section class="flex-fill">
+        {%- block content %}
+            {{ content | safe }}
+        {%- endblock %}
+        <!-- Go to top button -->
+        <button onclick="topFunction()" id="toTopButton" class="btn btn-light" title="Go to top">
+          <i class="fas fa-chevron-up"></i>
+        </button>
+
+    </section>
+
+    {% include "footer.njk" %}
+
+    <!-- Main JS-->
+    <script src="{{ '/js/main.js' | url }}"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    {# <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> #}
+
+    {# Have to use min jQuery for 'clickToSection.js' to work #}
+    {# <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> #}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin@3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- For Social Media Share Button-->
+    <script src="{{ '/js/shareToSocialMedia.js' | url }}"></script>
+
+    {% if specific_page_js %}
+    <!-- Page Specific JS-->
+    {%- for script in specific_page_js.list %}
+    <!-- {{ script.description }} -->
+    <script src="{{ script.url | url }}"></script>
+    {%- endfor %}
+    {% endif %}
+
+  </body>
+
+</html>
