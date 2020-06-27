@@ -21,9 +21,9 @@ specific_page_js:
 ---
 
 <div class="container-fluid d-flex justify-content-center mx-0 bg-white">
-    <nav class="navbar syntheses-navbar navbar-expand-md navbar-light w-100">
+    <nav class="navbar syntheses-navbar navbar-expand-lg navbar-light w-100">
         <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle {{ title }} page indices">
             <a class="navbar-text d-inline d-md-none" href="#">Index</a>
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,14 +31,16 @@ specific_page_js:
         <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarSupportedContent2">
             <ul class="nav nav-pills justify-content-center">
                 <li class="nav-item">
-                    <a href="{{ '/resources/syntheses' | url }}" class="nav-link">Intro</a>
+                    <a href="{{ '/resources/syntheses' | url }}" class="nav-link"
+                        data-toggle="collapse" data-target="#navbarSupportedContent2.show">Intro</a>
                 </li>
                 {# <span class="navbar-text px-1">Grouped by:</span> #}
                 {#- <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Grouped by: </a></li> -#}
                 {%- for group in collections.groupby %}
                     <li class="nav-item">
                         {#- <a href="#{{ group.fileSlug }}" class="nav-link{% if group.fileSlug == 'names' %}{{ ' active' }}{% endif %}" data-toggle="tab">{{ group.fileSlug | toTitleCase }}</a> -#}
-                        <a href="#{{ group.fileSlug }}" class="nav-link" data-groupedby="{{ group.fileSlug }}">{{ group.fileSlug | toTitleCase }}</a>
+                        <a href="#{{ group.fileSlug }}" class="nav-link" data-groupedby="{{ group.fileSlug }}"
+                            data-toggle="collapse" data-target="#navbarSupportedContent2.show">{{ group.fileSlug | toTitleCase }}</a>
                     </li>
                 {%- endfor %}
             </ul>
