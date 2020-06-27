@@ -2,6 +2,7 @@
 // Ref: https://stackoverflow.com/questions/19142762/changing-an-icon-inside-a-toggle-button
 function checkForChanges () {
   setTimeout(function () {
+    // console.log('checkForChanges function is working!') // !DEBUG
     let marginLeft = parseInt($('#sidebar').css('marginLeft').replace('px', ''))
     // console.log(marginLeft)  // !DEBUG
     if (marginLeft < 0) {
@@ -18,19 +19,16 @@ function checkForChanges () {
 
 // Close the side menu on small screen (when the side menu display full width) after a link is click
 function closeNavOnSmallScreen () {
-  document.querySelectorAll('#sidebar a').forEach(function (link) {
-    link.onclick = function () {
-      let width = document.querySelector('#sidebar').offsetWidth + 50
-      // console.log(width)
-      if (width >= window.innerWidth) {
-        document.querySelector('#sidebar').classList.toggle('active')
-      }
+  // console.log('closeNavOnSmallScreen JS working')  // !DEBUG
+  let width = document.querySelector('#sidebar').offsetWidth + 50
+  // console.log(width)
+  if (width >= window.innerWidth) {
+    document.querySelector('#sidebar').classList.toggle('active')
+  }
 
-      // Check if the side menu is displayed
-      // then display the correct icon on the toggle button
-      checkForChanges()
-    }
-  })
+  // Check if the side menu is displayed
+  // then display the correct icon on the toggle button
+  checkForChanges()
 }
 
 /**
@@ -78,7 +76,9 @@ $(document).ready(function () {
   checkForChanges()
 
   // Close the side menu on small screen (when the side menu display full width) after a link is click
-  closeNavOnSmallScreen()
+  document.querySelectorAll('#sidebar a').forEach(function (link) {
+    link.onclick = closeNavOnSmallScreen
+  })
 
   // In the event of window resize, check if the side menu is displayed
   // then display the correct icon on the toggle button
