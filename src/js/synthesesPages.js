@@ -121,7 +121,7 @@ function deepLink () {
 
     // Optionally, force the page scroll to start from the top of the page.
     setTimeout(() => {
-      console.log('scroll from top')
+      // console.log('scroll from top') // !DEBUG
       $(window).scrollTop(0)
     }, 100)
   }
