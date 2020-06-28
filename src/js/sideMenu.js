@@ -1,3 +1,6 @@
+window.checkForChanges = checkForChanges
+window.closeNavOnSmallScreen = closeNavOnSmallScreen
+
 // Use the correct icon on the toggle button
 // Ref: https://stackoverflow.com/questions/19142762/changing-an-icon-inside-a-toggle-button
 function checkForChanges () {

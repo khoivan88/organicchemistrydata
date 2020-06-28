@@ -26,12 +26,7 @@ async function loadPage (url, targetElem) {
   let contentDiv = document.querySelector(targetElem)
 
   var content = await fetchHtmlAsText(url)
-  // if (!content) return
   contentDiv.innerHTML = content
-
-  // let content = await fetchHtmlAsText(url)
-  // // if (!content) return
-  // contentDiv.innerHTML = content
 
   if (targetElem === '.syntheses-groupedby') {
     loadSynthesis()
@@ -56,56 +51,13 @@ function loadSideIndex () {
       }
 
       openSideBarIfClosed()
-
-      // waitUntilElementsLoaded('#fnt a', 100000).then(function (elements) {
-      //   for (const element of elements) {
-      //     element.onclick = function () {
-      //       console.log('something')
-      //       let url = element.dataset.url
-      //       console.log(url) // !DEBUG
-      //       // loadPage(url, '#content .full-list')
-      //     }
-      //   }
-      // }).catch(function (error) {
-      //   // elements not found withing 10 seconds
-      //   console.log(`ERROR: ${error}`)
-      // })
     }
   })
 }
 
-// Close the side menu on small screen (when the side menu display full width) after a link is click
-function closeNavOnSmallScreen1 () {
-  // console.log('closeNavOnSmallScreen1 JS working') // !DEBUG
-  let width = document.querySelector('#sidebar').offsetWidth + 50
-  // console.log(width)
-  if (width >= window.innerWidth) {
-    document.querySelector('#sidebar').classList.toggle('active')
-  }
-
-  checkForChanges1()
-}
-
-// Use the correct icon on the toggle button
-// Ref: https://stackoverflow.com/questions/19142762/changing-an-icon-inside-a-toggle-button
-function checkForChanges1 () {
-  setTimeout(function () {
-    // console.log('checkForChanges1 function is working!') // !DEBUG
-    let marginLeft = parseInt($('#sidebar').css('marginLeft').replace('px', ''))
-    // console.log(marginLeft)  // !DEBUG
-    if (marginLeft < 0) {
-      // When the side menu is hiding
-      // console.log('margin-left < 0')  // !DEBUG
-      $('#sidebarCollapse').children().addClass('fa-angle-double-right').removeClass('fa-angle-double-left')
-    } else {
-      // When the side menu is being displayed
-      // console.log('margin-left >= 0')  // !DEBUG
-      $('#sidebarCollapse').children().addClass('fa-angle-double-left').removeClass('fa-angle-double-right')
-    }
-  }, 300)
-}
-
-// Use the correct icon on the toggle button
+/**
+ * Force sidebar visible on all screen sizes when a index menu is clicked
+ */
 function openSideBarIfClosed () {
   // console.log('openSideBarIfClosed function is working!') // !DEBUG
   let marginLeft = parseInt($('#sidebar').css('marginLeft').replace('px', ''))
@@ -114,7 +66,8 @@ function openSideBarIfClosed () {
     // When the side menu is hiding
     // console.log('margin-left < 0')  // !DEBUG
     $('#sidebar, #content').toggleClass('active')
-    checkForChanges1()
+
+    window.checkForChanges()
   }
 }
 
@@ -123,13 +76,13 @@ async function loadSynthesis () {
   document.querySelectorAll('.syntheses-groupedby a').forEach(function (link) {
   // $('.syntheses-groupedby a').on('click', function (link) {
     link.onclick = function () {
-      console.log('something2') // !DEBUG
+      // console.log('something2') // !DEBUG
       // link.classList.toggle('active')
       let url = link.dataset.url
       // console.log(url) // !DEBUG
       loadPage(url, '#content .full-list')
 
-      closeNavOnSmallScreen1()
+      window.closeNavOnSmallScreen()
     }
   })
 }
@@ -152,7 +105,6 @@ function deepLink () {
     // .then(function (response) {
     //   console.log(response)
     //   if (response.ok) {
-
       //   } else {
       //     return Promise.reject(response);
       //   }
@@ -167,10 +119,11 @@ function deepLink () {
     // url = window.location.href.replace(/\/#/, "#");
     // window.history.replaceState(null, null, url)
 
-    // // Optionally, force the page scroll to start from the top of the page.
-    // setTimeout(() => {
-    //   $(window).scrollTop(0)
-    // }, 400)
+    // Optionally, force the page scroll to start from the top of the page.
+    setTimeout(() => {
+      console.log('scroll from top')
+      $(window).scrollTop(0)
+    }, 100)
   }
 
   // $('.syntheses-groupedby a').on("click", function() {
