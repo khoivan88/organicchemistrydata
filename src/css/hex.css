@@ -42,18 +42,19 @@
 /* hexagon */
 @media screen and (min-width: 576px) {
     .hex-container {
-        background: url('/organicchemistrydata/img/orgn-bkg.jpg') no-repeat;
+        background: url('/img/orgn-bkg.jpg') no-repeat;
+        background-repeat: repeat-y;
         max-width: 1400px;
         margin: auto;
     }
 
     .hex-holder {
     position: relative;
-    width: 200px;
-    height: 115.47px;
+    width: 170px;
+    height: 98.15px;
     background-color: white;
     color: rgb(186, 0, 0);
-    margin: 57.74px 0;
+    margin: 49.07px 0;
     border-left: 0px;
     border-right: 0px;
     }
@@ -64,19 +65,19 @@
         position: absolute;
         width: 0;
         left: 0;
-        border-left: 100px solid transparent;
-        border-right: 100px solid transparent;
+        border-left: 85px solid transparent;
+        border-right: 85px solid transparent;
     }
 
     .hex-holder:before {
         bottom: 100%;
-        border-bottom: 57.74px solid white;
+        border-bottom: 49.07px solid white;
     }
 
     .hex-holder:after {
         top: 100%;
         width: 0;
-        border-top: 57.74px solid white;
+        border-top: 49.07px solid white;
     }
 
     .hex-holder:hover {
@@ -86,13 +87,13 @@
 
     .hex-holder:hover:before {
         bottom: 100%;
-        border-bottom: 57.74px solid #0E2D46;
+        border-bottom: 49.07px solid #0E2D46;
     }
 
     .hex-holder:hover:after {
         top: 100%;
         width: 0;
-        border-top: 57.74px solid #0E2D46;
+        border-top: 49.07px solid #0E2D46;
     }
 
     .hex-content {
