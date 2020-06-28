@@ -594,12 +594,6 @@ div#at4-whatsnext {
 
 /*// Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {
-    .jumbotron.jumbotron-fluid {
-        /* height: 80vh; */
-        /* min-height: 80vh; */
-        max-height: calc(100vh - 100px);
-    }
-
     img.img-fluid {
         max-height: calc(100vh - 150px);
         max-width: 100%;
@@ -623,23 +617,6 @@ div#at4-whatsnext {
         line-height: 1;
     }
 
-    /* #sidebar {
-        margin-left: -250px;
-    }
-
-    #sidebar.active {
-        margin-left: 0;
-        width: 100%;
-    } */
-
-    /* #content{
-        width: 100%;
-    }
-
-    #content.active{
-        width: 100%;
-    } */
-
 }
 
 /*// Medium devices (tablets, 768px and down)*/
@@ -647,22 +624,6 @@ div#at4-whatsnext {
     h1 {
         font-size: 5.6vmin !important;
     }
-
-    /* #sidebar {
-        margin-left: -250px;
-    } */
-
-    /* #sidebar.active {
-        margin-left: 0;
-    } */
-
-    /* #content{
-        width: 100%;
-    }
-
-    #content.active{
-        width: calc(100% - 250px);
-    } */
 
 }
 
