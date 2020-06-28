@@ -1,0 +1,343 @@
+---
+layout: page_with_side_menu.njk
+
+header:
+    title: 'Nomenclature in Organic Chemistry'
+
+title: 'Nomenclature in Organic Chemistry'
+
+data_path: &data_path 'nomenclature_data/'
+gif_type: &gif_type '.gif'
+
+extra_top:
+  one_or_two: &one_or_two
+    id: one_or_two
+    title: 'Organic Nomenclature - One Word or Two?'
+
+items:
+  list:
+  - menu_heading: true
+    title: 'General Info and PDFs'
+  - <<: *one_or_two
+    leave_empty: true
+  - id: functional_groups
+    title: Functional Groups Summary
+    extra: true
+    display_link: true
+    url: 'nomenclature_data/functional-groups.pdf'
+    target: '_blank'
+  - id: nitrogen_containing_function_groups
+    title: Nitrogen-Containing Functional Groups Summary
+    extra: true
+    display_link: true
+    url: 'nomenclature_data/nitrogen-functional-groups.pdf'
+    target: '_blank'
+  - menu_heading: true
+    title: 'Principal Functional Groups'
+    display_link: true
+  - id: func-groups-00
+    title: 'Hydrocarbons'
+  - id: func-groups-00
+    title: 'Halides'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-00
+    title: 'Alcohol'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-00
+    title: 'Ethers'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-01
+    title: 'Aldehydes (Alkanals)'
+  - id: func-groups-01
+    title: 'Ketones (Alkanones)'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-01
+    title: 'Carboxylic Acids (Alkanoic Acids)'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-01
+    title: 'Carboxylic Esters (Alkyl Alkanoates)'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-01
+    title: 'Carboxylic Anhydrides'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-01
+    title: 'Carboxylic Acid chlorides (Acyl Halides)'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-01
+    title: 'Ketene'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-01
+    title: 'Carbonates'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - menu_heading: true
+    title: 'Substituent Groups'
+  - id: func-groups-02
+    title: 'Substituent Groups'
+    display_link: true
+  - menu_heading: true
+    title: 'Nitrogen-Containing Functional Groups'
+  - id: func-groups-03
+    title: 'Amides'
+  - id: func-groups-03
+    title: 'Amidines'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-03
+    title: 'Amines'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-03
+    title: 'Amine Oxides'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-03
+    title: 'Azo'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-03
+    title: 'Carbamates (Urethanes)'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-03
+    title: 'Carbodiimides'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-03
+    title: 'Diazo, Diazonium'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-03
+    title: 'Enamines'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-04
+    title: 'Guanidine'
+  - id: func-groups-04
+    title: 'Heretocycles - aromatic'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-04
+    title: 'Hydrazines'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-04
+    title: 'Hydrazones'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-04
+    title: 'Hydroxamic Acid'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-04
+    title: 'Hydroxylamines'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-04
+    title: 'Imides'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-04
+    title: 'Imines (Schiff bases)'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-05
+    title: 'Isocyanates'
+  - id: func-groups-05
+    title: 'Isocyanides'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-05
+    title: 'Nitrates'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-05
+    title: 'Nitriles (cyanides)'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-05
+    title: 'Nitrites'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-05
+    title: 'Nitro/Nitroso'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-05
+    title: 'Nitrone'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+  - id: func-groups-06
+    title: 'Oximes'
+  - id: func-groups-06
+    title: 'Urea'
+    leave_empty: true   # to not display the <li> tag again in the content (still display in the side menu)
+
+display_link: false
+---
+
+{%- block extra_top %}
+  <li class="list-group-item py-5" id="{{ extra_top.one_or_two.id }}">
+    <div class="container-fluid">
+      <h4 class="text-primary mb-2">Organic Nomenclature - One Word or Two?</h4>
+      <p>The question of whether the name of an organic compound should be written in one word or two words is a perennial
+        one. Here is a brief summary which should help keep things straight:</p>
+
+        <p><b><font color="#bb0000">Substitution nomenclature</font></b>
+        takes a parent compound and identifies substituents which replace hydrogens on it with either prefixes
+          (chloro-, phenyl-) or postfixes (-ol, -one). This system can be based on trivial names for the parent compound
+          (chloroacetone) or on names based on systematic rules such as those developed by IUPAC or Chemical Abstracts. Such
+          names are <b>one word</b>, except for certain functional groups (notably acid derivatives like esters and acid
+          chlorides) which retain their ancient two-word salt names.</p>
+
+          <p><b><font color="#bb3333">Salt nomenclature</font></b> was adopted from inorganic chemistry. In such names the "cation" and "anion" are always <b>separate
+              words</b>, first the cation, then the anion (e.g.: sodium chloride, lithium hydride, cesium carbonate). If the
+            last word ends in "ate" or "ide" you are using salt nomenclature, and your name will be at least two words (e.g.:
+            butyl bromide, allyl iodide).
+            <b><font color="#669933">Each of the words will be a radical name</font></b></font>, not a compound name.
+            <p>You should avoid using salt nomenclature for organic compounds that are not ethers, actual salts or derivatives
+              of acids if convenient substituent names are available. However, many salt names are so firmly entrenched and
+              convenient that they are almost second nature (allyl chloride vs 1-chloro-2-propene, or benzyl bromide vs
+              (bromomethyl)benzene or alpha-bromotulene).</p>
+
+              <center>
+                <table cellpadding=4 border=1 bgcolor="#ffffec" width=600>
+                  <tr>
+                    <th>Substituent Nomenclature - One Word</th>
+                    <th>Salt Nomenclature - Two Words</th>
+                  </tr>
+                  <tr>
+                    <td>trimethylchloro<b>silane</b></td>
+                    <td>trimethylsilyl chloride</td>
+                  </tr>
+                  <tr>
+                    <td>tributyl<b>stannane</b></td>
+                    <td>tributylstannyl hydride</td>
+                  </tr>
+                  <tr>
+                    <td>iodo<b>benzene</b></td>
+                    <td>phenyl iodide</td>
+                  </tr>
+                  <tr>
+                    <td>dichloro<b>methane</b></td>
+                    <td>methylene chloride</td>
+                  </tr>
+                  <tr>
+                    <td>1,2-dibromo<b>ethane</b></td>
+                    <td>ethylene dibromide</td>
+                  </tr>
+                  <tr>
+                    <td>2-<b>propen</b>-1-ol</td>
+                    <td>allyl alcohol (alcohol = hydroxide)</td>
+                  </tr>
+                  <tr>
+                    <td>1,2-oxido<b>propane</b></td>
+                    <td>propylene oxide</td>
+                  </tr>
+                  <tr>
+                    <td>1-azido<b>propane</b></b></td>
+                    <td>propyl azide</td>
+                  </tr>
+                </table>
+              </center>
+
+
+              <p>Amine is considered a variant of ammonia (analogous to phosphine). Thus amine names use substituent
+                nomenclature, and are always one word. Ether names, on the other hand, are adapted from salt nomenclature
+                (ether = oxide), and each radical is a separate word. (You can't expect a system developed by tens of
+                thousands of chemists over 150 years to be totally consistent). Sulfide, selenide, alcohol, mercaptan,
+                sulfoxide, sulfone, ketone, etc are also treated as salt names, since none of these words describes a specific
+                compound.
+
+                <center>
+                  <table cellpadding=4 border=1 bgcolor="#ffffec" width=600>
+                    <tr>
+                      <th>Substituent Nomenclature - One Word</th>
+                      <th>Salt Nomenclature - Two or more Words</th>
+                    </tr>
+
+                    <tr>
+                      <td>triethyl<b>amine</b></td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>triphenyl<b>phosphine</b></td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>ethyldimethyl<b>amine</b></td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td><b>methan</b>ol</td>
+                      <td>methyl alcohol (alcohol = hydroxide)</td>
+                    </tr>
+                    <tr>
+                      <td>methoxy<b>methane</b></td>
+                      <td>dimethyl ether (ether = <font color="#669933"></font>oxide)</td>
+                    </tr>
+                    <tr>
+                      <td>methoxy<b>benzene</b></td>
+                      <td>methyl phenyl ether</td>
+                    </tr>
+                    <tr>
+                      <td><b>benzene</b>thiol</td>
+                      <td>phenyl mercaptan</td>
+                    </tr>
+                    <tr>
+                      <td>2-<b>butan</b>one</td>
+                      <td>methyl ethyl ketone</td>
+                    </tr>
+                    <tr>
+                      <td>(methylsulfonyl)<b>benzene</b></td>
+                      <td>methyl phenyl sulfone</td>
+                    </tr>
+                  </table>
+                </center>
+                <p>Carboxylic acid derivatives (as well as derivatives of other families of acids such as sulfonic, carbonic,
+                  phosphonic, etc) are named as salts. Note that the acids themselves are written as two words (acetic acid,
+                  ethanoic acid, methanesulfonic acid).
+                  <center>
+                    <table cellpadding=4 border=1 bgcolor="#ffffec" width=400>
+                      <tr>
+                        <th>Salt Nomenclature of Acid Derivatives - Two Words</th>
+                      </tr>
+                      <tr>
+                        <td>ethyl acetate</td>
+                      </tr>
+                      <tr>
+                        <td>dimethyl phthalate</td>
+                      </tr>
+                      <tr>
+                        <td>trimethyl phosphate</td>
+                      </tr>
+                      <tr>
+                        <td>benzoyl chloride</td>
+                      </tr>
+                      <tr>
+                        <td>2,5-difluorobenzyl 2,4,6-trimethylbenzoate</td>
+                      </tr>
+                      <tr>
+                        <td>methyl benzenesulfonate</td>
+                      </tr>
+                    </table>
+                  </center>
+
+                  <p>Element names are usually handled using substituent nomenclature, although things get complicated here
+                    because this is not systematic ("Zinc" is not ZnH<sub>2</sub>, so we are not substituting hydrogens).
+                    Inorganic chemists have developed their own usages here (as, incidentally, have other languages).
+                    <center>
+                      <table cellpadding=4 border=1 bgcolor="#ffffec" width=600>
+                        <tr>
+                          <th>Substituent Nomenclature - One Word</th>
+                          <th>Salt Nomenclature - Two Words</th>
+                        </tr>
+                        <tr>
+                          <td>diethylzinc</td>
+                          <td>-</td>
+                        </tr>
+                        <tr>
+                          <td>diethylchloroaluminum</td>
+                          <td>diethylaluminum chloride</td>
+                        </tr>
+                        <tr>
+                          <td>methyllithium</td>
+                          <td>lithium methide</td>
+                        </tr>
+                        <tr>
+                          <td>tributylstannylsodium</td>
+                          <td>sodium tributylstannate</td>
+                        </tr>
+                        <tr>
+                          <td>(diisopropylamino)lithium</td>
+                          <td>lithium diisopropylamide</td>
+                        </tr>
+                      </table>
+                    </center>
+                    <p><b>A very general and useful rule</b>: if the last part of your name is an actual compound then you are
+                      using substituent nomenclature (e.g., benzene, methane, butane, biphenyl, stannane, phosphine are
+                      compounds). Your name will be be one word. If the last part is not, then you are probably using salt
+                      nomenclature (e.g. acetate, chloride, ketone, sulfide, ether, sulfoxide are not the names of compounds,
+                      and so substituent nomenclature is not appropriate). Salt names are always two or more words.
+                      </div>
+  </li>
+{%- endblock %}
+
