@@ -1,0 +1,38 @@
+# Build website with 11ty and sync to server
+name: 11ty-built
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    # Build the site with 11ty
+    - name: Eleventy Action
+      uses: TartanLlama/actions-eleventy@v1.2
+      with:
+        # If set to `true`, `npm install` will be run before Eleventy is invoked
+        install_dependencies: true
+        
+    # Transfer files to the server
+    - name: rsync deployments
+      uses: burnett01/rsync-deployments@4.1
+      with:
+        switches: -avzr --delete
+        path: _site/
+        remote_path: ${{ secrets.DEPLOY_PATH }}
+        remote_host: ${{ secrets.DEPLOY_HOST }}
+        remote_user: ${{ secrets.DEPLOY_USER_KV }}
+        remote_key: ${{ secrets.DEPLOY_KEY_KV }}
