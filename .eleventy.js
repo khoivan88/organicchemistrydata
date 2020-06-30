@@ -72,7 +72,7 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
       // layouts: "_includes/_layouts",
     },
-    pathPrefix: "/organicchemistrydata/",
+    // pathPrefix: "/organicchemistrydata/",
     htmlTemplateEngine: "njk"
   };
 };
