@@ -13,7 +13,7 @@ obit:
     target: '_blank'
 
 hans:
-    bio_url: /about_reich
+    bio_url: /hansreich/about_reich
 
 ieva:
     title: 'Ieva L. Reich'
@@ -33,14 +33,14 @@ uwmadison:
         <h1 class="display-4 text-center">{{ doc_statement.title }}</h1>
         <p class="lead text-justify">
             The idea and majority of the content of this website has come from the late
-            <a href="{{ hans.bio_url | url }}" target="{% if resource.target %}{{ hans.target }}{% else %}{{ '_self' }}{% endif %}">
+            <a href="{{ hans.bio_url | url }}" {%- if hans.target %}target="{{ hans.target }}" rel="noopener"{%- endif %}>
                 Professor Hans J. Reich
             </a>
             who served his entire professional academic career at the University of Wisconsin-Madison.
             Upon
-            <a href="{{ obit.url | url }}" target="{% if resource.target %}{{ obit.target }}{% else %}{{ '_self' }}{% endif %}">
+            <a href="{{ obit.url | url }}" {%- if obit.target %}target="{{ obit.target }}" rel="noopener"{%- endif %}>
                 his untimely death in 2020</a>, the
-            <a href="{{ doc.url | url }}" target="{% if resource.target %}{{ doc.target }}{% else %}{{ '_self' }}{% endif %}">
+            <a href="{{ doc.url | url }}" {%- if doc.target %}target="{{ doc.target }}" rel="noopener"{%- endif %}>
                 ACS Organic Division</a>
             offered to assist in maintaining Professor Reich’s extensive online resources.
             This website is a product of those efforts.<br>
@@ -48,14 +48,14 @@ uwmadison:
         <p class="lead text-justify">
             We are grateful to the
             <a href="{{ uwmadison.url | url }}"
-            target="{% if resource.target %}{{ uwmadison.target }}{% else %}{{ '_self' }}{% endif %}">University of Wisconsin-Madison</a>
+             {%- if uwmadison.target %}target="{{ uwmadison.target }}" rel="noopener"{%- endif %}>University of Wisconsin-Madison</a>
             (especially
             <a href="{{ uwmadison.chemistry.url | url }}"
-                target="{% if resource.target %}{{ uwmadison.chemistry.target }}{% else %}{{ '_self' }}{% endif %}">
+                {%- if uwmadison.chemistry.target %}target="{{ uwmadison.chemistry.target }}" rel="noopener"{%- endif %}>
                 the Chemistry department</a>) for their support in this project.
             We also graciously thank his wife,
             <a href="{{ ieva.url | url }}"
-                target="{% if resource.target %}{{ ieva.target }}{% else %}{{ '_self' }}{% endif %}">
+                {%- if ieva.target %}target="{{ ieva.target }}" rel="noopener"{%- endif %}>
                 Professor Ieva L. Reich</a>, and her family for supporting this project
             where we are able to honor Professor Hans Reich’s 25+ years of website efforts
             in support the broader organic chemistry community.
