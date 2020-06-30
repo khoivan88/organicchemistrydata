@@ -3,6 +3,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    {%- if metas %}
+      <!-- Custom meta tag -->
+      {%- for meta in metas %}
+        <meta name="{{ meta.name }}" content="{{ meta.content }}">
+      {%- endfor %}
+    {%- endif %}
+
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/1fb64b571b.js" crossorigin="anonymous"></script>
     <!-- Google Font -->
