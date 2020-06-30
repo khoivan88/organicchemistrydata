@@ -3,9 +3,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    {%- if metas %}
+    {%- if meta_tags %}
       <!-- Custom meta tag -->
-      {%- for meta in metas %}
+      {%- for meta in meta_tags %}
         <meta name="{{ meta.name }}" content="{{ meta.content }}">
       {%- endfor %}
     {%- endif %}
