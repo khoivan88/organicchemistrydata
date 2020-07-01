@@ -1,5 +1,5 @@
 const fs = require("fs");
-const lazyImagesPlugin = require('eleventy-plugin-lazyimages');  // https://www.npmjs.com/package/eleventy-plugin-lazyimages
+// const lazyImagesPlugin = require('eleventy-plugin-lazyimages');  // https://www.npmjs.com/package/eleventy-plugin-lazyimages
 const htmlmin = require("html-minifier");  // https://www.11ty.dev/docs/config/#transforms-example-minify-html-output
 
 module.exports = {
@@ -17,15 +17,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setQuietMode(true);
 
   // Plugins
-  // LazyImage loading plugin
-  eleventyConfig.addPlugin(lazyImagesPlugin, {
-    transformImgPath: (imgPath) => {
-      if (imgPath.startsWith('/') && !imgPath.startsWith('//')) {
-        return `./src${imgPath}`;
-      }
-      return imgPath;
-    },
-  });
+  // // LazyImage loading plugin
+  // eleventyConfig.addPlugin(lazyImagesPlugin, {
+  //   transformImgPath: (imgPath) => {
+  //     if (imgPath.startsWith('/') && !imgPath.startsWith('//')) {
+  //       return `./src${imgPath}`;
+  //     }
+  //     return imgPath;
+  //   },
+  // });
   // Minify HTML output
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
     if( outputPath.endsWith(".html") ) {
