@@ -17,8 +17,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setQuietMode(true);
 
   // Plugins
-  eleventyConfig.addPlugin(lazyImagesPlugin);
-
+  // LazyImage loading plugin
+  eleventyConfig.addPlugin(lazyImagesPlugin, {
+    transformImgPath: (imgPath) => {
+      if (imgPath.startsWith('/') && !imgPath.startsWith('//')) {
+        return `./src${imgPath}`;
+      }
+      return imgPath;
+    },
+  });
   // Minify HTML output
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
     if( outputPath.endsWith(".html") ) {
