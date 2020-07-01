@@ -39,33 +39,10 @@ doc:
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ '/' | url }}">Home</a>
                     </li>
-
-                    {%- for item in nav_items.list %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ item.url | url }}"{%- if item.target %} target="{{ item.target }}"{%- endif %}>
-                            {{ item.title }}
-                        </a>
-                    </li>
-                    {%- endfor %}
-
-                    {%- if org_collections %}
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-target="projects.html">{{ org_collections.title }}</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                {%- for collection in org_collections.list %}
-                                <a class="dropdown-item {{ collection.disabled }}" href="{{ collection.url | url }}"
-                                    target="{% if collection.target %}{{ collection.target }}{% else %}{{ '_self' }}{% endif %}">
-                                    {{ collection.title }}
-                                </a>
-                                {%- endfor %}
-                                {# <div class="dropdown-divider"></div> #}
-                            </div>
-                        </li>
-                    {%- endif %}
                 </ul>
 
                 {# <ul class="navbar-nav">
@@ -88,6 +65,8 @@ doc:
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form> #}
+
+                {% include "global_navlinks.njk" %}
             </div>
         </nav>
     </div>
