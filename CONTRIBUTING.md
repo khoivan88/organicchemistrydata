@@ -11,13 +11,13 @@
 2. Please share your github username with KV and ask him to add you to "Collaborators" list
 3. You can access the repo here: https://github.com/khoivan88/organicchemistrydata
 4. Access the specific file you want to edit (e.g: https://github.com/khoivan88/organicchemistrydata/blob/master/src/hansreich/about_reich.html)
-5. (Need edit) Click on the Edit button (Pencil image) to edit the content. You can click on the "Preview Changes" to see your changes. 
+5. (Need edit) Click on the `Edit` button (Pencil image) to edit the content. You can click on the "Preview Changes" to see your changes. 
 6. When done with the editing, go down to "Commit changes" section. Add:
    - In the first text box, and a 1 line summary of what you change (e.g. "Fix spelling issue"). This is required!
    - In the second text box, you can add additional info about the change you make. This box is optional. However, if you change is more than trivial, it is encourage to add the reason for your changes (focus on WHY aspect and not  HOW)
    - Consider: [Git Commit Best practice](https://github.com/trein/dev-best-practices/wiki/Git-Commit-Best-Practices)
-7. Choose Commit directly to the master branch FOR NOW (subject to change)
-8. Click on Commit changes button
+7. Choose `Commit directly to the master branch` FOR NOW (subject to change)
+8. Click on `Commit changes` button
 
 
 ## Folder Structure
