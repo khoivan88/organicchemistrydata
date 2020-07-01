@@ -16,10 +16,15 @@ extra_top:
   acronyms_general: &acronyms_general
     id: acronyms_general
     title: 'General Info on Acronyms'
+  stats: &stats
+    id: acronyms_statistics
+    title: 'Statistics on this Database'
 
 items:
   list:
   - <<: *acronyms_general
+    leave_empty: true
+  - <<: *stats
     leave_empty: true
   - id: acronyms_table
     title: 'Organic Acronyms Table'
@@ -163,8 +168,36 @@ display_link: true
         </tr>
       </table>
     </div>
+  </div>
+</li>
 
-
+<li class="list-group-item py-5" id="{{ extra_top.stats.id }}">
+  <div class="container-fluid">
+    <h4 class="text-primary pb-3">{{ extra_top.stats.title }}</h4>
+    <div class="container d-flex justify-content-center">
+      <img src="{{ (data_path + 'statistics.gif') | url }}" class="img-fluid" alt="{{ extra_top.stats.title }}"></img>
+    </div>
+    <p>
+      lf the aldol reaction is considered a name reaction, and all forms are counted, it would be at the top. The
+      Ozonolysis reaction,
+      selenoxide eliminations, olefin metathesis reactions, and reductive aminations would be in the top twenty, depending
+      on how
+      broadly they are defined. Several famous name reactions are not in the top thirty: Reformatsky, Baeyer-Villiger,
+      Hofmann elimination, Dieckman condensation. Others were barely used at all: Cope rearrangement, Darzens
+      condensation, Clemmensen reduction,
+      Favorskii rearrangement, Hunsdiecker reaction, Cope elimination, Beckman rearrangement, Meerwein-Ponndorf-Verley
+      reduction,
+      Gabriel synthesis, Stetter reaction, Hofmann rearrangement, and Haloform reaction.
+    </p>
+    <h4 class="py-3">Index entries:</h4>
+    <ol>
+      <li>Over 693 total syntheses have been analyzed.</li>
+      <li>There are over 15,700 Keyword index entries.</li>
+      <li>There are over 12,700 Reagent index entries.</li>
+    </ol>
+    <p>
+      This collection represents perhaps 2-5% of total syntheses published
+    </p>
   </div>
 </li>
 
