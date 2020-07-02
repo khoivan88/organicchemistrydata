@@ -97,6 +97,10 @@ $(document).ready(function () {
     theme: 'minimal-dark' // http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollbar_themes_demo.html
   })
 
+  $('.hex-content-detail').mCustomScrollbar({
+    theme: 'minimal-light' // http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollbar_themes_demo.html
+  })
+
   $('#sidebarCollapse').on('click', function () {
     $('#sidebar, #content').toggleClass('active')
     checkForChanges()
