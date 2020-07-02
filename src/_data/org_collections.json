@@ -1,43 +1,83 @@
 {
+    "url_prefix": "/collections",
     "title": "Links",
     "list": [
         {
             "title": "Reaction Info",
-            "url": ""
+            "id": "reaction_info",
+            "links": [
+                {
+                    "name": "Named Reactions",
+                    "url": "https://www.chem.wisc.edu/areas/reich/syntheses/syntheses-showname.htm"
+                },
+                {
+                    "name": "Named Rules and Effects",
+                    "url": "https://organicchemistrydata.org/hansreich/resources/named_effects"
+                },
+                {
+                    "name": "Named Reagents",
+                    "url": "https://organicchemistrydata.org/hansreich/resources/named_reagents"
+                },
+                {
+                    "name": "Natural Product Syntheses",
+                    "url": "https://organicchemistrydata.org/hansreich/resources/syntheses"
+                }, {
+                    "name": "Electron Pushing/Drawing Mechanisms",
+                    "url": "https://organicchemistrydata.org/hansreich/resources/electron_pushing"
+                },
+                {
+                    "name": "Organic Reactions",
+                    "url": "https://www.organicdivision.org/organicreactions/"
+                },
+                {
+                    "name": "Organic Syntheses",
+                    "url": "https://www.organicdivision.org/OrganicSyntheses/"
+                }
+            ]
         },
         {
             "title": "Chemical Data",
-            "url": ""
+            "id": "chemical_data"
         },
         {
-            "title": "Spectroscopy Resources"
+            "title": "Spectroscopy Resources",
+            "id": "spectroscopy_resources"
         },
         {
-            "title": "Organic Compound Info"
+            "title": "Organic Compound Info",
+            "id": "organic_compound_info"
         },
         {
-            "title": "Safety Resources"
+            "title": "Safety Resources",
+            "id": "safety_resources"
         },
         {
-            "title": "Chemical Societies and Portals"
+            "title": "Chemical Societies and Portals",
+            "id": "chemical_societies_and_portals"
         },
         {
-            "title": "Literature Sources"
+            "title": "Literature Sources",
+            "id": "literature_sources"
         },
         {
-            "title": "Laboratory Techniques"
+            "title": "Laboratory Techniques",
+            "id": "laboratory_techniques"
         },
         {
-            "title": "Useful Software"
+            "title": "Useful Softwares",
+            "id": "useful_softwares"
         },
         {
-            "title": "Resources for Educators and Students"
+            "title": "Resources for Educators and Students",
+            "id": "resources_for_educators_and_students"
         },
         {
-            "title": "Organic Chemistry Videos"
+            "title": "Organic Chemistry Videos",
+            "id": "organic_chemistry_videos"
         },
         {
-            "title": "Other Organic Chemistry Sites and Resources"
+            "title": "Other Organic Chemistry Sites and Resources",
+            "id": "other_organic_chemistry_sites_and_resources"
         }
     ]
 }
