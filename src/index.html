@@ -16,6 +16,14 @@ meta_tags:
   - name: 'description'
     content: 'A collection of web pages containing useful information in organic chemistry, biochemistry, and medicinal chemistry'
 
+specific_page_js:
+  list:
+  - description: Control side menu and toogle button
+    url: '/js/sideMenu.js'
+  - description: 'Offsetting an html anchor to adjust for fixed header'
+    url: '/js/clickToSection.js'
+
+
 ---
 
 <div class="jumbotron jumbotron-fluid hex-container mx-0">
@@ -24,7 +32,14 @@ meta_tags:
       {%- for collection in org_collections.list %}
         <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center hex-col">
             <div class="hex-holder d-flex align-items-center justify-content-center">
-                <div class="hex-content">{{ collection.title }}</div>
+                <h4 class="hex-content"><a href="{{ (org_collections.url_prefix + '#' + collection.id) | url }}">{{ collection.title }}</a></h4>
+                <span class="hex-content-detail">
+                  <ul class="list-unstyled">
+                    {%- for link in collection.links %}
+                    <li><a href="{{ link.url | url }}">{{ link.name }}</a></li>
+                    {%- endfor %}
+                  </ul>
+                </span>
             </div>
         </div>
       {%- endfor %}
