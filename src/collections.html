@@ -1,5 +1,15 @@
 ---
 layout: 'base_layout.njk'
 
-
 ---
+
+<div class="container">
+    {%- for collection in org_collections.list %}
+    <h3 id="{{ collection.id }}">{{ collection.title }}</h3>
+        <ul>
+            {%- for link in collection.links %}
+            <li><a href="{{ link.url | url }}">{{ link.name }}</a></li>
+            {%- endfor %}
+        </ul>
+    {%- endfor %}
+</div>
