@@ -39,6 +39,26 @@
     text-align: center;
 }
 
+.hex-content-detail {
+    display: none;
+    font-size: 12px;
+    max-height: 90px;
+    overflow-y: auto;
+    padding-left: 5px;
+}
+
+.hex-content-detail a{
+    color: white;
+}
+
+.hex-holder:hover .hex-content-detail {
+    display: block;
+}
+
+.hex-holder:hover .hex-content {
+    display: none;
+}
+
 /* hexagon */
 @media screen and (min-width: 576px) {
     .hex-container {

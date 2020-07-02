@@ -12,7 +12,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-target="projects.html">{{ org_collections.title }}</a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown1">
                 {%- for collection in org_collections.list %}
-                <a class="dropdown-item {{ collection.disabled }}" href="{{ collection.url | url }}"
+                <a class="dropdown-item {{ collection.disabled }}" href="{{ (org_collections.url_prefix + '#' + collection.id) | url }}"
                     target="{% if collection.target %}{{ collection.target }}{% else %}{{ '_self' }}{% endif %}">
                     {{ collection.title }}
                 </a>
