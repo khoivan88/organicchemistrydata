@@ -31,16 +31,19 @@ specific_page_js:
     <div class="row  justify-content-center">
       {%- for collection in org_collections.list %}
         <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center hex-col">
+          <a href="{{ (org_collections.url_prefix + '#' + collection.id) | url }}" class="text-decoration-none">
             <div class="hex-holder d-flex align-items-center justify-content-center">
-                <h4 class="hex-content"><a href="{{ (org_collections.url_prefix + '#' + collection.id) | url }}">{{ collection.title }}</a></h4>
-                <span class="hex-content-detail">
-                  <ul class="list-unstyled">
-                    {%- for link in collection.links %}
-                    <li><a href="{{ link.url | url }}">{{ link.name }}</a></li>
-                    {%- endfor %}
-                  </ul>
-                </span>
+              <h4 class="hex-content">{{ collection.title }}</h4>
+              <span class="hex-content-detail">
+                <ul class="list-unstyled">
+                  {%- for link in collection.links %}
+                  <!-- <li><a href="{{ link.url | url }}">{{ link.name }}</a></li> -->
+                  <li>{{ link.name }}</li>
+                  {%- endfor %}
+                </ul>
+              </span>
             </div>
+          </a>
         </div>
       {%- endfor %}
     </div>
