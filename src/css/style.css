@@ -56,7 +56,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Lato";
     text-transform: uppercase;
 }
-
+.navbar-nav .dropdown-menu {
+    /* max-width: inherit; */
+    max-width: 91vw;
+    max-height: 75vh;
+    overflow: auto;
+}
 
 /* ---------------------------------------------------
     TOTAL SYNTHESES SECTION
@@ -617,6 +622,9 @@ div#at4-whatsnext {
         line-height: 1;
     }
 
+    .dropdown-item {
+        white-space: normal;
+    }
 }
 
 /*// Medium devices (tablets, 768px and down)*/
