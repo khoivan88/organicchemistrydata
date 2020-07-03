@@ -61,7 +61,7 @@ display_link: true
 {%- block extra_top %}
 <li class="list-group-item py-5" id="{{ extra_top.acronyms_general.id }}">
   <div class="container-fluid">
-    <h4 class="text-primary pb-3">{{ extra_top.acronyms_general.title }}</h4>
+    <h4 class="pb-3">{{ extra_top.acronyms_general.title }}</h4>
     <blockquote class="blockquote">
       <!-- <header class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></header> -->
       <p class="mb-0 small">
@@ -173,7 +173,7 @@ display_link: true
 
 <li class="list-group-item py-5" id="{{ extra_top.stats.id }}">
   <div class="container-fluid">
-    <h4 class="text-primary pb-3">{{ extra_top.stats.title }}</h4>
+    <h4 class="pb-3">{{ extra_top.stats.title }}</h4>
     <div class="container d-flex justify-content-center">
       <img src="{{ (data_path + 'statistics.gif') | url }}" class="img-fluid" alt="{{ extra_top.stats.title }}"></img>
     </div>
