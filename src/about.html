@@ -7,6 +7,26 @@ header:
 doc_statement:
     title: "About Organic Chemistry Data Collection"
 
+obit:
+    title: 'Professor Hans J Reich Obituary'
+    url: 'https://www.cressfuneralservice.com/obituary/Hans-Reich'
+    target: '_blank'
+
+hans:
+    bio_url: /hansreich/about_reich
+
+ieva:
+    title: 'Ieva L. Reich'
+    url: 'https://www2.chem.wisc.edu/areas/reich/group/students/reich-il.htm'
+    target: '_blank'
+
+uwmadison:
+    url: 'https://www.wisc.edu/'
+    target: '_blank'
+    chemistry:
+        url: 'https://chem.wisc.edu/'
+        target: '_blank'
+
 ---
 <div class="jumbotron jumbotron-fluid pt-1 pb-3">
     <div class="container">
@@ -18,8 +38,7 @@ doc_statement:
             <p>
                 "[This] is a collection of Web pages containing information useful to teachers, researchers, and students
                 in organic chemistry, biochemistry, and medicinal chemistry. The pages have been selected for ease of use,
-                broad
-                applicability, and quality of coverage. Topics will include structural information, organic reactions,
+                broad applicability, and quality of coverage. Topics will include structural information, organic reactions,
                 nomenclature, physical properties, and spectroscopic data. These Web pages will be updated when possible and
                 additional Web pages will be added as they become available."
             </p>
@@ -33,6 +52,42 @@ doc_statement:
     </div>
 
     <div class="container py-3">
+        <p class="lead text-justify">
+            The idea and majority of the content of the Organic Chemistry Data website has come from the late
+            <a href="{{ hans.bio_url | url }}" {%- if hans.target %}target="{{ hans.target }}" rel="noopener"{%- endif %}>
+                Professor Hans J. Reich
+            </a>
+            who served his entire professional academic career at the University of Wisconsin-Madison.
+            Upon
+            <a href="{{ obit.url | url }}" {%- if obit.target %}target="{{ obit.target }}" rel="noopener"{%- endif %}>
+                his untimely death in 2020</a>, the
+            <a href="{{ doc.url | url }}" {%- if doc.target %}target="{{ doc.target }}" rel="noopener"{%- endif %}>
+                ACS Organic Division</a>
+            offered to assist in maintaining Professor Reich’s extensive online resources.
+            This website is a product of those efforts.<br>
+        </p>
+        <p class="lead text-justify">
+            We are grateful to the
+            <a href="{{ uwmadison.url | url }}"
+             {%- if uwmadison.target %}target="{{ uwmadison.target }}" rel="noopener"{%- endif %}>University of Wisconsin-Madison</a>
+            (especially
+            <a href="{{ uwmadison.chemistry.url | url }}"
+                {%- if uwmadison.chemistry.target %}target="{{ uwmadison.chemistry.target }}" rel="noopener"{%- endif %}>
+                the Chemistry department</a>) for their support in this project.
+            We also graciously thank his wife,
+            <a href="{{ ieva.url | url }}"
+                {%- if ieva.target %}target="{{ ieva.target }}" rel="noopener"{%- endif %}>
+                Professor Ieva L. Reich</a>, and her family for supporting this project
+            where we are able to honor Professor Hans Reich’s 25+ years of website efforts
+            in support the broader organic chemistry community.
+        </p>
+        <p class="lead text-justify">
+        The vast majority of work on setting up this website and converting the content of Prof. Reich's websites into this form where the content is available in a responsive manner (viewable/useable on phones as well as desktop computers) was accomplished through the immense volunteer efforts of Organic Division Assistant Webmaster Khoi Van (Ph.D., Organic Chemistry with Professor Daniel Romo) with initial oversight, support, and direction from Organic Division Webmaster Brian Myers (Ph.D., Organic Chemistry with Professor David R. Williams) and Organic Division Head Webmaster Joseph Ward (Ph.D., Organic Chemistry with Professor Robert Maleczka).</p>
+         <p class="lead text-justify">
+        We hope that the data and information resources provided on this website and the links to resources off of this website provide Organic Chemists quick access to high quality information so that they will be able to learn about and gain high quality information to enable their efforts in the laboratory and classroom settings. Where possible, references to primary literature are provided for information on this site. Links to resources off of this website are meant to assist individuals in finding high quality information; they are not an endorsement of any product, service, or website. 
+        </p>
+       <p class="lead">We are currently setting up a Board of Advisors to help us with oversight of this website</p>
+        
         <p class="lead">
             We encourage others who have collected data useful to organic chemists or who regularly use web sites
             that provide such data to contribute their information to this collection. Please
@@ -40,7 +95,5 @@ doc_statement:
             description of the data and explanation of their use.
         </p>
     </div>
-
-
 </div>
 
