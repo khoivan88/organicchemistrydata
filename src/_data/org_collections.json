@@ -7,23 +7,28 @@
             "id": "reaction_info",
             "links": [
                 {
-                    "name": "Named Reactions",
-                    "url": "https://organicchemistrydata.org/hansreich/resources/syntheses/#named_reactions"
+                    "name": "Acronyms",
+                    "url": "https://organicchemistrydata.org/hansreich/resources/acronyms/"
                 },
                 {
-                    "name": "Named Rules and Effects",
-                    "url": "https://organicchemistrydata.org/hansreich/resources/named_effects"
+                    "name": "Electron Pushing/Drawing Mechanisms",
+                    "url": "https://organicchemistrydata.org/hansreich/resources/electron_pushing"
+                },
+                {
+                    "name": "Named Reactions",
+                    "url": "https://organicchemistrydata.org/hansreich/resources/syntheses/#named_reactions"
                 },
                 {
                     "name": "Named Reagents",
                     "url": "https://organicchemistrydata.org/hansreich/resources/named_reagents"
                 },
                 {
+                    "name": "Named Rules and Effects",
+                    "url": "https://organicchemistrydata.org/hansreich/resources/named_effects"
+                },
+                {
                     "name": "Natural Product Syntheses",
                     "url": "https://organicchemistrydata.org/hansreich/resources/syntheses"
-                }, {
-                    "name": "Electron Pushing/Drawing Mechanisms",
-                    "url": "https://organicchemistrydata.org/hansreich/resources/electron_pushing"
                 },
                 {
                     "name": "Organic Reactions",
@@ -32,12 +37,190 @@
                 {
                     "name": "Organic Syntheses",
                     "url": "https://www.organicdivision.org/OrganicSyntheses/"
+                },
+                {
+                    "name": "Protecting Groups-Organic Chemistry Portal",
+                    "url": "https://www.organic-chemistry.org/protectivegroups/protectinggroups.htm"
+                },
+                {
+                    "name": "Reaction Retrieval System",
+                    "url": "http://www.openmolecules.org/webreactions/index.html"
+                },
+                {
+                    "name": "Reaction Topics",
+                    "links": [
+                        {
+                            "name": "Combinatorial Chemistry (at Science Direct)",
+                            "url": "https://www.sciencedirect.com/topics/chemistry/combinatorial-chemistry"
+                        },
+                        {
+                            "name": "Flow Chemistry-Organic Chemistry Portal",
+                            "url": "https://www.organic-chemistry.org/topics/flowchemistry.shtm"
+                        },
+                        {
+                            "name": "Green Chemistry",
+                            "url": "https://www.organicdivision.org/greenchemistry/"
+                        },
+                        {
+                            "name": "Green Chemistry-Organic Chemistry Portal",
+                            "url": "https://www.organic-chemistry.org/topics/green-chemistry.shtm"
+                        },
+                        {
+                            "name": "Microwave Syntheses-Organic Chemistry",
+                            "url": "https://www.organic-chemistry.org/topics/microwave-synthesis.shtm"
+                        },
+                        {
+                            "name": "Multicomponent Reactions-Organic Chemistry",
+                            "url": "https://www.organic-chemistry.org/topics/multicomponent-reactions.shtm"
+                        },
+                        {
+                            "name": "Organocatalysis-Organic Chemistry",
+                            "url": "https://www.organic-chemistry.org/topics/organocatalysis.shtm"
+                        },
+                        {
+                            "name": "Photochemistry-MSU (William Reusch)",
+                            "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/photchem.htm"
+                        },
+                        {
+                            "name": "Sonochemistry-Organic Chemistry",
+                            "url": "https://www.organic-chemistry.org/topics/sonochemistry.shtm"
+                        }
+                    ]
+                },
+                {
+                    "name": "Other Sites",
+                    "links": [
+                        {
+                            "name": "Name Reaction.com (Toronto, by Endri Gjiri)",
+                            "url": "https://www.name-reaction.com/list"
+                        },
+                        {
+                            "name": "Named Reactions-Organic Chemistry Portal (by Doug Taber)",
+                            "url": "https://www.organic-chemistry.org/namedreactions/"
+                        },
+                        {
+                            "name": "Organic Reactions (Wikipedia)",
+                            "url": "https://en.wikipedia.org/wiki/List_of_organic_reactions"
+                        },
+                        {
+                            "name": "SynArchive.com (by Daniel Beaudoin)",
+                            "url": "http://www.synarchive.com/named-reactions"
+                        },
+                        {
+                            "name": "Monomerchem, Inc. (by Marcus Brackeen)",
+                            "url": "http://www.monomerchem.com/display4.html"
+                        }
+                    ]
                 }
             ]
         },
         {
             "title": "Chemical Data",
-            "id": "chemical_data"
+            "id": "chemical_data",
+            "links": [
+                {
+                    "name": "A-Values",
+                    "url": "https://organicchemistrydata.org/hansreich/resources/a_values/"
+                },
+                {
+                    "name": "Electronegativities of Elements-Periodic Table",
+                    "url": "https://www2.chem.wisc.edu/areas/organic/index-chem.htm"
+                },
+                {
+                    "name": "pKa Values (Water, DMSO, gas phase)",
+                    "url": "https://organicchemistrydata.org/hansreich/resources/pka/"
+                },
+                {
+                    "name": "Nucleophile/Electrophile Reactivity",
+                    "links": [
+                        {
+                            "name": "Database of Nucleophilicities and Electrophilicities",
+                            "url": "https://www.cup.lmu.de/oc/mayr/DBintro.html"
+                        },
+                        {
+                            "name": "Mayr's Reactivity Scales Poster 2020",
+                            "url": "https://www.cup.lmu.de/oc/mayr/2020_MayrPoster.pdf"
+                        },
+                        {
+                            "name": "Mayr's Reactivity Scales Poster 2016",
+                            "url": "https://www.cup.lmu.de/oc/mayr/ReactScalesPoster.pdf"
+                        },
+                        {
+                            "name": "Reactivity Scales for Organocatalytic Reactions Poster",
+                            "url": "https://www.cup.lmu.de/oc/mayr/ReactScalesPoster%20OrgCatOrgMetCarbanions.pdf"
+                        }
+                    ]
+                },
+                {
+                    "name": "Solvents",
+                    "links": [
+                        {
+                            "name": "Web Elements (interactive)",
+                            "url": "https://www.webelements.com"
+                        },
+                        {
+                            "name": "PTable (interactive)",
+                            "url": "https://ptable.com"
+                        },
+                        {
+                            "name": "PTable (PDF)",
+                            "url": "https://ptable.com/print/periodic-table.pdf"
+                        },
+                        {
+                            "name": "IUPAC",
+                            "url": "https://iupac.org/what-we-do/periodic-table-of-elements/"
+                        },
+                        {
+                            "name": "IUPAC (PDF)",
+                            "url": "https://iupac.org/wp-content/uploads/2018/12/IUPAC_Periodic_Table-01Dec18.pdf"
+                        },
+                        {
+                            "name": "American Elements (interactive)",
+                            "url": "https://www.americanelements.com"
+                        },
+                        {
+                            "name": "Chemicool (interactive)",
+                            "url": "https://www.americanelements.com"
+                        },
+                        {
+                            "name": "Elements Database (interactive)",
+                            "url": "http://www.elementsdatabase.com"
+                        },
+                        {
+                            "name": "Chemiplus (interactive)",
+                            "url": "http://chemiplus.net"
+                        }
+                    ]
+                },
+                {
+                    "name": "Physical Constants",
+                    "url": "https://www.nist.gov/pml/fundamental-physical-constants"
+                },
+                {
+                    "name": "Physical Constants wall chart (NIST)",
+                    "url": "https://physics.nist.gov/cuu/pdf/wall_2018.pdf"
+                },
+                {
+                    "name": "SI Units",
+                    "url": "http://kirste.userpage.fu-berlin.de/chemistry/general/si_en.html"
+                },
+                {
+                    "name": "Nomograph (Boiling point vs Pressure, Aldrich)",
+                    "url": "https://www.sigmaaldrich.com/chemistry/solvents/learning-center/nomograph.html"
+                },
+                {
+                    "name": "Data Conversion",
+                    "url": "https://www.convertplus.com/en"
+                },
+                {
+                    "name": "Math Formulas",
+                    "url": "http://www.tutorsville.net/formulas/"
+                },
+                {
+                    "name": "Chemistry Data Tables (Wired Chemist)",
+                    "url": "http://www.wiredchemist.com/chemistry/data"
+                }
+            ]
         },
         {
             "title": "Spectroscopy Resources",
@@ -49,15 +232,121 @@
         },
         {
             "title": "Safety Resources",
-            "id": "safety_resources"
+            "id": "safety_resources",
+            "links": [
+                {
+                    "name": "Dow Lab Safety Academy",
+                    "url": "https://corporate.dow.com/en-us/science-and-sustainability/lab-safety"
+                },
+                {
+                    "name": "Lab Safety Institute",
+                    "url": "https://www.labsafety.org"
+                },
+                {
+                    "name": "OSHA Occupational Chemistry Database",
+                    "url": "https://www.osha.gov/chemicaldata/"
+                },
+                {
+                    "name": "Handling and Disposal of Chemicals",
+                    "url": "https://www.nap.edu/catalog/4911/prudent-practices-in-the-laboratory-handling-and-disposal-of-chemicals"
+                },
+                {
+                    "name": "Lab Safety Video Links--UC San Diego",
+                    "url": "https://blink.ucsd.edu/safety/research-lab/laboratory/videos.html"
+                },
+                {
+                    "name": "UCLA Health & Safety",
+                    "url": "https://www.chemistry.ucla.edu/health-safety"
+                }
+            ]
         },
         {
             "title": "Chemical Societies and Portals",
-            "id": "chemical_societies_and_portals"
+            "id": "chemical_societies_and_portals",
+            "links": [
+                {
+                    "name": "American Association for the Advancement of Science",
+                    "url": "https://www.aaas.org/"
+                },
+                {
+                    "name": "American Chemical Society",
+                    "url": "http://www.acs.org/"
+                },
+                {
+                    "name": "American Chemical Society, Division of Organic Chemistry",
+                    "url": "https://organicdivision.org"
+                },
+                {
+                    "name": "Canadian Society for Chemistry, Organic Division",
+                    "url": "https://www.cscorgdiv.ca"
+                },
+                {
+                    "name": "Chemical Institute of Canada",
+                    "url": "https://www.cheminst.ca/"
+                },
+                {
+                    "name": "International Isotope Society",
+                    "url": "http://www.intl-isotope-soc.org/"
+                },
+                {
+                    "name": "International Society of Heterocyclic Chemistry",
+                    "url": "http://www.ishc-web.org"
+                },
+                {
+                    "name": "National Organization for the Professional Advancement of Black Chemists and Chemical Engineers (NOBCChe)",
+                    "url": "https://www.nobcche.org/"
+                },
+                {
+                    "name": "North American Catalysis Society",
+                    "url": "http://nacatsoc.org/"
+                },
+                {
+                    "name": "Royal Society of Chemistry-Organic Division",
+                    "url": "https://www.rsc.org/Membership/Networking/InterestGroups/OrganicDivision/"
+                },
+                {
+                    "name": "The Society of Synthetic Organic Chemistry, Japan",
+                    "url": "https://www.ssocj.jp/en/"
+                },
+                {
+                    "name": "The World Association of Theoretical and Computational Chemists",
+                    "url": "http://www.ch.ic.ac.uk/watoc/"
+                },
+                {
+                    "name": "The American Association of Pharmaceutical Scientists",
+                    "url": "https://www.aaps.org/home"
+                }
+            ]
         },
         {
             "title": "Literature Sources",
-            "id": "literature_sources"
+            "id": "literature_sources",
+            "links": [
+                {
+                    "name": "ACS Organic Division's Links to Organic Journals",
+                    "url": "https://www.organicdivision.org/journals/"
+                },
+                {
+                    "name": "Organic Reactions",
+                    "url": "https://www.organicdivision.org/organicreactions/"
+                },
+                {
+                    "name": "Organic Syntheses",
+                    "url": "https://www.organicdivision.org/OrganicSyntheses/"
+                },
+                {
+                    "name": "ACS Online Publications",
+                    "url": "http://pubs.acs.org/about.html"
+                },
+                {
+                    "name": "The Goodman's Group List-University of Cambridge",
+                    "url": "http://www-jmg.ch.cam.ac.uk/data/c2k/cj/organic.html"
+                },
+                {
+                    "name": "Reference Resolver",
+                    "url": "http://chemsearch.kovsky.net"
+                }
+            ]
         },
         {
             "title": "Laboratory Techniques",
@@ -65,7 +354,74 @@
         },
         {
             "title": "Useful Softwares",
-            "id": "useful_softwares"
+            "id": "useful_softwares",
+            "links": [
+                {
+                    "name": "3D Organic Chemistry Animations",
+                    "url": "https://www.chemtube3d.com/"
+                },
+                {
+                    "name": "AMSOL",
+                    "url": "https://comp.chem.umn.edu/amsol/"
+                },
+                {
+                    "name": "ChemBioDraw",
+                    "url": "https://www.perkinelmer.com/category/chemdraw"
+                },
+                {
+                    "name": "ChemBioDraw Tutorial Videos by Pierre Morieux",
+                    "links": [
+                        {
+                            "name": "Colorful ChemDraw Collections",
+                            "url": "https://www.youtube.com/watch?v=pccebQuLr9k"
+                        },
+                        {
+                            "name": "Using Hotkeys",
+                            "url": "https://www.youtube.com/watch?v=AkkpuW322qo&amp;t=324s"
+                        },
+                        {
+                            "name": "ChemDraw Magic Tricks: Quick Catalytic Cycles",
+                            "url": "https://www.youtube.com/watch?v=PScK1yTvDVI"
+                        },
+                        {
+                            "name": "ChemDraw Magic 2",
+                            "url": "https://www.youtube.com/watch?v=SSZI8rh6sNY&amp;fmt=22"
+                        },
+                        {
+                            "name": "ChemDraw Magic 1",
+                            "url": "https://www.youtube.com/watch?v=03WNbvZLDkk"
+                        },
+                        {
+                            "name": "All Videos by Pierre Morieux",
+                            "url": "https://www.youtube.com/user/PierreMx3/videos"
+                        }
+                    ]
+                },
+                {
+                    "name": "ChemDoodle",
+                    "url": "https://www.chemdoodle.com/"
+                },
+                {
+                    "name": "MarvinSketch: Structure Drawing Software",
+                    "url": "https://chemaxon.com/products/marvin"
+                },
+                {
+                    "name": "MaxBridge",
+                    "url": "https://www.cadrerl.com/ring/"
+                },
+                {
+                    "name": "Schr\u00c3\u00b6dinger",
+                    "url": "https://www.schrodinger.com/drug-discovery"
+                },
+                {
+                    "name": "Vogel Scientific Software: CIARA and CALACO.",
+                    "url": "http://www.vogelscientific.com/"
+                },
+                {
+                    "name": "Wavefunction: Spartan",
+                    "url": "https://www.wavefun.com/"
+                }
+            ]
         },
         {
             "title": "Resources for Educators and Students",
