@@ -19,7 +19,7 @@ def links_to_json():
                 result = {'title': line, 'links': []}
 
         results.append(result)
-        fout.write(json.dumps(results, indent=4))
+        fout.write(json.dumps(results, indent=4, ensure_ascii=False))
 
 
 if __name__ == "__main__":
