@@ -155,6 +155,31 @@
                     "name": "Solvents",
                     "links": [
                         {
+                            "name": "Solvent Properties Table",
+                            "url": "https://organicdivision.org/solvents"
+                        },
+                        {
+                            "name": "Solvent Strength Calculation",
+                            "url": "https://selekt.biotage.com/blog/determining-solvent-strength-in-flash-column-chromatography"
+                        },
+                        {
+                            "name": "Solvent Strength Calculation (see pages 8-15)",
+                            "url": "http://www.lcresources.com/resources/exchpost/NP&IEX.20070501.pdf"
+                        },
+                        {
+                            "name": "Green Chromatography Solvent Selection Tables (Green Chem., 2012,14, 3020; Supplementary Data)",
+                            "url": "http://www.rsc.org/suppdata/gc/c2/c2gc36064k/c2gc36064k.pdf"
+                        },
+                        {
+                            "name": "See the DOC Green Chemistry Page",
+                            "url": "https://www.organicdivision.org/greenchemistry/"
+                        }
+                    ]
+                },
+                {
+                    "name": "Periodic Tables",
+                    "links": [
+                        {
                             "name": "Web Elements (interactive)",
                             "url": "https://www.webelements.com"
                         },
@@ -180,11 +205,11 @@
                         },
                         {
                             "name": "Chemicool (interactive)",
-                            "url": "https://www.americanelements.com"
+                            "url": "https://www.chemicool.com/elements/lead.html"
                         },
                         {
                             "name": "Elements Database (interactive)",
-                            "url": "http://www.elementsdatabase.com"
+                            "url": " [http://www.elementsdatabase.com"
                         },
                         {
                             "name": "Chemiplus (interactive)",
