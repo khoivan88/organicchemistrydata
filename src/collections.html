@@ -7,12 +7,13 @@ layout: 'base_layout.njk'
   <div class="list-group list-group-flush">
     {%- for collection in org_collections.list %}
     <div id="{{ collection.id }}" class="list-group-item">
-      <h3 class="display-4">{{ collection.title }}</h3>
+      <h3>{{ collection.title }}</h3>
       <ul>
         {%- if collection.links %}
           {%- for link in collection.links %}
             {%- if link.links %}
-            <li>{{ link.name }}
+            <li>
+              <h5>{{ link.name }}</h5>
               <ul>
                 {%- for item in link.links %}
                 <li><a href="{{ item.url | url }}">{{ item.name }}</a></li>
