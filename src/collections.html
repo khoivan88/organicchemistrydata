@@ -13,7 +13,7 @@ layout: 'base_layout.njk'
           {%- for link in collection.links %}
             {%- if link.links %}
             <li>
-              <h5>{{ link.name }}</h5>
+              <h5>{{ link.name | safe }}</h5>
               <ul>
                 {%- for item in link.links %}
                 <li><a href="{{ item.url | url }}">{{ item.name }}</a></li>

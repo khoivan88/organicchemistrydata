@@ -1,0 +1,804 @@
+[
+    {},
+    {
+        "title": "Color Key:",
+        "links": []
+    },
+    {
+        "title": "Main Menu-Hexagon Title and New Page",
+        "links": []
+    },
+    {
+        "title": "Info for the Mouseovers",
+        "links": []
+    },
+    {
+        "title": "Hans Reich/DOC Pages",
+        "links": []
+    },
+    {
+        "title": "Headings",
+        "links": []
+    },
+    {
+        "title": "Links off website",
+        "links": []
+    },
+    {
+        "title": "Notes to Khoi",
+        "links": []
+    },
+    {
+        "title": "",
+        "links": []
+    },
+    {
+        "title": "---------------------------------------------------------------------------------------------------------------",
+        "links": []
+    },
+    {
+        "title": "Reaction Info",
+        "links": []
+    },
+    {
+        "title": "Done",
+        "links": [
+            {
+                "name": "--Add this link under Acronyms: Terms used in Physical Organic Chemistry",
+                "url": "https://www.qmul.ac.uk/sbcs/iupac/gtpoc/cont.html"
+            }
+        ]
+    },
+    {
+        "title": "",
+        "links": []
+    },
+    {
+        "title": "--New subheader (and move these two links under it):",
+        "links": []
+    },
+    {
+        "title": "Lists of Total Syntheses (Reaction Schemes are included)",
+        "links": [
+            {
+                "name": "Natural Product Syntheses",
+                "url": "https://www2.chem.wisc.edu/areas/reich/syntheses/syntheses.htm"
+            },
+            {
+                "name": "Totally Synthetic Blog (by Docherty/Taber)",
+                "url": "https://www.organic-chemistry.org/totalsynthesis/"
+            },
+            {
+                "name": "-Add: SynArchive",
+                "url": "http://www.synarchive.com/"
+            },
+            {
+                "name": "-Add: Total Synthesis of Natural Products Dojo",
+                "url": "https://w3pharm.u-shizuoka-ken.ac.jp/~yakuzo/pass-eng/pdf-eng.html"
+            }
+        ]
+    },
+    {
+        "title": "",
+        "links": []
+    },
+    {
+        "title": "Reaction Topics",
+        "links": [
+            {
+                "name": "--Add this right after the subheader: Combinatorial Chemistry Review",
+                "url": "http://www.combichemistry.com"
+            }
+        ]
+    },
+    {
+        "title": "Chemical Data",
+        "links": []
+    },
+    {
+        "title": "Done",
+        "links": []
+    },
+    {
+        "title": "Spectroscopy Resources",
+        "links": []
+    },
+    {
+        "title": "Info on: NMR (1H, 13C, & multinuclear: Se-77 , F-19 , P-31 , B-11), IR, UV, MS Spectroscopy and links to spectra databases",
+        "links": []
+    },
+    {
+        "title": "General",
+        "links": [
+            {
+                "name": "Spectroscopy-William Reusch (MSU)",
+                "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/spectro.htm"
+            },
+            {
+                "name": "Spectroscopy Lectures-Nowick (UCI)",
+                "url": "https://www.youtube.com/playlist?list=PLC86CC98DDF0CDDAC&feature=viewall"
+            }
+        ]
+    },
+    {
+        "title": "General NMR",
+        "links": [
+            {
+                "name": "NMR Spectroscopy",
+                "url": "https://organicchemistrydata.org/NMRresources/nmr/"
+            },
+            {
+                "name": "NMR Spectroscopy-William Reusch (MSU)",
+                "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/nmr/nmr1.htm"
+            },
+            {
+                "name": "NMR Supplemental NMR Topics-William Reusch (MSU)",
+                "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/nmr/nmr2.htm"
+            },
+            {
+                "name": "The Basics of NMR-Hornak (Rochester Institute of Technology)",
+                "url": "http://www.cis.rit.edu/htbooks/nmr/"
+            },
+            {
+                "name": "NMR Dictionary",
+                "url": "http://www-usr.rider.edu/~grushow/nmr/NMR_tutor/dictionary/dict_intro.html"
+            },
+            {
+                "name": "NMR Multiplet Guide-Nowick (UCI)",
+                "url": "https://www.chem.uci.edu/~jsnowick/groupweb/files/MultipletGuideV4.pdf"
+            }
+        ]
+    },
+    {
+        "title": "NMR Data",
+        "links": [
+            {
+                "name": "<sup>1</sup>H NMR Shifts",
+                "url": "https://organicchemistrydata.org/NMRresources/nmr/h-data/hdata.htm"
+            },
+            {
+                "name": "<sup>13</sup>C NMR Shifts",
+                "url": "https://organicchemistrydata.org/NMRresources/nmr/c13-data/cdata.htm"
+            }
+        ]
+    },
+    {
+        "title": "Multinuclear NMR Data:",
+        "links": [
+            {
+                "name": "F-19",
+                "url": "https://organicchemistrydata.org/NMRresources/nmr/11-f-data.htm"
+            },
+            {
+                "name": "P-31",
+                "url": "https://organicchemistrydata.org/NMRresources/nmr/11-p-data.htm"
+            },
+            {
+                "name": "B-11",
+                "url": "http://www.chemistry.sdsu.edu/research/BNMR/"
+            },
+            {
+                "name": "Se-77",
+                "url": "https://organicchemistrydata.org/NMRresources/nmr/11-se-data.htm"
+            },
+            {
+                "name": "Coupling: <em>J</em><sub>(H-H)</sub>",
+                "url": "https://organicchemistrydata.org/NMRresources/nmr/h-data/h-coupling.htm"
+            },
+            {
+                "name": "Coupling: <em>J</em><sub>(C-H)</sub>",
+                "url": "https://organicchemistrydata.org/NMRresources/nmr/10-cdata-05-jch.htm"
+            },
+            {
+                "name": "NMR Solvents",
+                "url": "https://organicchemistrydata.org/NMRresources/nmr/nmr-solvents.htm"
+            },
+            {
+                "name": "NMR Periodic Table",
+                "url": "https://periodic.pastis.dk"
+            }
+        ]
+    },
+    {
+        "title": "Mass Spectroscopy",
+        "links": [
+            {
+                "name": "MS Spectroscopy-William Reusch (MSU)",
+                "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/MassSpec/masspec1.htm"
+            },
+            {
+                "name": "Exact Masses & Isotope Abundance Ratios and Calculators-William Reusch (MSU)",
+                "url": "https://www2.chemistry.msu.edu/faculty/reusch/OrgPage/mass.htm"
+            },
+            {
+                "name": "Intro to MS-Alison Ashcroft(Leeds)",
+                "url": "http://www.astbury.leeds.ac.uk/facil/MStut/mstutorial.htm"
+            }
+        ]
+    },
+    {
+        "title": "UV Spectroscopy",
+        "links": [
+            {
+                "name": "UV Spectroscopy-William Reusch (MSU)",
+                "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/UV-Vis/spectrum.htm"
+            }
+        ]
+    },
+    {
+        "title": "IR Spectroscopy",
+        "links": [
+            {
+                "name": "IR Spectroscopy-William Reusch (MSU)",
+                "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/InfraRed/infrared.htm"
+            },
+            {
+                "name": "IR Problems-William Reusch (MSU)",
+                "url": "http://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/Questions/Spectroscopy/irmsprb/infrared.htm"
+            },
+            {
+                "name": "IR Problems/Training (Colby College)",
+                "url": "http://www.colby.edu/chemistry/JCAMP/IRHelperNS.html"
+            }
+        ]
+    },
+    {
+        "title": "Databases of Spectra",
+        "links": [
+            {
+                "name": "Spectral Database for Organic Compounds",
+                "url": "https://sdbs.db.aist.go.jp/sdbs/cgi-bin/direct_frame_top.cgi?lang=eng"
+            },
+            {
+                "name": "NMRShiftDB (database of spectra and tools to predict spectra)",
+                "url": "https://nmrshiftdb.nmr.uni-koeln.de"
+            },
+            {
+                "name": "Polymer Science Learning Center Spectral Database",
+                "url": "https://pslc.uwsp.edu/"
+            },
+            {
+                "name": "ChemSpider",
+                "url": "http://www.chemspider.com/"
+            }
+        ]
+    },
+    {
+        "title": "Problems",
+        "links": [
+            {
+                "name": "NMRShiftDB Problem of the Month, Archive",
+                "url": "https://nmrshiftdb2.sourceforge.io/potm/archive.html"
+            },
+            {
+                "name": "NMR Spectral Problems (UCLA)",
+                "url": "http://www.chem.ucla.edu/~webspectra/#Problems"
+            },
+            {
+                "name": "Spectral Zoo Problems",
+                "url": "https://chemserv.centre.edu/muzyka/spectralzoo/jsmol/specZoo.php"
+            },
+            {
+                "name": "20 Problems (CU Boulder)",
+                "url": "http://www.orgchemboulder.com/Spectroscopy/Problems/index.shtml"
+            },
+            {
+                "name": "64 Problems (Notre Dame)",
+                "url": "https://www3.nd.edu/~smithgrp/structure/workbook.html"
+            },
+            {
+                "name": "Spectroscopy Exams-Nowick (UCI)",
+                "url": "https://www.chem.uci.edu/~jsnowick/organicspectroscopy/index.html"
+            }
+        ]
+    },
+    {
+        "title": "Organic Compound Info",
+        "links": []
+    },
+    {
+        "title": "Info on naming organic compounds, functional groups, and assigning stereochemistry. Links to some commonly available organic compounds",
+        "links": []
+    },
+    {
+        "title": "Nomenclature",
+        "links": [
+            {
+                "name": "General Information/Page",
+                "url": "https://organicchemistrydata.org/hansreich/resources/nomenclature/"
+            },
+            {
+                "name": "Functional Groups Summary",
+                "url": "https://organicchemistrydata.org/hansreich/resources/nomenclature/nomenclature_data/functional-groups.pdf"
+            },
+            {
+                "name": "Named Reagents",
+                "url": "https://organicchemistrydata.org/hansreich/resources/named_reagents/"
+            },
+            {
+                "name": "Reactive Intermediates",
+                "url": "https://organicchemistrydata.org/hansreich/resources/reactive_intermediates/"
+            },
+            {
+                "name": "Acronyms",
+                "url": "https://organicchemistrydata.org/hansreich/resources/acronyms/"
+            },
+            {
+                "name": "Nitrogen Containing Functional Groups Summary",
+                "url": "https://organicchemistrydata.org/hansreich/resources/nomenclature/nomenclature_data/nitrogen-functional-groups.pdf"
+            },
+            {
+                "name": "Abbreviations: <em>Journal of Organic Chemistry</em>",
+                "url": "https://pubs.acs.org/userimages/ContentEditor/1218717864819/joceah_abbreviations.pdf"
+            },
+            {
+                "name": "IUPAC (ACDLabs)",
+                "url": "https://www.acdlabs.com/iupac/nomenclature/"
+            },
+            {
+                "name": "RSC IUPAC Rules (RSC, free registration required)",
+                "url": "https://pubs.rsc.org/en/content/ebook/9780854041824"
+            },
+            {
+                "name": "IUPAC Compendium of Chemical Terminology (the Gold Book)",
+                "url": "http://goldbook.iupac.org/"
+            },
+            {
+                "name": "IUPAC Glossary of Class Names of Organic Compounds and Reactive Intermediates 1995",
+                "url": "https://www.iupac.org/publications/pac/1995/pdf/6708x1307.pdf"
+            }
+        ]
+    },
+    {
+        "title": "Stereochemistry",
+        "links": [
+            {
+                "name": "Chiral Configurations-William Reusch (MSU)",
+                "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/sterism3.htm#isom13"
+            },
+            {
+                "name": "IUPAC Rules for the Nomenclature of Organic Chemistry, Section E: Stereochemistry(1974)",
+                "url": "http://publications.iupac.org/pac/1976/pdf/4501x0011.pdf"
+            },
+            {
+                "name": "Axial chirality-Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Axial_chirality"
+            },
+            {
+                "name": "Chirality and Odour Perception",
+                "url": "http://www.leffingwell.com/chirality/chirality.htm"
+            }
+        ]
+    },
+    {
+        "title": "Organometallic Topics",
+        "links": [
+            {
+                "name": "Organolithium Reagents",
+                "url": "https://organicchemistrydata.org/hansreich/resources/organolithium/"
+            },
+            {
+                "name": "Organometallic Chemistry General-William Reusch (MSU)",
+                "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/orgmetal.htm#met10"
+            },
+            {
+                "name": "Organometallic Hypertextbook",
+                "url": "http://www.ilpi.com/organomet/index.html"
+            }
+        ]
+    },
+    {
+        "title": "Organic Compound Special Types",
+        "links": [
+            {
+                "name": "Heterocyclic Chemistry-William Reusch (MSU)",
+                "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/heterocy.htm"
+            },
+            {
+                "name": "Nitrogen Containing Functional Groups Summary",
+                "url": "https://organicchemistrydata.org/hansreich/resources/nomenclature/nomenclature_data/nitrogen-functional-groups.pdf"
+            },
+            {
+                "name": "Pesticides",
+                "url": "http://www.alanwood.net/pesticides/index_cn_frame.html"
+            },
+            {
+                "name": "Polymers-William Reusch (MSU)",
+                "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/polymers.htm#polmr1"
+            },
+            {
+                "name": "Carbohydrates-William Reusch (MSU)",
+                "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/carbhyd.htm#carb1"
+            },
+            {
+                "name": "Proteins and Amino Acids-William Reusch (MSU)",
+                "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/proteins.htm#aacd1"
+            },
+            {
+                "name": "Nucleic Acids-William Reusch (MSU)",
+                "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/nucacids.htm#nacd1"
+            },
+            {
+                "name": "Steroids",
+                "url": "http://www.sbcs.qmul.ac.uk/iupac/steroid/"
+            },
+            {
+                "name": "Sweeteners",
+                "url": "https://www.acs.org/content/dam/acsorg/education/resources/highschool/chemmatters/archive/chemmatters-oct2011-sweeteners-brownlee.pdf"
+            },
+            {
+                "name": "Aroma Compounds-Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Aroma_compound"
+            }
+        ]
+    },
+    {
+        "title": "Databases---Khoi these are the things I am most uncertain about (if they are useful or not, if not please delete)",
+        "links": [
+            {
+                "name": "CAS Source Index (CASSI) Search Tool",
+                "url": "https://cassi.cas.org/"
+            },
+            {
+                "name": "Beyond CASSI",
+                "url": "https://www.cas.org/sites/default/files/documents/beyond_cassi.pdf"
+            },
+            {
+                "name": "Chemical Abstract Service (CAS)",
+                "url": "https://www.cas.org/"
+            },
+            {
+                "name": "ChemSynthesis",
+                "url": "https://www.chemsynthesis.com"
+            },
+            {
+                "name": "eMolecules (suppliers)",
+                "url": "http://www.emolecules.com/index.php"
+            },
+            {
+                "name": "OSIRIS Property Explorer",
+                "url": "https://www.organic-chemistry.org/prog/peo/"
+            },
+            {
+                "name": "RCSB Protein Databank",
+                "url": "http://www.rcsb.org/pdb/"
+            },
+            {
+                "name": "Reaxys",
+                "url": "https://www.elsevier.com/solutions/reaxys"
+            },
+            {
+                "name": "Science of Synthesis",
+                "url": "https://science-of-synthesis.thieme.com"
+            },
+            {
+                "name": "Unichem",
+                "url": "https://www.ebi.ac.uk/unichem/"
+            },
+            {
+                "name": "WebReactions",
+                "url": "http://www.webreactions.net"
+            },
+            {
+                "name": "WolframAlpha: Chemistry",
+                "url": "http://www.wolframalpha.com/examples/Chemistry.html"
+            }
+        ]
+    },
+    {
+        "title": "Sites on Some General Info on Organic Compounds",
+        "links": [
+            {
+                "name": "Compound Interest (infographics on various topics)",
+                "url": "https://www.compoundchem.com/infographics/"
+            },
+            {
+                "name": "Disease Focused Posters-J�n Njar�arson (Arizona)",
+                "url": "https://njardarson.lab.arizona.edu/content/disease-focused-pharmaceutical-posters"
+            },
+            {
+                "name": "Top 200 Pharmaceuticals Posters-J�n Njar�arson (Arizona)",
+                "url": "https://njardarson.lab.arizona.edu/content/top-pharmaceuticals-poster"
+            },
+            {
+                "name": "Molecules with Silly or Unusual Names",
+                "url": "http://www.chm.bris.ac.uk/sillymolecules/sillymols.htm"
+            },
+            {
+                "name": "Molecules that Matter",
+                "url": "https://tang.skidmore.edu/exhibitions/123-molecules-that-matter"
+            },
+            {
+                "name": "Molecule of the Month",
+                "url": "http://www.chm.bris.ac.uk/motm/motm.htm"
+            }
+        ]
+    },
+    {
+        "title": "Safety Resources",
+        "links": []
+    },
+    {
+        "title": "Links to various useful resources for safe operations and handling of chemicals:",
+        "links": []
+    },
+    {
+        "title": "",
+        "links": []
+    },
+    {
+        "title": "Chemical Societies and Portals",
+        "links": []
+    },
+    {
+        "title": "Links to various Chemical Societies especially those that have a focus on or related to Organic Chemistry",
+        "links": []
+    },
+    {
+        "title": "Literature Sources",
+        "links": []
+    },
+    {
+        "title": "Links to various literature resources including lists of journals that have an Organic Chemistry focus. The Reference Resolver is also linked from this section.",
+        "links": []
+    },
+    {
+        "title": "",
+        "links": []
+    },
+    {
+        "title": "Laboratory Techniques",
+        "links": []
+    },
+    {
+        "title": "Links to resources for doing various general laboratory procedures in organic chemistry laboratories",
+        "links": [
+            {
+                "name": "ChemSpider Synthetic Procedure Pages",
+                "url": "http://cssp.chemspider.com/"
+            }
+        ]
+    },
+    {
+        "title": "Useful Software",
+        "links": []
+    },
+    {
+        "title": "Links to software applications that are likely useful for a broad selection of organic chemists. Including some videos on using Chemdraw to quickly draw structures.",
+        "links": []
+    },
+    {
+        "title": "Add in your Chemical Inventory Software link(s)",
+        "links": []
+    },
+    {
+        "title": "Resources for Educators and Students",
+        "links": []
+    },
+    {
+        "title": "Links and resources for educators and students in teaching and learning organic chemistry",
+        "links": [
+            {
+                "name": "Virtual Textbook of Organic Chemistry-William Reusch (MSU)",
+                "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/intro1.htm"
+            },
+            {
+                "name": "Acronyms",
+                "url": "https://organicchemistrydata.org/hansreich/resources/acronyms/"
+            },
+            {
+                "name": "Challenging Problems in Organic Chemistry-David Evans (Harvard)",
+                "url": "http://evans.rc.fas.harvard.edu/problems/index.cgi"
+            },
+            {
+                "name": "ChemTube (3D Organic Chemistry Animations)",
+                "url": "http://www.chemtube3d.com/"
+            },
+            {
+                "name": "Chemistry by Design-Jón Njarðarson (Arizona)",
+                "url": "http://chemistrybydesign.oia.arizona.edu/"
+            },
+            {
+                "name": "Chemical Educational Xchange (by JCE)",
+                "url": "https://www.chemedx.org/category/concepts/organic"
+            },
+            {
+                "name": "Organic Synthesis Handouts-Andrew Myers (Harvard)",
+                "url": "https://faculty.chemistry.harvard.edu/myers/pages/chem-115-handouts"
+            },
+            {
+                "name": "Chimie générale & organiqué-Gérard Dupuis",
+                "url": "https://www.faidherbe.org/site/cours/dupuis/accueil.htm"
+            },
+            {
+                "name": "Organic Chemistry InfoGraphics-Roman Valiulin",
+                "url": "https://cheminfographic.wordpress.com"
+            },
+            {
+                "name": "Determining the product of Substitution or Elimination Reactions-Robert Grossman (Kentucky)",
+                "url": "http://www.uky.edu/~rbgros1/CHE230/handouts/drawSnE.html"
+            },
+            {
+                "name": "Drawing Substitution and Elimination Products-Robert Grossman (Kentucky)",
+                "url": "http://www.uky.edu/~rbgros1/CHE230/handouts/SNorE.HTML"
+            },
+            {
+                "name": "Electron Pushing/Drawing Mechanisms",
+                "url": "https://organicchemistrydata.org/epush/"
+            },
+            {
+                "name": "Open Source Lecture Notes-Bode Research Group (ETH-Z�rich)",
+                "url": "https://bode.ethz.ch/open-source-lecture-notes.html"
+            },
+            {
+                "name": "Organic Chemistry Practice Problems-William Reusch (MSU)",
+                "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Questions/problems.htm"
+            },
+            {
+                "name": "Organic Education Resources (OrganicERs.org cCWCS)",
+                "url": "https://www.organicers.org"
+            },
+            {
+                "name": "Polymer Education Guide",
+                "url": "http://polymer-search.com/covalent/science-teachers-polymer-education-guide.html"
+            },
+            {
+                "name": "R/S Chemistry-Master Assigning Absolute Stereochemistry-Neil Garg",
+                "url": "https://rschemistry.com"
+            },
+            {
+                "name": "Stereochemistry Help-Robert Grossman (Kentucky)",
+                "url": "http://www.uky.edu/~rbgros1/stereo/welcome.HTML"
+            },
+            {
+                "name": "The Golden Rules of Organic Chemistry",
+                "url": "http://iverson.cm.utexas.edu/courses/old/310N/spring2008/MainPagesSp06/GoldenRules.html"
+            },
+            {
+                "name": "The Organic Coloring Book by Neil Garg",
+                "url": "https://www.amazon.com/Organic-Coloring-Book-Neil-Garg/dp/0692860541/"
+            },
+            {
+                "name": "Chemistry Hall",
+                "url": "https://chemistryhall.com/"
+            },
+            {
+                "name": "QR Chem (presentation materials for instructors)-Neil Garg",
+                "url": "https://qrchem.net/"
+            }
+        ]
+    },
+    {
+        "title": "Organic Chemistry Videos",
+        "links": []
+    },
+    {
+        "title": "Links to collections and individual (significant/historical) videos about organic chemistry. Often these will be lectures",
+        "links": [
+            {
+                "name": "DOC Videos Page (NOS, historical, &amp; Virtual Symposia)",
+                "url": "https://www.organicdivision.org/videos/"
+            },
+            {
+                "name": "Eminent Organic Chemist Videos",
+                "url": "https://www.organicdivision.org/eminentorganicchemists/"
+            },
+            {
+                "name": "Chemistry Video-clip Library",
+                "url": "http://www.ch.ic.ac.uk/video/"
+            },
+            {
+                "name": "Protein Data Bank Videos",
+                "url": "https://pdb101.rcsb.org/learn/videos"
+            }
+        ]
+    },
+    {
+        "title": "",
+        "links": []
+    },
+    {
+        "title": "Other Organic Chemistry Sites and Resources",
+        "links": []
+    },
+    {
+        "title": "This is a collection of links on topics related to organic chemistry that do not readily fit in the other categories on this page.",
+        "links": [
+            {
+                "name": "Chemical (Academic) Genealogy Database",
+                "url": "http://web-genealogy.scs.illinois.edu/"
+            },
+            {
+                "name": "Famous Organic Chemists",
+                "url": "https://www.organicdivision.org/famous-organic-chemists/"
+            },
+            {
+                "name": "Nobel Prizes in Chemistry",
+                "url": "http://lem.ch.unito.it/chemistry/nobel_chemistry.html"
+            },
+            {
+                "name": "Nobel Prizes in Chemistry on Nobelprize.org",
+                "url": "http://www.nobelprize.org/nobel_prizes/chemistry/laureates/"
+            }
+        ]
+    },
+    {
+        "title": "Chemistry Portals",
+        "links": [
+            {
+                "name": "Chemistry 2000, Cambridge",
+                "url": "http://www-jmg.ch.cam.ac.uk/data/c2k/"
+            },
+            {
+                "name": "Hans Reich's Organic Chemistry Info (now housed by the DOC)",
+                "url": "https://organicchemistrydata.org"
+            },
+            {
+                "name": "Organic Chemistry Portal",
+                "url": "https://www.organic-chemistry.org/"
+            },
+            {
+                "name": "Organic Chemistry Resources Worldwide",
+                "url": "http://www.organicworldwide.net/"
+            },
+            {
+                "name": "Organic Chemistry Links by the Mohr Group",
+                "url": "http://www2.chem.uic.edu/mohr/page5/index.html"
+            },
+            {
+                "name": "Alfa Aesar's Organic Chemistry Resources",
+                "url": "https://www.alfa.com/en/organic-chemistry-resource-center/"
+            }
+        ]
+    },
+    {
+        "title": "MedChem/Pharma Links",
+        "links": [
+            {
+                "name": "ACS Division of Medicinal Chemistry (MEDI)",
+                "url": "https://www.acsmedchem.org"
+            },
+            {
+                "name": "Biospace Pharmaceutical Company News",
+                "url": "https://www.biospace.com/"
+            },
+            {
+                "name": "FiercePharma Pharmaceutical Company News",
+                "url": "https://www.fiercepharma.com/"
+            },
+            {
+                "name": "Mayo Clinic",
+                "url": "https://www.mayoclinic.org/"
+            },
+            {
+                "name": "NIH Entrez Search",
+                "url": "http://www.ncbi.nlm.nih.gov/Entrez/"
+            },
+            {
+                "name": "Organic-Reaction.com (Covers some patents, Literature, and chemistry relavent to Medchem)",
+                "url": "https://www.organic-reaction.com"
+            }
+        ]
+    },
+    {
+        "title": "Research Group Indices",
+        "links": [
+            {
+                "name": "Organiclinks (Matt McIntosh's List of Organic Research Groups-Now hosted by the DOC)",
+                "url": "https://www.organicdivision.org/organicsyntheticfaculty/"
+            },
+            {
+                "name": "ChemBiolinks by Jared Shaw",
+                "url": "https://www.chembiolinks.com"
+            },
+            {
+                "name": "Stephen Chamberland's List of PUI Organic Research Groups",
+                "url": "https://organiclinkspui.net/"
+            },
+            {
+                "name": "Peptidelinks by James Nowick-UC Irvine",
+                "url": "http://peptidelinks.net/"
+            }
+        ]
+    }
+]

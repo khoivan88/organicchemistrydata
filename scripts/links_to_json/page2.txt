@@ -1,0 +1,194 @@
+Color Key:
+Main Menu-Hexagon Title and New Page
+Info for the Mouseovers
+Hans Reich/DOC Pages
+Headings
+Links off website
+Notes to Khoi
+
+---------------------------------------------------------------------------------------------------------------
+Reaction Info
+Done
+--Add this link under Acronyms: Terms used in Physical Organic Chemistry [https://www.qmul.ac.uk/sbcs/iupac/gtpoc/cont.html]
+
+--New subheader (and move these two links under it):
+Lists of Total Syntheses (Reaction Schemes are included)
+Natural Product Syntheses [https://www2.chem.wisc.edu/areas/reich/syntheses/syntheses.htm]
+Totally Synthetic Blog (by Docherty/Taber) [https://www.organic-chemistry.org/totalsynthesis/]
+-Add: SynArchive [http://www.synarchive.com/]
+-Add: Total Synthesis of Natural Products Dojo [https://w3pharm.u-shizuoka-ken.ac.jp/~yakuzo/pass-eng/pdf-eng.html]
+
+Reaction Topics
+--Add this right after the subheader: Combinatorial Chemistry Review [http://www.combichemistry.com]
+Chemical Data
+Done
+Spectroscopy Resources
+Info on: NMR (1H, 13C, & multinuclear: Se-77 , F-19 , P-31 , B-11), IR, UV, MS Spectroscopy and links to spectra databases
+General
+Spectroscopy-William Reusch (MSU) [https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/spectro.htm]
+Spectroscopy Lectures-Nowick (UCI) [https://www.youtube.com/playlist?list=PLC86CC98DDF0CDDAC&feature=viewall]
+General NMR
+NMR Spectroscopy [https://organicchemistrydata.org/NMRresources/nmr/]
+NMR Spectroscopy-William Reusch (MSU) [https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/nmr/nmr1.htm]
+NMR Supplemental NMR Topics-William Reusch (MSU) [https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/nmr/nmr2.htm]
+The Basics of NMR-Hornak (Rochester Institute of Technology) [http://www.cis.rit.edu/htbooks/nmr/]
+NMR Dictionary [http://www-usr.rider.edu/~grushow/nmr/NMR_tutor/dictionary/dict_intro.html]
+NMR Multiplet Guide-Nowick (UCI) [https://www.chem.uci.edu/~jsnowick/groupweb/files/MultipletGuideV4.pdf]
+NMR Data
+<sup>1</sup>H NMR Shifts [https://organicchemistrydata.org/NMRresources/nmr/h-data/hdata.htm]
+<sup>13</sup>C NMR Shifts [https://organicchemistrydata.org/NMRresources/nmr/c13-data/cdata.htm]
+Multinuclear NMR Data:
+	F-19 [https://organicchemistrydata.org/NMRresources/nmr/11-f-data.htm]
+	P-31 [https://organicchemistrydata.org/NMRresources/nmr/11-p-data.htm]
+	B-11 [http://www.chemistry.sdsu.edu/research/BNMR/] ??????
+	Se-77 [https://organicchemistrydata.org/NMRresources/nmr/11-se-data.htm]
+Coupling: <em>J</em><sub>(H-H)</sub> [https://organicchemistrydata.org/NMRresources/nmr/h-data/h-coupling.htm]
+Coupling: <em>J</em><sub>(C-H)</sub> [https://organicchemistrydata.org/NMRresources/nmr/10-cdata-05-jch.htm]
+NMR Solvents [https://organicchemistrydata.org/NMRresources/nmr/nmr-solvents.htm]
+NMR Periodic Table [https://periodic.pastis.dk]
+Mass Spectroscopy
+MS Spectroscopy-William Reusch (MSU) [https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/MassSpec/masspec1.htm]
+Exact Masses & Isotope Abundance Ratios and Calculators-William Reusch (MSU) [https://www2.chemistry.msu.edu/faculty/reusch/OrgPage/mass.htm]
+Intro to MS-Alison Ashcroft(Leeds) [http://www.astbury.leeds.ac.uk/facil/MStut/mstutorial.htm]
+UV Spectroscopy
+UV Spectroscopy-William Reusch (MSU) [https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/UV-Vis/spectrum.htm]
+IR Spectroscopy
+IR Spectroscopy-William Reusch (MSU) [https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/InfraRed/infrared.htm]
+IR Problems-William Reusch (MSU) [http://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/Questions/Spectroscopy/irmsprb/infrared.htm]
+IR Problems/Training (Colby College) [http://www.colby.edu/chemistry/JCAMP/IRHelperNS.html]
+Databases of Spectra
+Spectral Database for Organic Compounds [https://sdbs.db.aist.go.jp/sdbs/cgi-bin/direct_frame_top.cgi?lang=eng]
+NMRShiftDB (database of spectra and tools to predict spectra) [https://nmrshiftdb.nmr.uni-koeln.de]
+Polymer Science Learning Center Spectral Database [https://pslc.uwsp.edu/]
+ChemSpider [http://www.chemspider.com/]
+Problems
+NMRShiftDB Problem of the Month, Archive [https://nmrshiftdb2.sourceforge.io/potm/archive.html]
+NMR Spectral Problems (UCLA) [http://www.chem.ucla.edu/~webspectra/#Problems]
+Spectral Zoo Problems [https://chemserv.centre.edu/muzyka/spectralzoo/jsmol/specZoo.php]
+20 Problems (CU Boulder)[http://www.orgchemboulder.com/Spectroscopy/Problems/index.shtml]
+64 Problems (Notre Dame) [https://www3.nd.edu/~smithgrp/structure/workbook.html]
+Spectroscopy Exams-Nowick (UCI) [https://www.chem.uci.edu/~jsnowick/organicspectroscopy/index.html]
+Organic Compound Info
+Info on naming organic compounds, functional groups, and assigning stereochemistry. Links to some commonly available organic compounds
+Nomenclature
+General Information/Page [https://organicchemistrydata.org/hansreich/resources/nomenclature/]
+Functional Groups Summary [https://organicchemistrydata.org/hansreich/resources/nomenclature/nomenclature_data/functional-groups.pdf]
+Named Reagents [https://organicchemistrydata.org/hansreich/resources/named_reagents/]
+Reactive Intermediates [https://organicchemistrydata.org/hansreich/resources/reactive_intermediates/]
+Acronyms [https://organicchemistrydata.org/hansreich/resources/acronyms/]
+Nitrogen Containing Functional Groups Summary [https://organicchemistrydata.org/hansreich/resources/nomenclature/nomenclature_data/nitrogen-functional-groups.pdf]
+Abbreviations: <em>Journal of Organic Chemistry</em> [https://pubs.acs.org/userimages/ContentEditor/1218717864819/joceah_abbreviations.pdf]
+IUPAC (ACDLabs) [https://www.acdlabs.com/iupac/nomenclature/]
+RSC IUPAC Rules (RSC, free registration required) [https://pubs.rsc.org/en/content/ebook/9780854041824]
+IUPAC Compendium of Chemical Terminology (the Gold Book) [http://goldbook.iupac.org/]
+IUPAC Glossary of Class Names of Organic Compounds and Reactive Intermediates 1995 [https://www.iupac.org/publications/pac/1995/pdf/6708x1307.pdf]
+Stereochemistry
+Chiral Configurations-William Reusch (MSU) [https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/sterism3.htm#isom13]
+IUPAC Rules for the Nomenclature of Organic Chemistry, Section E: Stereochemistry(1974) [http://publications.iupac.org/pac/1976/pdf/4501x0011.pdf]
+Axial chirality-Wikipedia [https://en.wikipedia.org/wiki/Axial_chirality]
+Chirality and Odour Perception [http://www.leffingwell.com/chirality/chirality.htm]
+Organometallic Topics
+Organolithium Reagents [https://organicchemistrydata.org/hansreich/resources/organolithium/]
+Organometallic Chemistry General-William Reusch (MSU) [https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/orgmetal.htm#met10]
+Organometallic Hypertextbook [http://www.ilpi.com/organomet/index.html]
+Organic Compound Special Types
+Heterocyclic Chemistry-William Reusch (MSU)[https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/heterocy.htm]
+Nitrogen Containing Functional Groups Summary [https://organicchemistrydata.org/hansreich/resources/nomenclature/nomenclature_data/nitrogen-functional-groups.pdf]
+Pesticides [http://www.alanwood.net/pesticides/index_cn_frame.html]
+Polymers-William Reusch (MSU) [https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/polymers.htm#polmr1]
+Carbohydrates-William Reusch (MSU) [https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/carbhyd.htm#carb1]
+Proteins and Amino Acids-William Reusch (MSU) [https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/proteins.htm#aacd1]
+Nucleic Acids-William Reusch (MSU) [https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/nucacids.htm#nacd1]
+Steroids [http://www.sbcs.qmul.ac.uk/iupac/steroid/]
+Sweeteners [https://www.acs.org/content/dam/acsorg/education/resources/highschool/chemmatters/archive/chemmatters-oct2011-sweeteners-brownlee.pdf]
+Aroma Compounds-Wikipedia [https://en.wikipedia.org/wiki/Aroma_compound]
+Databases---Khoi these are the things I am most uncertain about (if they are useful or not, if not please delete)
+CAS Source Index (CASSI) Search Tool [https://cassi.cas.org/]
+Beyond CASSI [https://www.cas.org/sites/default/files/documents/beyond_cassi.pdf]
+Chemical Abstract Service (CAS) [https://www.cas.org/]
+ChemSynthesis [https://www.chemsynthesis.com]
+eMolecules (suppliers) [http://www.emolecules.com/index.php]
+OSIRIS Property Explorer [https://www.organic-chemistry.org/prog/peo/]
+RCSB Protein Databank [http://www.rcsb.org/pdb/]
+Reaxys [https://www.elsevier.com/solutions/reaxys]
+Science of Synthesis [https://science-of-synthesis.thieme.com]
+Unichem [https://www.ebi.ac.uk/unichem/]
+WebReactions [http://www.webreactions.net]
+WolframAlpha: Chemistry [http://www.wolframalpha.com/examples/Chemistry.html]
+Sites on Some General Info on Organic Compounds
+Compound Interest (infographics on various topics) [https://www.compoundchem.com/infographics/]
+Disease Focused Posters-J�n Njar�arson (Arizona)[https://njardarson.lab.arizona.edu/content/disease-focused-pharmaceutical-posters]
+Top 200 Pharmaceuticals Posters-J�n Njar�arson (Arizona) [https://njardarson.lab.arizona.edu/content/top-pharmaceuticals-poster]
+Molecules with Silly or Unusual Names [http://www.chm.bris.ac.uk/sillymolecules/sillymols.htm]
+Molecules that Matter [https://tang.skidmore.edu/exhibitions/123-molecules-that-matter]
+Molecule of the Month [http://www.chm.bris.ac.uk/motm/motm.htm]
+Safety Resources
+Links to various useful resources for safe operations and handling of chemicals:
+
+Chemical Societies and Portals
+Links to various Chemical Societies especially those that have a focus on or related to Organic Chemistry
+Literature Sources
+Links to various literature resources including lists of journals that have an Organic Chemistry focus. The Reference Resolver is also linked from this section.
+
+Laboratory Techniques
+Links to resources for doing various general laboratory procedures in organic chemistry laboratories
+ChemSpider Synthetic Procedure Pages [http://cssp.chemspider.com/]
+Useful Software
+Links to software applications that are likely useful for a broad selection of organic chemists. Including some videos on using Chemdraw to quickly draw structures.
+Add in your Chemical Inventory Software link(s)
+Resources for Educators and Students
+Links and resources for educators and students in teaching and learning organic chemistry
+Virtual Textbook of Organic Chemistry-William Reusch (MSU) [https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/intro1.htm]
+Acronyms [https://organicchemistrydata.org/hansreich/resources/acronyms/]
+Challenging Problems in Organic Chemistry-David Evans (Harvard) [http://evans.rc.fas.harvard.edu/problems/index.cgi]
+ChemTube (3D Organic Chemistry Animations) [http://www.chemtube3d.com/]
+Chemistry by Design-J�n Njar�arson (Arizona) [http://chemistrybydesign.oia.arizona.edu/]
+Chemical Educational Xchange (by JCE) [https://www.chemedx.org/category/concepts/organic]
+Organic Synthesis Handouts-Andrew Myers (Harvard) [https://faculty.chemistry.harvard.edu/myers/pages/chem-115-handouts]
+Chimie g�n�rale &amp; organiqu�-G�rard Dupuis [https://www.faidherbe.org/site/cours/dupuis/accueil.htm]
+Organic Chemistry InfoGraphics-Roman Valiulin [https://cheminfographic.wordpress.com]
+Determining the product of Substitution or Elimination Reactions-Robert Grossman (Kentucky) [http://www.uky.edu/~rbgros1/CHE230/handouts/drawSnE.html]
+Drawing Substitution and Elimination Products-Robert Grossman (Kentucky) [http://www.uky.edu/~rbgros1/CHE230/handouts/SNorE.HTML]
+Electron Pushing/Drawing Mechanisms [https://organicchemistrydata.org/epush/]
+Open Source Lecture Notes-Bode Research Group (ETH-Z�rich) [https://bode.ethz.ch/open-source-lecture-notes.html]
+Organic Chemistry Practice Problems-William Reusch (MSU) [https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Questions/problems.htm]
+Organic Education Resources (OrganicERs.org cCWCS) [https://www.organicers.org]
+Polymer Education Guide [http://polymer-search.com/covalent/science-teachers-polymer-education-guide.html]
+R/S Chemistry-Master Assigning Absolute Stereochemistry-Neil Garg [https://rschemistry.com]
+Stereochemistry Help-Robert Grossman (Kentucky) [http://www.uky.edu/~rbgros1/stereo/welcome.HTML]
+The Golden Rules of Organic Chemistry [http://iverson.cm.utexas.edu/courses/old/310N/spring2008/MainPagesSp06/GoldenRules.html]
+The Organic Coloring Book by Neil Garg [https://www.amazon.com/Organic-Coloring-Book-Neil-Garg/dp/0692860541/]
+Chemistry Hall [https://chemistryhall.com/]
+QR Chem (presentation materials for instructors)-Neil Garg [https://qrchem.net/]
+Organic Chemistry Videos
+Links to collections and individual (significant/historical) videos about organic chemistry. Often these will be lectures
+DOC Videos Page (NOS, historical, &amp; Virtual Symposia) [https://www.organicdivision.org/videos/]
+Eminent Organic Chemist Videos [https://www.organicdivision.org/eminentorganicchemists/]
+Chemistry Video-clip Library [http://www.ch.ic.ac.uk/video/]
+Protein Data Bank Videos [https://pdb101.rcsb.org/learn/videos]
+
+Other Organic Chemistry Sites and Resources
+This is a collection of links on topics related to organic chemistry that do not readily fit in the other categories on this page.
+Chemical (Academic) Genealogy Database [http://web-genealogy.scs.illinois.edu/]
+Famous Organic Chemists [https://www.organicdivision.org/famous-organic-chemists/]
+Nobel Prizes in Chemistry [http://lem.ch.unito.it/chemistry/nobel_chemistry.html]
+Nobel Prizes in Chemistry on Nobelprize.org [http://www.nobelprize.org/nobel_prizes/chemistry/laureates/]
+Chemistry Portals
+Chemistry 2000, Cambridge [http://www-jmg.ch.cam.ac.uk/data/c2k/]
+Hans Reich�s Organic Chemistry Info (now housed by the DOC) [https://organicchemistrydata.org]
+Organic Chemistry Portal [https://www.organic-chemistry.org/]
+Organic Chemistry Resources Worldwide [http://www.organicworldwide.net/]
+Organic Chemistry Links by the Mohr Group [http://www2.chem.uic.edu/mohr/page5/index.html]
+Alfa Aesar's Organic Chemistry Resources [https://www.alfa.com/en/organic-chemistry-resource-center/]
+MedChem/Pharma Links
+ACS Division of Medicinal Chemistry (MEDI) [https://www.acsmedchem.org]
+Biospace Pharmaceutical Company News [https://www.biospace.com/]
+FiercePharma Pharmaceutical Company News [https://www.fiercepharma.com/]
+Mayo Clinic [https://www.mayoclinic.org/]
+NIH Entrez Search [http://www.ncbi.nlm.nih.gov/Entrez/]
+Organic-Reaction.com (Covers some patents, Literature, and chemistry relavent to Medchem) [https://www.organic-reaction.com]
+Research Group Indices
+Organiclinks (Matt McIntosh's List of Organic Research Groups-Now hosted by the DOC) [https://www.organicdivision.org/organicsyntheticfaculty/]
+ChemBiolinks by Jared Shaw [https://www.chembiolinks.com]
+Stephen Chamberland's List of PUI Organic Research Groups [https://organiclinkspui.net/]
+Peptidelinks by James Nowick-UC Irvine [http://peptidelinks.net/]

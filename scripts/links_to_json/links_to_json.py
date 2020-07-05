@@ -2,7 +2,7 @@ import json
 import re
 
 def links_to_json():
-    with open('page.txt', 'r') as fin, open('links.json', 'w') as fout:
+    with open('page2.txt', 'r') as fin, open('links1.json', 'w') as fout:
         results = []
         result = {}
         for line in fin:
