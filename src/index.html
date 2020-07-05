@@ -31,13 +31,14 @@ specific_page_js:
           <a href="{{ (org_collections.url_prefix + '#' + collection.id) | url }}" class="d-flex justify-content-center w-100 text-decoration-none">
             <div class="hex-holder d-flex align-items-center justify-content-center">
               <h4 class="hex-content">{{ collection.title }}</h4>
-              <span class="hex-content-detail">
-                <ul class="list-unstyled">
+              <span class="hex-content-detail text-center">
+                {# <ul class="list-unstyled">
                   {%- for link in collection.links %}
                   <!-- <li><a href="{{ link.url | url }}">{{ link.name }}</a></li> -->
                   <li>{{ link.name }}</li>
                   {%- endfor %}
-                </ul>
+                </ul> #}
+                {{ collection.description }}
               </span>
             </div>
           </a>

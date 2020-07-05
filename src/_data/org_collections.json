@@ -5,6 +5,7 @@
         {
             "title": "Reaction Info",
             "id": "reaction_info",
+            "description": "Info on Named Reactions; Rules and Effects; and Reagents. Protecting Groups, Electron Pushing, Acid/Base Catalysis, Natural Product Syntheses",
             "links": [
                 {
                     "name": "Acronyms",
@@ -117,6 +118,7 @@
         {
             "title": "Chemical Data",
             "id": "chemical_data",
+            "description": "Info on pKa values, Nucleophile/Electrophile Reactivity, A-Values, Solvents, Physical Constants, etc.",
             "links": [
                 {
                     "name": "A-Values",
