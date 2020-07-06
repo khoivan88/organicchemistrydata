@@ -651,6 +651,12 @@ div#at4-whatsnext {
     h1 {
         font-size: 5.6vmin !important;
     }
+    h2 {
+        font-size: 4.6vmin !important;
+    }
+    h3 {
+        font-size: 4.0vmin !important;
+    }
 
 }
 
