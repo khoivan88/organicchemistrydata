@@ -1,16 +1,56 @@
 ---
 layout: 'base_layout.njk'
 
+header:
+  title: 'Organic Chemistry Data - Links'
+
+title: 'Links'
+
+specific_page_js:
+  list:
+    - description: Control side menu and toogle button
+      url: '/js/sideMenu.js'
+
 ---
 
-<div class="container">
-  <div class="list-group list-group-flush">
-    {%- for collection in org_collections.list %}
-    <div id="{{ collection.id }}" class="list-group-item">
-      <h3>{{ collection.title }}</h3>
-      <ul>
-        {%- if collection.links %}
-          {%- for link in collection.links %}
+{% if title %}
+<div class="container-fluid page-title-static mx-0 pt-1 pb-0 d-flex justify-content-center">
+    <h1 class="text-center ml-3 pl-3 my-auto">{{ title }}</h1>
+</div>
+{% endif %}
+
+<div class="wrapper">
+  <!-- Sidebar -->
+  <nav id="sidebar" class="navbar px-0 pt-2 pb-4">
+    <div class="sidebar-header text-center">
+      <h6 class="d-inline-flex align-self-center my-1">List</h6>
+    </div>
+
+    <div id="navbar-left">
+      <ul class="nav nav-pills flex-column">
+        {%- for collection in org_collections.list %}
+          <li class="nav-item border-bottom">
+              <a href="#{{ collection.id }}" class="nav-link px-1 py-1">{{ collection.title }}</a>
+          </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </nav>
+
+
+  <div id="content">
+    <button type="button" id="sidebarCollapse" class="btn btn-info d-inline-block ml-auto mr-3" title="Toggle List">
+      <i class="fas fa-angle-double-left"></i>
+    </button>
+
+    <div class="full-list container px-0 mx-0">
+      <div class="list-group list-group-flush">
+        {%- for collection in org_collections.list %}
+        <div id="{{ collection.id }}" class="list-group-item my-4">
+          <h3>{{ collection.title }}</h3>
+          <ul>
+            {%- if collection.links %}
+            {%- for link in collection.links %}
             {%- if link.links %}
             <li>
               <h5>{{ link.name | safe }}</h5>
@@ -23,10 +63,15 @@ layout: 'base_layout.njk'
             {% else %}
             <li><a href="{{ link.url | url }}">{{ link.name }}</a></li>
             {%- endif %}
-          {%- endfor %}
-        {%- endif %}
-      </ul>
+            {%- endfor %}
+            {%- endif %}
+          </ul>
+        </div>
+        {%- endfor %}
+      </div>
     </div>
-    {%- endfor %}
   </div>
+
 </div>
+
+
