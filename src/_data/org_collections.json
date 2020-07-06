@@ -5,7 +5,7 @@
         {
             "title": "Reaction Info",
             "id": "reaction_info",
-            "description": "Info on Named Reactions; Rules and Effects; and Reagents. Protecting Groups, Electron Pushing, Acid/Base Catalysis, Natural Product Syntheses",
+            "description": "Info on reactions (inc. named items), electron pushing, acid/base catalysis, natural pdt. syntheses",
             "links": [
                 {
                     "name": "Acronyms",
@@ -143,7 +143,7 @@
         {
             "title": "Chemical Data",
             "id": "chemical_data",
-            "description": "Info on pKa values, Nucleophile/Electrophile Reactivity, A-Values, Solvents, Physical Constants, etc.",
+            "description": "Info on pKa values, nucleophile/electrophiles, A-values, solvents, physical constants, etc.",
             "links": [
                 {
                     "name": "A-Values",
@@ -277,7 +277,7 @@
         {
             "title": "Spectroscopy Resources",
             "id": "spectroscopy_resources",
-            "description": "Info on: NMR (1H, 13C, & multinuclear: Se-77 , F-19 , P-31 , B-11), IR, UV, MS Spectroscopy and links to spectra databases",
+            "description": "Info on: NMR (1H, 13C, 19F 31P, 11B, 77Se), IR, UV, MS spectroscopy and links to spectra databases",
             "links": [
                 {
                     "name": "General",
@@ -469,7 +469,7 @@
         {
             "title": "Organic Compound Info",
             "id": "organic_compound_info",
-            "description": "Info on naming organic compounds, functional groups, and assigning stereochemistry. Links to some commonly available organic compounds",
+            "description": "Info on naming organic compounds, functional groups, assigning R/S. and organic compound types",
             "links": [
                 {
                     "name": "Nomenclature",
@@ -690,7 +690,7 @@
         {
             "title": "Safety Resources",
             "id": "safety_resources",
-            "description": "Links to various useful resources for safe operations and handling of chemicals",
+            "description": "Links to useful resources for safe operations of organic chemistry laboratories",
             "links": [
                 {
                     "name": "Dow Lab Safety Academy",
@@ -721,7 +721,7 @@
         {
             "title": "Chemical Societies and Portals",
             "id": "chemical_societies_and_portals",
-            "description": "Links to various Chemical Societies especially those that have a focus on or related to Organic Chemistry",
+            "description": "Links to chemical societies especially those that have a focus on or related to organic chemistry",
             "links": [
                 {
                     "name": "American Association for the Advancement of Science",
@@ -780,7 +780,7 @@
         {
             "title": "Literature Sources",
             "id": "literature_sources",
-            "description": "Links to various literature resources including lists of journals that have an Organic Chemistry focus. The Reference Resolver is also linked from this section.",
+            "description": "Links to literature resources (i.e. lists of journals with an organic chemistry focus)",
             "links": [
                 {
                     "name": "ACS Organic Division's Links to Organic Journals",
@@ -811,7 +811,7 @@
         {
             "title": "Laboratory Techniques",
             "id": "laboratory_techniques",
-            "description": "Links to resources for doing various general laboratory procedures in organic chemistry laboratories",
+            "description": "Links to resources for doing various general laboratory procedures in organic chemistry labs",
             "links": [
                 {
                 "name": "ChemSpider Synthetic Procedure Pages",
@@ -822,7 +822,7 @@
         {
             "title": "Useful Software",
             "id": "useful_software",
-            "description": "Links to software applications that are likely useful for a broad selection of organic chemists. Including some videos on using Chemdraw to quickly draw structures.",
+            "description": "Links to software applications that are likely useful for a broad selection of organic chemists",
             "links": [
                 {
                     "name": "3D Organic Chemistry Animations",
@@ -993,7 +993,7 @@
         {
             "title": "Organic Chemistry Videos",
             "id": "organic_chemistry_videos",
-            "description": "Links to collections and individual (significant/historical) videos about organic chemistry. Often these will be lectures",
+            "description": "Links to collections and individual (significant/historical) videos about organic chemistry-often these will be lectures",
             "links": [
                 {
                     "name": "DOC Videos Page (NOS, historical, & Virtual Symposia)",
@@ -1017,7 +1017,7 @@
         {
             "title": "Other Sites and Resources",
             "id": "other_sites_and_resources",
-            "description": "This is a collection of links on topics related to organic chemistry that do not readily fit in the other categories on this page.",
+            "description": "Links on topics related to organic chemistry that do not fit in the other categories on this page",
             "links": [
                 {
                     "name": "Chemical (Academic) Genealogy Database",
