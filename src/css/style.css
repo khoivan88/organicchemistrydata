@@ -13,15 +13,21 @@ body {
     /* top: 60px; */
     padding-top: 130px;    /* to prevent cover of content by the nav-bar
     /* padding-bottom: 10px;    /* to prevent cover of content by the nav-bar */
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Source Serif Pro', serif;
 }
 
 body section.flex-fill {
     margin-top: -25px;
 }
 
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Crimson Text', serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+.display-1, .display-2, .display-3, .display-4 {
+    font-weight: bold;
 }
 
 .lead {
@@ -36,6 +42,10 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 950;
     min-height: 45px;
     /* padding-bottom: 50px; */
+}
+
+.indent {
+	text-indent: 25px;
 }
 
 
