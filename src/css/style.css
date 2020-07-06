@@ -433,10 +433,6 @@ div#at4-whatsnext {
     overflow: hidden;
 }
 
-#bb-footer .bb-footer__bottom .footer-bucket {
-    text-align: center;
-}
-
 #bb-footer .bb-footer__bottom .footer-bucket img {
     display: inline-block;
     max-width: 170px;
@@ -673,7 +669,6 @@ div#at4-whatsnext {
 
 @media only screen and (min-width: 768px){
     #bb-footer .privacy {
-        text-align: right;
         margin-top: 0;
         font-size: 14px;
         line-height: 18px;
