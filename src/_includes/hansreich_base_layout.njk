@@ -99,10 +99,6 @@ about:
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent1">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ '/' | url }}">Home</a>
-                    </li>
-
                     {%- for item in nav_items.list %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ item.url | url }}" target="{{ item.target }}">
