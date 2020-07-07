@@ -15,7 +15,7 @@ header:
 
     {% for page in collections.all %}
         <ul class="sitemap">
-            <li>{{ site.url }}{{ page.url | url }}</li>
+            <li><a href="{{ site.url }}{{ page.url | url }}">{{ site.url }}{{ page.url | url }}</a></li>
         </ul>
     {% endfor %}
 </div>
