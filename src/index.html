@@ -16,6 +16,11 @@ meta_tags:
   - name: 'description'
     content: 'This is collection of web pages containing useful information/data for organic chemists. The links and data can be used to learn how to complete various organic reactions and understand the products (spectroscopy) and mechanisms of those reactions.'
 
+specific_page_js:
+  list:
+    - description: display hex description on xs screen
+      url: '/js/hex.js'
+
 ---
 
 <div class="jumbotron jumbotron-fluid hex-container mx-0">
@@ -24,12 +29,14 @@ meta_tags:
       {%- for collection in org_collections.list %}
         <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center hex-col">
           <div class="hex-holder d-flex align-items-center justify-content-center">
-            <a href="{{ (org_collections.url_prefix + '#' + collection.id) | url }}" class="d-flex justify-content-center w-100 text-decoration-none">
-              <h4 class="hex-content px-2">{{ collection.title }}</h4>
+            <a href="{{ (org_collections.url_prefix + '#' + collection.id) | url }}" class="d-flex w-100 text-decoration-none">
+              <h4 class="hex-content px-2 mx-auto my-0">{{ collection.title }}</h4>
 
-              {# <a href="#description-{{ collection.id }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Arrow</a> #}
-              {# <div id="description-{{ collection.id }}" class="collapse"> #}
-                <span class="hex-content-detail text-center px-1">
+              {# <a href="#description-{{ collection.id }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle d-inline d-sm-none"></a> #}
+              {# <button class="btn btn-link dropdown-toggle d-inline d-sm-none mx-0 px-2" type="button" id="dropdownMenuButton-{{ collection.id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button> #}
+              <button class="nav-link dropdown-toggle btn btn-link d-inline d-sm-none mx-0 px-2" type="button" id="dropdownMenuButton-{{ collection.id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+              <div class="hex-content-detail dropdown-menu dropdown-menu-right text-center px-1 my-0 py-0 border-0" aria-labelledby="dropdownMenuButton-{{ collection.id }}">
+                {# <span class="hex-content-detail text-center px-1"> #}
                   {# <ul class="list-unstyled">
                     {%- for link in collection.links %}
                     <!-- <li><a href="{{ link.url | url }}">{{ link.name }}</a></li> -->
@@ -37,8 +44,8 @@ meta_tags:
                     {%- endfor %}
                   </ul> #}
                   {{ collection.description }}
-                </span>
-              {# </div> #}
+                {# </span> #}
+              </div>
             </a>
           </div>
         </div>

@@ -16,14 +16,24 @@
 }
 .hex-holder {
   position: relative;
-  width: 75%;
-  height: 57.7px;
+  width: 82%;
+  height: 65px;
   vertical-align: center;
   background-color: white;
   color: rgb(186, 0, 0);
   margin: 10px 0;
   border-left: 0px;
-  border-right: 0px; }
+  border-right: 0px;
+}
+
+.hex-holder.open {
+  height: 130px;
+  align-items: start !important;
+}
+
+.hex-holder.open .hex-content-detail {
+    padding-top: 10px !important;
+}
 
 /* .hex-holder:hover {
 	background-color: rgb(58, 100, 134);
@@ -41,13 +51,17 @@
     /* padding: 0px 5px; */
 }
 
+.hex-holder .dropdown-menu {
+    background-color: transparent;
+    position: inherit;
+}
+
 .hex-content-detail {
-    display: none;
     font-size: 14px;
     max-height: 105px;
     overflow-y: auto;
     font-family: 'Roboto Condensed', sans-serif;
-    color: white;
+    color: black;
 }
 
 .hex-content-detail a{
@@ -121,8 +135,13 @@
         height: 56px;
     }
 
+    .hex-content-detail {
+        display: none;
+    }
+
     .hex-holder:hover .hex-content-detail {
         display: block;
+        color: white;
     }
 
     .hex-holder:hover .hex-content {
