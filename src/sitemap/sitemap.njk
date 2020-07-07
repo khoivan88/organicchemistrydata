@@ -1,0 +1,25 @@
+---
+permalink: /sitemap/sitemap.xml
+
+eleventyExcludeFromCollections: true
+
+header:
+    title: Sitemap
+
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% for page in collections.all %}
+        <url>
+            <loc>{{ site.url }}{{ page.url | url }}</loc>
+            {%- if page.data.updated -%}
+                <lastmod>{{ page.data.updated.toISOString() }}</lastmod>
+            {%- else -%}
+                <lastmod>{{ page.date.toISOString() }}</lastmod>
+            {%- endif -%}
+            {%- if page.data.changeFreq -%}
+                <changefreq>{{page.data.changeFreq}}</changefreq>
+            {%- endif -%}
+        </url>
+    {% endfor %}
+</urlset>

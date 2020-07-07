@@ -1,0 +1,21 @@
+---
+# permalink: sitemap.xml
+
+eleventyExcludeFromCollections: true
+
+layout: base_layout.njk
+
+header:
+    title: Sitemap
+
+---
+
+<div class="container">
+    <h1>{{ header.title }}</h1>
+
+    {% for page in collections.all %}
+        <ul class="sitemap">
+            <li>{{ site.url }}{{ page.url | url }}</li>
+        </ul>
+    {% endfor %}
+</div>
