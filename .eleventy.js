@@ -2,10 +2,6 @@ const fs = require("fs");
 // const lazyImagesPlugin = require('eleventy-plugin-lazyimages');  // https://www.npmjs.com/package/eleventy-plugin-lazyimages
 const htmlmin = require("html-minifier");  // https://www.11ty.dev/docs/config/#transforms-example-minify-html-output
 
-module.exports = {
-  google_analytic: true
-}
-
 module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats(["html", "liquid", "njk", "ejs", "md", "hbs", "mustache", "haml", "pug", "11ty.js", "pdf", "gif"]);
   eleventyConfig.addPassthroughCopy("src/css");
