@@ -7,6 +7,7 @@ html {
     /* scroll-padding-top: 130px; */ /* no need anymore with clickToSection.js */
 }
 
+
 body {
     /* font-family: sans-serif; */
     position: relative;    /* for scrollspy to work properly */
@@ -646,13 +647,22 @@ div#at4-whatsnext {
 /*// Medium devices (tablets, 768px and down)*/
 @media (max-width: 768px) {
     h1 {
-        font-size: 5.6vmin !important;
+        font-size: 5.8vmin !important;
     }
     h2 {
-        font-size: 4.6vmin !important;
+        font-size: 5.5vmin !important;
     }
     h3 {
-        font-size: 4.0vmin !important;
+        font-size: 5.2vmin !important;
+    }
+    h4 {
+        font-size: 4.9vmin !important;
+    }
+    h5 {
+        font-size: 4.6vmin !important;
+    }
+    h6 {
+        font-size: 4.3vmin !important;
     }
 
 }
