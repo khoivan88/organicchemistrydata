@@ -217,7 +217,7 @@ img.img-fluid {
 #sidebarCollapse {
     /* right: 0; */
     left: 4px;
-    top: 62px;
+    top: 65px;
     position: fixed;
     z-index: 1000;
 }
