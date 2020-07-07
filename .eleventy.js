@@ -3,7 +3,7 @@ const fs = require("fs");
 const htmlmin = require("html-minifier");  // https://www.11ty.dev/docs/config/#transforms-example-minify-html-output
 
 module.exports = {
-  google_analytic: false
+  google_analytic: true
 }
 
 module.exports = function (eleventyConfig) {
