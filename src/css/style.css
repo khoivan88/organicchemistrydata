@@ -14,7 +14,8 @@ body {
     /* top: 60px; */
     padding-top: 130px;    /* to prevent cover of content by the nav-bar
     /* padding-bottom: 10px;    /* to prevent cover of content by the nav-bar */
-    font-family: 'Source Serif Pro', serif;
+    /* font-family: 'Source Serif Pro', serif; */
+    font-family: 'Open Sans', serif;
 }
 
 body section.flex-fill {
