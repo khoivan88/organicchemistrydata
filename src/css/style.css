@@ -643,28 +643,30 @@ div#at4-whatsnext {
     .dropdown-item {
         white-space: normal;
     }
+
+    h1 {
+        font-size: 5.7vmin !important;
+    }
+    h2 {
+        font-size: 5.4vmin !important;
+    }
+    h3 {
+        font-size: 5.1vmin !important;
+    }
+    h4 {
+        font-size: 4.8vmin !important;
+    }
+    h5 {
+        font-size: 4.5vmin !important;
+    }
+    h6 {
+        font-size: 4.2vmin !important;
+    }
+
 }
 
 /*// Medium devices (tablets, 768px and down)*/
 @media (max-width: 768px) {
-    h1 {
-        font-size: 5.8vmin !important;
-    }
-    h2 {
-        font-size: 5.5vmin !important;
-    }
-    h3 {
-        font-size: 5.2vmin !important;
-    }
-    h4 {
-        font-size: 4.9vmin !important;
-    }
-    h5 {
-        font-size: 4.6vmin !important;
-    }
-    h6 {
-        font-size: 4.3vmin !important;
-    }
 
 }
 
