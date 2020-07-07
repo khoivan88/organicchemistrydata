@@ -27,6 +27,7 @@ function closeNavOnSmallScreen () {
   // console.log(width)
   if (width >= window.innerWidth) {
     document.querySelector('#sidebar').classList.toggle('active')
+    document.querySelector('#content').classList.toggle('active')
   }
 
   // Check if the side menu is displayed
@@ -98,7 +99,8 @@ $(document).ready(function () {
   })
 
   $('#sidebarCollapse').on('click', function () {
-    $('#sidebar, #content').toggleClass('active')
+    // $('#sidebar, #content').toggleClass('active')
+    $('#sidebar,#content').toggleClass('active')
     checkForChanges()
   })
 })
