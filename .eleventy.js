@@ -1,6 +1,6 @@
 const fs = require("fs");
 // const lazyImagesPlugin = require('eleventy-plugin-lazyimages');  // https://www.npmjs.com/package/eleventy-plugin-lazyimages
-const htmlmin = require("html-minifier");  // https://www.11ty.dev/docs/config/#transforms-example-minify-html-output
+// const htmlmin = require("html-minifier");  // https://www.11ty.dev/docs/config/#transforms-example-minify-html-output
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats(["html", "liquid", "njk", "ejs", "md", "hbs", "mustache", "haml", "pug", "11ty.js", "pdf", "gif"]);
@@ -22,18 +22,18 @@ module.exports = function (eleventyConfig) {
   //     return imgPath;
   //   },
   // });
-  // Minify HTML output
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    if( outputPath.endsWith(".html") ) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: false,
-        collapseWhitespace: true
-      });
-      return minified;
-    }
-    return content;
-  });
+  // // Minify HTML output
+  // eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+  //   if( outputPath.endsWith(".html") ) {
+  //     let minified = htmlmin.minify(content, {
+  //       useShortDoctype: true,
+  //       removeComments: false,
+  //       collapseWhitespace: true
+  //     });
+  //     return minified;
+  //   }
+  //   return content;
+  // });
 
   // Custom filters
   eleventyConfig.addFilter("toLowerCase", function (value) {
