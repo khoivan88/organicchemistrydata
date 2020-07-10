@@ -683,7 +683,7 @@ div#at4-whatsnext {
 @media only screen and (min-width: 768px){
     #bb-footer .privacy {
         margin-top: 0;
-        font-size: 14px;
+        /* font-size: 14px; */
         line-height: 18px;
     }
 
