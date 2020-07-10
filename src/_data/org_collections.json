@@ -331,7 +331,8 @@
                         {
                             "name": "¹³C NMR Shifts",
                             "url": "/NMRresources/nmr/c13-data/cdata.htm"
-                        }                        {
+                        },
+                        {
                             "name": "Coupling: 𝘑(H-H)",
                             "url": "/NMRresources/nmr/h-data/h-coupling.htm"
                         },
