@@ -93,10 +93,16 @@ $(document).ready(function () {
     resizeId = setTimeout(checkForChanges, 300)
   })
 
-  // // Use minimal scroll bar theme
-  // $('#sidebar').mCustomScrollbar({
-  //   theme: 'minimal-dark' // http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollbar_themes_demo.html
-  // })
+  // Use minimal scroll bar theme
+  $('#sidebar').mCustomScrollbar({
+    theme: 'minimal-dark', // http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollbar_themes_demo.html
+    mouseWheel: {
+    //   scrollAmount: 300,
+    //   deltaFactor: 200,
+      normalizeDelta: true
+    },
+    scrollInertia: 200
+  })
 
   $('#sidebarCollapse').on('click', function () {
     // $('#sidebar, #content').toggleClass('active')
