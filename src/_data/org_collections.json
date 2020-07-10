@@ -331,6 +331,17 @@
                         {
                             "name": "¹³C NMR Shifts",
                             "url": "/NMRresources/nmr/c13-data/cdata.htm"
+                        }                        {
+                            "name": "Coupling: 𝘑(H-H)",
+                            "url": "/NMRresources/nmr/h-data/h-coupling.htm"
+                        },
+                        {
+                            "name": "Coupling: 𝘑(C-H)",
+                            "url": "/NMRresources/nmr/10-cdata-05-jch.htm"
+                        },
+                        {
+                            "name": "NMR Solvents",
+                            "url": "/NMRresources/nmr/nmr-solvents.htm"
                         }
                     ]
                 },
@@ -352,18 +363,6 @@
                         {
                             "name": "Se-77",
                             "url": "/NMRresources/nmr/11-se-data.htm"
-                        },
-                        {
-                            "name": "Coupling: 𝘑(H-H)",
-                            "url": "/NMRresources/nmr/h-data/h-coupling.htm"
-                        },
-                        {
-                            "name": "Coupling: 𝘑(C-H)",
-                            "url": "/NMRresources/nmr/10-cdata-05-jch.htm"
-                        },
-                        {
-                            "name": "NMR Solvents",
-                            "url": "/NMRresources/nmr/nmr-solvents.htm"
                         },
                         {
                             "name": "NMR Periodic Table",
@@ -475,7 +474,7 @@
                     "name": "Nomenclature",
                     "links": [
                         {
-                            "name": "General Information/Page",
+                            "name": "General Information",
                             "url": "/hansreich/resources/nomenclature/"
                         },
                         {
@@ -629,6 +628,10 @@
                         {
                             "name": "OSIRIS Property Explorer",
                             "url": "https://www.organic-chemistry.org/prog/peo/"
+                        },
+                        {
+                            "name": "PubChem (NIH)",
+                            "url": "https://pubchem.ncbi.nlm.nih.gov"
                         },
                         {
                             "name": "RCSB Protein Databank",
@@ -814,8 +817,24 @@
             "description": "Links to resources for doing various general laboratory procedures in organic chemistry labs",
             "links": [
                 {
+                "name": "Not Voodoo Organic Techniques/Information",
+                "url": "http://chem.chem.rochester.edu/%7Envd/index.php"
+                },
+                {
+                "name": "NOP General Techniques",
+                "url": "https://www.oc-praktikum.de/nop/en-techniques"
+                },
+                {
+                "name": "",
+                "url": "https://www.oc-praktikum.de/nop/index.php?page=experiments&lang=en&subset=none&term=%25&type=title&difficulty=%25"
+                },
+                {
                 "name": "ChemSpider Synthetic Procedure Pages",
                 "url": "http://cssp.chemspider.com/"
+                },
+                {
+                "name": "Organic Syntheses",
+                "url": "https://www.organicdivision.org/OrganicSyntheses/"
                 }
             ]
         },
@@ -878,6 +897,10 @@
                     "url": "https://www.cadrerl.com/ring/"
                 },
                 {
+                    "name": "Open Enventory: free, open-source chemical inventory & ELN",
+                    "url": "https://open-enventory.gitbook.io/user-guides/"
+                },
+                {
                     "name": "Schrödinger",
                     "url": "https://www.schrodinger.com/drug-discovery"
                 },
@@ -888,10 +911,6 @@
                 {
                     "name": "Wavefunction: Spartan",
                     "url": "https://www.wavefun.com/"
-                },
-                {
-                    "name": "Open Enventory: free, open-source chemical inventory & ELN",
-                    "url": "https://open-enventory.gitbook.io/user-guides/"
                 }
             ]
         },
