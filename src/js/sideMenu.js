@@ -93,10 +93,10 @@ $(document).ready(function () {
     resizeId = setTimeout(checkForChanges, 300)
   })
 
-  // Use minimal scroll bar theme
-  $('#sidebar').mCustomScrollbar({
-    theme: 'minimal-dark' // http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollbar_themes_demo.html
-  })
+  // // Use minimal scroll bar theme
+  // $('#sidebar').mCustomScrollbar({
+  //   theme: 'minimal-dark' // http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollbar_themes_demo.html
+  // })
 
   $('#sidebarCollapse').on('click', function () {
     // $('#sidebar, #content').toggleClass('active')
