@@ -90,7 +90,17 @@ h1, h2, h3, h4, h5, h6 {
     /* padding-bottom: 50px; */
 }
 
+#sidebar .input-group {
+    z-index: 900;
+    position: fixed;
+    top: 110px;
+    background-color: white;
+    max-width: 240px;
+}
 
+#sidebar.active .input-group {
+    max-width: -webkit-fill-available;
+}
 
 /* ---------------------------------------------------
     Go to top Button
@@ -164,12 +174,12 @@ img.img-fluid {
 #sidebar {
     width: 250px;
     position: fixed;
-    top: 130px;
+    top: 135px;
     bottom: 0px;
     left: 0px;
     /* height: 85vh; */
     z-index: 800;
-    transition: all 0.3s;
+    /* transition: all 0.3s; */
     border-right: 1px black solid;
     overflow: auto;
     background-color: white;
@@ -703,6 +713,10 @@ div#at4-whatsnext {
 
     #content.active {
         width: 100%;
+    }
+
+    #sidebar.active .input-group {
+        max-width: 240px;
     }
 
 }
