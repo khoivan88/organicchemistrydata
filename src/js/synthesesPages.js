@@ -99,31 +99,33 @@ function deepLink () {
     const hash = url.split('#')
     // console.log(`deepLink hash: ${hash}`) // !DEBUG
 
+    loadPage(`../../syntheses_data/${hash[1]}`, '#content .full-list')
+
     // Check the hash for 'groupby' indices first;
     // if not found, load default indexed by 'names' and then try to load the total synthesis page
-    loadPage(`groupby/${hash[1]}`, '.syntheses-groupedby')
-    // .then(function (response) {
-    //   console.log(response)
-    //   if (response.ok) {
-      //   } else {
-      //     return Promise.reject(response);
-      //   }
-      // })
-      .catch(function (error) {
-        console.warn(`${error}: indexed by '${hash[1]}'`) // !DEBUG
-        loadPage('groupby/names', '.syntheses-groupedby')
-        loadPage(`syntheses_data/${hash[1]}`, '#content .full-list')
-      })
+    // loadPage(`groupby/${hash[1]}`, '.syntheses-groupedby')
+    // // .then(function (response) {
+    // //   console.log(response)
+    // //   if (response.ok) {
+    //   //   } else {
+    //   //     return Promise.reject(response);
+    //   //   }
+    //   // })
+    //   .catch(function (error) {
+    //     console.warn(`${error}: indexed by '${hash[1]}'`) // !DEBUG
+    //     loadPage('groupby/names', '.syntheses-groupedby')
+    //     loadPage(`syntheses_data/${hash[1]}`, '#content .full-list')
+    //   })
 
     // Reload page and create new url (optional)
     // url = window.location.href.replace(/\/#/, "#");
     // window.history.replaceState(null, null, url)
 
-    // Optionally, force the page scroll to start from the top of the page.
-    setTimeout(() => {
-      // console.log('scroll from top') // !DEBUG
-      $(window).scrollTop(0)
-    }, 100)
+    // // Optionally, force the page scroll to start from the top of the page.
+    // setTimeout(() => {
+    //   // console.log('scroll from top') // !DEBUG
+    //   $(window).scrollTop(0)
+    // }, 100)
   }
 
   // $('.syntheses-groupedby a').on("click", function() {
@@ -139,16 +141,48 @@ function deepLink () {
   // });
 }
 
+function indexRedirect () {
+  console.log('indexRedirect JS working!') // !DEBUG
+
+  const select = document.querySelector('.index')
+  const options = document.querySelectorAll('.index option')
+
+
+  // 1
+  select.addEventListener('change', function () {
+    const url = this.options[this.selectedIndex].dataset.url
+    if (url) {
+      window.location.href = url
+    }
+  })
+
+  // 2
+  for (const option of options) {
+    const url = option.dataset.url
+    if (window.location.href.includes(url)) {
+      option.setAttribute('selected', '')
+      break
+    }
+  }
+
+  openSideBarIfClosed()
+}
+
 $(document).ready(function () {
   // console.log('synthesesPages JS working!') // !DEBUG
 
   // If user provides a url with hash (e.g. 'example.com/#something') then try to load the correct page
   if (window.location.hash) {
     deepLink()
-  } else {
-    // Initial load grouped by names page
-    loadPage('groupby/names', '.syntheses-groupedby')
   }
+  // else {
+  //   // Initial load grouped by names page
+  //   loadPage('groupby/names', '.syntheses-groupedby')
+  // }
 
-  loadSideIndex()
+  // loadSideIndex()
+
+  indexRedirect()
+
+  loadSynthesis()
 })
