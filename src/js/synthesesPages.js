@@ -142,11 +142,10 @@ function deepLink () {
 }
 
 function indexRedirect () {
-  console.log('indexRedirect JS working!') // !DEBUG
+  // console.log('indexRedirect JS working!') // !DEBUG
 
   const select = document.querySelector('.index')
   const options = document.querySelectorAll('.index option')
-
 
   // 1
   select.addEventListener('change', function () {
