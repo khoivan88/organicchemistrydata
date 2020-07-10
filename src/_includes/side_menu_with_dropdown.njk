@@ -44,7 +44,7 @@ specific_page_js:
 
 <div class="wrapper">
     <!-- Sidebar -->
-    <nav id="sidebar" class="navbar px-0 pt-3 pb-4">
+    <nav id="sidebar" class="align-items-start px-0 pt-3 pb-4">
         <!-- <div class="sidebar-header text-center">
             <h6 class="d-inline-flex align-self-center my-1">List</h6>
         </div> -->
@@ -61,9 +61,9 @@ specific_page_js:
             </select>
         </div>
 
-        <div id="navbar-left" class="container-fluid py-3">
+        <div id="navbar-left" class="container-fluid py-5">
             <div class="syntheses-groupedby w-100" id="">
-                <p>{{ content | safe }}</p>
+                {{ content | safe }}
             </div>
 
         </div>
@@ -74,13 +74,11 @@ specific_page_js:
         <button type="button" id="sidebarCollapse"
             class="btn btn-info d-inline-block ml-auto mr-3"
             title="Toggle List">
-            {# <i class="fas fa-list-ul"></i> #}
             <i class="fas fa-angle-double-left"></i>
         </button>
 
         <div class="full-list container px-3 mx-0 pb-5">
             <!-- <div class="tab-pane fade show active" id="home"> -->
-            {% block explanation %}
             <div class="container" id="info">
                 <h3>Explanation</h3>
                 <p class="">
@@ -114,7 +112,6 @@ specific_page_js:
                     (1), Kristen Plessel (1), Almaz Jalilov (1). and Kevin Schultz (1).
                 </p>
             </div>
-            {% endblock %}
 
         </div>
     </div>
