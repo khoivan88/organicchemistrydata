@@ -78,8 +78,9 @@ async function loadSynthesis () {
     link.onclick = function () {
       // console.log('something2') // !DEBUG
       // link.classList.toggle('active')
-      let url = link.dataset.url
-      // console.log(url) // !DEBUG
+      // let url = link.dataset.url
+      let url = '../../syntheses_data/' + link.href.split('#')[1]
+      console.log(url) // !DEBUG
       loadPage(url, '#content .full-list')
 
       window.closeNavOnSmallScreen()
