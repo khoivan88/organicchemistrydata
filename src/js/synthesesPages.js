@@ -144,26 +144,29 @@ function deepLink () {
   // });
 }
 
+/**
+ * Load index page upon a select option is chosen
+ * Ref: https://webdesign.tutsplus.com/tutorials/dropdown-navigation-how-to-maintain-the-selected-option-on-page-load--cms-32210
+ */
 function indexRedirect () {
   // console.log('indexRedirect JS working!') // !DEBUG
 
   const select = document.querySelector('.index')
   const options = document.querySelectorAll('.index option')
 
-  // 1
+  // Retrieve the page url related to the selected option and force a redirection to this page.
   select.addEventListener('change', function () {
     const url = this.options[this.selectedIndex].dataset.url
     if (url) {
       // window.location.href = url
       loadPage(url, '.syntheses-groupedby')
-      setTimeout(() => {
-        console.log('scroll from top') // !DEBUG
-        $(window).scrollTop(0)
-      }, 100)
+
+      // Scroll to top, used with malihu scrollbar: http://manos.malihu.gr/jquery-custom-content-scroller/#methods-section-scrollTo
+      $('#sidebar').mCustomScrollbar('scrollTo', 'top')
     }
   })
 
-  // // 2
+  // // Iterate through all options, grab their data-url attribute value, and check to see whether this value is part of the page url or not. If it is, we mark the related option as selected and jump out of the loop.
   // for (const option of options) {
   //   const url = option.dataset.url
   //   if (window.location.href.includes(url)) {
@@ -171,9 +174,6 @@ function indexRedirect () {
   //     break
   //   }
   // }
-
-
-  // openSideBarIfClosed()
 }
 
 $(document).ready(function () {
