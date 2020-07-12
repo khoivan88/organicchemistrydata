@@ -163,7 +163,7 @@ function indexRedirect () {
 
       // Update scroll bar then Scroll to top, used with malihu scrollbar: http://manos.malihu.gr/jquery-custom-content-scroller/#methods-section-scrollTo
       $('#sidebar').mCustomScrollbar('update')
-      $('#sidebar').mCustomScrollbar('scrollTo', 'top')
+      $('#sidebar').mCustomScrollbar('scrollTo', 'top', { timeout: 400 })
     }
   })
 
