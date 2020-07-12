@@ -2,12 +2,6 @@
 main_css:
     url: "/css/style.css"
 
-homepage_logo:
-    #url: '/img/ReichSiteIcon.jpg'
-    src: '/img/logo-white@2x.png'
-    url: 'https://www.organicdivision.org/'
-    target: '_blank'
-
 doc:
     url: "https://www.organicdivision.org/"
     target: '_blank'
@@ -32,9 +26,12 @@ about:
     <!--source: https://stackoverflow.com/a/42333464-->
     <div id="nav-placeholder">
         <nav id="navbar" class="navbar fixed-top navbar-expand-sm py-0 navbar-dark">
-            <a class="navbar-brand py-1" href="{{ homepage_logo.url | url }}"{%-if homepage_logo.target %} target="{{ homepage_logo.target }}"{%- endif %}>
-                <img src="{{ homepage_logo.src | url }}" height="50" alt="DOC Logo" loading="lazy">
-            </a>
+            {# <a class="navbar-brand py-1" href="{{ homepage_logo.url | url }}"{%-if homepage_logo.target %} target="{{ homepage_logo.target }}"{%- endif %}>
+                <img src="{{ homepage_logo.src | url }}" height="50" alt="Organic Chemistry Data Site - Logo" loading="lazy">
+            </a> #}
+
+            {%- include 'global_logo.njk' -%}
+
             <button class="navbar-toggler align-self-start py-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1,#sitenav-submenu1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
