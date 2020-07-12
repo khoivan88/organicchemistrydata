@@ -78,7 +78,9 @@ async function loadSynthesis () {
     link.onclick = function () {
       // console.log('something2') // !DEBUG
       // link.classList.toggle('active')
-      let url = link.dataset.url
+      // let url = link.dataset.url
+      // let url = '../../syntheses_data/' + link.href.split('#')[1]
+      let url = 'syntheses_data/' + link.href.split('#')[1]
       // console.log(url) // !DEBUG
       loadPage(url, '#content .full-list')
 
@@ -99,31 +101,34 @@ function deepLink () {
     const hash = url.split('#')
     // console.log(`deepLink hash: ${hash}`) // !DEBUG
 
+    // loadPage(`../../syntheses_data/${hash[1]}`, '#content .full-list')
+    loadPage(`syntheses_data/${hash[1]}`, '#content .full-list')
+
     // Check the hash for 'groupby' indices first;
     // if not found, load default indexed by 'names' and then try to load the total synthesis page
-    loadPage(`groupby/${hash[1]}`, '.syntheses-groupedby')
-    // .then(function (response) {
-    //   console.log(response)
-    //   if (response.ok) {
-      //   } else {
-      //     return Promise.reject(response);
-      //   }
-      // })
-      .catch(function (error) {
-        console.warn(`${error}: indexed by '${hash[1]}'`) // !DEBUG
-        loadPage('groupby/names', '.syntheses-groupedby')
-        loadPage(`syntheses_data/${hash[1]}`, '#content .full-list')
-      })
+    // loadPage(`groupby/${hash[1]}`, '.syntheses-groupedby')
+    // // .then(function (response) {
+    // //   console.log(response)
+    // //   if (response.ok) {
+    //   //   } else {
+    //   //     return Promise.reject(response);
+    //   //   }
+    //   // })
+    //   .catch(function (error) {
+    //     console.warn(`${error}: indexed by '${hash[1]}'`) // !DEBUG
+    //     loadPage('groupby/names', '.syntheses-groupedby')
+    //     loadPage(`syntheses_data/${hash[1]}`, '#content .full-list')
+    //   })
 
     // Reload page and create new url (optional)
     // url = window.location.href.replace(/\/#/, "#");
     // window.history.replaceState(null, null, url)
 
-    // Optionally, force the page scroll to start from the top of the page.
-    setTimeout(() => {
-      // console.log('scroll from top') // !DEBUG
-      $(window).scrollTop(0)
-    }, 100)
+    // // Optionally, force the page scroll to start from the top of the page.
+    // setTimeout(() => {
+    //   // console.log('scroll from top') // !DEBUG
+    //   $(window).scrollTop(0)
+    // }, 100)
   }
 
   // $('.syntheses-groupedby a').on("click", function() {
@@ -139,16 +144,56 @@ function deepLink () {
   // });
 }
 
+/**
+ * Load index page upon a select option is chosen
+ * Ref: https://webdesign.tutsplus.com/tutorials/dropdown-navigation-how-to-maintain-the-selected-option-on-page-load--cms-32210
+ */
+function indexRedirect () {
+  // console.log('indexRedirect JS working!') // !DEBUG
+
+  const select = document.querySelector('.index')
+  const options = document.querySelectorAll('.index option')
+
+  // Retrieve the page url related to the selected option and force a redirection to this page.
+  select.addEventListener('change', function () {
+    const url = this.options[this.selectedIndex].dataset.url
+    if (url) {
+      // window.location.href = url
+      loadPage(url, '.syntheses-groupedby')
+
+      // Update scroll bar then Scroll to top, used with malihu scrollbar: http://manos.malihu.gr/jquery-custom-content-scroller/#methods-section-scrollTo
+      $('#sidebar').mCustomScrollbar('update')
+      $('#sidebar').mCustomScrollbar('scrollTo', 'top')
+    }
+  })
+
+  // // Iterate through all options, grab their data-url attribute value, and check to see whether this value is part of the page url or not. If it is, we mark the related option as selected and jump out of the loop.
+  // for (const option of options) {
+  //   const url = option.dataset.url
+  //   if (window.location.href.includes(url)) {
+  //     option.setAttribute('selected', '')
+  //     break
+  //   }
+  // }
+}
+
 $(document).ready(function () {
   // console.log('synthesesPages JS working!') // !DEBUG
 
   // If user provides a url with hash (e.g. 'example.com/#something') then try to load the correct page
   if (window.location.hash) {
     deepLink()
-  } else {
-    // Initial load grouped by names page
-    loadPage('groupby/names', '.syntheses-groupedby')
   }
+  // else {
+  //   // Initial load grouped by names page
+  //   loadPage('groupby/names', '.syntheses-groupedby')
+  // }
 
-  loadSideIndex()
+  loadPage('groupby/names', '.syntheses-groupedby')
+
+  // loadSideIndex()
+
+  indexRedirect()
+
+  loadSynthesis()
 })

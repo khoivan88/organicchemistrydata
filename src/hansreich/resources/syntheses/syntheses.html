@@ -1,6 +1,6 @@
 ---
-#layout: syntheses.njk
-layout: hansreich_base_layout.njk
+# layout: hansreich_base_layout.njk
+layout: side_menu_with_dropdown.njk
 
 header:
     title: 'Total Syntheses'
@@ -9,109 +9,49 @@ title: 'Total Syntheses'
 
 id: 'syntheses-info'
 
-specific_page_js:
-    list:
-    - description: 'Control side menu and toogle button'
-      url: '/js/sideMenu.js'
-    - description: 'Dynamic loading pages in Total Syntheses section'
-      url: '/js/synthesesPages.js'
+# specific_page_js:
+#     list:
+#     - description: 'Control side menu and toogle button'
+#       url: '/js/sideMenu.js'
+#     - description: 'Dynamic loading pages in Total Syntheses section'
+#       url: '/js/synthesesPages.js'
 
 ---
 
-<div class="container-fluid d-flex justify-content-center mx-0 bg-white">
-    <nav class="navbar syntheses-navbar navbar-expand-lg navbar-light w-100">
-        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle {{ title }} page indices">
-            <a class="navbar-text d-inline d-md-none" href="#">Index</a>
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<!-- <script>
+    window.location.replace('groupby/names/');
+</script> -->
 
-        <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarSupportedContent2">
-            <ul class="nav nav-pills justify-content-center">
-                <li class="nav-item">
-                    <a href="{{ '/hansreich/resources/syntheses' | url }}" class="nav-link"
-                        data-toggle="collapse" data-target="#navbarSupportedContent2.show">Intro</a>
-                </li>
-                {# <span class="navbar-text px-1">Grouped by:</span> #}
-                {#- <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Grouped by: </a></li> -#}
-                {%- for group in collections.groupby %}
-                    <li class="nav-item">
-                        {#- <a href="#{{ group.fileSlug }}" class="nav-link{% if group.fileSlug == 'names' %}{{ ' active' }}{% endif %}" data-toggle="tab">{{ group.fileSlug | toTitleCase }}</a> -#}
-                        <a href="#{{ group.fileSlug }}" class="nav-link" data-groupedby="{{ group.fileSlug }}"
-                            data-toggle="collapse" data-target="#navbarSupportedContent2.show">{{ group.fileSlug | toTitleCase }}</a>
-                    </li>
-                {%- endfor %}
-            </ul>
-        </div>
-    </nav>
+<div class="container" id="info">
+    <h3>Explanation</h3>
+    <p class="">
+        This collection of short natural product syntheses (a few “unnatural” products are also included. e.g.
+        cubane, twistane, triquinacene) was initially assembled over many years as a source of classroom
+        examples, problems, and examination questions in a senior undergraduate/beginning graduate level
+        course in organic chemistry. It has since matured into a comprehensive summary of the many
+        techniques and reagents used in total synthesis. It serves as a interesting and unique guide to which of
+        these are actually being used in natural product synthesis. For example, LiN'Pr. is the most commonly
+        used reagent in organic synthesis (ignoring NEt3, which is often present only to neutralize acid, and not
+        an active partipant in the molecular transformation).
+    </p>
+    <p class="">
+        The syntheses were selected for the inclusion of one or more key reactions that illustrate important
+        transformation of general utility (syntheses which used a minimum of "magic reactions” were preferred),
+        for their brevity, and for a presentation style in the original journal that permitted ready preparation of the
+        synthetic schemes.
+    </p>
+    <p class="">
+        Currently the name of the synthetic target is indexed, and there are compound Names, Reactions,
+        Reagents, Named Reactions, Rings, Chemoselectivity (competition) and chronological indices (Year).
+        These indices will continue to be improved and expanded in future releases.
+    </p>
+    <p class="">
+        Acknowledgments: This website is made possible by a generous allocation of server space and
+        bandwidth from, previously, the Department of Chemistry at the University of Wisconsin, and, now, ACS Division of Organic Chemistry. | also thank the National
+        Science Foundation for financial support. Prof. Kevin Jantzi (Valparaiso University) looked up many of the
+        DOI references, and | thank him for his efforts on this onerous task.
+
+        | also thank contributors to this collection: Mateusz Plesniak (20), Kris Kolonko (6). Amanda Jones
+        (1), Kristen Plessel (1), Almaz Jalilov (1). and Kevin Schultz (1).
+    </p>
 </div>
-
-<div class="wrapper">
-    <!-- Sidebar -->
-    <nav id="sidebar" class="navbar mt-3 px-0 pt-2 pb-4">
-        <!-- <div class="sidebar-header text-center">
-            <h6 class="d-inline-flex align-self-center my-1">List</h6>
-        </div> -->
-
-        <div id="navbar-left" class="container-fluid py-3">
-            <div class="syntheses-groupedby w-100" id="">
-                <p>{{ content | safe }}</p>
-            </div>
-
-        </div>
-    </nav>
-
-
-    <div id="content" class="py-5">
-        <button type="button" id="sidebarCollapse"
-            class="btn btn-info d-inline-block ml-auto mr-3"
-            title="Toggle List">
-            {# <i class="fas fa-list-ul"></i> #}
-            <i class="fas fa-angle-double-left"></i>
-        </button>
-
-        <div class="full-list container px-3 mx-0 py-5">
-            <!-- <div class="tab-pane fade show active" id="home"> -->
-            {% block explanation %}
-            <div class="container" id="info">
-                <h3>Explanation</h3>
-                <p class="">
-                    This collection of short natural product syntheses (a few “unnatural” products are also included. e.g.
-                    cubane, twistane, triquinacene) was initially assembled over many years as a source of classroom
-                    examples, problems, and examination questions in a senior undergraduate/beginning graduate level
-                    course in organic chemistry. It has since matured into a comprehensive summary of the many
-                    techniques and reagents used in total synthesis. It serves as a interesting and unique guide to which of
-                    these are actually being used in natural product synthesis. For example, LiN'Pr. is the most commonly
-                    used reagent in organic synthesis (ignoring NEt3, which is often present only to neutralize acid, and not
-                    an active partipant in the molecular transformation).
-                </p>
-                <p class="">
-                    The syntheses were selected for the inclusion of one or more key reactions that illustrate important
-                    transformation of general utility (syntheses which used a minimum of "magic reactions” were preferred),
-                    for their brevity, and for a presentation style in the original journal that permitted ready preparation of the
-                    synthetic schemes.
-                </p>
-                <p class="">
-                    Currently the name of the synthetic target is indexed, and there are compound Names, Reactions,
-                    Reagents, Named Reactions, Rings, Chemoselectivity (competition) and chronological indices (Year).
-                    These indices will continue to be improved and expanded in future releases.
-                </p>
-                <p class="">
-                    Acknowledgments: This website is made possible by a generous allocation of server space and
-                    bandwidth from, previously, the Department of Chemistry at the University of Wisconsin, and, now, ACS Division of Organic Chemistry. | also thank the National
-                    Science Foundation for financial support. Prof. Kevin Jantzi (Valparaiso University) looked up many of the
-                    DOI references, and | thank him for his efforts on this onerous task.
-
-                    | also thank contributors to this collection: Mateusz Plesniak (20), Kris Kolonko (6). Amanda Jones
-                    (1), Kristen Plessel (1), Almaz Jalilov (1). and Kevin Schultz (1).
-                </p>
-            </div>
-            {% endblock %}
-
-            {{ content | safe }}
-        </div>
-    </div>
-
-</div>
-
-

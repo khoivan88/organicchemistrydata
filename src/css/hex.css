@@ -73,7 +73,7 @@
 @media screen and (min-width: 576px) {
     .hex-container {
         /* background: url('/img/orgn-bkg.jpg') no-repeat; */
-        background: url('/img/orgn-bkg.jpg');
+        background: url('/organicchemistrydata/img/orgn-bkg.jpg');
         /* background-repeat: repeat-y; */
         /* max-width: 1400px; */
         margin: auto;

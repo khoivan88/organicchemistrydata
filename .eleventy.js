@@ -43,8 +43,10 @@ module.exports = function (eleventyConfig) {
     return value.toUpperCase();
   });
   eleventyConfig.addFilter("toTitleCase", function (value) {
-    value = value.replace(/-|_/gi, ' ').split(" ").map(([firstChar, ...rest]) =>
-      firstChar.toUpperCase() + rest.join("").toLowerCase()).join(" ")
+    // value = value.replace(/-|_/gi, ' ').split(" ").map(([firstChar, ...rest]) =>
+      // firstChar.toUpperCase() + rest.join("").toLowerCase()).join(" ")
+    value = value.replace(/_/gi, ' ').split(" ").map(([firstChar, ...rest]) =>
+      firstChar.toUpperCase() + rest.join("")).join(" ")
     return value;
   });
   eleventyConfig.addFilter("startsWithVowel", function (value) {
@@ -74,7 +76,7 @@ module.exports = function (eleventyConfig) {
       input: "src",
       includes: "_includes",
     },
-    // pathPrefix: "/organicchemistrydata/",
+    pathPrefix: "/organicchemistrydata",
     htmlTemplateEngine: "njk"
   };
 };

@@ -89,22 +89,18 @@ about:
     <!--source: https://stackoverflow.com/a/42333464-->
     <div id="nav-placeholder">
         <nav id="navbar" class="navbar fixed-top navbar-expand-sm py-0 navbar-dark">
+            <div class="d-none d-sm-block">
+            {%- include 'global_logo.njk' -%}
+            </div>
+
             <a class="navbar-brand py-1 d-none d-sm-block" href="{{ homepage_logo.href | url }}" target="_self">
                 <img src="{{ homepage_logo.url | url }}" height="50" alt="DOC Logo" loading="lazy">
             </a>
 
             <div class="navbar-nav" id="hansreichCollection">
               <ul class="navbar-nav">
-                  {%- for item in nav_items.list %}
-                  <li class="nav-item">
-                      <a class="nav-item nav-link" href="{{ item.url | url }}" target="{{ item.target }}">
-                          {{ item.title }}
-                      </a>
-                  </li>
-                  {%- endfor %}
-
                   <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ resources.title }}</a>
+                      <a class="nav-link dropdown-toggle pl-0 pl-sm-3" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ resources.title }}</a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
                           {%- for resource in resources.list %}
                           <a class="dropdown-item {{ resource.disabled }}" href="{{ resource.url | url }}"
@@ -132,36 +128,6 @@ about:
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent1">
                 {# <ul class="navbar-nav">
-                    {%- for item in nav_items.list %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ item.url | url }}" target="{{ item.target }}">
-                            {{ item.title }}
-                        </a>
-                    </li>
-                    {%- endfor %}
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-target="projects.html">{{ resources.title }}</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                            {%- for resource in resources.list %}
-                            <a class="dropdown-item {{ resource.disabled }}" href="{{ resource.url | url }}"
-                                target="{% if resource.target %}{{ resource.target }}{% else %}{{ '_self' }}{% endif %}">
-                                {{ resource.title }}
-                            </a>
-                            {%- endfor %}
-                            <div class="dropdown-divider"></div>
-                            {%- for item in reich_related.list %}
-                            <a class="dropdown-item" href="{{ item.url | url }}"
-                                target="{% if item.target %}{{ item.target }}{% else %}{{ '_self' }}{% endif %}">
-                                {{ item.title }}
-                            </a>
-                            {%- endfor %}
-
-                        </div>
-                    </li>
-                </ul> #}
-
-                {# <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-target="projects.html">{{ reich_related.title }}</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
@@ -187,12 +153,6 @@ about:
             </div>
         </nav>
     </div>
-    {# <script>
-    $(function(){
-      $("#nav-placeholder").load("navbar.html");
-    });
-    </script> #}
-
     <!--end of Navigation bar-->
 
     {% if title %}
