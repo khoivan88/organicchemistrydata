@@ -89,6 +89,10 @@ about:
     <!--source: https://stackoverflow.com/a/42333464-->
     <div id="nav-placeholder">
         <nav id="navbar" class="navbar fixed-top navbar-expand-sm py-0 navbar-dark">
+            <div class="d-none d-sm-block">
+            {%- include 'global_logo.njk' -%}
+            </div>
+
             <a class="navbar-brand py-1 d-none d-sm-block" href="{{ homepage_logo.href | url }}" target="_self">
                 <img src="{{ homepage_logo.url | url }}" height="50" alt="DOC Logo" loading="lazy">
             </a>
