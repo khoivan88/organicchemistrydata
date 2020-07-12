@@ -79,8 +79,9 @@ async function loadSynthesis () {
       // console.log('something2') // !DEBUG
       // link.classList.toggle('active')
       // let url = link.dataset.url
-      let url = '../../syntheses_data/' + link.href.split('#')[1]
-      console.log(url) // !DEBUG
+      // let url = '../../syntheses_data/' + link.href.split('#')[1]
+      let url = 'syntheses_data/' + link.href.split('#')[1]
+      // console.log(url) // !DEBUG
       loadPage(url, '#content .full-list')
 
       window.closeNavOnSmallScreen()
@@ -100,7 +101,8 @@ function deepLink () {
     const hash = url.split('#')
     // console.log(`deepLink hash: ${hash}`) // !DEBUG
 
-    loadPage(`../../syntheses_data/${hash[1]}`, '#content .full-list')
+    // loadPage(`../../syntheses_data/${hash[1]}`, '#content .full-list')
+    loadPage(`syntheses_data/${hash[1]}`, '#content .full-list')
 
     // Check the hash for 'groupby' indices first;
     // if not found, load default indexed by 'names' and then try to load the total synthesis page
@@ -152,20 +154,26 @@ function indexRedirect () {
   select.addEventListener('change', function () {
     const url = this.options[this.selectedIndex].dataset.url
     if (url) {
-      window.location.href = url
+      // window.location.href = url
+      loadPage(url, '.syntheses-groupedby')
+      setTimeout(() => {
+        console.log('scroll from top') // !DEBUG
+        $(window).scrollTop(0)
+      }, 100)
     }
   })
 
-  // 2
-  for (const option of options) {
-    const url = option.dataset.url
-    if (window.location.href.includes(url)) {
-      option.setAttribute('selected', '')
-      break
-    }
-  }
+  // // 2
+  // for (const option of options) {
+  //   const url = option.dataset.url
+  //   if (window.location.href.includes(url)) {
+  //     option.setAttribute('selected', '')
+  //     break
+  //   }
+  // }
 
-  openSideBarIfClosed()
+
+  // openSideBarIfClosed()
 }
 
 $(document).ready(function () {
@@ -179,6 +187,8 @@ $(document).ready(function () {
   //   // Initial load grouped by names page
   //   loadPage('groupby/names', '.syntheses-groupedby')
   // }
+
+  loadPage('groupby/names', '.syntheses-groupedby')
 
   // loadSideIndex()
 

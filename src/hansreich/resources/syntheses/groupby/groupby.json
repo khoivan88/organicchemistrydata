@@ -1,5 +1,4 @@
 {
     "tags": "groupby",
-    "url_prefix": "/hansreich/resources/syntheses/syntheses_data/",
-    "layout": "side_menu_with_dropdown.njk"
+    "url_prefix": "/hansreich/resources/syntheses/syntheses_data/"
 }

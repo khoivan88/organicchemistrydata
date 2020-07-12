@@ -95,11 +95,11 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     top: 110px;
     background-color: white;
-    max-width: 240px;
+    max-width: 238px;
 }
 
 #sidebar.active .input-group {
-    max-width: -webkit-fill-available;
+    max-width: 95vw;
 }
 
 /* ---------------------------------------------------
