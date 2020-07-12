@@ -5,7 +5,7 @@ name: 11ty-build-and-deploy
 # events but only for the master branch
 on:
   push:
-    branches: [ three-nav ]
+    branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -26,10 +26,16 @@ jobs:
         # If set to `true`, `npm install` will be run before Eleventy is invoked
         install_dependencies: true
 
-    # Deploy to github pages
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v1.1.0
-      env:
-        PUBLISH_DIR: _site
-        PUBLISH_BRANCH: gh-pages
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # Transfer files to the server
+    - name: rsync deployments
+      uses: burnett01/rsync-deployments@4.1
+      with:
+        # Add '--omit-dir-times' because rsync gave error 'rsync: failed to set times on "***/.": Operation not permitted (1)'
+        # Add '--no-perms' because rsync gave error 'rsync: failed to set permissions on "***/.": Operation not permitted (1)'
+        # switches: -avzr --checksum --omit-dir-times --no-perms
+        switches: -vzr -rlD --checksum --omit-dir-times
+        path: _site/
+        remote_path: ${{ secrets.DEPLOY_PATH }}
+        remote_host: ${{ secrets.DEPLOY_HOST }}
+        remote_user: ${{ secrets.DEPLOY_USER_KV }}
+        remote_key: ${{ secrets.DEPLOY_KEY_KV }}

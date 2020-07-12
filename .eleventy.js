@@ -76,7 +76,7 @@ module.exports = function (eleventyConfig) {
       input: "src",
       includes: "_includes",
     },
-    pathPrefix: "/organicchemistrydata",
+    // pathPrefix: "/organicchemistrydata",
     htmlTemplateEngine: "njk"
   };
 };
