@@ -3,15 +3,16 @@ from collections import Counter
 import re
 
 
-def main(ref_file, infile, outfile):
+def main(ref_files, infile, outfile):
     # root_url = 'https://raw.githubusercontent.com/khoivan88/organicchemistrydata/master/src/hansreich/resources/syntheses/groupby'
     # ref_file_url = f'{root_url}/names.html'
     # ref_html = requests.get(ref_file_url)
     linklist = {}
-    with open(ref_file, 'r') as f_ref:
-        ref_soup = BeautifulSoup(f_ref.read(), 'html.parser')
-        for el in ref_soup.find_all('a', href=True):
-            linklist[el['href']] = el.text
+    for ref_file in ref_files:
+        with open(ref_file, 'r') as f_ref:
+            ref_soup = BeautifulSoup(f_ref.read(), 'html.parser')
+            for el in ref_soup.find_all('a', href=True):
+                linklist[el['href']] = el.text
     # print(str(ref_soup))
     # print(linklist)
 
@@ -69,8 +70,9 @@ if __name__ == "__main__":
     indir = 'groupby'
     outdir = 'new_groupby'
 
-    ref_file = f'{indir}/names.html'
+    # ref_file = f'{indir}/names.html'
     # count_href(ref_file)
+    ref_files = [f'{indir}/names.html', f'{indir}/information.html']
 
     outfile_names = ['names', 'years', 'chemoselectivity', 'named_reactions', 'reactions', 'reagents', 'rings']
     # outfile_names = ['years']
@@ -78,4 +80,4 @@ if __name__ == "__main__":
     for name in outfile_names:
         infile = f'{indir}/{name}.html'
         outfile = f'{outdir}/{name}.html'
-        main(ref_file, infile, outfile)
+        main(ref_files, infile, outfile)
