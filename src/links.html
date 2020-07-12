@@ -56,12 +56,12 @@ specific_page_js:
               <h5>{{ link.name | safe }}</h5>
               <ul>
                 {%- for item in link.links %}
-                <li><a href="{{ item.url | url }}">{{ item.name }}</a></li>
+                <li><a href="{{ item.url | url }}" {%- if item.url[0] != '/' %} target="_blank" rel="noopener"{%- endif -%}>{{ item.name }}</a></li>
                 {%- endfor %}
               </ul>
             </li>
             {% else %}
-            <li><a href="{{ link.url | url }}">{{ link.name }}</a></li>
+            <li><a href="{{ link.url | url }}" {%- if link.url[0] != '/' %} target="_blank" rel="noopener"{%- endif -%}>{{ link.name }}</a></li>
             {%- endif %}
             {%- endfor %}
             {%- endif %}
