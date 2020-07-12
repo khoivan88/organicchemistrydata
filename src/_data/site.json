@@ -2,7 +2,7 @@
     "google_analytic": "false",
     "url": "https://organicchemistrydata.org",
     "logo": {
-        "url": "{{ site.logo.url }}",
+        "url": "/",
         "src": "/img/organicchemistrydata-logo.png",
         "alt_text": "Organic Chemistry Data Site Logo"
     }
