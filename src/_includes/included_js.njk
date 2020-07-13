@@ -21,7 +21,11 @@
     {%- if specific_page_js %}
         <!-- Page Specific JS-->
         {%- for script in specific_page_js.list %}
-            <!-- {{ script.description }} -->
-            <script src="{{ script.url | url }}"></script>
+            <!-- {{ script.description | safe }} -->
+            <script {%- if script.url %} src="{{ script.url | url }}"{%- endif -%}>{{ script.content | safe }}</script>
         {%- endfor %}
+        {%- if default_script %}
+            <!-- {{ default_script.description | safe }} -->
+            <script {%- if default_script.url %} src="{{ default_script.url | url }}"{%- endif -%}>{{ default_script.content | safe }}</script>
+        {%- endif %}
     {%- endif %}

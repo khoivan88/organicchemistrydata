@@ -28,53 +28,53 @@ async function loadPage (url, targetElem) {
   var content = await fetchHtmlAsText(url)
   contentDiv.innerHTML = content
 
-  if (targetElem === '.syntheses-groupedby') {
-    loadSynthesis()
+  if (targetElem === '.index-content') {
+    loadContent()
   }
 }
 
 /**
  * Load the correct index page for each button click
  */
-function loadSideIndex () {
-  document.querySelectorAll('.syntheses-navbar a').forEach(function (link) {
-    link.onclick = function () {
-      // link.classList.toggle('active')
-      let url = ''
-      if (!link.dataset.groupedby) {
-        // Handle link without 'groupedby' dataset, just load using the href
-        window.location.href = link.href
-      } else {
-        url = 'groupby/' + link.dataset.groupedby
-        // console.log(url)  // !DEBUG
-        loadPage(url, '.syntheses-groupedby')
-      }
+// function loadSideIndex () {
+//   document.querySelectorAll('.syntheses-navbar a').forEach(function (link) {
+//     link.onclick = function () {
+//       // link.classList.toggle('active')
+//       let url = ''
+//       if (!link.dataset.groupedby) {
+//         // Handle link without 'groupedby' dataset, just load using the href
+//         window.location.href = link.href
+//       } else {
+//         url = 'groupby/' + link.dataset.groupedby
+//         // console.log(url)  // !DEBUG
+//         loadPage(url, '.index-content')
+//       }
 
-      openSideBarIfClosed()
-    }
-  })
-}
+//       openSideBarIfClosed()
+//     }
+//   })
+// }
 
 /**
  * Force sidebar visible on all screen sizes when a index menu is clicked
  */
-function openSideBarIfClosed () {
-  // console.log('openSideBarIfClosed function is working!') // !DEBUG
-  let marginLeft = parseInt($('#sidebar').css('marginLeft').replace('px', ''))
-  // console.log(marginLeft)  // !DEBUG
-  if (marginLeft < 0) {
-    // When the side menu is hiding
-    // console.log('margin-left < 0')  // !DEBUG
-    $('#sidebar, #content').toggleClass('active')
+// function openSideBarIfClosed () {
+//   // console.log('openSideBarIfClosed function is working!') // !DEBUG
+//   let marginLeft = parseInt($('#sidebar').css('marginLeft').replace('px', ''))
+//   // console.log(marginLeft)  // !DEBUG
+//   if (marginLeft < 0) {
+//     // When the side menu is hiding
+//     // console.log('margin-left < 0')  // !DEBUG
+//     $('#sidebar, #content').toggleClass('active')
 
-    window.checkForChanges()
-  }
-}
+//     window.checkForChanges()
+//   }
+// }
 
-async function loadSynthesis () {
+async function loadContent () {
   // console.log('something1') // !DEBUG
-  document.querySelectorAll('.syntheses-groupedby a').forEach(function (link) {
-  // $('.syntheses-groupedby a').on('click', function (link) {
+  document.querySelectorAll('.index-content a').forEach(function (link) {
+  // $('.index-content a').on('click', function (link) {
     link.onclick = function () {
       // console.log('something2') // !DEBUG
       // link.classList.toggle('active')
@@ -106,7 +106,7 @@ function deepLink () {
 
     // Check the hash for 'groupby' indices first;
     // if not found, load default indexed by 'names' and then try to load the total synthesis page
-    // loadPage(`groupby/${hash[1]}`, '.syntheses-groupedby')
+    // loadPage(`groupby/${hash[1]}`, '.index-content')
     // // .then(function (response) {
     // //   console.log(response)
     // //   if (response.ok) {
@@ -116,7 +116,7 @@ function deepLink () {
     //   // })
     //   .catch(function (error) {
     //     console.warn(`${error}: indexed by '${hash[1]}'`) // !DEBUG
-    //     loadPage('groupby/names', '.syntheses-groupedby')
+    //     loadPage('groupby/names', '.index-content')
     //     loadPage(`syntheses_data/${hash[1]}`, '#content .full-list')
     //   })
 
@@ -131,7 +131,7 @@ function deepLink () {
     // }, 100)
   }
 
-  // $('.syntheses-groupedby a').on("click", function() {
+  // $('.index-content a').on("click", function() {
   //   let newUrl;
   //   const hash = $(this).attr("href");
   //   if(hash == "#home") {
@@ -152,14 +152,14 @@ function indexRedirect () {
   // console.log('indexRedirect JS working!') // !DEBUG
 
   const select = document.querySelector('.index')
-  const options = document.querySelectorAll('.index option')
+  // const options = document.querySelectorAll('.index option')
 
   // Retrieve the page url related to the selected option and force a redirection to this page.
   select.addEventListener('change', function () {
     const url = this.options[this.selectedIndex].dataset.url
     if (url) {
       // window.location.href = url
-      loadPage(url, '.syntheses-groupedby')
+      loadPage(url, '.index-content')
 
       // Update scroll bar then Scroll to top, used with malihu scrollbar: http://manos.malihu.gr/jquery-custom-content-scroller/#methods-section-scrollTo
       $('#sidebar').mCustomScrollbar('update')
@@ -178,22 +178,14 @@ function indexRedirect () {
 }
 
 $(document).ready(function () {
-  // console.log('synthesesPages JS working!') // !DEBUG
+  // console.log('sideMenuWithDropdown JS working!') // !DEBUG
 
   // If user provides a url with hash (e.g. 'example.com/#something') then try to load the correct page
   if (window.location.hash) {
     deepLink()
   }
-  // else {
-  //   // Initial load grouped by names page
-  //   loadPage('groupby/names', '.syntheses-groupedby')
-  // }
-
-  loadPage('groupby/names', '.syntheses-groupedby')
-
-  // loadSideIndex()
 
   indexRedirect()
 
-  loadSynthesis()
+  loadContent()
 })
