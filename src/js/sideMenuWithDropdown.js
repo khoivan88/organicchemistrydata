@@ -71,6 +71,17 @@ async function loadPage (url, targetElem) {
 //   }
 // }
 
+/**
+ * Use URL to find correct data path
+ */
+function getDataPath () {
+  // Get the last segment of the URL, for example:
+  // 'https://organicchemistrydata.org/hansreich/resources/syntheses/' -> 'syntheses'
+  // 'https://organicchemistrydata.org/hansreich/resources/syntheses/#abscisic-acid-constantino' -> 'syntheses'
+  let segment = new URL(window.location.href).pathname.split('/').filter(Boolean).pop();
+  return `${segment}_data/`
+}
+
 async function loadContent () {
   // console.log('something1') // !DEBUG
   document.querySelectorAll('.index-content a').forEach(function (link) {
@@ -79,8 +90,7 @@ async function loadContent () {
       // console.log('something2') // !DEBUG
       // link.classList.toggle('active')
       // let url = link.dataset.url
-      // let url = '../../syntheses_data/' + link.href.split('#')[1]
-      let url = 'syntheses_data/' + link.href.split('#')[1]
+      let url = getDataPath() + link.href.split('#')[1]
       // console.log(url) // !DEBUG
       loadPage(url, '#content .full-list')
 
@@ -101,8 +111,8 @@ function deepLink () {
     const hash = url.split('#')
     // console.log(`deepLink hash: ${hash}`) // !DEBUG
 
-    // loadPage(`../../syntheses_data/${hash[1]}`, '#content .full-list')
-    loadPage(`syntheses_data/${hash[1]}`, '#content .full-list')
+    let contentUrl = getDataPath() + hash[1]
+    loadPage(contentUrl, '#content .full-list')
 
     // Check the hash for 'groupby' indices first;
     // if not found, load default indexed by 'names' and then try to load the total synthesis page
