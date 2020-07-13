@@ -1,0 +1,29 @@
+---
+layout: side_menu_with_dropdown.njk
+
+header:
+    title: 'Organometallic Chemistry'
+
+title: 'Organometallic Chemistry'
+
+landing_content: |
+    <p class="lead">
+        This is Prof. Hans Reich collection on various topics of Organometallic Chemistry.
+        Please choose a specific topic on the side menu.
+    </p>
+
+---
+
+<option selected>Choose...</option>
+<!-- <optgroup label="Group by"> -->
+    {%- for group in collections.organometallic_index %}
+    <option data-url="{{ group.url | url }}">{{ group.fileSlug | toTitleCase }}</option>
+    {%- endfor -%}
+<!-- </optgroup> -->
+<!-- <optgroup label="Details">
+    {%- for group in collections.groupby %}
+    {%- if group.fileSlug == 'information' %}
+    <option data-url="{{ group.url | url }}">{{ group.fileSlug | toTitleCase }}</option>
+    {%- endif %}
+    {%- endfor -%}
+</optgroup> -->
