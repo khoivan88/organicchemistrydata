@@ -35,6 +35,28 @@ specific_page_js:
         {%- endfor %}
       </ul>
     </div>
+
+    <!-- Organic Reference Resolver -->
+    <div class="container mt-5 px-1">
+      <form action="http://chemsearch.kovsky.net/index.php" target="_blank" rel="noopener">
+          <div class="form-group">
+            <p class="text-center mb-0">
+              <a href="http://chemsearch.kovsky.net" target="_blank" rel="noopener">
+                <img src="{{ '/img/ref_resolver_logo_small.png' | url }}" width="164"
+                  alt="Organic chemistry reference resolver" title="chemsearch.kovsky.net" class="rounded">
+              </a>
+            </p>
+            <div class="d-flex flex-row w-100 mx-0">
+              <input type="text" name="q" class="form-control" placeholder="Search reference"
+                aria-label="Search Reference Resolver">
+                <button class="btn btn-dark" type="submit" value="Search"><i class="fa fa-search" aria-hidden="true"></i></button>
+              <!-- </div> -->
+            </div>
+            <p class="my-0 small text-center">Created by <a href="http://kovsky.net" class="text-decoration-none" target="_blank" rel="noopener">Oleksandr
+              Zhurakovskyi</a></p>
+          </div>
+      </form>
+    </div>
   </nav>
 
 
