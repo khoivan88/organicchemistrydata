@@ -78,7 +78,7 @@ function getDataPath () {
   // Get the last segment of the URL, for example:
   // 'https://organicchemistrydata.org/hansreich/resources/syntheses/' -> 'syntheses'
   // 'https://organicchemistrydata.org/hansreich/resources/syntheses/#abscisic-acid-constantino' -> 'syntheses'
-  let segment = new URL(window.location.href).pathname.split('/').filter(Boolean).pop();
+  let segment = new URL(window.location.href).pathname.split('/').filter(Boolean).pop()
   return `${segment}_data/`
 }
 
@@ -187,6 +187,52 @@ function indexRedirect () {
   // }
 }
 
+/**
+ * Add simple search function and scroll to item
+ */
+function scrollToLink () {
+  console.log('"scrollToLink" working!')  // !DEBUG
+  document.querySelector('#scrollToLinkForm').addEventListener('submit', function (e) {
+    e.preventDefault()
+
+    // Get the query term
+    let query = this.getElementsByTagName("input")[0].value
+
+    // Popover setup, ref: https://getbootstrap.com/docs/4.5/components/popovers/
+    let pop = $(this).find('input')
+    pop.popover({
+      trigger: 'manual',
+      title: 'Term not found',
+      content: 'Try using single word!',
+      placement: 'bottom'
+    })
+
+    let aTag = document.querySelector(`a[href*="${query}" i]`) // 'i' is for case INSENSITIVE search, ref: https://stackoverflow.com/a/26721521/6596203
+    if (aTag) { // if a tag is found
+      pop.popover('hide') // Hide popover
+
+      // Scroll to the first item with offset (in pixel)
+      $('#sidebar').mCustomScrollbar('scrollTo', function () {
+        return (aTag.offsetTop) - 100
+      })
+
+      // Highlight search termm using 'mark.js', ref: https://markjs.io/
+      var instance = new Mark(document.querySelector('#sidebar'))
+      instance.unmark() // unmark previously searched query
+      instance.mark(query)
+    }
+    else {
+      pop.popover('show')
+      // Hide popover after 5 sec
+      pop.on('shown.bs.popover', function () {
+        setTimeout(function () {
+          pop.popover('hide')
+        }, 5000)
+      })
+    }
+  })
+}
+
 $(document).ready(function () {
   // console.log('sideMenuWithDropdown JS working!') // !DEBUG
 
@@ -198,4 +244,6 @@ $(document).ready(function () {
   indexRedirect()
 
   loadContent()
+
+  scrollToLink()
 })

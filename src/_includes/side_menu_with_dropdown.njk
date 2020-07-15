@@ -7,19 +7,31 @@ specific_page_js:
       url: '/js/sideMenu.js'
     - description: 'Dynamic loading of Index and Main Content'
       url: '/js/sideMenuWithDropdown.js'
-
+    - description: 'To highlight search term'
+      url: 'https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js'
 ---
 
 <div class="wrapper">
     <!-- Sidebar -->
     <nav id="sidebar" class="align-items-start px-0 pt-3 pb-4">
-        <div class="input-group pt-2 px-1">
+        <div class="index-select pt-2 px-1 w-100">
             <select class="index custom-select" id="indexInputGroup">
                 {{ content | safe }}
             </select>
+            <div class="container px-0">
+                <form id="scrollToLinkForm">
+                    <div class="input-group input-group-sm mb-3">
+                        <input type="text" class="form-control" placeholder="Search term" aria-label="Search term" aria-describedby="scrollToLinkButton">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-dark" type="submit" id="scrollToLinkButton"><i class="fas fa-search" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
 
-        <div id="navbar-left" class="container-fluid py-5">
+
+        <div id="navbar-left" class="container-fluid mt-5 py-5">
             <div class="index-content w-100">
             </div>
         </div>
