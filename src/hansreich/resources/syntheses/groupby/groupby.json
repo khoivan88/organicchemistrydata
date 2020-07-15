@@ -1,5 +1,4 @@
 {
     "tags": "groupby",
-    "url_prefix": "/hansreich/resources/syntheses/syntheses_data/",
-    "eleventyExcludeFromCollections": "true"
+    "url_prefix": "/hansreich/resources/syntheses/syntheses_data/"
 }
