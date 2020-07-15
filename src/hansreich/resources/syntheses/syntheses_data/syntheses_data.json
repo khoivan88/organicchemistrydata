@@ -1,3 +1,4 @@
 {
-    "img_url_prefix": "/hansreich/resources/syntheses/syntheses_data/img/"
+    "img_url_prefix": "/hansreich/resources/syntheses/syntheses_data/img/",
+    "eleventyExcludeFromCollections": "true"
 }
