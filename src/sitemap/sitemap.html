@@ -13,9 +13,11 @@ header:
 <div class="container">
     <h1>{{ header.title }}</h1>
 
-    {% for page in collections.all %}
+    {%- for item in collections.all %}
+    {%- if item.data.sitemap_ignore !== true %}
         <ul class="sitemap">
-            <li><a href="{{ site.url }}{{ page.url | url }}">{{ site.url }}{{ page.url | url }}</a></li>
+            <li><a href="{{ site.url }}{{ item.url | url }}">{{ site.url }}{{ item.url | url }}</a></li>
         </ul>
-    {% endfor %}
+    {%- endif %}
+    {%- endfor %}
 </div>

@@ -1,3 +1,4 @@
 {
-    "img_url_prefix": "/hansreich/resources/organometallic/organometallic_data/img/"
+    "img_url_prefix": "/hansreich/resources/organometallic/organometallic_data/img/",
+    "sitemap_ignore": true
 }

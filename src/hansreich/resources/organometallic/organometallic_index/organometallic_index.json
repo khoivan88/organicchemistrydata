@@ -1,4 +1,5 @@
 {
     "tags": "organometallic_index",
-    "url_prefix": "/hansreich/resources/organometallic/organometallic_data/"
+    "url_prefix": "/hansreich/resources/organometallic/organometallic_data/",
+    "sitemap_ignore": true
 }
