@@ -8,8 +8,8 @@
     {%- endfor %} #}
 
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-target="">{{ org_collections.title }}</a>
-        <div id="sitenav-submenu1" class="dropdown-menu dropdown-menu-right collapse" aria-labelledby="navbarDropdown1">
+        <a class="nav-link dropdown-toggle" href="#" id="globalNavDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-target="">{{ org_collections.title }}</a>
+        <div id="sitenav-submenu1" class="dropdown-menu dropdown-menu-right collapse" aria-labelledby="globalNavDropdown">
             <a class="dropdown-item" href="{{ '/' | url }}">Home</a>
             <div class="dropdown-divider"></div>
             {%- for collection in org_collections.list %}
