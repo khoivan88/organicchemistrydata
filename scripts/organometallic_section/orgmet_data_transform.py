@@ -28,7 +28,7 @@ def main(infile, outdir):
     body = str(fnt_div)
     # print(body)
 
-    modified_body = re.sub(r'{|}', r'', body)
+    modified_body = re.sub(r'{|}|(?:_chem842-\d\d-)', r'', body)
 
     # Rewrite img src to include 11ty template
     re_src = re.compile(r'src="([^"]*?)"', re.UNICODE)

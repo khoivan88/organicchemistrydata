@@ -25,7 +25,7 @@ def main(infile, outdir):
     # Replace "href" and remove "target"
     output = re.sub(r'<a href="(.*?).htm.*?>', r'<a href="#\1">', output)
     # Remove curly bracket
-    output = re.sub(r'{|}', r'', output)
+    output = re.sub(r'{|}|(?:_chem842-\d\d-)', r'', output)
     # print(output)
 
     with open(outfile, 'wb') as f_out:
