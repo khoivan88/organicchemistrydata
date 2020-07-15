@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
     /* padding-bottom: 50px; */
 }
 
-#sidebar .input-group {
+#sidebar .index-select {
     z-index: 900;
     position: fixed;
     top: 110px;
@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 238px;
 }
 
-#sidebar.active .input-group {
+#sidebar.active .index-select {
     max-width: 95vw;
 }
 
@@ -280,6 +280,14 @@ a.list-group-item {
     margin-right: 15px;
 }
 
+/* ---------------------------------------------------
+    for mark.js Highlight script
+    https://markjs.io/#styling
+----------------------------------------------------- */
+mark {
+    background: orange;
+    color: black;
+}
 
 /* ---------------------------------------------------
     Footer
@@ -715,7 +723,7 @@ div#at4-whatsnext {
         width: 100%;
     }
 
-    #sidebar.active .input-group {
+    #sidebar.active .index-select {
         max-width: 240px;
     }
 
