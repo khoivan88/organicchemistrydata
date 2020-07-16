@@ -14,8 +14,11 @@ def main(infile, outdir):
         infile_soup = BeautifulSoup(infile.read(), 'html.parser')
         title = infile_soup.find('title')
         fnt_div = infile_soup.find('div', id='fnt')
+        # print(fnt_div)
         # copyright_tag = fnt_div.find('p', string=re.compile(r'&#169;', re.UNICODE))    # does not work for some reason
         copyright_tag = fnt_div.find('p', string=re.compile(r'©', re.UNICODE))
+
+    # print(infile_soup)
 
     # Remove copyright
     if copyright_tag:
@@ -50,3 +53,5 @@ if __name__ == "__main__":
     # main(next(htm_files), Path(outdir))
     for file in htm_files:
         main(file, Path(outdir))
+
+    # main(Path('orgmet_data_original') / 'orgli02.htm', Path(outdir))
