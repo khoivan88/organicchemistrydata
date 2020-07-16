@@ -191,7 +191,7 @@ function indexRedirect () {
  * Add simple search function and scroll to item
  */
 function scrollToLink () {
-  console.log('"scrollToLink" working!')  // !DEBUG
+  // console.log('"scrollToLink" working!')  // !DEBUG
   document.querySelector('#scrollToLinkForm').addEventListener('submit', function (e) {
     e.preventDefault()
 
