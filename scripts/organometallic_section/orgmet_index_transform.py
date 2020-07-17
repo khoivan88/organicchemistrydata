@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 def main(infile, outdir):
     # !Important to convert the outfile here, it would be changed from 'Pathlib' object
     # to IOText object after the 'with' block
-    outfile = outdir / '{}.html'.format(infile.stem.split('-')[0])
+    outfile = outdir / '{}.html'.format(infile.stem.split('-')[0].lower())
 
 
     with open(infile, 'r') as infile:
@@ -24,6 +24,9 @@ def main(infile, outdir):
     output = re.sub(r'<br/>.*?(<a.*?</a>)', r'\t<li>\1</li>', output)
     # Replace "href" and remove "target"
     output = re.sub(r'<a href="(.*?).htm.*?>', r'<a href="#\1">', output)
+    # Change the 'href' content into lower case
+    output = re.sub(r'(?<=<a href=\"#)(.*?)(?=\">)', lambda m: m.group(1).lower(), output)
+
     # Remove curly bracket
     output = re.sub(r'{|}|(?:_chem842-\d\d-)', r'', output)
     # print(output)

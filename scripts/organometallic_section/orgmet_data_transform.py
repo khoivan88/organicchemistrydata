@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 def main(infile, outdir):
     # !Important to convert the outfile here, it would be changed from 'Pathlib' object
     # to IOText object after the 'with' block
-    outfile = outdir / '{}.html'.format(infile.stem.replace('{', '').replace('}', ''))
+    outfile = outdir / '{}.html'.format(infile.stem.replace('{', '').replace('}', '').lower())
 
 
     with open(infile, 'r') as infile:
@@ -35,7 +35,7 @@ def main(infile, outdir):
 
     # Rewrite img src to include 11ty template
     re_src = re.compile(r'src="([^"]*?)"', re.UNICODE)
-    modified_body = re_src.sub('src="{{ (img_url_prefix + \'' + r'\1' + '\') | url }}" class="img-fluid"', modified_body)
+    modified_body = re_src.sub(lambda m: 'src="{{{{ (img_url_prefix + \'{}\') | url }}}}" class="img-fluid"'.format(m.group(1).lower()), modified_body)
 
     # Remove '.htm' in a href
     modified_body = re.sub(r'href="([^"]*/)([^"]*?)\.htm"', r'href="\1#\2"', modified_body)
