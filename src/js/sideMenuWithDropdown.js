@@ -94,6 +94,9 @@ async function loadContent () {
       // console.log(url) // !DEBUG
       loadPage(url, '#content .full-list')
 
+      // Scroll to top of the new content page
+      setTimeout(window.topFunction, 100)
+
       window.closeNavOnSmallScreen()
     }
   })
