@@ -64,7 +64,7 @@ This is for small content changes (e.g. text, data). If you need to edit the sit
 5. Some of the pictures in the content is linked to a specific page in the [Total Syntheses section](https://organicchemistrydata.org/hansreich/resources/syntheses/). Some of these links might be broken. Chrome developer tool is suggested to check the html code for each link/image.
 6. After finding the broken link, find the closet match in the [Total Syntheses section](https://organicchemistrydata.org/hansreich/resources/syntheses/) and get the correct link.
    - Example:
-     - The screenshot below displays [*Organometallic Reagents in Synthesis*](https://organicchemistrydata.org/hansreich/resources/syntheses/#isoamijiol-majetich) in the **Intro** section. The first picture of **Isoamijiol** has the link 
+     - The screenshot below displays [*Organometallic Reagents in Synthesis*](https://organicchemistrydata.org/hansreich/resources/organometallic/#intro01) in the **Intro** section. The first picture of **Isoamijiol** has the link 
        ```html
        <a href="Synth-Isoamijiol.gif">
        ```
