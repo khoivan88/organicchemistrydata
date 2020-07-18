@@ -18,7 +18,7 @@ To edit content of 'Organometallic Chemistry' section, specifically:
 - [Editing Broken Links in 'Organometallic Chemistry' section](#editing-broken-links-in-organometallic-chemistry-section)
   - [Overviews](#overviews)
   - [Steps to Edit File Content directly on Github](#steps-to-edit-file-content-directly-on-github)
-  - [How to find what Files and What Content to Change](#how-to-find-what-files-and-what-content-to-change)
+  - [How to Find What Files and What Content to Change](#how-to-find-what-files-and-what-content-to-change)
     - [Data Structure for **Organometallic Chemistry** section](#data-structure-for-organometallic-chemistry-section)
     - [Steps to Identify Broken Links](#steps-to-identify-broken-links)
 
@@ -31,7 +31,7 @@ This is for small content changes (e.g. text, data). If you need to edit the sit
 
 1. If you don't have a github account, please register for an account here: https://github.com/
 2. Please share your github username with KV and ask him to add you to "Collaborators" list
-3. Find the file(s) that need to be edited. Please see the [following section for info on what file and what content to change](#what-files-and-what-content-to-change).
+3. Find the file(s) that need to be edited. Please see the [following section for info on what file and what content to change](#how-to-find-what-files-and-what-content-to-change).
 4. Click on the `Edit` button (Pencil image) to edit the content of a specific file. You can click on the "Preview Changes" to see your changes.
 5. When done with the editing, go down to "Commit changes" section. Add:
    - In the first text box, and a 1 line summary of what you change (e.g. "Fix spelling issue"). This is required!
@@ -42,7 +42,7 @@ This is for small content changes (e.g. text, data). If you need to edit the sit
 
 <br>
 
-## How to find what Files and What Content to Change
+## How to Find What Files and What Content to Change
 
 ### Data Structure for **Organometallic Chemistry** section
 
