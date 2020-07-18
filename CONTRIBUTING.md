@@ -1,7 +1,9 @@
 # Editing Content of organicchemistrydata.org
 
-(This document is being update constantly so please check back regularly. Please feel free to edit the document if you find any errors.)
+***This document is being update constantly so please check back regularly. Please feel free to edit the document if you find any errors.***
+
 This is a general guide on how to edit content of this repo. For more spefic guide, please see documents inside [**docs**](docs) folder
+<br>
 
 ## Overviews
 
