@@ -77,12 +77,20 @@ specific_page_js:
               <h5>{{ link.name | safe }}</h5>
               <ul>
                 {%- for item in link.links %}
-                <li><a href="{{ item.url | url }}" {%- if item.url[0] != '/' %} target="_blank" rel="noopener"{%- endif -%}>{{ item.name }}</a></li>
+                <li>
+                  <a href="{{ item.url | url }}" {%- if item.url[0] != '/' %} target="_blank" rel="noopener"{%- endif -%}>
+                    {{ item.name }} {%- if '/hansreich' in item.url %}<span class="small text-danger"> (Hans Reich's Collection - DOC)</span>{%- endif -%}
+                  </a>
+                </li>
                 {%- endfor %}
               </ul>
             </li>
             {% else %}
-            <li><a href="{{ link.url | url }}" {%- if link.url[0] != '/' %} target="_blank" rel="noopener"{%- endif -%}>{{ link.name }}</a></li>
+            <li>
+              <a href="{{ link.url | url }}" {%- if link.url[0] != '/' %} target="_blank" rel="noopener"{%- endif -%}>
+                {{ link.name }} {%- if '/hansreich' in link.url %}<span class="small text-danger"> (Hans Reich's Collection - DOC)</span>{%- endif -%}
+              </a>
+            </li>
             {%- endif %}
             {%- endfor %}
             {%- endif %}
