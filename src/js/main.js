@@ -1,7 +1,4 @@
-// (function () {
-//   console.log('Invoke the static site template JavaScript!')
-// })()
-
+window.topFunction = topFunction
 var mybutton = document.getElementById('toTopButton')
 
 function scrollFunction () {

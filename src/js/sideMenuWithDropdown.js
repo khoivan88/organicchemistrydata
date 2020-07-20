@@ -34,44 +34,6 @@ async function loadPage (url, targetElem) {
 }
 
 /**
- * Load the correct index page for each button click
- */
-// function loadSideIndex () {
-//   document.querySelectorAll('.syntheses-navbar a').forEach(function (link) {
-//     link.onclick = function () {
-//       // link.classList.toggle('active')
-//       let url = ''
-//       if (!link.dataset.groupedby) {
-//         // Handle link without 'groupedby' dataset, just load using the href
-//         window.location.href = link.href
-//       } else {
-//         url = 'groupby/' + link.dataset.groupedby
-//         // console.log(url)  // !DEBUG
-//         loadPage(url, '.index-content')
-//       }
-
-//       openSideBarIfClosed()
-//     }
-//   })
-// }
-
-/**
- * Force sidebar visible on all screen sizes when a index menu is clicked
- */
-// function openSideBarIfClosed () {
-//   // console.log('openSideBarIfClosed function is working!') // !DEBUG
-//   let marginLeft = parseInt($('#sidebar').css('marginLeft').replace('px', ''))
-//   // console.log(marginLeft)  // !DEBUG
-//   if (marginLeft < 0) {
-//     // When the side menu is hiding
-//     // console.log('margin-left < 0')  // !DEBUG
-//     $('#sidebar, #content').toggleClass('active')
-
-//     window.checkForChanges()
-//   }
-// }
-
-/**
  * Use URL to find correct data path
  */
 function getDataPath () {
@@ -250,5 +212,7 @@ $(document).ready(function () {
 
   loadContent()
 
-  scrollToLink()
+  if (document.querySelector('#scrollToLinkForm')) {
+    scrollToLink()
+  }
 })
