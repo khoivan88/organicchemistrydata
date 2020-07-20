@@ -53,6 +53,7 @@ This will show you how to edit this repo from your own machine and run a local t
    ```
 
 5. At this point, you are ready to edit the content of the repo. Use any text editor of your choice (vscode, atom, sublime, bbedit, etc.) to edit the content of the file(s) you want.
+   ***<span style="color: red">Because this repo is constantly being updated, it is important that you run a `git pull` either before you start your edit or before pushing your commit so that all new commits are updated in your local repo</span>***
 6. When you are done editing, run the 11ty test server by running the following command: (**Note**, you need to be in the `organicchemistrydata` folder)
 
    ```bash
@@ -75,11 +76,12 @@ This will show you how to edit this repo from your own machine and run a local t
 
 7. Check your new content by opening your internet browser of choice and go to the output url above (e.g. `http://localhost:8080`)
 8. If you are not satisfied, you can continue the editing process (step 5), the server is live so it should automatically reload your page above. **Note**: considering that if you have a lot of edits, stop the live server by pressing `Ctrl-C` **TWICE** in the terminal in step 6.
-9. After you satified with your change, add all of your content, commit and push to the repo using the following commands:  (**Note**, you need to be in the `organicchemistrydata` folder)
+9.  After you satified with your change, add all of your content, commit and push to the repo using the following commands:  (**Note**, you need to be in the `organicchemistrydata` folder)
 
    ```bash
    git add .    # don't forget the period at the end, this is to add all files that were changed into the staging area
    git commit -m 'Your short commit message here'    # Add your commit message, considering the alternative below if you have a long commit message
+   git pull origin master    # (Optional) Required if there are new commits to the repo by other contributors
    git push origin master
    ```
 
