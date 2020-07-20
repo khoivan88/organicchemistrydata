@@ -53,7 +53,9 @@ This will show you how to edit this repo from your own machine and run a local t
    ```
 
 5. At this point, you are ready to edit the content of the repo. Use any text editor of your choice (vscode, atom, sublime, bbedit, etc.) to edit the content of the file(s) you want.
-   ***<span style="color: red">Because this repo is constantly being updated, it is important that you run a `git pull` either before you start your edit or before pushing your commit so that all new commits are updated in your local repo</span>***
+   
+   ***Because this repo is constantly being updated, it is important that you run a `git pull` either before you start your edit or before pushing your commit so that all new commits are updated in your local repo***
+   
 6. When you are done editing, run the 11ty test server by running the following command: (**Note**, you need to be in the `organicchemistrydata` folder)
 
    ```bash
