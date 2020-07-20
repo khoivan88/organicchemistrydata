@@ -244,7 +244,9 @@ $(document).ready(function () {
     deepLink()
   }
 
-  indexRedirect()
+  if (document.querySelector('.index')) {
+    indexRedirect()
+  }
 
   loadContent()
 
