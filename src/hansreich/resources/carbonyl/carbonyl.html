@@ -6,6 +6,12 @@ header:
 
 title: 'Carbonyl Chemistry'
 
+default_script:
+    description: 'Load first link as default'
+    content: |
+        let url = getDataPath() + document.querySelector('.index-content a').href.split('#')[1]
+        loadPage(url, '#content .full-list')
+
 ---
 
 <!-- <p class="lead">Carbonyl Chemistry<br /></p> -->
