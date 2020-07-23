@@ -154,6 +154,10 @@
                     "url": "/hansreich/resources/a_values/"
                 },
                 {
+                    "name": "Bond Energies and Bond Dissociation Energies-MSU (William Reusch)",
+                    "url": "https://www2.chemistry.msu.edu/faculty/reusch/OrgPage/bndenrgy.htm"
+                },
+                {
                     "name": "Electronegativities of Elements-Periodic Table",
                     "url": "/hansreich/resources/electronegativities"
                 },
@@ -271,6 +275,10 @@
                 {
                     "name": "Math Formulas",
                     "url": "http://www.tutorsville.net/formulas/"
+                },
+                {
+                    "name": "Frequency - Wavelength - Energy Converter-MSU (William Reusch)",
+                    "url": "https://www2.chemistry.msu.edu/faculty/reusch/OrgPage/cnvcalc.htm"
                 },
                 {
                     "name": "Chemistry Data Tables (Wired Chemist)",
