@@ -4,7 +4,7 @@
 ----------------------------------------------------- */
 html {
     /* height of sticky header */
-    /* scroll-padding-top: 130px; */ /* no need anymore with clickToSection.js */
+    scroll-padding-top: 130px; /* no need anymore with clickToSection.js */
 }
 
 
