@@ -52,15 +52,53 @@ async function loadContent () {
       // console.log('something2') // !DEBUG
       // link.classList.toggle('active')
       // let url = link.dataset.url
-      let url = getDataPath() + link.href.split('#')[1]
+
+      // Split the href value into page and sections
+      [currentPath, page, section, ...rest] = link.href.split('#')
+
+      let url = getDataPath() + page
       // console.log(url) // !DEBUG
       loadPage(url, '#content .full-list')
 
       // Scroll to top of the new content page
       setTimeout(window.topFunction, 100)
 
+      if (section) {
+        setTimeout(function () {
+          scrollToSection(section)
+        }, 300)
+      }
+
+      // Scroll to section if exists
       window.closeNavOnSmallScreen()
+
+      // For pages with image to display over text (such as those in NMR section)
+      // run the display image function after setTimeout
+      // setTimeout(window.displayImage, 1000)
+      setTimeout(activateTooltip, 1000)
     }
+  })
+}
+
+/**
+ * For links on side menu that include specific section
+ */
+function scrollToSection (sectionId) {
+  // console.log(`section is : ${sectionId}`) // !DEBUG
+  // window.location.hash = sectionId
+  document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' })
+}
+
+/**
+ * Activate Bootstrap 4 tooltip with html true
+ */
+function activateTooltip () {
+  // $('[data-toggle="tooltip"]').tooltip({ html: true })
+  $('[data-toggle="tooltip"]').tooltip('dispose').tooltip({
+    boundary: 'window', // to resolve parent div has overflow auto and scroll
+    placement: 'bottom', // placement 'top' makes tooltip flicker
+    html: true, // to display image
+    template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner border border-dark bg-white"></div></div>' // to make background white and dark border
   })
 }
 
@@ -78,6 +116,19 @@ function deepLink () {
 
     let contentUrl = getDataPath() + hash[1]
     loadPage(contentUrl, '#content .full-list')
+
+    // Scroll to top of the new content page
+    setTimeout(window.topFunction, 100)
+
+    if (hash[2]) {
+      console.log(hash[2]) // !DEBUG
+      setTimeout(function () {
+        scrollToSection(hash[2])
+      }, 1000)
+    }
+
+    // Wait longer before activating tooltip on direct load
+    setTimeout(activateTooltip, 3000)
 
     // Check the hash for 'groupby' indices first;
     // if not found, load default indexed by 'names' and then try to load the total synthesis page
@@ -161,7 +212,7 @@ function scrollToLink () {
     e.preventDefault()
 
     // Get the query term
-    let query = this.getElementsByTagName("input")[0].value
+    let query = this.getElementsByTagName('input')[0].value
 
     // Popover setup, ref: https://getbootstrap.com/docs/4.5/components/popovers/
     let pop = $(this).find('input')
@@ -185,8 +236,7 @@ function scrollToLink () {
       var instance = new Mark(document.querySelector('#sidebar'))
       instance.unmark() // unmark previously searched query
       instance.mark(query)
-    }
-    else {
+    } else {
       pop.popover('show')
       // Hide popover after 5 sec
       pop.on('shown.bs.popover', function () {
