@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN" >
+<html>
+<head>
+<title>8-TECH-3  Measuring Rates by NMR</title>
+<style type="text/css">
+<!-- #fnt  {font-family:verdana, arial, helvetica; font-size:10pt;}-->
+</style>
+
+<meta name="generator" content="WINPLT">
+<meta name='keywords' content='chemistry, NMR spectroscopy, NOE effect NMR,T1 relaxation NMR, T2 relaxation NMR, DNMR. synamic NMR spectroscopy, measurement of rates by NMR'>
+
+<!--   include the hover-lib stylesheet  -->
+  <link rel="stylesheet" href="hover-lib.css">
+<!-- =================================== -->
+
+</head>
+<body>
+
+
+<!--========== Start of Table ====-->
+<table>
+<tr>
+<td width=3%> </td><td width=94%>
+<div id="fnt">
+<p align=center><b><span style="font-size:14pt; color:#B6120A; font-family:Arial;">8-TECH-3  Measuring Rates by NMR</span></b></p>
+
+<p align=right><span style="font-size:8pt;">&#169; Copyright Hans J. Reich 2020<br>
+All Rights Reserved<br>
+University of Wisconsin</span></p>
+
+<p>There are three main techniques for measuring rates by NMR spectroscopy:</p>
+<p>&nbsp;&nbsp;1.  <b>Integration of NMR signals as a function of time</b>.  This technique is equivalent to other &#34;laboratory time scale&#34; methods for measuring concentration.  It is non-invasive, and so is well suited to studying reactive species where intrusive sampling creates contamination problems, and is very convenient.  Some chemical processes, such as certain isotopic exchanges, can be measured by almost no other method.  Disadvantages are less precise temperature control, a relatively low accuracy in the measurement of concentrations and the derived rate constants (compared, for example with UV spectroscopy or chemical titration), marginal for measurement of &Delta;<i>H</i><sup>&Dagger;</sup> and particularly &Delta;<i>S</i><sup>&Dagger;</sup>, and the requirement that a spectrometer costing hundreds of thousands of dollars be used as a glorified constant temperature bath.</p>
+<p>&nbsp;&nbsp;<i>Rapid Injection NMR (RINMR)</i>: NMR spectrometers can be fairly easily fitted with a rapid injection device which can be used to mix and take NMR spectra of samples on a second and even sub-second time scale.  This allows study of reactions and species having lifetimes in the 0.1 sec to 60 sec range at temperatures down to -130 &#176;C.  The technique involves computer-controlled injection of samples directly into an NMR tube in the spectrometer, with computer controlled pulsing at short intervals to detect reactive intermediates.  For examples see:  McGarrity, J. F., Ogle, C. A. <i>J. Am. Chem. Soc</i>.<b> 1985</b> <i>107</i>, 1805; McGarrity, J. F.; Ogle, C. A.; Brich, Z.; Loosli, H.-R. <i>J. Am. Chem. Soc</i>. <b>1985</b>, <i>107</i>, 1810; Frye, S. V.; Eliel, E. L.; Cloux, R. <i>J. Am. Chem. Soc.</i> <b>1987</b>, <i>109</i>, 1862.</p>
+<p>&nbsp;&nbsp;A <sup>7</sup>Li RINMR experiment at -135 &#176;C (3:1 Me<sub>2</sub>O / THF): Reaction of n-BuLi dimer and tetramer with trimethylsilylacetylene (Jones, A. C., Sanders, A. W.,  Bevan, M. J., Reich, H. J. <i>J. Am. Chem. Soc.</i> <b>2007</b>, <i>129</i>, 3492).</p>
+<br>
+<img src="08-tech-03-dnmr{00}.gif">&nbsp;
+
+<p>&nbsp;&nbsp;2. <b>Dynamic NMR</b>: Heisenberg uncertainty broadening of NMR signals occurs when two NMR transitions are interchanged by some physical process (spin-spin relaxation, <i>T</i><sub>2</sub>) on a timescale equivalent to the separation of the two signals in Hz.  That is, when there is uncertainty about the lifetime of a spin state (&Delta;t), there is uncertainty about the energy (&Delta;&nu;), which causes line broadening.  This is a unique capability of NMR spectrscopy, and many processes whose rates are easily measured by DNMR techniques are virtually impossible to study by any other method.</p>
+<br>
+<img src="08-tech-03-dnmr{01}.gif">&nbsp;
+
+<p>&nbsp;&nbsp;3. <b>Saturation Transfer (Forsen, EXSY)</b>.  When two NMR signals are undergoing dynamic exchange on the timescale of <i>T</i><sub>1</sub>, then saturation of one of the signals causes intensity changes in the other, since saturated nuclei will be transferred between the two sites by the exchange process.  These intensity changes can be used to obtain quantitative rate data.  (<i>Note</i>: although the experiment itself is very similar to an <a href="08-tech-02-noe.htm">NOE experiment</a>, the underlying physical processes and information obtained is quite different.)</p>
+
+<p><b><span style="font-size:12pt; color:#B6120A;">8-TECH-3.1 Dynamic NMR (DNMR)</span></b></p>
+
+<p>&nbsp;&nbsp;Reversible molecular processes which result in detectable changes in an NMR property (chemical shift or coupling constant) and which occur with rate constants between approximately 10 and 10,000 sec<sup>-1</sup> between -150  and +150 &#176;C (corresponding to &Delta;<i>G</i><sup>&Dagger;</sup> from 5 kcal to 26 kcal/mole) can be studied by variable temperature dynamic NMR (DNMR) techniques.  The range of free energies that can be covered depends in a major way on the difference in frequency (chemical shift or coupling constant) of the exchanging signals.</p>
+<br>
+<img src="08-tech-03-dnmr{02}.gif">&nbsp;
+
+<p>&nbsp;&nbsp;There is an important difference between the DNMR method and classical kinetic measurements: only processes <i>which are at equilibrium</i> can be studied.  In the large majority of cases <i>degenerate</i> processes have been studied, i.e., processes for which starting material and product are identical, and <i>K</i><sub>eq</sub> is by definition 1 (as in the cyclohexane inversion below). <i>Non-degenerate</i> processes (such as the chlorocyclohexane inversion) can also be studied, but it is important to recognize that there must be significant amounts of both species/signals present at equilibrium to see DNMR line broadening effects.  Thus an NMR time scale interconversion between an observed species and a minor (&lt;&lt;1&#37;) component will usually have <i>no</i> detectable effects on the NMR spectrum, no matter how fast or slow the rate is.  For an analysis of the two-site very unequal population problem, see Anet, F. A. L.; et al. <i>J. Chem. Soc., Chem. Commun.</i> <b>1976</b>, 399.</p>
+
+<img src="08-tech-03-dnmr{03}.gif">&nbsp;
+
+<p>&nbsp;&nbsp;The vast majority of processes studied by DNMR are <span style=" color:#E10000;"><b>intra</b></span>molecular in nature.  However, a small number of <span style=" color:#E10000;"><b>inter</b></span>molecular reactions have also been studied, most notably proton transfers, but acyl transfers, silyl transfers, ate-complex formation/dissociation, Lewis acid Lewis base dissociations, and ligand transfers between metals have also been amenable to study by this technique.<p>
+&nbsp;&nbsp;The DNMR method requires measurement of high quality NMR spectra at a series of accurately known temperatures in the region in which significant line broadening of relevant signals occurs. For intermolecular processes, the effect of a series of concentrations on the rate can also be studied. The determination of accurate rate constants by the DNMR method requires line shape simulations using computer programs such as Binsch's DNMR5 program (Review: Binsch, G. <i>Dynamic NMR Spectrosopy</i>, Jackman, L. M.; Cotton, F. A., Eds., Academic Press, N. Y., 45) or WINDNMR (<a href="http://www.chem.wisc.edu/areas/reich/plt/windnmr.htm">http://www.chem.wisc.edu/areas/reich/plt/windnmr.htm</a>).</p>
+
+<p>&nbsp;&nbsp;Crude estimates of rate constants can be obtained from spectral data using several approximate formulas (see Kost, D.; Carlson, E. H.; Raban, M. <i>J. Chem. Soc., Chem. Commun.</i> <b>1971</b>, 656; two-site uncoupled system: Gutowsky, H. S.; Holm, C. H. <i>J. Chem. Phys.</i> <b>1956</b>, <i>25</i>, 1228;  coupled AB system: <i>J. Chem. Phys</i>, <b>1964</b>, <i>41</i>, 1033)</p>
+
+<img src="08-tech-03-dnmr{04}.gif">&nbsp;
+<br>
+<img src="08-tech-03-dnmr{05}.gif">&nbsp;
+
+<p><b><span style="font-size:12pt; color:#B6120A;">8-TECH-3.2 <a name="08-tech-03-dnmr-temp"> Temperature Measurement in DNMR Experiments</a></span></b></p>
+
+<p>&nbsp;&nbsp;The &#34;dial&#34; temperatures on NMR spectrometers are not accurate enough for measurement of kinetic or thermodynamic parameters.  There is both an offset error and a slope error (the offset error changes with temperature). This is because the temperature sensing devices in the spectrometer probe are of necessity some distance outside the sample tube and probe coils. The temperature errors are a sensitive function of cooling/heating gas flow rates, so it is necessary to determine the sample temperature for each temperature setting in a variable temperature experiment.  There are three main methods for determining sample temperature.</p>
+<p>&nbsp;&nbsp;1.  Direct measurement of temperature with a calibrated thermocouple or RTD thermometer. Before and after each experiment the measuring probe is lowered into the sample (not usually practical) or the sample is removed and an open tube containing solvent and temperature probe is lowered into the NMR probe and the temperature measured.</p>
+<p>&nbsp;&nbsp;2. Substitution of sample by a chemical shift sample.  Here a sample tube containing a material which has a temperature sensitive chemical shift which has been previously calibrated is substituted for the actual sample, and the NMR spectrum is measured. The most commonly used thermometer sample uses the <sup>1</sup>H signals of methanol (the OH signal is temperature dependent), which can be used from -100 to +60 &#176;C.  At higher temperatures ethylene glycol is often used (Van Geet, A. L. <i>Anal. Chem.</i> <i>40</i>, <b>1968</b>, 2227;  Van Geet, A. L. <i>Anal. Chem.</i> <i>42</i>, <b>1970</b>, 679; Raiford, D. S.; Fisk, C. L.; Becker, E. D. <i>Anal. Chem.</i> <b>1979</b>, <i>51</i>, 2050).</p>
+<p>&nbsp;&nbsp;3. Both of the above methods require sample substitution and thus do not measure the temperature at the time of the experiment, and they cannot always be used under the actual conditions of the sample experiment.  For example the decoupler may have to be turned off during the sample substitution process.  Of course, the temperature measuring sample can be placed inside the sample tube (either as a concentric sample tube or as a capillary insert, but this can interfere with sample preparation, and often leads to unacceptable degradation of sample resolution and sensitivity. A better solution is an internal chemical shift thermometer which can be placed directly in the sample of interest, and the temperature is then measured as part of the normal spectrum acquisition process. A compound which is exceptionally good for <sup>13</sup>C variable temperature work is tris(trimethylsilyl)methane (Me<sub>3</sub>Si)<sub>3</sub>CH, where the <sup>13</sup>C chemical shift difference between the CH and CH<sub>3</sub> carbons varies linearly with temperature (&gt;1 Hz/&#176;C in a 360 MHz proton frequency spectrometer).  Only 1-4 &mu;L of 10&#37; <sup>13</sup>C enriched (Me<sub>3</sub>Si)<sub>3</sub><sup>13</sup>CH needs to be added to the sample to provide a true measure of the internal temperature during the actual experiment (Sikorski, W. H.; Sanders, A. W.; Reich, H. J. <i>Magn. Resonan. Chem.</i> <b>1998</b>, <i>36</i>, S118-S124). One disadvantage of this technique is that a calibration curve has to be established for each solvent.  A number of these have been reported.</p>
+<p>&nbsp;&nbsp;In addition to temperature errors resulting from instrumentation issues, the internal temperature of an NMR sample is also perturbed by sample heating from strong decoupling fields (usually {<sup>1</sup>H}).  This effect is especially pronounced in aqueous solutions with significant ionic strength (Led, J. J.; Petersen, S. B. <i>J. Magn. Reson.</i> <b>1978</b>, <i>32</i>, 1-17).  Thus sample temperatures will be higher if the decoupler is on than when it is off.</p>
+<br>
+<img src="08-tech-03-dnmr{06}.gif">&nbsp;
+
+<p><sup>13</sup>C NMR spectra (90.56 MHz, 360 MHz proton frequency) from a variable temperature study of 0.20 M tris(trimethylsilyl)methane (<sup>13</sup>C-H) in 3:2 THF-ether.</p>
+<br>
+<img src="08-tech-03-dnmr{07}.gif">&nbsp;
+
+<p>&nbsp;&nbsp;(a) Temperature dependence of the chemical shift difference (&Delta;&delta;) between the CH<sub>3</sub> and CH of (Me<sub>3</sub>Si)<sub>3</sub>CH in various solvents. (b) Equations for calculationg temperature from &Delta;&delta; values.  The temperatures given are the range in which the calibration was performed.</p>
+
+<p><b><span style="font-size:12pt; color:#B6120A;"><b>8-TECH-3.3 <a name="08-tech-03-dnmr-thermodynamics">Determination of Thermodynamic Parameters</a></b></span></b></p>
+
+<p>&nbsp;&nbsp;Enthalpies, entropies and free energies of activation as derived from transition state theory.</p>
+<br>
+<img src="08-tech-03-dnmr{08}.gif">&nbsp;
+
+<p>&nbsp;&nbsp;There are two common ways to plot rate constant data to determine activation energies using the Eyring Equation:</p>
+<p>&nbsp;&nbsp;1. A plot of  &Delta;<i>G</i><sup>&Dagger;</sup> vs <i>T</i> will give a straight line with a slope of -&Delta;<i>S</i><sup>&Dagger;</sup> and an intercept of &Delta;<i>H</i><sup>&Dagger;</sup> (eq. 1, Eyring Plot).  &Delta;<i>G</i><sup>&#135;</sup> is calculated from the rate constant and the temperature using eq. 3. This kind of plot is easier to interpret than the one below since the temperature range of the experiment can be directly read off the graph, and the y-coordinates and slope of the data points is visually interpretable in terms of the size of &Delta;<i>H</i><sup>&Dagger;</sup> the sign of &Delta;<i>S</i><sup>&Dagger;</sup>.  This is especially useful for comparison of several such plots on a single graph.</p>
+<p>&nbsp;&nbsp;2.  A plot of ln(<i>k</i>/<i>T</i>) vs 1/<i>T</i> will give a slope of - &Delta;<i>H&Dagger;</i> / R and an intercept of ln(<i>k</i>i/h) + &Delta;<i>S</i><sup>&Dagger;</sup>/<i>R</i> (plot eq. 3). This type of plot is more forgiving (looks better) if the rate data is not too accurate.  However, the obscure units of the x and y coordinates as well as of the slope and intercept prevents any meaningful interpretation of the graph itself.</p>
+
+<img src="08-tech-03-dnmr{09}.gif">&nbsp;
+
+<p>&nbsp;&nbsp;&Delta;<i>H</i><sup>&Dagger;</sup> = -1.9872 (slope)</p>
+<p>&nbsp;&nbsp;&Delta;<i>S</i><sup>&Dagger;</sup> = 1.9872 (intercept - ln(&kappa;<i>k</i>/<i>h</i>)   (&kappa;  = transmission coefficient, either 1 or 1/2)</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;ln(&kappa;k/h) = 23.75999 (&kappa; = 1), 23.06684 (&kappa; = 1/2)</p>
+
+<p><b><span style="font-size:12pt; color:#B6120A;">8-TECH-3.4 Some Processes that Have Been Studied by DNMR</span></b></p>
+
+<p>&nbsp;&nbsp;<b>Rotation Around Bonds - Conformational Changes</b>.  Barriers to rotations around <a href="08-tech-03-dnmr.htm#08-tech-03-dnmr-single">hindered single bonds</a> can be conveniently measured by DNMR techniques.  <a href="08-tech-04-EXSY.htm#08-tech-04-EXSY-cyclohexane-inv">cyclohexane ring inversions</a>, as well as those of larger rings are often in the DNMR rate range.  Rotations around unhindered single bonds and the interconversion of various cyclopentane half-chair and envelope conformation are generally too fast (&Delta;<i>G</i><sup>&Dagger;</sup> &lt; 5 kcal/mole) . Single bonds with partial double bond character (such as <a href="08-tech-03-dnmr.htm#08-tech-03-dnmr-amide">amide</a> bonds), <a href="../NMR-Spectra/NMR-cyclohexane-3,5-dithia-1-aza-2,4,6-trimethyl-N-nitroso-DNMR-r-05n.pdf" class='hover-lib' id='09-hdata-8-gallery_NMR-cyclohexane-3,5-dithia-1-aza-2,4,6-trimethyl-N-nitroso-DNMR-r-05n.gif'>N-nitroso amines</a> and double bonds with partial single bond character (such as <a href="08-tech-03-dnmr.htm#08-tech-03-dnmr-aminofulvene">aminofulvenes</a> and <a href="08-tech-03-dnmr.htm#08-tech-03-dnmr-pushpullalkene">push-pull alkenes</a>) can be studied.</p>
+<br>
+<img src="08-tech-03-dnmr{10}.gif">&nbsp;
+
+<p>&nbsp;&nbsp;<b>Pyramidal Inversions</b>.  The inversion barriers for amines, <a href="08-tech-03-dnmr.htm#08-tech-03-dnmr-carbodiimide-inv">imines</a>, <a href="08-tech-03-dnmr.htm#08-tech-03-dnmr-carbanion-inv">carbanions</a>, <a href="08-tech-03-dnmr.htm#08-tech-03-dnmr-phosphole-inv">phosphines</a>, oxonium salts, sulfonium salts, and sulfinyl chiral centers can sometimes be measured by DNMR techniques.  </p>
+
+<img src="08-tech-03-dnmr{11}.gif">&nbsp;
+
+<p>&nbsp;&nbsp;<b>Pseudorotations</b>.  Related to inversions are pseudorotational processes of pentacoordinate trigonal bipyramidal P, As and transition metal compounds, and similar geometric reorganizations of tetracoordinated S (e.g., SF<sub>4</sub>), Se and Te compounds, and tricoordinated Cl, Br, and I compounds (e.g. IPh<sub>3</sub>).  Similarly, internal reorganization of square planar, trigonal bipyramidal and octahedral complexes of many transition metals  have been studied by DNMR. <b>Examples</b>: <a href="../NMR-Spectra/NMR-phosphorane-dimethylamino-tetrafluoro-DNMR-r-13h.pdf" class='hover-lib' id='09-hdata-8-gallery_NMR-phosphorane-dimethylamino-tetrafluoro-DNMR-r-13h.gif'>1</a>, <a href="../NMR-Spectra/NMR-selenium-tetrafluoride-DNMR-r-312.pdf" class='hover-lib' id='09-hdata-8-gallery_NMR-selenium-tetrafluoride-DNMR-r-312.gif'>2</a>, <a href="../NMR-Spectra/NMR-platinum-pentaphosphite-tetraphenylboron-r-99p.pdf" class='hover-lib' id='09-hdata-8-gallery_NMR-platinum-pentaphosphite-tetraphenylboron-r-99p.gif'>3</a>.</p>
+
+<img src="08-tech-03-dnmr{12}.gif">&nbsp;
+
+<p>&nbsp;&nbsp;<b>Ligand Reorganizations</b>.  Organometallic complexes with alkene, allyl, diene, pentadienyl, trienyl and other ligands can have multiple bonding sites, and interconversion among these can often be studied by dynamic NMR.  This includes end-to-end of &sigma; to &sigma; and &sigma; to &pi; interconversion of allyl complexes, rotations of ethylene ligands, bond slippage along polyene chains, interconversion of octahedral isomers, and migration among other types of coordination sites in a ligand. <b>Examples:</b> <a href="../NMR-Spectra/NMR-phosphole-diphospha-Pd-complex-DNMR-r-12n.pdf" class='hover-lib' id='09-hdata-8-gallery_NMR-phosphole-diphospha-Pd-complex-DNMR-r-12n.gif'>1</a>.</p>
+
+<img src="08-tech-03-dnmr{13}.gif">&nbsp;
+
+<p>&nbsp;&nbsp;<b>Molecular Rearrangements</b>.  Valence bond isomerizations such as the bullvalene and semibullvalene divinylcyclopropane Cope rearrangements, norcaradiene-cycloheptatriene and oxepin-arene oxide isomerizations, ring-chain tautomerization such as homoallyl-cyclopropylcarbinyl isomerizations, 1,2-, 1,3- and 1,5-hydrogen and metal (e.g. silyl) shifts, [2,3]sigmatropic rearrangements, <a href="08-tech-03-dnmr.htm#08-tech-03-dnmr-annulene-db-shift">double bond shifts</a>.</p>
+
+<img src="08-tech-03-dnmr{14}.gif">&nbsp;
+
+<p>&nbsp;&nbsp;<b>Intermolecular Reactions and Ligand Exchanges</b>.  Degenerate proton and hydride transfers, exchanges of metal coordinated ligands with the free molecules, transfers of Lewis acids between basic groups, nucleophilic and electrophilic substitution reactions, exchange between aggregates, and host-guest equilibrations.  The intermolecular exchange of coordinated groups on many metals can be studied by DNMR techniques.  The NMR probe can be of several types: loss of <i>J</i>-coupling between metal and ligand (if both are NMR-active), exchange of chemical shifts between coordinated and free ligands, or averaging of diastereotopic groups due to symmetry changes as a result of substitution processes (e.g. <a href="08-tech-03-dnmr.htm#08-tech-03-dnmr-p-ligand-au">phosphine gold complex</a>).</p>
+
+<img src="08-tech-03-dnmr{15}.gif">&nbsp;
+
+<p>&nbsp;&nbsp;In the pages that follow are capsule descriptions of a selection of DNMR experiments illustrating the methodology and the types of processes that can be studied.</p>
+
+<p><b><span style="font-size:12pt; color:#B6120A;">DNMR - Effect of Chemical Shift</span></b></p>
+<p>&nbsp;&nbsp;During a DNMR coalescence experiment the peaks that are further apart always become more broadened before merging into one peak than those that are closer together. The graphic below shows simulated lineshapes of two pairs of signals undergoing  identical rates of exchange - the A and B signals exchange with each other and are 33 Hz apart, the C and D signals exchange, and are only 9 Hz apart. Note that before coalescence (up to about 12 sec<sup>-1</sup>) all line widths are the same. However, above this the C/D signals coalesce (at 38 sec<sup>-1</sup>), but the A/B signals continue to broaden, until they coalesce at a much higher rate of exchange (170 sec <sup>-1</sup>), and presumably at substantially higher temperature.  Note that above coalescence the line broadening is very strongly dependent on the chemical shift (in fact, it varies as the square of the shift). <p>
+&nbsp;&nbsp;A consequence of these factors is that the accuracy of activation parameters is strongly affected by the line separation of exchanging signals, since the further apart the signals are, the wider the range of temperatures in which accurate rate measurements can be made, and the more accurate the rate constant will be (broader lines leads to more accurate simulations). This leads to more precise values for &Delta;S<sup>&#135;</sup> and &Delta;H<sup>&#135;</sup> derived from an Eyring plot.</p>
+
+<img src="08-tech-03-dnmr{16}.gif">&nbsp;
+
+<p><b><span style="font-size:12pt; color:#B6120A;">8-TECH-3.5 Hindered Rotation around <a name="08-tech-03-dnmr-single">Single Bonds</a></span></b></p>
+
+<p>&nbsp;&nbsp;Rotation around most single bands is too fast for DNMR rate measurements (&Delta;G<sup>&#135;</sup> 2.5-5 kcal/mol).  However, tertiary centers adjacent to secondary or tertiary sp<sup>3</sup> carbons can have substantial barriers to rotation, easily measured by DNMR techniques. Hawkins, B. L.; Bremser, W.; Borcic, S.; Roberts, J. D. <i>J. Am. Chem. Soc.</i> <b>1971</b>, <i>93</i>, 4472. <b>Examples</b>: <a href="../NMR-Spectra/NMR-benzene-1,2-dineopentyl-3,4,5,6-tetramethyl-r-03n.pdf" class='hover-lib' id='09-hdata-8-gallery_NMR-benzene-1,2-dineopentyl-3,4,5,6-tetramethyl-r-03n.gif'>1</a>.</p>
+<br>
+<img src="08-tech-03-dnmr{17}.gif">&nbsp;
+<br>
+<img src="08-tech-03-dnmr{18}.gif">&nbsp;
+
+<p><b><span style="font-size:12pt; color:#B6120A;">8-TECH-3.6 <a name="08-tech-03-dnmr-double">Hindered Rotation Around Partial Double Bonds</a></span></b></p>
+
+<p>&nbsp;&nbsp;<a name="08-tech-03-dnmr-amide"><b>Amide Rotation</b></a>. Among the most intensely studied molecular processes (using DNMR) is the restricted rotation around amide bonds, because of the importance of the phenomenon in peptide and protein structures and chemical behavior.  Some typical spectra (<sup>1</sup>H and <sup>13</sup>C) of a DNMR study of N,N-dimethylacetamide are shown below (from Abraham and Loftus). The two <sup>1</sup>H N-methyl peaks have slightly different peak heights because there is apparently a small coupling between one of the N-Me groups and the C-Me group. <p>
+&nbsp;&nbsp;The <sup>13</sup>C variable temperature NMR study illustrates some of the advantages and disadvantages of C vs H DNMR work:<p>
+&nbsp;&nbsp;1. The <sup>13</sup>C NMR spectra show considerably more noise, leading to less accurate rate constants<p>
+&nbsp;&nbsp;2. The C signal can be hard (or impossible) to detect near coalescence, when there is maximum broadening.  This effect is exacerbated by the usually much larger shift in Hz between the C vs the H signals, in this case 10.5 Hz for H and 75.3 Hz for C).<p>
+&nbsp;&nbsp;3. Because of the larger shift difference the C spectra show measurable broadening over a wider temperature range (the range is extended to higher temperatures, the low temperature broadening is identical for all nuclei), which could lead to more accurate activation parameters (&Delta;<i>H</i><sup>&#135;</sup> and (&Delta;<i>S</i><sup>&#135;</sup>).<p>
+&nbsp;&nbsp;4.  There is no interference from coupling in the C NMR spectra, making lineshape simulations much simpler, but also resulting in a less information-rich set of spectra.<p>
+&nbsp;&nbsp;5. NOE effects and saturation effects in <sup>13</sup>C NMR spectra can cause errors in peak areas, so acquisition parameters have to be chosen carefully. <b>Other amide examples</b>:  <a href="../NMR-Spectra/NMR-formamide-diisopropyl-r-274.pdf" class='hover-lib' id='09-hdata-8-gallery_NMR-formamide-diisopropyl-r-274.gif'>1</a>, <a href="../NMR-Spectra/NMR-N-vinyl-formamide.pdf" class='hover-lib' id='09-hdata-8-gallery_NMR-N-vinyl-formamide.gif'>2</a>, <a href="../NMR-Spectra/NMR-benzamide-N,N-diisopropyl-o-diphenylphosphino.pdf" class='hover-lib' id='09-hdata-8-gallery_NMR-benzamide-N,N-diisopropyl-o-diphenylphosphino.gif'>3</a>.</p>
+<br>
+<img src="08-tech-03-dnmr{19}.gif">&nbsp;
+
+<p><b>Exercize</b>: Interpret all features of the room temperature NMR spectrum of N-vinyl formamide</p>
+<br>
+<a href="../NMR-Spectra/NMR-N-vinyl-formamide.pdf"><img src="08-tech-03-dnmr{20}.gif" border="1"></a>&nbsp;
+
+<p><b>Exercise</b>: (a) Explain the appearance of the CH region around &delta; 3.6.  (b) Explain the appearance of the methyl region (HINT: there is restricted rotation around more than one bond.) <i>Click on the spectrum for an analysis</i></p>
+<br>
+<a href="../NMR-Spectra/NMR-benzamide-N,N-diisopropyl-o-diphenylphosphino.pdf"><img src="08-tech-03-dnmr{21}.gif" border="1"></a>&nbsp;
+
+<p>&nbsp;&nbsp;<b><a name="08-tech-03-dnmr-aminofulvene">Aminofulvene Double Bond Rotation</a></b>. The barrier to rotation around simple C=C double bonds are in excess of 50 kcal/mol, much higher than can be measured by DNMR methods. However, formal double bonds in structures which have significant resonance contributors with single bond character can show much reduced barriers to E/Z isomerization.  The aminofulvenes below are molecules of this type. The very low barriers to E/Z isomerization indicate that the cyclopentadienide-imonium resonance structure is significant. This is also indicated by the substantial barrier to rotation around the C-NMe<sub>2</sub> bond (as indicated by coalescence of the diastereotopic NMe<sub>2</sub> group (-10 &#176;C). (Crabtree, Bertelli <i>J. Am. Chem. Soc.</i> <b>1967</b>, <i>89</i>, 5384)</p>
+<br>
+<img src="08-tech-03-dnmr{22}.gif">&nbsp;
+
+<p>&nbsp;&nbsp;<a name="08-tech-03-dnmr-pushpullalkene"><b>Push-Pull Double Bond Rotation</b>.</a> These diamino cyano alkenes show restricted rotation around 4 different bonds, three of them formal single bonds with double bond character, the fourth a double bond with single bond characater (H. Kessler <i>Chem. Ber.</i> <b>1970</b>, <i>103</i>, 973.)</p>
+<br>
+<img src="08-tech-03-dnmr{23}.gif">&nbsp;
+<br>
+<img src="08-tech-03-dnmr{24}.gif">&nbsp;
+
+<p><b><span style="font-size:12pt; color:#B6120A;">8-TECH-3.7 <a name="08-tech-03-dnmr-inversion">Detection of Chirality with Diastereotopic Groups</a></span></b></p>
+
+<p>&nbsp;&nbsp;The detection of degenerate molecular processes such as pyramidal inversion or other racemization processes by DNMR often requires labeling of the molecule with some diastereotopic group so that the process can be detected. Below some examples of such labeling.</p>
+<p>&nbsp;&nbsp;<b><a name="08-tech-03-dnmr-phosphole-inv">Pyramidal inversion in Phosphole</a></b>. Alkyl and aryl phosphines have high barriers to pyramidal inversion (&gt;35 kcal/mol). For the experiment shown below a phosphole was constructed such that the P-<sup>i</sup>Pr group would be diastereotopic in a static pyramidal structure, but inversion at P would equilibrate the methyl environments.  Indeed, at low temperature the isopropyl group shows a pair of dd (each Me is coupled to an H and the P), which shows that the equilibrium structure is non-planar.  When the sample is warmed the signals broaden and eventually coalesce to a single dd at high temperature (K. Mislow <i>J. Am. Chem. Soc.</i>, <b>1970</b>, <i>92</i>, 1442).  The lowering of the inversion barrier by ca 20 kcal/mole from a non-aromatic model provides an estimate of the aromatic stabilization of the planar phosphole structure which is the presumed transition state for the inversion.</p>
+<br>
+<img src="08-tech-03-dnmr{25}.gif">&nbsp;
+
+<p>&nbsp;&nbsp;<b><a name="08-tech-03-dnmr-carbodiimide-inv">Inversion-Rotation in Carbodiimide</a></b>. If inversion/rotation at the C=N bonds is slow, the carbodiimide shown would be chiral, and have diastereotopic isopropyl methyls.  In fact, if the sample is cooled to -150 &#176;C, the doublet decoalesces to two doublets (F. A. L. Anet <i>J. Am. Chem. Soc.</i>, <b>1970</b>, <i>92</i>, 2557).</p>
+<br>
+<img src="08-tech-03-dnmr{26}.gif">&nbsp;
+
+<p>&nbsp;&nbsp;<b><a name="08-tech-03-dnmr-carbanion-inv">Pyramidal Inversion in a Carbanion Species</a></b>. In the variable temperature <sup>13</sup>C NMR experiment below of a chelated lithiumn reagent several molecular processes can be identified and their rates measured by DNMR.  In the static pyramidal structure at low temperature both Si(Me)<sub>2</sub> carbons are diastereotopic (four signals at &delta; 3 to 7). They begin to broaden above -80 &#176;C as inversion becomes fast on the NMR time scale.  Note that initially all four SiMe peaks broaden equally, but the pair that is closer together coalesces at a much lower temperature (<i>T</i><sub>c</sub> ca -50 &#176;C) than does the other pair (<i>T</i><sub>c</sub> ca -30 &#176;C).  The inversion process does not involve any <i>intermolecular</i> exchange of Li ions, since the Li-C coupling (1:1:1:1 quartet at -7 &delta;) remains unaffected throughout the temperature range studied.<p>
+&nbsp;&nbsp;The pyrrolidine ring carbons at &delta; 58.5 are diastereotopic in the low temperature spectra, but they broaden and coalesce at -70 &#176;C. This process involves decoordination of the pyrrolidine nitrogen from lithium, rotation around the C-N bond, inversion at nitrogen, and re-coordination. It is about a factor of four faster than inversion at carbon (Reich, H. J.; Kulicke, K. J.  <i>J. Am. Chem. Soc.</i> <b>1995</b>, <i>117</i>, 6621<a href="http://dx.doi.org/10.1021/ja00129a038">DOI</a>).</p>
+<br>
+<img src="08-tech-03-dnmr{27}.gif">&nbsp;
+<br>
+<img src="08-tech-03-dnmr{28}.gif">&nbsp;
+
+<p><b><span style="font-size:12pt; color:#B6120A;">8-TECH-3.8 Double Bond Shifts</span></b></p>
+
+<p>&nbsp;&nbsp;<b><a name="08-tech-03-dnmr-annulene-db-shift">Annulene Double Bond Bhift</a></b>. The <i>syn</i> bridged annulene is a delocalized aromatic (bis-homo anthracene) compound, as shown by the strong upfield shift of the bridging protons (&delta; -0.6 and -1.1), and the downfield vinyl protons.  In the <i>anti</i>-bridged annulene conjugation is apparently not possible, since the NMR chemical shifts of the bridge protons are normal (&delta; 1.9 and 2.5).  At room temperature the spectrum of the <i>anti</i> compound is symmetric, and shows only a single CH<sub>2</sub> group.  However, at lower temperatures decoalescence occurs, and two CH<sub>2</sub> are seen at -138 &#176;C (Vogel, E.  <i>Angew. Chem.</i> <b>1970</b>, <i>82</i>, 510, 512). At this temperature the double-bond shift is slow on the NMR time scale. The activation energy for bond-shift is &Delta;<i>G</i><sup>&Dagger;</sup> = 7.1 kcal/mol.  Thus the two representations are <i>resonance structures</i> for the <i>syn</i> compound, but <i>valence-bond isomers</i> in the <i>anti</i>.</p>
+<br>
+<img src="08-tech-03-dnmr{29}.gif">&nbsp;
+<br>
+<img src="08-tech-03-dnmr{30}.gif">&nbsp;
+
+<p><b><span style="font-size:12pt; color:#B6120A;">8-TECH-3.9 Bimolecular Ligand Exchange</span></b></p>
+
+<p>&nbsp;&nbsp;<b><a name="08-tech-03-dnmr-p-ligand-au">Phosphine Ligand Exchange in Gold Complex</a></b>. DNMR experiments usually involve changing temperature to change the rates of molecular processes, but other variables which change rates and result in averaging of shifts and coupling constants can also be studied. In the series of spectra below, increments of PMe<sub>3</sub> ligand were added to a solution of a gold-phosphne complex, which initiates a bimolecular exchange between bound and free ligands, causing loss of <sup>3</sup><i>J</i> coupling between the CH<sub>3</sub>-Au protons and P. Initially no change is detectable in the PMe<sub>3</sub> protons because the fraction of free ligand is &lt;1&#37;.  When a significant fraction of PMe<sub>3</sub> has been added, however, the PMe<sub>3</sub> signals move downfield because of averaging between free and bound ligand.  The apparent coupling also decreases, and becomes 0 at 350&#37; PMe<sub>3</sub>.  Coupling between H and P reappears when 9 equivalents of PMe<sub>3</sub> have been added, with <i>J</i> close to that of the pure ligand (2.6 Hz).  This shows that <sup>2</sup><i>J</i><sub>HP</sub> has <i>opposite signs</i> in the free and bound ligands (Shiotani, A.; Klein, H. F.; Schmidbauer, H. <i>J. Am. Chem. Soc.</i> <b>1971</b>, <i>93</i>, 1555).</p>
+<br>
+<img src="08-tech-03-dnmr{31}.gif">&nbsp;
+
+</div>
+<!--========== Bottom stuff ====-->
+<div id="fnt">
+<hr>
+&#169; 2020 Hans J. Reich, All Rights Reserved
+<hr>
+<font face="Verdana" size="1" color="#CC0000">
+Web page created by <a href = "http://www.chem.wisc.edu/areas/reich/plt/winplt.htm" target="_top">WINPLT</a>. </font>
+<!--==========Last Modified Code====-->
+<SCRIPT LANGUAGE="JavaScript">
+    <!--
+    document.write( "<I>Last updated "+ document.lastModified +"</I>");
+    -->
+</SCRIPT>
+</div>
+<!--========== Bottom of Table ====-->
+</td><td width =3%> </td>
+</tr>
+</table>
+</body>
+
+  <!--   after the closing body tag import jquery.js   -->
+  <script type="text/javascript" src="jquery.js"></script>
+  <!--   after the closing body tag import hover-lib.js   -->
+  <script type="text/javascript" src="hover-lib.js"></script>
+</html>

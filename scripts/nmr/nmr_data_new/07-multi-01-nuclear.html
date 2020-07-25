@@ -1,0 +1,50 @@
+---
+title: "7-MULTI-1 Summary of Nuclear Properties"
+---
+<div id="fnt">
+<p align="center"><b><span style="font-size:14pt; color:#990000;">7-MULTI-1 Summary of Nuclear Properties</span></b></p>
+
+<br/>
+<img src="{{ (img_url_prefix + '07-multi-01-nuclear00.gif') | url }}" class="img-fluid"/> 
+
+<p>  <b>Nuclei with spin = 0</b>.  These nuclei have no NMR properties except for isotope shifts on nearby nuclei: <sup>16</sup>O, <sup>12</sup>C, <sup>32</sup>S.</p>
+<p>  <b>Principal NMR active nuclei with spin = ½</b>.  These nuclei are easily observed, give sharp lines and easily observed <i>J</i> coupling.</p>
+<p>  100% abundance: <sup>1</sup>H, <sup>19</sup>F, <sup>31</sup>P,<sup>169</sup>Tm, <sup>103</sup>Rh, <sup>89</sup>Y. Of  these,  Rh and Y are low-frequency nuclei which may require special hardware.</p>
+<p>  1-50% abundance, easily observable: <sup>13</sup>C, <sup>119</sup>Sn, <sup>117</sup>Sn, <sup>77</sup>Se, <sup>29</sup>Si, <sup>207</sup>Pb, <sup>125</sup>Te, <sup>195</sup>Pt, <sup>111</sup>Cd, <sup>203</sup>Tl, <sup>205</sup>Tl, <sup>113</sup>Cd, <sup>199</sup>Hg, <sup>129</sup>Xe.  Low-frequency nuclei with special hardware requirements: <sup>57</sup>Fe, <sup>107</sup>Ag, <sup>109</sup>Ag,<sup>183</sup>W, <sup>189</sup>Os.</p>
+<p>  Less than 1% abundance: <sup>15</sup>N (0.37%), <sup>3</sup>H (0%).</p>
+<p>  <b>Other easily observed nuclei with spin &gt;½</b>:  These have a small enough electric quadrupole moment that lines are fairly sharp, or at least observable.</p>
+<p>  <sup>2</sup>H Deuterium (<i>I</i> = 1, 0.015% abundant).  It is common to work with enriched samples, although natural abundance spectra can be observed.  Deuterium signals show relatively little line broadening from quadrupolar relaxation.  Coupling to protons cannot always be resolved since there is some line broadening, and couplings are &lt;3 Hz (<i>J</i><sub>D-H</sub> is approximately 1/6 the magnitude of <i>J</i><sub>H-H</sub>).</p>
+<p>  <sup>7</sup>Li (<i>I</i> = 3/2, 92.6% abundance).  Easily observed nucleus with high sensitivity, line widths usually less than 10 Hz, below 1 Hz in tetrahedral environments.</p>
+<p>  <sup>6</sup>Li (<i>I</i> = 1, 7.4%) Natural abundance spectra can be obtained (similar in sensitivity to <sup>13</sup>C) but artificial enrichment is common.  <sup>6</sup>Li spectra show almost no quadrupolar (<i>T</i><sub>1</sub>) broadening.</p>
+<p>  <sup>11</sup>B (<i>I</i> = 3/2, 81.2%)  Extensively used in organoboron chemistry. Lines can be broad (several Hz to 10s of Hz) but spectra are usually resolved enough to be useful.  A second isotope, <sup>10</sup>B, 18.83%, I = 3 is also useable, but less effective.</p>
+<p>  <sup>14</sup>N (<i>I </i>= 1, 99.6%)  Lines are usually too broad to show <i>J </i>coupling, and the frequency is at the lower limit of detection for normal broad-band probes.  For nitrogen compounds with near tetrahedral symmetry (e.g., ammonium salts) <i>J</i> coupling involving <sup>14</sup>N can be observed; for most others see some broadening due to residual coupling or no effect.  Most nitrogen NMR work is done with enriched <sup>15</sup>N samples.</p>
+<p>  <sup>17</sup>O (<i>I</i> = 5/2, 0.037%)  Natural abundance spectra can be taken, but artificial enrichment is common.  Linewidths are often a hundred or more Hz, so coupling is rarely seen.  No high resolution NMR work can be done with oxygen.</p>
+<p>  <sup>33</sup>S (<i>I</i> = 3/2, 0.74%)  This is the only NMR active isotope of sulfur.  Natural abundance work is difficult, reasonably sharp lines are only seen for tetrahedral sulfur with four bonds, such as sulfones, sulfonic acids and related functional groups.  Sometimes NMR studies are performed on selenium analogs, since <sup>77</sup>Se is a good spin ½ nucleus.</p>
+<p>  <b>Common nuclei with I &gt; ½ which usually show no or minimal coupling effects:</b>  Cl, Br, I, and the non-spin ½ isotopes of Se, Sn, Te, and many others.</p>
+<img src="{{ (img_url_prefix + '07-multi-01-nuclear01.gif') | url }}" class="img-fluid"/> 
+
+<h5 class="pt-5 text-danger font-weight-bold" id="07-multi-01-nuclear-fundamentals">7-MULTI-1.2 Fundamentals of Multinuclear NMR Spectroscopy</h5>
+<p>  1. <b>Nuclear Properties</b>: these determine what kind of hardware is needed and what experiments can be done on a nucleus (see 11-DATA-1 <a href="#11-multi-main" onclick="setTimeout(location.reload.bind(location), 1)"> Main group</a>, <a href="#11-multi-trans" onclick="setTimeout(location.reload.bind(location), 1)">Transition metals</a>, <a href="#11-multi-actin" onclick="setTimeout(location.reload.bind(location), 1)">Lanthanides</a>).</p>
+<p>  - Spin (<i>I</i>): 0, ½ , &gt;½ (quadrupolar).  If <i>I</i> = 0, the nucleus cannot be directly observed.  Nuclei with <i>I</i> = ½  have excellent NMR properties (sharp lines).  Quadrupolar nuclei often have special problems, and many do not give high resolution NMR spectra, or any useful spectra at all.</p>
+<p>  - Gyromagnetic ratio (γ):  determines Larmour precession frequency.  If low, there may be special instrumentation requirements, and there will be sensitivity problems (sensitivity scales as γ<sup>5/2</sup>) .</p>
+<p>  - Sign of γ: if negative will give a negative NOE effect provided <a href="#08-tech-01-relax#08-tech-01-relax-dd" onclick="setTimeout(location.reload.bind(location), 1)">dipolar relaxation</a> is the main <i>T</i><sub>1</sub> relaxation mechanism.  This can result in nulled or negative signals when proton decoupling is used. Some common nuclei that have negative γ are:  <sup>15</sup>N, <sup>29</sup>Si, <sup>103</sup>Rh.</p>
+<p>  - Natural abundance.  This determines both the sensitivity of the NMR experiment, and the effect of spin-spin coupling on neighboring nuclei.</p>
+<p><b>  2. <b>Molecular Properties</b>.</b></p>
+<p>  - Molecules must be diamagnetic (no unpaired electron spins) to show sharp NMR lines.</p>
+<p>  - Symmetry of the molecule can have dramatic effects on line width (<i>T</i><sub>1</sub>) for quadrupolar nuclei (See <a href="#08-tech-01-relax#08-tech-01-relax-qr" onclick="setTimeout(location.reload.bind(location), 1)">8-TECH-1</a>).</p>
+<p><b>  3. <b>Phenomena</b>.</b></p>
+<p>  - Nuclear Overhauser Effect (NOE).  Under some circumstances decoupling of one nucleus close in space to another can cause changes in line intensity.  NOE experiments have enormous importance for structure determination of complex molecules (See <a href="#08-tech-02-noe" onclick="setTimeout(location.reload.bind(location), 1)">8-TECH-2</a>).</p>
+<p>  - Large chemical shifts.  Chemical shifts ranges in the many thousands (2000 to 20,000) of ppm are observed for some nuclei.  The entire chemical shift range may no longer be covered by one spectrum, since spectrometers are limited to a finite spectrum width (from 500,000 Hz to 2 MHz for modern machines).  Large chemical shift ranges also mean the nucleus is very sensitive to temperature, and thus lines can be broadened by temperature gradients within the NMR sample tube or temperature drift during the experiment.</p>
+<p>  - Isotope shifts.  Higher mass usually (but not always) causes small upfield shifts of directly bonded or nearby nuclei.  This allows non-NMR-active nuclei to be detected.</p>
+<p>  - Saunders isotope perturbation.  Systems in rapid equilibrium will show special isotope shifts resulting from perturbation of the equilibrium position (usually seen with H/D isotopic substitution). (See 8-TECH-5)</p>
+<p>  - Dynamic NMR line broadening (DNMR).  Line broadening and coalescence of NMR peaks resulting from molecular reorganizations which become slow on the NMR time scale (See <a href="#08-tech-03-dnmr" onclick="setTimeout(location.reload.bind(location), 1)">8-TECH-3</a> )</p>
+<p>  4. <b>Quadrupolar Nuclei</b> - special considerations</p>
+<p>  - Molecular symmetry affects <i>T</i><sub>1</sub>.  Although spin ½ nuclei rarely show natural line widths over a few Hz (assuming no chemical exchange), with quadrupolar nuclei line widths are highly variable, ranging from as little as  0.1 Hz to MHz.<p>
+  - A spin ½ nucleus coupled to one quadrupolar nucleus will show a multiplet of the 1:1:1:1 ... type.<p>
+  - <i>T</i><sub>1</sub> relaxation of a quadrupolar nucleus can cause <i>T</i><sub>2</sub> broadening of another nucleus coupled to it (partially resolved coupling).<p>
+  - The efficiency of various relaxation pathways determine line width and NOE.</p>
+<br/>
+<img src="{{ (img_url_prefix + '07-multi-01-nuclear02.gif') | url }}" class="img-fluid"/> 
+
+<p><hr/> Next Section: <a href="#07-multi-02-effects" onclick="setTimeout(location.reload.bind(location), 1)">7.2 - Effects on H, C NMR </a>  · <a href="." onclick="setTimeout(location.reload.bind(location), 1)">Home</a> </p>
+</p></p></p></div>
