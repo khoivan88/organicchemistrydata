@@ -1,0 +1,87 @@
+items:
+  list:
+  - id: c-coupling08
+    title: <i>J</i><sub>C-H</sub> - Alcohol
+  - id: c-coupling11
+    title: <i>J</i><sub>C-H</sub> - Aldehydes
+  - id: c-coupling09
+    title: <i>J</i><sub>C-H</sub> - Alkanes
+  - id: c-coupling10
+    title: <i>J</i><sub>C-H</sub> - Alkenes
+  - id: c-coupling12
+    title: <i>J</i><sub>C-H</sub> - Alkynes
+  - id: c-coupling13
+    title: <i>J</i><sub>C-H</sub> - Allenes
+  - id: c-coupling13
+    leave_empty: true
+    title: <i>J</i><sub>C-H</sub> - Amines
+  - id: c-coupling17
+    title: <i>J</i><sub>C-H</sub> - Aromatic heterocycles
+  - id: c-coupling15
+    title: <i>J</i><sub>C-H</sub> - Azides
+  - id: c-coupling14
+    title: <i>J</i><sub>C-H</sub> - Benzene
+  - id: c-coupling16
+    title: <i>J</i><sub>C-H</sub> - Carbonium ion
+  - id: c-coupling18
+    title: <i>J</i><sub>C-H</sub> - Carboxylic Acid Derivatives
+  - id: c-coupling19
+    title: <i>J</i><sub>C-H</sub> - Cyclobutane
+  - id: c-coupling19
+    leave_empty: true
+    title: <i>J</i><sub>C-H</sub> - Cycloheptane
+  - id: c-coupling20
+    title: <i>J</i><sub>C-H</sub> - Cyclohexane
+  - id: c-coupling21
+    title: <i>J</i><sub>C-H</sub> - Cyclooctane
+  - id: c-coupling23
+    title: <i>J</i><sub>C-H</sub> - Cyclopentane
+  - id: c-coupling22
+    title: <i>J</i><sub>C-H</sub> - Cyclopropane
+  - id: c-coupling24
+    title: <i>J</i><sub>C-H</sub> - Ethers
+  - id: c-coupling24
+    leave_empty: true
+    title: <i>J</i><sub>C-H</sub> - Furan
+  - id: c-coupling25
+    title: <i>J</i><sub>C-H</sub> - Ketone
+  - id: c-coupling27
+    title: <i>J</i><sub>C-H</sub> - Lithium
+  - id: c-coupling26
+    title: <i>J</i><sub>C-H</sub> - Naphthalenes
+  - id: c-coupling26
+    leave_empty: true
+    title: <i>J</i><sub>C-H</sub> - Nitriles
+  - id: c-coupling26
+    leave_empty: true
+    title: <i>J</i><sub>C-H</sub> - Nitro
+  - id: c-coupling28
+    title: <i>J</i><sub>C-H</sub> - Phenol
+  - id: c-coupling31
+    title: <i>J</i><sub>C-H</sub> - Pyridines
+  - id: c-coupling32
+    title: <i>J</i><sub>C-H</sub> - Pyrone
+  - id: c-coupling33
+    title: <i>J</i><sub>C-H</sub> - Pyrrole
+  - id: c-coupling29
+    title: <i>J</i><sub>C-H</sub> - Quinone
+  - id: c-coupling34
+    title: <i>J</i><sub>C-H</sub> - Sulfide
+  - id: c-coupling30
+    title: <i>J</i><sub>C-H</sub> - Thiophene
+  - id: c-coupling06
+    title: <sup>1<i></i></sup>J
+  - id: c-coupling04
+    title: <sup>1<i></i></sup>J
+  - id: c-coupling03
+    title: <sup>1<i></i></sup>J
+  - id: c-coupling05
+    title: <sup>1<i></i></sup>J
+  - id: c-coupling07
+    title: <sup>1<i></i></sup>J
+  - id: c-coupling02
+    title: <sup>1<i></i></sup>J
+  - id: c-coupling00
+    title: <sup>1<i></i></sup>J
+  - id: c-coupling01
+    title: <sup>1<i></i></sup>J
