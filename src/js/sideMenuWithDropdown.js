@@ -1,3 +1,5 @@
+window.loadFirstLink = loadFirstLink
+
 /**
  * It downloads HTML as text and then feeds it to the innerHTML of your container element.
  * Ref: https://stackoverflow.com/a/52349344/6596203
@@ -193,6 +195,9 @@ function indexRedirect () {
         }
       }, 100)
 
+      // Load first link as default:
+      setTimeout(loadFirstLink, 300)
+
       // Update scroll bar then Scroll to top, used with malihu scrollbar: http://manos.malihu.gr/jquery-custom-content-scroller/#methods-section-scrollTo
       $('#sidebar').mCustomScrollbar('update')
       $('#sidebar').mCustomScrollbar('scrollTo', 'top', { timeout: 500 })
@@ -207,6 +212,16 @@ function indexRedirect () {
   //     break
   //   }
   // }
+}
+
+/**
+ * Load the first link as default
+ */
+function loadFirstLink () {
+  window.elementReady('.index-content a:first-of-type').then(function (firstATag) {
+    let url = getDataPath() + firstATag.href.split('#')[1]
+    loadPage(url, '#content .full-list')
+  })
 }
 
 /**
