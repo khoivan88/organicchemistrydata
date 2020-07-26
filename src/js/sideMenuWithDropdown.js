@@ -66,7 +66,7 @@ async function loadContent () {
       if (section) {
         setTimeout(function () {
           scrollToSection(section)
-        }, 300)
+        }, 700)
       }
 
       // Scroll to section if exists
@@ -187,9 +187,15 @@ function indexRedirect () {
       // window.location.href = url
       loadPage(url, '.index-content')
 
+      setTimeout(function () {
+        if (document.getElementById('pageData')) {
+          injectContent()
+        }
+      }, 100)
+
       // Update scroll bar then Scroll to top, used with malihu scrollbar: http://manos.malihu.gr/jquery-custom-content-scroller/#methods-section-scrollTo
       $('#sidebar').mCustomScrollbar('update')
-      $('#sidebar').mCustomScrollbar('scrollTo', 'top', { timeout: 400 })
+      $('#sidebar').mCustomScrollbar('scrollTo', 'top', { timeout: 500 })
     }
   })
 
@@ -246,6 +252,20 @@ function scrollToLink () {
       })
     }
   })
+}
+
+/**
+* Put the content of element with '#pageData' into the main content
+* This is currently applied to data inside 'Hans Reich' > 'NMR' section
+* data such as couplings and chemicals shifts
+*/
+function injectContent () {
+  // console.log('"injectContent()" ran!') // !DEBUG
+  // document.querySelector('#content .full-list').appendChild(document.getElementById('pageData'))
+  let mainContent = document.querySelector('#content .full-list')
+  mainContent.innerHTML = ''
+  mainContent.appendChild(document.getElementById('pageData'))
+  window.scrollTo(0, 0)
 }
 
 $(document).ready(function () {
