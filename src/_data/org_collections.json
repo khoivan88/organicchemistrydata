@@ -21,15 +21,15 @@
                 },
                 {
                     "name": "Named Reactions",
-                    "url": "/hansreich/resources/syntheses/#named_reactions"
+                    "url": "/hansreich/resources/syntheses/"
                 },
                 {
                     "name": "Named Reagents",
-                    "url": "/hansreich/resources/named_reagents"
+                    "url": "/hansreich/resources/named_reagents/"
                 },
                 {
                     "name": "Named Rules and Effects",
-                    "url": "/hansreich/resources/named_effects"
+                    "url": "/hansreich/resources/named_effects/"
                 },
                 {
                     "name": "Organic Reactions",
@@ -126,7 +126,7 @@
                     "links": [
                         {
                             "name": "Natural Product Syntheses",
-                            "url": "/hansreich/resources/syntheses"
+                            "url": "/hansreich/resources/syntheses/"
                         },
                         {
                             "name": "Totally Synthetic Blog (by Docherty/Taber)",
@@ -163,7 +163,7 @@
                 },
                 {
                     "name": "Electronegativities of Elements-Periodic Table",
-                    "url": "/hansreich/resources/electronegativities"
+                    "url": "/hansreich/resources/electronegativities/"
                 },
                 {
                     "name": "pKa Values (Water, DMSO, gas phase)",
@@ -248,7 +248,7 @@
                         },
                         {
                             "name": "Elements Database (interactive)",
-                            "url": " [http://www.elementsdatabase.com"
+                            "url": "http://www.elementsdatabase.com"
                         },
                         {
                             "name": "Chemiplus (interactive)",
@@ -267,10 +267,6 @@
                 {
                     "name": "SI Units",
                     "url": "http://kirste.userpage.fu-berlin.de/chemistry/general/si_en.html"
-                },
-                {
-                    "name": "NIST Chemistry WebBook (Data on 40,000 compounds including IR and UV Vis spectra)",
-                    "url": "https://webbook.nist.gov/chemistry/"
                 },
                 {
                     "name": "Nomograph (Boiling point vs Pressure, Aldrich)",
@@ -379,7 +375,7 @@
                         },
                         {
                             "name": "B-11",
-                            "url": "http://www.chemistry.sdsu.edu/research/BNMR/"
+                            "url": "https://www.chemistry.sdsu.edu/research/BNMR/"
                         },
                         {
                             "name": "Se-77",
@@ -426,7 +422,7 @@
                         },
                         {
                             "name": "IR Problems-William Reusch (MSU)",
-                            "url": "http://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/Questions/Spectroscopy/irmsprb/infrared.htm"
+                            "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/Questions/Spectroscopy/irmsprb/infrared.htm"
                         },
                         {
                             "name": "IR Problems/Training (Colby College)",
@@ -452,12 +448,7 @@
                         {
                             "name": "ChemSpider",
                             "url": "http://www.chemspider.com/"
-                        },
-						{
-							"name": "NIST Chemistry WebBook (Data on 40,000 compounds including IR and UV Vis spectra)",
-							"url": "https://webbook.nist.gov/chemistry/"
-						}
-                        
+                        }
                     ]
                 },
                 {
@@ -541,7 +532,7 @@
                         },
                         {
                             "name": "IUPAC Glossary of Class Names of Organic Compounds and Reactive Intermediates 1995",
-                            "url": "https://www.iupac.org/publications/pac/1995/pdf/6708x1307.pdf"
+                            "url": "http://publications.iupac.org/pac/1995/pdf/6708x1307.pdf"
                         }
                     ]
                 },
@@ -649,7 +640,7 @@
                         },
                         {
                             "name": "eMolecules (suppliers)",
-                            "url": "http://www.emolecules.com/index.php"
+                            "url": "https://www.emolecules.com/"
                         },
                         {
                             "name": "OSIRIS Property Explorer",
@@ -774,7 +765,7 @@
                 },
                 {
                     "name": "International Isotope Society",
-                    "url": "http://www.intl-isotope-soc.org/"
+                    "url": "https://www.intl-isotope-soc.org/"
                 },
                 {
                     "name": "International Society of Heterocyclic Chemistry",
@@ -833,7 +824,7 @@
                 },
                 {
                     "name": "Reference Resolver",
-                    "url": "http://chemsearch.kovsky.net"
+                    "url": "https://chemsearch.kovsky.net/"
                 }
             ]
         },
@@ -870,16 +861,12 @@
             "description": "Links to software applications that are likely useful for a broad selection of organic chemists",
             "links": [
                 {
-                    "name": "3D Organic Chemistry Animations",
-                    "url": "https://www.chemtube3d.com/"
-                },
-                {
                     "name": "AMSOL",
                     "url": "https://comp.chem.umn.edu/amsol/"
                 },
                 {
                     "name": "ChemBioDraw",
-                    "url": "https://www.perkinelmer.com/category/chemdraw"
+                    "url": "https://www.perkinelmer.com/product/chemdraw-professional-chemdrawpro"
                 },
                 {
                     "name": "ChemBioDraw Tutorial Videos by Pierre Morieux",
@@ -954,12 +941,8 @@
                     "url": "/hansreich/resources/acronyms/"
                 },
                 {
-                    "name": "Challenging Problems in Organic Chemistry-David Evans (Harvard)",
-                    "url": "http://evans.rc.fas.harvard.edu/problems/index.cgi"
-                },
-                {
                     "name": "ChemTube (3D Organic Chemistry Animations)",
-                    "url": "http://www.chemtube3d.com/"
+                    "url": "https://www.chemtube3d.com/"
                 },
                 {
                     "name": "Chemistry by Design-Jón Njarðarson (Arizona)",
@@ -1142,7 +1125,7 @@
                         },
                         {
                             "name": "Organic-Reaction.com (Covers some patents, Literature, and chemistry relavent to Medchem)",
-                            "url": "https://www.organic-reaction.com"
+                            "url": "https://organic-reaction.com"
                         }
                     ]
                 },
