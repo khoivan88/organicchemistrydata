@@ -10,11 +10,9 @@ default_script:
     description: 'Load "NMR Info" index page and its "Intro" page as default'
     content: |
         loadPage('nmr_index/info', '.index-content')
-        // Load the first link as default
-        setTimeout(function () {
-            let url = getDataPath() + document.querySelector('.index-content a').href.split('#')[1]
-            loadPage(url, '#content .full-list')
-        }, 300)
+        // Load first link as default:
+        window.loadFirstLink()
+
 
 ---
 
