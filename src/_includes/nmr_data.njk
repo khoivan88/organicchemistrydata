@@ -22,13 +22,7 @@
             {# {%- if item.extra %}
                 <a href="{{ item.url | url }}"
             {% else %} #}
-                <a href="#{{ item.id }}" class="nav-link px-1 py-1"
-            {# {%- endif %}
-                    {%- if item.target %}
-                        target="{{ item.target }}"
-                    {%- endif %} #}
-                    >{{ item.title }}
-                </a>
+                <a href="#{{ item.id }}" class="nav-link px-1 py-1">{{ item.title | safe }}</a>
             </li>
         {%- endif %}
     {%- endfor %}
@@ -49,7 +43,7 @@
             <li class="list-group-item py-5" id="{{ item.id }}">
                 {%- if display_link or item.display_link %}
                     {# <a id="{{ item.id }}" class="list-group-item" href="{{ item.url | url }}" target="{{ item.target }}"> #}
-                    <h4>{{ item.title }}</h4>
+                    <h4>{{ item.title | safe }}</h4>
                     {# </a> #}
                 {%- endif %}
                 {%- if item.extra %}
