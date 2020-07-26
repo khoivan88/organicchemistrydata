@@ -158,6 +158,10 @@
                     "url": "https://www2.chemistry.msu.edu/faculty/reusch/OrgPage/bndenrgy.htm"
                 },
                 {
+                    "name": "Bond Dissociation Energy Estimator by the National Renewable Energy Laboratory (NREL)",
+                    "url": "https://bde.ml.nrel.gov"
+                },
+                {
                     "name": "Electronegativities of Elements-Periodic Table",
                     "url": "/hansreich/resources/electronegativities"
                 },
@@ -263,6 +267,10 @@
                 {
                     "name": "SI Units",
                     "url": "http://kirste.userpage.fu-berlin.de/chemistry/general/si_en.html"
+                },
+                {
+                    "name": "NIST Chemistry WebBook (Data on 40,000 compounds including IR and UV Vis spectra)",
+                    "url": "https://webbook.nist.gov/chemistry/"
                 },
                 {
                     "name": "Nomograph (Boiling point vs Pressure, Aldrich)",
@@ -444,7 +452,12 @@
                         {
                             "name": "ChemSpider",
                             "url": "http://www.chemspider.com/"
-                        }
+                        },
+						{
+							"name": "NIST Chemistry WebBook (Data on 40,000 compounds including IR and UV Vis spectra)",
+							"url": "https://webbook.nist.gov/chemistry/"
+						}
+                        
                     ]
                 },
                 {
