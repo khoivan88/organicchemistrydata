@@ -73,7 +73,6 @@ def find_gif_urls(root_url, page_name):
                     # filename = a_tag["src"]
                     url = f'{root_url}/{filename}'
                     id_field = filename_reg.search(filename).group(1)
-                    # title = a_tag.text
                     title = ''.join(str(el) for el in a_tag.contents)
                     yield filename, url, id_field, title
 
