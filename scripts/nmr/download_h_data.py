@@ -20,17 +20,19 @@ def download_and_summary():
 
         data = {'items': {'list': []}}
 
-        for file_name, url, id_field, title in find_gif_urls(root_url=root_url, page_name=page_name):
-            # print(file_name, url, id_field, title)
+        for filename, url, id_field, title in find_gif_urls(root_url=root_url, page_name=page_name):
+            # print(filename, url, id_field, title)
 
             # Change file name to remove curly bracket, if change this, make sure change in the `download()` as well
-            new_data = {'title': title, 'id': id_field.replace('{', '').replace('}', '')}
+            # new_filename = id_field.replace('{', '').replace('}', '')
+            new_filename = re.sub(r'{|}|^\d*?-', '', id_field)
+            new_data = {'title': title, 'id': new_filename}
             duplicate = any(item['id'] == new_data['id'] for item in data['items']['list'])
             if duplicate:
                 data['items']['list'].append({**new_data, 'leave_empty': True})
             else:
                 data['items']['list'].append(new_data)
-            download(file_name=file_name, url=url, rel_download_path=data_filename)
+            download(filename=filename, new_filename=new_filename, url=url, rel_download_path=data_filename)
 
         # print(data)
         data_file = Path(__file__).resolve().parent / f'{data_filename}.yaml'
@@ -67,12 +69,12 @@ def find_gif_urls(root_url, page_name):
 
                 # gif_urls = (f'{root_url}/{url_suffix.search(a_tag["src"]).group(1)}' for img_tag in a_tags)
                 for a_tag in a_tags:
-                    file_name = a_tag["href"]
-                    # file_name = a_tag["src"]
-                    url = f'{root_url}/{file_name}'
-                    id_field = filename_reg.search(file_name).group(1)
-                    title = a_tag.text
-                    yield file_name, url, id_field, title
+                    filename = a_tag["href"]
+                    # filename = a_tag["src"]
+                    url = f'{root_url}/{filename}'
+                    id_field = filename_reg.search(filename).group(1)
+                    title = ''.join(str(el) for el in a_tag.contents)
+                    yield filename, url, id_field, title
 
     except Exception as error:
         if debug:
@@ -80,7 +82,7 @@ def find_gif_urls(root_url, page_name):
             print(traceback_str)
 
 
-def download(file_name: str, url: str, abs_download_path: str = None, rel_download_path: str = None):
+def download(filename: str, new_filename: None, url: str, abs_download_path: str = None, rel_download_path: str = None):
     """Download file
 
     Parameters
@@ -95,7 +97,9 @@ def download(file_name: str, url: str, abs_download_path: str = None, rel_downlo
     None
     """
     # Sanitize filename
-    file_name = file_name.replace('{', '').replace('}', '')
+    ext = Path(filename).suffix
+    # print(ext)
+    filename = f'{new_filename}{ext}' or filename
 
     download_path = ''
     if not (abs_download_path or rel_download_path):
@@ -110,18 +114,18 @@ def download(file_name: str, url: str, abs_download_path: str = None, rel_downlo
     # https://docs.python.org/3/library/os.html#os.makedirs
     Path.mkdir(download_path, exist_ok=True)
 
-    download_file = Path(download_path) / file_name
+    download_file = Path(download_path) / filename
     # Check if the file not exists and download
     # check file exists: https://stackoverflow.com/questions/82831/how-do-i-check-whether-a-file-exists
     if download_file.exists():
-        print('{} already downloaded'.format(file_name))
+        print('{} already downloaded'.format(filename))
         # print('.', end='')
     else:
-        print('\nDownloading {} ...'.format(file_name))
+        print('\nDownloading {} ...'.format(filename))
         r = requests.get(url, headers=headers, timeout=20)
         # Check to see if give OK status (200) and not redirect
         if r.status_code == 200 and len(r.history) == 0:
-            # print('\nDownloading {} ...'.format(file_name))
+            # print('\nDownloading {} ...'.format(filename))
             with open(download_file, 'wb') as f:
                 f.write(r.content)
 

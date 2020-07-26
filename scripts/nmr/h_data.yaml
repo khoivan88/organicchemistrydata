@@ -21,9 +21,9 @@ items:
   - id: hdata08
     title: "Acetylene tables (X-C\u2261C-Me)"
   - id: hdata13
-    title: "Acetylene tables (X-CH2-C\u2261C-CH3)"
+    title: "Acetylene tables (X-CH<sub>2</sub>-C\u2261C-CH<sub>3</sub>)"
   - id: hdata12
-    title: "Acetylene tables (X-CH2-C\u2261C-H)"
+    title: "Acetylene tables (X-CH<sub>2</sub>-C\u2261C-H)"
   - id: hdata10
     title: Acridine
   - id: hdata11
@@ -39,9 +39,9 @@ items:
   - id: hdata22
     title: Alkene, 1,1-Disubstituted
   - id: hdata20
-    title: Alkene, cis-Disubstituted
+    title: Alkene, <i>cis</i>-Disubstituted
   - id: hdata19
-    title: Alkene, trans-Disubstituted
+    title: Alkene, <i>trans</i>-Disubstituted
   - id: hdata18
     title: Alkene, Monosubstituted (C-Li)
   - id: hdata17
