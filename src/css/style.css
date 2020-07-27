@@ -32,10 +32,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-.lead {
-    font-weight: 350 !important;
-}
-
 .page-title-static {
     /* padding-top: 60px; */
     position: fixed;
@@ -638,7 +634,6 @@ div#at4-whatsnext {
 
     .lead {
         font-size: 1.0rem !important;
-        font-weight: 350 !important;
     }
 
     #bb-footer .bb-footer__top .menu-social-nav-container a {
