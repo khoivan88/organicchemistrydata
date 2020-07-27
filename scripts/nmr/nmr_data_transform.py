@@ -37,7 +37,7 @@ def main(infile, outdir):
                 new_content = parent_p_tag.get_text()
 
                 # For those heading containing '<span style="font-size:12pt; color:#B6120A;">, replace with <h5> tag. Note: could be different color,
-                if tag.find_parent('span', attrs={ 'style': re.compile(r'color.*')}):
+                if tag.find_parent('span', attrs={ 'style': re.compile(r'color')}):
                     new_tag = infile_soup.new_tag('h5')
                     # Put the id into it parent p tag
                     new_tag['id'] = tag['name']
@@ -105,7 +105,7 @@ def main(infile, outdir):
         # Remove '.htm' in a href and add '#' in href;
         # Also add ' onclick="location.reload()"' so that it goes to these links
         modified_body = re.sub(r'href=\"(?!http)([^\"]*?)\.htm([^\"]*?)\"',
-                                r'href="#\1\2" onclick="setTimeout(location.reload.bind(location), 1)"',
+                                r'href="#\1\2" onclick="window.scrollTo(0,0); setTimeout(location.reload.bind(location), 1)"',
                                 modified_body)
 
         # Add 'target="_blank" rel="noopener"' for external link
