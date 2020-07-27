@@ -193,14 +193,19 @@ function indexRedirect () {
         if (document.getElementById('pageData')) {
           injectContent()
         }
-      }, 100)
+      }, 300)
+      // window.elementReady('#sidebar #pageData').then(function () {
+      //   setTimeout(injectContent, 300)
+      // })
 
       // Load first link as default:
       setTimeout(loadFirstLink, 700)
 
       // Update scroll bar then Scroll to top, used with malihu scrollbar: http://manos.malihu.gr/jquery-custom-content-scroller/#methods-section-scrollTo
-      $('#sidebar').mCustomScrollbar('update')
-      $('#sidebar').mCustomScrollbar('scrollTo', 'top', { timeout: 700 })
+      setTimeout(function () {
+        $('#sidebar').mCustomScrollbar('update')
+        $('#sidebar').mCustomScrollbar('scrollTo', 'top', { timeout: 100 })
+      }, 500)
     }
   })
 
