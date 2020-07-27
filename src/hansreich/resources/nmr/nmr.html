@@ -16,23 +16,23 @@ default_script:
 
 ---
 
-<option selected>Choose...</option>
+<!-- <option selected>Choose...</option> -->
 {%- for group in collections.nmr_index %}
     {%- if ('coupling' not in group.fileSlug) and ('shift' not in group.fileSlug) %}
-    <option {%- if group.fileSlug == 'info' %} selected{%- endif %} data-url="{{ group.url | url }}">{{ group.fileSlug | toTitleCase }}</option>
+    <option {%- if group.fileSlug == 'info' %} selected{%- endif %} data-url="{{ group.url | url }}" value="{{ group.fileSlug }}">{{ group.fileSlug | toTitleCase }}</option>
     {%- endif %}
 {%- endfor %}
 <optgroup label="Chemical Shift">
 {%- for group in collections.nmr_index %}
     {%- if 'shift' in group.fileSlug %}
-        <option data-url="{{ group.url | url }}">{{ group.fileSlug | toTitleCase }}</option>
+        <option data-url="{{ group.url | url }}" value="{{ group.fileSlug }}">{{ group.fileSlug | toTitleCase }}</option>
     {%- endif %}
 {%- endfor %}
 </optgroup>
 <optgroup label="Coupling Constant">
 {%- for group in collections.nmr_index %}
     {%- if 'coupling' in group.fileSlug %}
-        <option data-url="{{ group.url | url }}">{{ group.fileSlug | toTitleCase }}</option>
+        <option data-url="{{ group.url | url }}" value="{{ group.fileSlug }}">{{ group.fileSlug | toTitleCase }}</option>
     {%- endif %}
 {%- endfor %}
 </optgroup>
