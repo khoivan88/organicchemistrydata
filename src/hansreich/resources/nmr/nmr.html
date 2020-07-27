@@ -22,14 +22,14 @@ default_script:
     <option {%- if group.fileSlug == 'info' %} selected{%- endif %} data-url="{{ group.url | url }}" value="{{ group.fileSlug }}">{{ group.fileSlug | toTitleCase }}</option>
     {%- endif %}
 {%- endfor %}
-<optgroup label="Chemical Shift">
+<optgroup label="Chemical Shift Data">
 {%- for group in collections.nmr_index %}
     {%- if 'shift' in group.fileSlug %}
         <option data-url="{{ group.url | url }}" value="{{ group.fileSlug }}">{{ group.fileSlug | toTitleCase }}</option>
     {%- endif %}
 {%- endfor %}
 </optgroup>
-<optgroup label="Coupling Constant">
+<optgroup label="Coupling Constant Data">
 {%- for group in collections.nmr_index %}
     {%- if 'coupling' in group.fileSlug %}
         <option data-url="{{ group.url | url }}" value="{{ group.fileSlug }}">{{ group.fileSlug | toTitleCase }}</option>
