@@ -196,11 +196,11 @@ function indexRedirect () {
       }, 100)
 
       // Load first link as default:
-      setTimeout(loadFirstLink, 300)
+      setTimeout(loadFirstLink, 700)
 
       // Update scroll bar then Scroll to top, used with malihu scrollbar: http://manos.malihu.gr/jquery-custom-content-scroller/#methods-section-scrollTo
       $('#sidebar').mCustomScrollbar('update')
-      $('#sidebar').mCustomScrollbar('scrollTo', 'top', { timeout: 500 })
+      $('#sidebar').mCustomScrollbar('scrollTo', 'top', { timeout: 700 })
     }
   })
 
