@@ -1,20 +1,14 @@
 ---
-layout: hansreich_base_layout.njk
-
-header:
-    title: 'Conformational Energies (A-Values)'
-
 title: 'Conformational Energies (A-Values)'
 
 image:
-    url: '/hansreich/resources/a_values/avalue.gif'
+    name: 'avalue.gif'
 ---
 
-<!-- <script src="js/main.js"></script> -->
-
-<div class="container-fluid my-5">
+<div class="container-fluid my-3">
+    <h4 class="text-danger text-center">{{ title }}</h4>
     <div class="container text-center">
-        <img src="{{ image.url | url }}" class="img-fluid" alt="Conformers equilibrium">
+        <img src="{{ (img_url_prefix + image.name) | url }}" class="img-fluid" alt="Conformers equilibrium">
     </div>
 
     <div class="row justify-content-center">
