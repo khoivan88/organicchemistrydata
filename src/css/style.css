@@ -210,6 +210,18 @@ img.img-fluid {
     z-index: 1000;
 }
 
+.fake-link {
+    color: #007bff; /* Change this with links color*/
+    cursor: pointer;
+    /* text-decoration: underline; */
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0px;
+}
+
+.fake-link:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Change the value to with anchors hover color*/
+}
 
 /* ---------------------------------------------------
     CONTENT STYLE (for pages with toggle side list)
