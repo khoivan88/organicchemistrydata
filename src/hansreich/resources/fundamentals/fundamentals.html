@@ -2,9 +2,9 @@
 layout: side_menu_multiple_page.njk
 
 header:
-    title: 'Reduction and Oxidation'
+    title: 'Fundamentals of Organic Chemistry'
 
-title: 'Reduction and Oxidation'
+title: 'Fundamentals of Organic Chemistry'
 
 default_script:
     description: 'Load first link as default'
@@ -13,13 +13,16 @@ default_script:
         loadPage(url, '#content .full-list')
 
 ---
-<p class="lead">Fundamentals in Organic Chemistry</p>
+<p class="lead">Fundamentals of Organic Chemistry</p>
 <ol class="pl-3">
     <li><a href="#tools00">Symbolic Notation</a></li>
-    <li><a href="{{ '/hansreich/resources/electron_pushing/' | url }}">Electron Pushing</a></li>
-    <li><a href="{{ '/hansreich/resources/electron_pushing/#epush-acidcatalysis' | url }}">Acid Catalysis</a></li>
-    <li><a href="{{ '/hansreich/resources/electron_pushing/#epush-basecatalysis' | url }}">Basic and Nucleophilic Catalysis</a></li>
     <li><a href="#tools04">Bond Formation in Organic Chemistry</a></li>
     <li><a href="#tools05">Synthons for C-C Bond Formation</a></li>
     <li><a href="#tools06">Nucleophiles and Electrophiles</a></li>
+</ol>
+<p>Also see:</p>
+<ul class="pl-3">
+    <li><a href="{{ '/hansreich/resources/electron_pushing/' | url }}">Electron Pushing</a></li>
+    <li><a href="{{ '/hansreich/resources/redox/' | url }}">Reduction and Oxidation</a></li>
+    <li><a href="{{ '/hansreich/resources/reactive_intermediates/' | url }}">Reactive Intermediates</a></li>
 </ol>
