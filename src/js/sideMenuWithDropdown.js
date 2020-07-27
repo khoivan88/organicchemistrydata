@@ -283,6 +283,27 @@ function injectContent () {
   window.scrollTo(0, 0)
 }
 
+/**
+ * Use as direct link to change dropdown select option
+ * @param {element} e pass in the data itself
+ * Refs:
+ * https://stackoverflow.com/a/2856602/6596203;
+ * https://stackoverflow.com/a/10911718/6596203
+ */
+function changeIndex (e) {
+  // console.log(e.dataset.value)
+  document.querySelector('select.index').value = e.dataset.value
+  // firing the event properly according to StackOverflow
+  // http://stackoverflow.com/questions/2856513/how-can-i-trigger-an-onchange-event-manually
+  if ('createEvent' in document) {
+    var evt = document.createEvent('HTMLEvents')
+    evt.initEvent('change', false, true)
+    document.querySelector('select.index').dispatchEvent(evt)
+  } else {
+    document.querySelector('select.index').fireEvent('onchange')
+  }
+}
+
 $(document).ready(function () {
   // console.log('sideMenuWithDropdown JS working!') // !DEBUG
 
