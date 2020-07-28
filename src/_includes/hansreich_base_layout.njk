@@ -128,6 +128,7 @@ about:
                         {%- for resource in resources.list %}
                           {%- if resource.list %}
                             <!-- Level two dropdown-->
+                            {# Refs: https://bootstrapious.com/p/bootstrap-multilevel-dropdown; http://jsfiddle.net/R3JKz/15/ #}
                             <div class="navbar-hover d-block d-md-flex flex-row align-items-center">
                               <li class="flex-grow-1"><a href="{{ resource.url | url }}" {%- if resource.target %} target="{{ resource.target }}"{%- endif %}
                                     class="dropdown-item pr-3 pr-md-0">{{ resource.title }}</a></li>
