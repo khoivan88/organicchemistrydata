@@ -71,6 +71,21 @@ h1, h2, h3, h4, h5, h6 {
     overflow: auto;
 }
 
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu>a:after {
+  content: "\f0d7";    /* caret-down */
+  float: right;
+  border: none;
+  font-family: 'FontAwesome';
+}
+
+.dropdown-submenu .dropdown-menu {
+  position: static;
+}
+
 /* ---------------------------------------------------
     TOTAL SYNTHESES SECTION
 ----------------------------------------------------- */
@@ -709,6 +724,17 @@ div#at4-whatsnext {
 
     #sidebar.active .index-select {
         max-width: 240px;
+    }
+
+    .navbar-nav .dropdown-menu {
+        max-width: auto;
+        /* max-width: 91vw; */
+        max-height: auto;
+        overflow: inherit;
+    }
+
+    .dropdown-submenu>a:after {
+        content: "\f0da";    /* caret-right */
     }
 
 }
