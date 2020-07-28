@@ -89,7 +89,31 @@ $("ul.dropdown-menu [data-toggle='dropdown']").on('click', function (event) {
   })
 })
 
+/**
+ * Auto expand submenus in 'Hans Reich Collection' upon clicking on its dropdown button
+ * This only applies to small screen
+ */
+function displaySubmenus () {
+  var reichMenu = $('#hansreichCollection')
+  var subMenus = $('.dropdown-submenu .dropdown-menu')
+  // Use Bootstrap 4 drowndown event: https://getbootstrap.com/docs/4.5/components/dropdowns/#events
+  // Upon the menu is displayed, check if the screen size is small or smaller, if so, expand sub menus
+  reichMenu.on('show.bs.dropdown', function () {
+    if ($(window).width() <= 576) {
+      // console.log($(window).width())    // !DEBUG
+      subMenus.addClass('show')
+    }
+  })
+
+  // Collapse sub menus upon hiding main menu
+  reichMenu.on('hide.bs.dropdown', function () {
+    subMenus.removeClass('show')
+  })
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   // console.log('main.js working!')
   // adjustFooterPosition()
+
+  displaySubmenus()
 })
