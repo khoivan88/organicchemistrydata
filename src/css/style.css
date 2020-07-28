@@ -71,20 +71,11 @@ h1, h2, h3, h4, h5, h6 {
     overflow: auto;
 }
 
-.dropdown-submenu {
-  position: relative;
+.dropdown-submenu.dropright .dropdown-toggle:after {
+    /* Rotate the caret-right symbol down */
+    transform: rotate(90deg);
 }
 
-.dropdown-submenu>a:after {
-  content: "\f0d7";    /* caret-down */
-  float: right;
-  border: none;
-  font-family: 'FontAwesome';
-}
-
-.dropdown-submenu .dropdown-menu {
-  position: static;
-}
 
 /* ---------------------------------------------------
     TOTAL SYNTHESES SECTION
@@ -733,8 +724,12 @@ div#at4-whatsnext {
         overflow: inherit;
     }
 
-    .dropdown-submenu>a:after {
-        content: "\f0da";    /* caret-right */
+    .navbar-hover {position:relative;}
+    .navbar-hover:hover ul {display:block}
+
+    .dropdown-submenu.dropright .dropdown-toggle:after {
+        /* Turn off rotate=ing the caret symbol */
+        transform: none;
     }
 
 }
