@@ -129,7 +129,7 @@ about:
                           {%- if resource.list %}
                             <!-- Level two dropdown-->
                             <div class="navbar-hover d-block d-md-flex flex-row align-items-center">
-                              <li class="flex-grow-1"><a href="{{ resource.url | url }}" target="{% if resource.target %}{{ resource.target }}{% endif %}"
+                              <li class="flex-grow-1"><a href="{{ resource.url | url }}" {%- if resource.target %} target="{{ resource.target }}"{%- endif %}
                                     class="dropdown-item pr-3 pr-md-0">{{ resource.title }}</a></li>
                               <li class="dropdown-submenu text-center dropright">
                                 <a class="dropdown-toggle px-3 text-dark" href="#" id="{{ resource.id }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
@@ -137,7 +137,7 @@ about:
                                 {%- for subitem in resource.list %}
                                   <li>
                                     <a class="dropdown-item {{ subitem.disabled }}" href="{{ subitem.url  | url }}"
-                                      target="{% if subitem.target %}{{ subitem.target }}{% endif %}">
+                                      {%- if subitem.target %} target="{{ subitem.target }}"{%- endif %}>
                                       {{ subitem.title }}
                                     </a>
                                   </li>
@@ -148,7 +148,7 @@ about:
                             <!-- End Level two -->
                           {%- else %}
                             <li><a class="dropdown-item {{ resource.disabled }}" href="{{ resource.url | url }}"
-                              target="{% if resource.target %}{{ resource.target }}{% endif %}">
+                              {%- if resource.target %} target="{{ resource.target }}"{%- endif %}>
                               {{ resource.title }}
                             </a></li>
                           {%- endif %}
@@ -158,7 +158,7 @@ about:
                         <div class="dropdown-divider"></div>
                         {%- for item in reich_related.list %}
                         <a class="dropdown-item" href="{{ item.url | url }}"
-                            target="{% if item.target %}{{ item.target }}{% endif %}">
+                            {%- if item.target %} target="{{ item.target }}"{%- endif %}>
                             {{ item.title }}
                         </a>
                         {%- endfor %}
@@ -179,7 +179,7 @@ about:
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                             {%- for item in reich_related.list %}
                             <a class="dropdown-item" href="{{ item.url | url }}"
-                                target="{% if item.target %}{{ item.target }}{% endif %}">
+                                {%- if item.target %} target="{{ item.target }}"{%- endif %}>
                                 {{ item.title }}
                             </a>
                             {%- endfor %}
