@@ -135,6 +135,12 @@ about:
                               <li class="dropdown-submenu text-center dropright">
                                 <a class="dropdown-toggle px-3 text-dark" href="#" id="{{ resource.id }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                                 <ul class="dropdown-menu shadow ml-0 pl-3 pl-md-0" aria-labelledby="{{ resource.id }}">
+                                  <li>
+                                    <a class="dropdown-item {{ resource.disabled }}" href="{{ resource.url  | url }}"
+                                      {%- if resource.target %} target="{{ resource.target }}"{%- endif %}>
+                                      General Info
+                                    </a>
+                                  </li>
                                 {%- for subitem in resource.list %}
                                   <li>
                                     <a class="dropdown-item {{ subitem.disabled }}" href="{{ subitem.url  | url }}"
