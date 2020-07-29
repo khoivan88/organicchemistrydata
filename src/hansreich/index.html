@@ -12,6 +12,10 @@ obit:
     url: 'https://www.cressfuneralservice.com/obituary/Hans-Reich'
     target: '_blank'
 
+blockquote_image:
+    src: '/img/hansreich.jpg'
+    alt: 'Hans Reich headshot'
+
 hans:
     bio_url: /hansreich/about_reich
 
@@ -63,21 +67,26 @@ uwmadison:
     </div>
 </div>
 
-<div class="container bg-secondary text-white">
-    <blockquote class="blockquote text-center">
-        <p>
-            "[This] is a collection of Web pages containing information useful to teachers, researchers, and students
-            in organic chemistry, biochemistry, and medicinal chemistry. The pages have been selected for ease of use, broad
-            applicability, and quality of coverage. Topics will include structural information, organic reactions,
-            nomenclature, physical properties, and spectroscopic data. These Web pages will be updated when possible and
-            additional Web pages will be added as they become available."
-        </p>
-        <footer class="blockquote-footer text-light">Professor Hans Reich in
-            <cite title="Source Title">
-                <a href="https://doi.org/10.1021/ed082p495" target="_blank" rel="noopener" class="text-warning">J. Chem. Educ. 2005, 82, 3, 495</a>
-            </cite>
-        </footer>
-    </blockquote>
+<div class="container mx-auto row bg-dark shadow rounded-lg">
+    <div class="d-flex align-items-top pt-3 pt-md-5 justify-content-center col-12 col-md-3 col-lg-2">
+        <img class="blockquote-custom-img" src="{{ blockquote_image.src | url }}" alt="{{ blockquote_image.alt }}">
+    </div>
+    <div class="col-12 col-md-9 col-lg-10">
+        <blockquote class="blockquote blockquote-custom text-white pt-5 px-1 px-md-3 px-lg-5 mb-0">
+            <p class="font-weight-light text-justify">
+                [This] is a collection of Web pages containing information useful to teachers, researchers, and students
+                in organic chemistry, biochemistry, and medicinal chemistry. The pages have been selected for ease of use, broad
+                applicability, and quality of coverage. Topics will include structural information, organic reactions,
+                nomenclature, physical properties, and spectroscopic data. These Web pages will be updated when possible and
+                additional Web pages will be added as they become available."
+            </p>
+            <footer class="blockquote-footer text-center text-light p-3 mt-4 border-top border-light">Professor Hans Reich in
+                <cite title="Source Title">
+                    <a href="https://doi.org/10.1021/ed082p495" target="_blank" rel="noopener" class="text-warning">J. Chem. Educ. 2005, 82, 3, 495</a>
+                </cite>
+            </footer>
+        </blockquote>
+    </div>
 </div>
 
 <div class="container py-3">

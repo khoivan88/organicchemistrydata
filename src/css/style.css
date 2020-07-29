@@ -77,6 +77,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/*
+* ==========================================
+* BLOCKQUOTE CLASS
+* ==========================================
+*/
+.blockquote-custom {
+  position: relative;
+}
+
+.blockquote-custom p {
+    font-family: 'Josefin Sans', serif;
+    font-size: 1.25em;
+    font-style: italic;
+    line-height: 2rem;
+    text-indent: 50px;
+}
+
+.blockquote-custom p:first-of-type:before {
+font-family: Georgia, serif;
+    font-style: italic;
+    content: '\201C';
+    color: #81bedb;
+    font-size: 4.5em;
+    font-weight: 700;
+    opacity: .6;
+    top: 0.3em;
+    left: -0.4em;
+    text-shadow: none;
+    position: absolute;
+}
+
+.blockquote-custom-img {
+    border: 3px solid #9CC1D3;
+    border-radius: 50%;
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+
 /* ---------------------------------------------------
     TOTAL SYNTHESES SECTION
 ----------------------------------------------------- */
