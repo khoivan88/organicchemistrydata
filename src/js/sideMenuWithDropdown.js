@@ -7,16 +7,16 @@ window.loadFirstLink = loadFirstLink
  * @return {String} the resulting HTML string fragment
 */
 async function fetchHtmlAsText (url) {
-  // const response = await fetch(url)
-  const res = await fetch(url)
-    .then(function (response) {
-      if (response.ok) {
-        return response
-        // return response.text()
-      } else {
-        return Promise.reject(response)
+  let response = await fetch(url)
+
+  if (response.ok) { // if HTTP-status is 200-299
+    // get the response body (the method explained below)
+    return response.text()
+  } else {
+    console.warn(`Could not find a page from ${url}`)
+    return Promise.reject(response)
         // throw Error(`Request rejected with status ${res.status}`);
-      }
+  }
     })
     // .catch(function (error) {
     //   console.warn(`${error}. Could not find a page from ${url}`)
@@ -25,13 +25,17 @@ async function fetchHtmlAsText (url) {
 }
 
 async function loadPage (url, targetElem) {
-  let contentDiv = document.querySelector(targetElem)
+  try {
+    let contentDiv = document.querySelector(targetElem)
 
-  var content = await fetchHtmlAsText(url)
-  contentDiv.innerHTML = content
+    var content = await fetchHtmlAsText(url)
+    contentDiv.innerHTML = content
 
-  if (targetElem === '.index-content') {
-    loadContent()
+    if (targetElem === '.index-content') {
+      loadContent()
+    }
+  } catch (e) {
+    console.warn('e')
   }
 }
 
