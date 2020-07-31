@@ -95,7 +95,7 @@ $(document).ready(function () {
 
   // Use minimal scroll bar theme
   $('#sidebar').mCustomScrollbar({
-    theme: 'minimal-dark', // http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollbar_themes_demo.html
+    theme: 'minimal-dark' // http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollbar_themes_demo.html
     // Other setting: http://manos.malihu.gr/jquery-custom-content-scroller/#configuration-section
     // mouseWheel: {
     //   scrollAmount: 300,
