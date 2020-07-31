@@ -316,16 +316,15 @@ function changeIndex (e) {
 $(document).ready(function () {
   // console.log('sideMenuWithDropdown JS working!') // !DEBUG
 
-  // If user provides a url with hash (e.g. 'example.com/#something') then try to load the correct page
-  if (window.location.hash) {
-    deepLink()
-  }
-
   if (document.querySelector('.index')) {
     indexRedirect()
   }
 
   loadContent()
+
+  // If user provides a url with hash (e.g. 'example.com/#something') then try to load the correct page
+  // ! IMPORTANT that this is after `indexRedirect()` or window will reload the first link
+  deepLink()
 
   if (document.querySelector('#scrollToLinkForm')) {
     scrollToLink()
