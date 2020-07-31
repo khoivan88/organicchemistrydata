@@ -50,8 +50,8 @@ function getDataPath () {
   return `${segment}_data/`
 }
 
-async function loadContent () {
-  // console.log('something1') // !DEBUG
+function loadContent () {
+  // console.log('"loadContent()" working') // !DEBUG
   document.querySelectorAll('.index-content a').forEach(function (link) {
   // $('.index-content a').on('click', function (link) {
     link.onclick = function () {
@@ -65,23 +65,25 @@ async function loadContent () {
       let url = getDataPath() + page
       // console.log(url) // !DEBUG
       loadPage(url, '#content .full-list')
+        .then(function () {
+          // Scroll to top of the new content page
+          setTimeout(window.topFunction, 100)
 
-      // Scroll to top of the new content page
-      setTimeout(window.topFunction, 100)
-
-      if (section) {
-        setTimeout(function () {
-          scrollToSection(section)
-        }, 700)
-      }
+          // Scroll to section if exists
+          if (section) {
+            setTimeout(function () {
+              scrollToSection(section)
+            }, 700)
+          }
 
       // Scroll to section if exists
-      window.closeNavOnSmallScreen()
+          window.closeNavOnSmallScreen()
 
-      // For pages with image to display over text (such as those in NMR section)
+          // For pages with image to display over text (such as those in NMR section)
       // run the display image function after setTimeout
       // setTimeout(window.displayImage, 1000)
-      setTimeout(activateTooltip, 1000)
+          setTimeout(activateTooltip, 1000)
+        })
     }
   })
 }
@@ -181,7 +183,7 @@ function deepLink () {
  * Ref: https://webdesign.tutsplus.com/tutorials/dropdown-navigation-how-to-maintain-the-selected-option-on-page-load--cms-32210
  */
 function indexRedirect () {
-  // console.log('indexRedirect JS working!') // !DEBUG
+  // console.log('indexRedirect() JS working!') // !DEBUG
 
   const select = document.querySelector('.index')
   // const options = document.querySelectorAll('.index option')
