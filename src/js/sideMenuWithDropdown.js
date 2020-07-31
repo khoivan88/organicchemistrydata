@@ -52,7 +52,7 @@ function loadContent () {
   document.querySelectorAll('.index-content a').forEach(function (link) {
   // $('.index-content a').on('click', function (link) {
     link.onclick = function () {
-      // console.log('something2') // !DEBUG
+      console.log('sidemenu link clicked!'); // !DEBUG
       // link.classList.toggle('active')
       // let url = link.dataset.url
 
@@ -68,9 +68,14 @@ function loadContent () {
 
           // Scroll to section if exists
           if (section) {
-            setTimeout(function () {
-              scrollToSection(section)
-            }, 700)
+            // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
+            window.elementReady('#' + CSS.escape(section))
+              .then(function (el) {
+                console.log(`Should be running because element with id ${section} exists`) // !DEBUG
+                setTimeout(function () {
+                  el.scrollIntoView({ behavior: 'smooth' })
+                }, 500)
+              })
           }
 
           window.closeNavOnSmallScreen()
@@ -85,11 +90,11 @@ function loadContent () {
 /**
  * For links on side menu that include specific section
  */
-function scrollToSection (sectionId) {
-  // console.log(`section is : ${sectionId}`) // !DEBUG
-  // window.location.hash = sectionId
-  document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' })
-}
+// function scrollToSection (sectionId) {
+//   // console.log(`section is : ${sectionId}`) // !DEBUG
+//   // window.location.hash = sectionId
+//   document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' })
+// }
 
 /**
  * Activate Bootstrap 4 tooltip with html true
@@ -120,28 +125,17 @@ function deepLink () {
     let contentUrl = getDataPath() + hash[1]
     // console.log(`contentUrl: ${contentUrl}`) // !DEBUG
 
-    // loadPage(contentUrl, '#content .full-list')
-
-    // // Scroll to top of the new content page
-    // setTimeout(window.topFunction, 100)
-
-    // if (hash[2]) {
-    //   // console.log(hash[2]) // !DEBUG
-    //   setTimeout(function () {
-    //     scrollToSection(hash[2])
-    //   }, 1000)
-    // }
-
-    // // Wait longer before activating tooltip on direct load
-    // setTimeout(activateTooltip, 3000)
-
     loadPage(contentUrl, '#content .full-list')
       .then(function () {
         if (hash[2]) {
-          // console.log(hash[2]) // !DEBUG
-          setTimeout(function () {
-            scrollToSection(hash[2])
-          }, 200)
+          // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
+          window.elementReady('#' + CSS.escape(hash[2]))
+            .then(function (el) {
+              console.log(`Should be running because element with id ${hash[2]} exists`) // !DEBUG
+              setTimeout(function () {
+                el.scrollIntoView({ behavior: 'smooth' })
+              }, 500)
+            })
         } else {
           // Scroll to top of the new content page
           setTimeout(window.topFunction, 100)
@@ -237,7 +231,7 @@ function indexRedirect () {
  * Load the first link as default
  */
 function loadFirstLink () {
-  console.log('"loadFirstLink()" working!')  // !DEBUG
+  console.log('"loadFirstLink()" working!') // !DEBUG
   window.elementReady('.index-content a:first-of-type')
     .then(function (firstATag) {
       let url = getDataPath() + firstATag.href.split('#')[1]
