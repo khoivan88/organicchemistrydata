@@ -190,28 +190,24 @@ function indexRedirect () {
 
   // Retrieve the page url related to the selected option and force a redirection to this page.
   select.addEventListener('change', function () {
-    const url = this.options[this.selectedIndex].dataset.url
+    let url = this.options[this.selectedIndex].dataset.url
     if (url) {
-      // window.location.href = url
       loadPage(url, '.index-content')
+        .then(function (hasPageData) {
+          console.log('indexRedirect() loadPage first ".then()" call') //! DEBUG
+          $('#sidebar').mCustomScrollbar('update')
+          $('#sidebar').mCustomScrollbar('scrollTo', 'top', {
+            timeout: 500,
+            scrollEasing: 'linear'
+          })
 
-      setTimeout(function () {
-        if (document.getElementById('pageData')) {
-          injectContent()
-        }
-      }, 300)
-      // window.elementReady('#sidebar #pageData').then(function () {
-      //   setTimeout(injectContent, 300)
-      // })
-
-      // Load first link as default:
-      setTimeout(loadFirstLink, 700)
-
-      // Update scroll bar then Scroll to top, used with malihu scrollbar: http://manos.malihu.gr/jquery-custom-content-scroller/#methods-section-scrollTo
-      setTimeout(function () {
-        $('#sidebar').mCustomScrollbar('update')
-        $('#sidebar').mCustomScrollbar('scrollTo', 'top', { timeout: 100 })
-      }, 500)
+          if (hasPageData) {
+            injectContent()
+          } else {
+            // Load first link as default:
+            setTimeout(loadFirstLink, 500)
+          }
+        })
     }
   })
 
@@ -286,8 +282,7 @@ function scrollToLink () {
 * data such as couplings and chemicals shifts
 */
 function injectContent () {
-  // console.log('"injectContent()" ran!') // !DEBUG
-  // document.querySelector('#content .full-list').appendChild(document.getElementById('pageData'))
+  console.log('"injectContent()" ran!') // !DEBUG
   let mainContent = document.querySelector('#content .full-list')
   mainContent.innerHTML = ''
   mainContent.appendChild(document.getElementById('pageData'))
