@@ -225,10 +225,12 @@ function indexRedirect () {
  * Load the first link as default
  */
 function loadFirstLink () {
-  window.elementReady('.index-content a:first-of-type').then(function (firstATag) {
-    let url = getDataPath() + firstATag.href.split('#')[1]
-    loadPage(url, '#content .full-list')
-  })
+  console.log('"loadFirstLink()" working!')  // !DEBUG
+  window.elementReady('.index-content a:first-of-type')
+    .then(function (firstATag) {
+      let url = getDataPath() + firstATag.href.split('#')[1]
+      loadPage(url, '#content .full-list')
+    })
 }
 
 /**
@@ -297,6 +299,7 @@ function injectContent () {
  * https://stackoverflow.com/a/10911718/6596203
  */
 function changeIndex (e) {
+  console.log('changeIndex() runs') // !DEBUG
   // console.log(e.dataset.value)
   document.querySelector('select.index').value = e.dataset.value
   // firing the event properly according to StackOverflow
