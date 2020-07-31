@@ -9,10 +9,15 @@ title: 'NMR Spectroscopy'
 default_script:
     description: 'Load "NMR Info" index page and its "Intro" page as default'
     content: |
-        loadPage('nmr_index/info', '.index-content')
-        // Load first link as default:
-        window.loadFirstLink()
-
+        document.addEventListener('DOMContentLoaded', function () {
+            loadPage('nmr_index/info', '.index-content')
+                .then(function () {
+                    // Load first link as default if there is no hash in url:
+                    if (!window.location.hash) {
+                        window.loadFirstLink()
+                    }
+                })
+            })
 
 ---
 
