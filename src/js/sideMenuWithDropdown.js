@@ -15,25 +15,22 @@ async function fetchHtmlAsText (url) {
   } else {
     console.warn(`Could not find a page from ${url}`)
     return Promise.reject(response)
-        // throw Error(`Request rejected with status ${res.status}`);
   }
-    })
-    // .catch(function (error) {
-    //   console.warn(`${error}. Could not find a page from ${url}`)
-    // })
-  return await res.text()
 }
 
 async function loadPage (url, targetElem) {
   try {
     let contentDiv = document.querySelector(targetElem)
 
-    var content = await fetchHtmlAsText(url)
+    let content = await fetchHtmlAsText(url)
     contentDiv.innerHTML = content
 
     if (targetElem === '.index-content') {
       loadContent()
     }
+
+    var pageDataRe = /id=['"]pageData['"]/
+    return pageDataRe.test(content)
   } catch (e) {
     console.warn('e')
   }
@@ -76,12 +73,9 @@ function loadContent () {
             }, 700)
           }
 
-      // Scroll to section if exists
           window.closeNavOnSmallScreen()
 
           // For pages with image to display over text (such as those in NMR section)
-      // run the display image function after setTimeout
-      // setTimeout(window.displayImage, 1000)
           setTimeout(activateTooltip, 1000)
         })
     }
@@ -115,6 +109,7 @@ function activateTooltip () {
  * Ref: https://webdesign.tutsplus.com/tutorials/how-to-add-deep-linking-to-the-bootstrap-4-tabs-component--cms-31180
  */
 function deepLink () {
+  console.log('"deepLink()" working!')
   let url = window.location.href.replace(/\/$/, '')
   // console.log(`deepLink url: ${url}`) // !DEBUG
 
@@ -123,20 +118,37 @@ function deepLink () {
     // console.log(`deepLink hash: ${hash}`) // !DEBUG
 
     let contentUrl = getDataPath() + hash[1]
+    // console.log(`contentUrl: ${contentUrl}`) // !DEBUG
+
+    // loadPage(contentUrl, '#content .full-list')
+
+    // // Scroll to top of the new content page
+    // setTimeout(window.topFunction, 100)
+
+    // if (hash[2]) {
+    //   // console.log(hash[2]) // !DEBUG
+    //   setTimeout(function () {
+    //     scrollToSection(hash[2])
+    //   }, 1000)
+    // }
+
+    // // Wait longer before activating tooltip on direct load
+    // setTimeout(activateTooltip, 3000)
+
     loadPage(contentUrl, '#content .full-list')
-
-    // Scroll to top of the new content page
-    setTimeout(window.topFunction, 100)
-
-    if (hash[2]) {
-      console.log(hash[2]) // !DEBUG
-      setTimeout(function () {
-        scrollToSection(hash[2])
-      }, 1000)
-    }
-
-    // Wait longer before activating tooltip on direct load
-    setTimeout(activateTooltip, 3000)
+      .then(function () {
+        if (hash[2]) {
+          // console.log(hash[2]) // !DEBUG
+          setTimeout(function () {
+            scrollToSection(hash[2])
+          }, 200)
+        } else {
+          // Scroll to top of the new content page
+          setTimeout(window.topFunction, 100)
+        }
+        // Wait longer before activating tooltip on direct load
+        setTimeout(activateTooltip, 300)
+      })
 
     // Check the hash for 'groupby' indices first;
     // if not found, load default indexed by 'names' and then try to load the total synthesis page
