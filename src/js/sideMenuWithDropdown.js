@@ -51,7 +51,8 @@ function loadContent () {
   // console.log('"loadContent()" working') // !DEBUG
   document.querySelectorAll('.index-content a').forEach(function (link) {
   // $('.index-content a').on('click', function (link) {
-    link.onclick = function () {
+    link.onclick = function (e) {
+      e.preventDefault()
       console.log('sidemenu link clicked!'); // !DEBUG
       // link.classList.toggle('active')
       // let url = link.dataset.url
@@ -63,6 +64,10 @@ function loadContent () {
       // console.log(url) // !DEBUG
       loadPage(url, '#content .full-list')
         .then(function () {
+          // Reload page and create new url (optional)
+          // url = window.location.href.replace(/\/#/, "#");
+          window.history.pushState(null, null, link.href)
+
           // Scroll to top of the new content page
           setTimeout(window.topFunction, 100)
 
@@ -317,6 +322,17 @@ function changeIndex (e) {
   } else {
     document.querySelector('select.index').fireEvent('onchange')
   }
+}
+
+// When back arrow is clicked, show previous section
+window.onpopstate = function () {
+  console.log('"onpopstate" event!')  // ! DEBUG
+
+  // ! The popstate event is fired when the active history entry changes, this includes clicking
+  // on a 'href' tag, see: https://stackoverflow.com/questions/26147580/window-onpopstate-its-activated-with-all-href-links#:~:text=The%20reason%20window.,are%20doing%20a%20browser%20action.
+  // Because we are calling `deepLink()` on this event, accidentally, we don't need 'onclick="setTimeout(deepLink, 10)"'
+  // on internal links in 'nmr_data' folder anymore.
+  deepLink()
 }
 
 $(document).ready(function () {
