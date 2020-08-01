@@ -47,47 +47,58 @@ function getDataPath () {
   return `${segment}_data/`
 }
 
+/**
+ * To check if an element is existed
+ * @param {String} selector : the CSS selector string
+ * ! Be careful with CSS selector for element with attr starting with number
+ * See this: https://drafts.csswg.org/cssom/#the-css.escape()-method
+ */
+function elementExisted (selector) {
+  let el = document.querySelector(selector)
+  return (typeof (el) !== 'undefined' && el != null)
+}
+
 function loadContent () {
   // console.log('"loadContent()" working') // !DEBUG
   document.querySelectorAll('.index-content a').forEach(function (link) {
   // $('.index-content a').on('click', function (link) {
     link.onclick = function (e) {
-      e.preventDefault()
-      console.log('sidemenu link clicked!'); // !DEBUG
-      // link.classList.toggle('active')
-      // let url = link.dataset.url
+      if (!elementExisted('#content .full-list #pageData')) {
+        e.preventDefault()
+        console.log('sidemenu link clicked!'); // !DEBUG
+        // link.classList.toggle('active')
 
-      // Split the href value into page and sections
-      [currentPath, page, section, ...rest] = link.href.split('#')
+        // Split the href value into page and sections
+        [currentPath, page, section, ...rest] = link.href.split('#')
 
-      let url = getDataPath() + page
-      // console.log(url) // !DEBUG
-      loadPage(url, '#content .full-list')
-        .then(function () {
-          // Reload page and create new url (optional)
-          // url = window.location.href.replace(/\/#/, "#");
-          window.history.pushState(null, null, link.href)
+        let url = getDataPath() + page
+        // console.log(url) // !DEBUG
+        loadPage(url, '#content .full-list')
+          .then(function () {
+            // Reload page and create new url (optional)
+            // url = window.location.href.replace(/\/#/, "#");
+            window.history.pushState(null, null, link.href)
 
-          // Scroll to top of the new content page
-          setTimeout(window.topFunction, 100)
+            // Scroll to top of the new content page
+            setTimeout(window.topFunction, 100)
 
-          // Scroll to section if exists
-          if (section) {
-            // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
-            window.elementReady('#' + CSS.escape(section))
-              .then(function (el) {
-                console.log(`Should be running because element with id ${section} exists`) // !DEBUG
-                setTimeout(function () {
-                  el.scrollIntoView({ behavior: 'smooth' })
-                }, 500)
-              })
-          }
+            // Scroll to section if exists
+            if (section) {
+              // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
+              window.elementReady('#' + CSS.escape(section))
+                .then(function (el) {
+                  console.log(`Should be running because element with id ${section} exists`) // !DEBUG
+                  setTimeout(function () {
+                    el.scrollIntoView({ behavior: 'smooth' })
+                  }, 500)
+                })
+            }
+          })
+      }
+      window.closeNavOnSmallScreen()
 
-          window.closeNavOnSmallScreen()
-
-          // For pages with image to display over text (such as those in NMR section)
-          setTimeout(activateTooltip, 1000)
-        })
+      // For pages with image to display over text (such as those in NMR section)
+      setTimeout(activateTooltip, 1000)
     }
   })
 }
@@ -326,7 +337,7 @@ function changeIndex (e) {
 
 // When back arrow is clicked, show previous section
 window.onpopstate = function () {
-  console.log('"onpopstate" event!')  // ! DEBUG
+  console.log('"onpopstate" event!') // ! DEBUG
 
   // ! The popstate event is fired when the active history entry changes, this includes clicking
   // on a 'href' tag, see: https://stackoverflow.com/questions/26147580/window-onpopstate-its-activated-with-all-href-links#:~:text=The%20reason%20window.,are%20doing%20a%20browser%20action.
