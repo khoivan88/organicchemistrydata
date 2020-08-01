@@ -103,8 +103,8 @@ function loadContent () {
                 .then(function (el) {
                   console.log(`Should be running because element with id ${section} exists`) // !DEBUG
                   setTimeout(function () {
-                    el.scrollIntoView({ behavior: 'smooth' })
-                  }, 500)
+                    el.scrollIntoView({ behavior: 'auto' })
+                  }, 100)
                 })
             }
           })
@@ -171,8 +171,8 @@ function deepLink () {
             .then(function (el) {
               console.log(`Should be running because element with id ${hash[2]} exists`) // !DEBUG
               setTimeout(function () {
-                el.scrollIntoView({ behavior: 'smooth' })
-              }, 500)
+                el.scrollIntoView({ behavior: 'auto' })
+              }, 100)
             })
         } else {
           // Scroll to top of the new content page
