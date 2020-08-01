@@ -1,5 +1,5 @@
 {
-    "url_prefix": "/links",
+    "url_prefix": "/links/",
     "title": "Menu",
     "list": [
         {
@@ -17,7 +17,7 @@
                 },
                 {
                     "name": "Electron Pushing/Drawing Mechanisms",
-                    "url": "/hansreich/resources/electron_pushing"
+                    "url": "/hansreich/resources/electron_pushing/"
                 },
                 {
                     "name": "Named Reactions",
@@ -317,7 +317,7 @@
                     "links": [
                         {
                             "name": "NMR Spectroscopy",
-                            "url": "/NMRresources/nmr/"
+                            "url": "/hansreich/resources/nmr/"
                         },
                         {
                             "name": "NMR Spectroscopy-William Reusch (MSU)",
@@ -362,7 +362,7 @@
                         },
                         {
                             "name": "NMR Solvents",
-                            "url": "/NMRresources/nmr/nmr-solvents.htm"
+                            "url": "/hansreich/resources/nmr/#nmr-solvents/"
                         }
                     ]
                 },
