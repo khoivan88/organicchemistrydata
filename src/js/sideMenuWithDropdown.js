@@ -6,16 +6,29 @@ window.loadFirstLink = loadFirstLink
  * @param {String} url - address for the HTML to fetch
  * @return {String} the resulting HTML string fragment
 */
-async function fetchHtmlAsText (url) {
-  let response = await fetch(url)
+function fetchHtmlAsText (url) {
+  // let response = await fetch(url)
 
-  if (response.ok) { // if HTTP-status is 200-299
-    // get the response body (the method explained below)
-    return response.text()
-  } else {
-    console.warn(`Could not find a page from ${url}`)
-    return Promise.reject(response)
-  }
+  // if (response.ok) { // if HTTP-status is 200-299
+  //   // get the response body (the method explained below)
+  //   return response.text()
+  // } else {
+  //   console.warn(`Could not find a page from ${url}`)
+  //   return Promise.reject(response)
+  // }
+
+  return new Promise((resolve, reject) => {
+    fetch(url)
+      .then(function (response) {
+        if (response.ok) { // if HTTP-status is 200-299
+          // get the response body (the method explained below)
+          return resolve(response.text())
+        } else {
+          console.warn(`Could not find a page from ${url}`)
+          return reject(response)
+        }
+      })
+  })
 }
 
 async function loadPage (url, targetElem) {
@@ -31,8 +44,9 @@ async function loadPage (url, targetElem) {
 
     var pageDataRe = /id=['"]pageData['"]/
     return pageDataRe.test(content)
-  } catch (e) {
-    console.warn('e')
+  } catch (error) {
+    console.warn(error)  // ! DEBUG
+    setTimeout(window.location.reload.bind(window.location), 1)
   }
 }
 
@@ -94,7 +108,15 @@ function loadContent () {
                 })
             }
           })
+          .catch(function (error) {
+            console.warn(error)  // !DEBUG
+            setTimeout(function () {
+              // console.log(link.href)  // !DEBUG
+              window.location.href = link.href
+            }, 1)
+          })
       }
+
       window.closeNavOnSmallScreen()
 
       // For pages with image to display over text (such as those in NMR section)
