@@ -345,20 +345,20 @@
                     "name": "NMR Data",
                     "links": [
                         {
-                            "name": "¹H NMR Shifts",
-                            "url": "/NMRresources/nmr/h-data/hdata.htm"
+                            "name": "<sup>1</sup>H NMR Shifts",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F1H_shift"
                         },
                         {
-                            "name": "¹³C NMR Shifts",
-                            "url": "/NMRresources/nmr/c13-data/cdata.htm"
+                            "name": "<sup>13</sup>C NMR Shifts",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F13C_shift"
                         },
                         {
-                            "name": "Coupling: 𝘑(H-H)",
-                            "url": "/NMRresources/nmr/h-data/h-coupling.htm"
+                            "name": "Coupling: <i>J</i><sub>(H&ndash;H)</sub>",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F1H_coupling"
                         },
                         {
-                            "name": "Coupling: 𝘑(C-H)",
-                            "url": "/NMRresources/nmr/10-cdata-05-jch.htm"
+                            "name": "Coupling: <i>J</i><sub>(C&ndash;C)</sub> and <i>J</i><sub>(C&ndash;H)</sub>",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F13C_coupling"
                         },
                         {
                             "name": "NMR Solvents",
@@ -370,20 +370,28 @@
                     "name": "Multinuclear NMR Data:",
                     "links": [
                         {
-                            "name": "F-19",
-                            "url": "/NMRresources/nmr/11-f-data.htm"
+                            "name": "<sup>19</sup>F NMR Shift",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F19F_shift"
                         },
                         {
-                            "name": "P-31",
-                            "url": "/NMRresources/nmr/11-p-data.htm"
+                            "name": "<sup>19</sup>F NMR Coupling Constant",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F19F_coupling"
                         },
                         {
-                            "name": "B-11",
+                            "name": "<sup>31</sup>P NMR Shift",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F31P_shift"
+                        },
+                        {
+                            "name": "<sup>31</sup>P NMR Coupling Constant",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F31P_coupling"
+                        },
+                        {
+                            "name": "<sup>11</sup>B",
                             "url": "https://www.chemistry.sdsu.edu/research/BNMR/"
                         },
                         {
-                            "name": "Se-77",
-                            "url": "/NMRresources/nmr/11-se-data.htm"
+                            "name": "<sup>77</sup>Se NMR Shift",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F77Se_shift"
                         },
                         {
                             "name": "NMR Periodic Table",
