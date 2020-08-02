@@ -154,11 +154,26 @@ function activateTooltip () {
  */
 function deepLink () {
   console.log('"deepLink()" working!')
-  let url = window.location.href.replace(/\/$/, '')
-  // console.log(`deepLink url: ${url}`) // !DEBUG
+  let currentUrl = new URL(window.location.href)
+  // console.log(`deepLink currentUrl: ${currentUrl}`) // !DEBUG
 
-  if (window.location.hash) {
-    const hash = url.split('#')
+  // Load the index page using query string
+  if (currentUrl.search) {
+    let urlParams = new URLSearchParams(currentUrl.search)
+    let indexPage = urlParams.get('index')
+    document.querySelector('select.index').value = indexPage.split('/')[1]
+    console.log(indexPage.split('/')[1])
+    loadPage(indexPage, '.index-content')
+      .then(function (hasPageData) {
+        if (hasPageData) {
+          injectContent()
+        }
+      })
+  }
+
+  // Load the content page into main content and scroll to subsection if exists
+  if (currentUrl.hash) {
+    const hash = currentUrl.hash.split('#')
     // console.log(`deepLink hash: ${hash}`) // !DEBUG
 
     let contentUrl = getDataPath() + hash[1]
