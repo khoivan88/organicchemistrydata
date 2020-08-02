@@ -231,7 +231,6 @@ function indexRedirect () {
   // console.log('indexRedirect() JS working!') // !DEBUG
 
   const select = document.querySelector('.index')
-  // const options = document.querySelectorAll('.index option')
 
   // Retrieve the page url related to the selected option and force a redirection to this page.
   select.addEventListener('change', function () {
@@ -255,16 +254,22 @@ function indexRedirect () {
         })
     }
   })
-
-  // // Iterate through all options, grab their data-url attribute value, and check to see whether this value is part of the page url or not. If it is, we mark the related option as selected and jump out of the loop.
-  // for (const option of options) {
-  //   const url = option.dataset.url
-  //   if (window.location.href.includes(url)) {
-  //     option.setAttribute('selected', '')
-  //     break
-  //   }
-  // }
 }
+
+/**
+ * Iterate through all options, grab their data-url attribute value, and check to see whether this value is part of the page url or not.
+ * If it is, we mark the related option as selected and jump out of the loop.
+ */
+// function setOptionSelected () {
+//   const options = document.querySelectorAll('.index option')
+//   for (let option of options) {
+//     let url = option.dataset.url
+//     if (window.location.href.includes(url)) {
+//       option.setAttribute('selected', '')
+//       break
+//     }
+//   }
+// }
 
 /**
  * Load the first link as default
