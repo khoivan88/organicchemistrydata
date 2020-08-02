@@ -148,7 +148,6 @@ about:
                                 {%- for subitem in resource.list %}
                                   <li>
                                     <a class="dropdown-item {{ subitem.disabled }}" href="{{ subitem.url  | url }}"
-                                      {%- if '#' in subitem.url %} onclick="setTimeout(location.reload.bind(location), 1)"{%- endif %}
                                       {%- if subitem.target %} target="{{ subitem.target }}"{%- endif %}>
                                       {{ subitem.title }}
                                     </a>
