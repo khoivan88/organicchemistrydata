@@ -77,6 +77,7 @@ function loadContent () {
   document.querySelectorAll('.index-content a').forEach(function (link) {
   // $('.index-content a').on('click', function (link) {
     link.onclick = function (e) {
+      // For pages WITHOUT element with selector: '#content .full-list #pageData'
       if (!elementExisted('#content .full-list #pageData')) {
         e.preventDefault()
         console.log('sidemenu link clicked!'); // !DEBUG
