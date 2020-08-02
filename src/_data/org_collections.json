@@ -532,7 +532,7 @@
                         },
                         {
                             "name": "IUPAC Compendium of Chemical Terminology (the Gold Book)",
-                            "url": "http://goldbook.iupac.org/"
+                            "url": "https://goldbook.iupac.org/"
                         },
                         {
                             "name": "IUPAC Glossary of Class Names of Organic Compounds and Reactive Intermediates 1995",
@@ -978,7 +978,7 @@
                 },
                 {
                     "name": "Electron Pushing/Drawing Mechanisms",
-                    "url": "/epush/"
+                    "url": "/hansreich/resources/electron_pushing/"
                 },
                 {
                     "name": "Open Source Lecture Notes-Bode Research Group (ETH-Zürich)",
