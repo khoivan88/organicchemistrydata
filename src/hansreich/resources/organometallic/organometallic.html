@@ -81,20 +81,16 @@ landing_content: |
 
 default_script:
     description: 'Load "Intro" index page as default for "Organometallic Chemistry" section'
-    content: "loadPage('organometallic_index/intro', '.index-content')"
+    content: |
+        if(!window.location.search) {loadPage('organometallic_index/intro', '.index-content')}
 
 ---
 
-<option selected>Choose...</option>
-<!-- <optgroup label="Group by"> -->
+{# <option selected>Choose...</option> #}
+{# <optgroup label="Group by"> #}
     {%- for group in collections.organometallic_index %}
-    <option data-url="{{ group.url | url }}">{{ group.fileSlug | toTitleCase }}</option>
+    <option {%- if loop.first %} selected{%- endif %} data-url="{{ group.url | url }}" value="{{ group.fileSlug }}">
+        {{ group.fileSlug | toTitleCase }}
+    </option>
     {%- endfor -%}
-<!-- </optgroup> -->
-<!-- <optgroup label="Details">
-    {%- for group in collections.groupby %}
-    {%- if group.fileSlug == 'information' %}
-    <option data-url="{{ group.url | url }}">{{ group.fileSlug | toTitleCase }}</option>
-    {%- endif %}
-    {%- endfor -%}
-</optgroup> -->
+{# </optgroup> #}

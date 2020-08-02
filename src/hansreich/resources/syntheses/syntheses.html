@@ -43,22 +43,26 @@ landing_content: |
 
 default_script:
     description: 'Load "Names" index page as default'
-    content: "loadPage('groupby/names', '.index-content')"
+    content: |
+        if (!window.location.search) {loadPage('groupby/names', '.index-content')}
 
 ---
 
-    <option selected>Choose...</option>
-    <optgroup label="Group by">
-    {%- for group in collections.groupby %}
-        {%- if group.fileSlug != 'information' %}
-        <option data-url="{{ group.url | url }}">{{ group.fileSlug | toTitleCase }}</option>
-        {%- endif %}
-    {%- endfor -%}
-    </optgroup>
-    <optgroup label="Details">
-    {%- for group in collections.groupby %}
-        {%- if group.fileSlug == 'information' %}
-        <option data-url="{{ group.url | url }}">{{ group.fileSlug | toTitleCase }}</option>
-        {%- endif %}
-    {%- endfor -%}
-    </optgroup>
+{# <option selected>Choose...</option> #}
+<optgroup label="Group by">
+{%- for group in collections.groupby %}
+    {%- if group.fileSlug != 'information' %}
+    <option {%- if group.fileSlug == 'names' %} selected{%- endif %}
+        data-url="{{ group.url | url }}" value="{{ group.fileSlug }}">
+        {{ group.fileSlug | toTitleCase }}
+    </option>
+    {%- endif %}
+{%- endfor -%}
+</optgroup>
+<optgroup label="Details">
+{%- for group in collections.groupby %}
+    {%- if group.fileSlug == 'information' %}
+    <option data-url="{{ group.url | url }}" value="{{ group.fileSlug }}">{{ group.fileSlug | toTitleCase }}</option>
+    {%- endif %}
+{%- endfor -%}
+</optgroup>
