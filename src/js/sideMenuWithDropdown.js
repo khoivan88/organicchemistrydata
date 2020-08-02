@@ -252,6 +252,22 @@ function indexRedirect () {
             setTimeout(loadFirstLink, 500)
           }
         })
+
+      // Create new url
+      // Use 'data-url' value of each link to build query string part
+      let parts = url.split('/').filter(Boolean)
+      let file = parts.pop()
+      let path = parts.pop()
+      let params = new URLSearchParams({
+        index: `${path}/${file}`
+      })
+      // Create new url with the query string
+      let newUrl = new URL(window.location.href)
+      newUrl.search = params
+      // Remove current url hash if there is any
+      newUrl.hash = ''
+      // console.log(`"newUrl" is :${newUrl}`)  // ! DEBUG
+      window.history.pushState(null, null, newUrl.href)
     }
   })
 }
