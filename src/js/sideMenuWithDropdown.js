@@ -34,8 +34,7 @@ function loadPage (url, targetElem) {
         if (targetElem === '.index-content') {
           loadContent()
         }
-
-    var pageDataRe = /id=['"]pageData['"]/
+        var pageDataRe = /id=['"]pageData['"]/
         resolve(pageDataRe.test(responseText))
       })
       .catch(error => {
@@ -97,7 +96,7 @@ function loadContent () {
               // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
               window.elementReady('#' + CSS.escape(section))
                 .then(function (el) {
-                  console.log(`Should be running because element with id ${section} exists`) // !DEBUG
+                  // console.log(`Should be running because element with id ${section} exists`) // !DEBUG
                   setTimeout(function () {
                     el.scrollIntoView({ behavior: 'auto' })
                   }, 100)
@@ -105,7 +104,7 @@ function loadContent () {
             }
           })
           .catch(function (error) {
-            console.warn(error)  // !DEBUG
+            // console.error(error)  // !DEBUG
             setTimeout(function () {
               // console.log(link.href)  // !DEBUG
               window.location.href = link.href
@@ -147,7 +146,7 @@ function activateTooltip () {
  * To load the exact side Index if users provides a link with hash (e.g. "http://example.com/#index")
  * Ref: https://webdesign.tutsplus.com/tutorials/how-to-add-deep-linking-to-the-bootstrap-4-tabs-component--cms-31180
  */
-function deepLink () {
+async function deepLink () {
   console.log('"deepLink()" working!')
   let currentUrl = new URL(window.location.href)
   // console.log(`deepLink currentUrl: ${currentUrl}`) // !DEBUG
@@ -156,18 +155,26 @@ function deepLink () {
   if (currentUrl.search) {
     let urlParams = new URLSearchParams(currentUrl.search)
     let indexPage = urlParams.get('index')
+
+    // Mark dropdown option in side menu 'selected'
     document.querySelector('select.index').value = indexPage.split('/')[1]
-    console.log(indexPage.split('/')[1])
-    loadPage(indexPage, '.index-content')
-      .then(function (hasPageData) {
-        if (hasPageData) {
-          injectContent()
-        }
-      })
+
+    var hasPageData = await loadPage(indexPage, '.index-content')
+    if (hasPageData) {
+      injectContent()
+
+      // Scroll to section if exists
+      if (currentUrl.hash) {
+        // console.log(`Should be running because element with id ${currentUrl.hash} exists`) // !DEBUG
+        setTimeout(function () {
+          document.querySelector(currentUrl.hash).scrollIntoView()
+        }, 300)
+      }
+    }
   }
 
   // Load the content page into main content and scroll to subsection if exists
-  if (currentUrl.hash) {
+  if (currentUrl.hash && !hasPageData) {
     const hash = currentUrl.hash.split('#')
     // console.log(`deepLink hash: ${hash}`) // !DEBUG
 
@@ -180,10 +187,10 @@ function deepLink () {
           // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
           window.elementReady('#' + CSS.escape(hash[2]))
             .then(function (el) {
-              console.log(`Should be running because element with id ${hash[2]} exists`) // !DEBUG
+              // console.log(`Should be running because element with id ${hash[2]} exists`) // !DEBUG
               setTimeout(function () {
                 el.scrollIntoView({ behavior: 'auto' })
-              }, 100)
+              }, 200)
             })
         } else {
           // Scroll to top of the new content page
@@ -192,45 +199,7 @@ function deepLink () {
         // Wait longer before activating tooltip on direct load
         setTimeout(activateTooltip, 300)
       })
-
-    // Check the hash for 'groupby' indices first;
-    // if not found, load default indexed by 'names' and then try to load the total synthesis page
-    // loadPage(`groupby/${hash[1]}`, '.index-content')
-    // // .then(function (response) {
-    // //   console.log(response)
-    // //   if (response.ok) {
-    //   //   } else {
-    //   //     return Promise.reject(response);
-    //   //   }
-    //   // })
-    //   .catch(function (error) {
-    //     console.warn(`${error}: indexed by '${hash[1]}'`) // !DEBUG
-    //     loadPage('groupby/names', '.index-content')
-    //     loadPage(`syntheses_data/${hash[1]}`, '#content .full-list')
-    //   })
-
-    // Reload page and create new url (optional)
-    // url = window.location.href.replace(/\/#/, "#");
-    // window.history.replaceState(null, null, url)
-
-    // // Optionally, force the page scroll to start from the top of the page.
-    // setTimeout(() => {
-    //   // console.log('scroll from top') // !DEBUG
-    //   $(window).scrollTop(0)
-    // }, 100)
   }
-
-  // $('.index-content a').on("click", function() {
-  //   let newUrl;
-  //   const hash = $(this).attr("href");
-  //   if(hash == "#home") {
-  //     newUrl = url.split("#")[0];
-  //   } else {
-  //     newUrl = url.split("#")[0] + hash;
-  //   }
-  //   newUrl += "/";
-  //   history.replaceState(null, null, newUrl);
-  // });
 }
 
 /**
