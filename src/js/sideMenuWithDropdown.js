@@ -7,47 +7,42 @@ window.loadFirstLink = loadFirstLink
  * @return {String} the resulting HTML string fragment
 */
 function fetchHtmlAsText (url) {
-  // let response = await fetch(url)
-
-  // if (response.ok) { // if HTTP-status is 200-299
-  //   // get the response body (the method explained below)
-  //   return response.text()
-  // } else {
-  //   console.warn(`Could not find a page from ${url}`)
-  //   return Promise.reject(response)
-  // }
-
   return new Promise((resolve, reject) => {
     fetch(url)
       .then(function (response) {
         if (response.ok) { // if HTTP-status is 200-299
           // get the response body (the method explained below)
-          return resolve(response.text())
+          resolve(response.text())
         } else {
           console.warn(`Could not find a page from ${url}`)
-          return reject(response)
+          reject(response)
         }
+      })
+      .catch(error => {
+        reject(error)
       })
   })
 }
 
-async function loadPage (url, targetElem) {
-  try {
+function loadPage (url, targetElem) {
+  return new Promise((resolve, reject) => {
     let contentDiv = document.querySelector(targetElem)
-
-    let content = await fetchHtmlAsText(url)
-    contentDiv.innerHTML = content
-
-    if (targetElem === '.index-content') {
-      loadContent()
-    }
+    let content = fetchHtmlAsText(url)
+    content
+      .then(responseText => {
+        contentDiv.innerHTML = responseText
+        if (targetElem === '.index-content') {
+          loadContent()
+        }
 
     var pageDataRe = /id=['"]pageData['"]/
-    return pageDataRe.test(content)
-  } catch (error) {
-    console.warn(error)  // ! DEBUG
-    setTimeout(window.location.reload.bind(window.location), 1)
-  }
+        resolve(pageDataRe.test(responseText))
+      })
+      .catch(error => {
+        // console.error(error) // ! DEBUG
+        reject(error)
+      })
+  })
 }
 
 /**
