@@ -664,7 +664,7 @@
                         },
                         {
                             "name": "RCSB Protein Databank",
-                            "url": "http://www.rcsb.org/pdb/"
+                            "url": "https://www.rcsb.org/"
                         },
                         {
                             "name": "Reaxys",
