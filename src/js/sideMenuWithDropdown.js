@@ -274,34 +274,58 @@ function loadFirstLink () {
  */
 function scrollToLink () {
   // console.log('"scrollToLink" working!')  // !DEBUG
+
+  var instance = new Mark(document.querySelector('#sidebar'))
+
   document.querySelector('#scrollToLinkForm').addEventListener('submit', function (e) {
     e.preventDefault()
 
+    instance.unmark() // unmark previously searched query
+
     // Get the query term
-    let query = this.getElementsByTagName('input')[0].value
+    let query = this.getElementsByTagName('input')[0].value.toLowerCase()
+    // let query = this.getElementById('sideMenuSearch').value
 
     // Popover setup, ref: https://getbootstrap.com/docs/4.5/components/popovers/
     let pop = $(this).find('input')
     pop.popover({
       trigger: 'manual',
       title: 'Term not found',
-      content: 'Try using single word!',
+      // content: 'Try using single word!',
       placement: 'bottom'
     })
 
-    let aTag = document.querySelector(`a[href*="${query}" i]`) // 'i' is for case INSENSITIVE search, ref: https://stackoverflow.com/a/26721521/6596203
-    if (aTag) { // if a tag is found
+    // let aTag = document.querySelector(`a[href*="${query}" i]`) // 'i' is for case INSENSITIVE search, ref: https://stackoverflow.com/a/26721521/6596203
+    // var xpath = `//*[contains(translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '${query}')]`
+    // "//div[@id='navbar-left']/div//" was used to only search inside this div, otherwise, it would return the whole html body
+    var xpath = `//div[@id='navbar-left']/div//*[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '${query}')]`
+    // console.log(xpath)
+    // var aTag = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue
+    // console.log(aTag)
+    // Use "ORDERED_NODE_SNAPSHOT_TYPE" to return all of the matched nodes
+    var foundNodes = document.evaluate(xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)
+    console.log(`${foundNodes.snapshotLength} match(es).`)
+    if (foundNodes) { // if a tag is found
       pop.popover('hide') // Hide popover
 
       // Scroll to the first item with offset (in pixel)
-      $('#sidebar').mCustomScrollbar('scrollTo', function () {
-        return (aTag.offsetTop) - 100
-      })
+      $('#sidebar').mCustomScrollbar('scrollTo',
+        function () {
+          // return (foundNodes.offsetTop) - 100
+          return (foundNodes.snapshotItem(i).offsetTop) - 100
+        },
+        { scrollInertia: 100 } // default is too slow and cause issue with items at the bottom or a long list
+      )
 
       // Highlight search termm using 'mark.js', ref: https://markjs.io/
-      var instance = new Mark(document.querySelector('#sidebar'))
-      instance.unmark() // unmark previously searched query
-      instance.mark(query)
+      // !Define option inside mark is somehow give faster executiontime
+      // See this for more detail: https://markjs.io/#mark
+      instance.mark(query, {
+        'separateWordSearch': false,
+        'acrossElements': true, // Whether to search for matches across elements
+        'ignoreJoiners': true, // Whether to also find matches that contain soft hyphen, zero width space, zero width non-joiner and zero width joiner.
+        'ignorePunctuation': ":;.,-–—‒_(){}[]!'\"+=".split('') // e.g. setting this option to ["'"] would match "Worlds", "World's" and "Wo'rlds"
+      })
     } else {
       pop.popover('show')
       // Hide popover after 5 sec
