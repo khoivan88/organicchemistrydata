@@ -121,15 +121,6 @@ function loadContent () {
 }
 
 /**
- * For links on side menu that include specific section
- */
-// function scrollToSection (sectionId) {
-//   // console.log(`section is : ${sectionId}`) // !DEBUG
-//   // window.location.hash = sectionId
-//   document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' })
-// }
-
-/**
  * Activate Bootstrap 4 tooltip with html true
  */
 function activateTooltip () {
