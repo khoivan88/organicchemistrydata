@@ -11,6 +11,11 @@
         <a class="nav-link dropdown-toggle" href="#" id="globalNavDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-target="">{{ org_collections.title }}</a>
         <div id="sitenav-submenu1" class="dropdown-menu dropdown-menu-right collapse" aria-labelledby="globalNavDropdown">
             <a class="dropdown-item" href="{{ '/' | url }}">Home</a>
+            <!-- Google Search Engine for this site -->
+            <script async src="https://cse.google.com/cse.js?cx=003368067869466336026:tatj5bdtawu"></script>
+            <div class="gcse-search"></div>
+            <!-- End Google Search Engine -->
+
             <div class="dropdown-divider"></div>
             {%- for collection in org_collections.list %}
             <a class="dropdown-item {{ collection.disabled }}" href="{{ (org_collections.url_prefix + '#' + collection.id) | url }}"
