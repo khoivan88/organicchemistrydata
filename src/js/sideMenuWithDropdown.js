@@ -212,7 +212,8 @@ function indexRedirect () {
           $('#sidebar').mCustomScrollbar('update')
           $('#sidebar').mCustomScrollbar('scrollTo', 'top', {
             timeout: 500,
-            scrollEasing: 'linear'
+            scrollEasing: 'linear',
+            scrollInertia: 0
           })
 
           if (hasPageData) {
