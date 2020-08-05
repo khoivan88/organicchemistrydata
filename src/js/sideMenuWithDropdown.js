@@ -272,6 +272,7 @@ function loadFirstLink () {
 
 /**
  * Process an array and return previous or next item in the array
+ * Ref: https://stackoverflow.com/a/26945342/6596203
  */
 class SearchResult {
   constructor (arr) {
@@ -300,6 +301,7 @@ class SearchResult {
 
 /**
  * Return an array of nodes of elements found by XPATH
+ * Ref: https://stackoverflow.com/a/42600459/6596203
  * @param {string} xPathSelector XPath selector string
  */
 function getElementsByXPath (xPathSelector) {
@@ -357,8 +359,7 @@ function scrollToLink () {
       placement: 'bottom'
     })
 
-    // let aTag = document.querySelector(`a[href*="${query}" i]`) // 'i' is for case INSENSITIVE search, ref: https://stackoverflow.com/a/26721521/6596203
-    // var xpath = `//*[contains(translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '${query}')]`
+    // `translate()` was used in conjunction with input.toLowerCase() to search for case insensitive. Ref: https://stackoverflow.com/a/8474109/6596203
     // "//div[@id='navbar-left']/div//" was used to only search inside this div, otherwise, it would return the whole html body
     var xpath = `//div[@id='navbar-left']/div//*[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '${query}')]`
     // console.log(xpath)
