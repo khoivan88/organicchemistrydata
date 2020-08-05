@@ -21,8 +21,13 @@ specific_page_js:
             <div class="container px-0">
                 <form id="scrollToLinkForm">
                     <div class="input-group input-group-sm mb-3">
-                        <input id="sideMenuSearch" type="text" class="form-control" placeholder="Search term" aria-label="Search term" aria-describedby="scrollToLinkButton" autocomplete="off">
+                        <input id="sideMenuSearch" type="text" class="form-control border-right-0" placeholder="Search term" aria-label="Search term" aria-describedby="scrollToLinkButton" autocomplete="off">
                         <div class="input-group-append">
+                            <div id="matchResult" class="d-none border-top border-bottom">
+                                <span class="input-group-text px-1 py-0 border-0 bg-transparent" id="matchText"></span>
+                                <button class="btn btn-sm px-1 py-0 border-0" type="button" id="prev_button"><i class="fas fa-angle-up" aria-hidden="true"></i></button>
+                                <button class="btn btn-sm px-1 py-0 border-0" type="button" id="next_button"><i class="fas fa-angle-down" aria-hidden="true"></i></button>
+                            </div>
                             <button class="btn btn-outline-dark" type="submit" id="scrollToLinkButton"><i class="fas fa-search" aria-hidden="true"></i></button>
                         </div>
                     </div>

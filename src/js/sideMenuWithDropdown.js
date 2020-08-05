@@ -270,12 +270,73 @@ function loadFirstLink () {
 }
 
 /**
+ * Process an array and return previous or next item in the array
+ */
+class SearchResult {
+  constructor (arr) {
+    this.arr = arr
+    this.i = 0
+    this.length = arr.length
+    this.firstItem = arr[0]
+  }
+
+  nextItem () {
+    this.i++ // increase i by one
+    this.i = this.i % this.arr.length // if we've gone too high, start from `0` again
+    // console.log(this.arr[this.i])  // ! DEBUG
+    return [this.i, this.arr[this.i]] // give us back the item of where we are now
+  }
+
+  prevItem () {
+    if (this.i === 0) { // i would become 0
+      this.i = this.arr.length // so put it at the other end of the array
+    }
+    this.i-- // decrease by one
+    // console.log(this.arr[this.i])  // ! DEBUG
+    return [this.i, this.arr[this.i]] // give us back the item of where we are now
+  }
+}
+
+/**
+ * Return an array of nodes of elements found by XPATH
+ * @param {string} xPathSelector XPath selector string
+ */
+function getElementsByXPath (xPathSelector) {
+  let aResult = []
+  // Use "ORDERED_NODE_SNAPSHOT_TYPE" to return all of the matched nodes
+  let a = document.evaluate(xPathSelector, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)
+  for (var i = 0; i < a.snapshotLength; i++) {
+    aResult.push(a.snapshotItem(i))
+  }
+  return aResult
+}
+
+/**
  * Add simple search function and scroll to item
  */
 function scrollToLink () {
   // console.log('"scrollToLink" working!')  // !DEBUG
 
+  // Instantiate Mark object
   var instance = new Mark(document.querySelector('#sidebar'))
+
+  // Instantiate element to display match result
+  const matchDiv = document.querySelector('#matchResult')
+  const matchResultText = document.querySelector('#matchText')
+
+  // Disable search button till there is not empty query
+  const submitButton = document.querySelector('#scrollToLinkButton')
+  submitButton.disabled = true
+  const inputSideMenuSearch = document.querySelector('#sideMenuSearch')
+
+  inputSideMenuSearch.onkeyup = function () {
+    if (inputSideMenuSearch.value.trim() !== '' && inputSideMenuSearch.value.length > 0) {
+      submitButton.disabled = false
+    } else {
+      submitButton.disabled = true
+      matchDiv.classList.remove('d-flex')  // Hide the match result div
+    }
+  }
 
   document.querySelector('#scrollToLinkForm').addEventListener('submit', function (e) {
     e.preventDefault()
@@ -300,21 +361,26 @@ function scrollToLink () {
     // "//div[@id='navbar-left']/div//" was used to only search inside this div, otherwise, it would return the whole html body
     var xpath = `//div[@id='navbar-left']/div//*[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '${query}')]`
     // console.log(xpath)
-    // var aTag = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue
-    // console.log(aTag)
-    // Use "ORDERED_NODE_SNAPSHOT_TYPE" to return all of the matched nodes
-    var foundNodes = document.evaluate(xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)
-    console.log(`${foundNodes.snapshotLength} match(es).`)
-    if (foundNodes) { // if a tag is found
+
+    let foundNodes = getElementsByXPath(xpath)
+    // console.log(`${foundNodes.length} match(es).`)  // ! DEBUG
+
+    let result = new SearchResult(foundNodes)
+    // console.log(typeof (foundNodes.snapshotLength))
+
+    if (result.length > 0) { // if a tag is found
+      // Update match result
+      matchDiv.classList.add('d-flex')
+      matchResultText.innerHTML = `1/${result.length}`
+
       pop.popover('hide') // Hide popover
 
       // Scroll to the first item with offset (in pixel)
       $('#sidebar').mCustomScrollbar('scrollTo',
         function () {
-          // return (foundNodes.offsetTop) - 100
-          return (foundNodes.snapshotItem(i).offsetTop) - 100
+          return (result.firstItem.offsetTop) - 100
         },
-        { scrollInertia: 100 } // default is too slow and cause issue with items at the bottom or a long list
+        { scrollInertia: 0 } // default is too slow and cause issue with items at the bottom or a long list
       )
 
       // Highlight search termm using 'mark.js', ref: https://markjs.io/
@@ -326,6 +392,35 @@ function scrollToLink () {
         'ignoreJoiners': true, // Whether to also find matches that contain soft hyphen, zero width space, zero width non-joiner and zero width joiner.
         'ignorePunctuation': ":;.,-–—‒_(){}[]!'\"+=".split('') // e.g. setting this option to ["'"] would match "Worlds", "World's" and "Wo'rlds"
       })
+
+      document.getElementById('prev_button').onclick = function (e) { // the e here is the event itself
+        // console.log('Prev button clicked.')  // ! DEBUG
+        let [i, item] = result.prevItem()
+        matchResultText.innerHTML = `${i + 1}/${result.length}`
+        // Scroll to the next item with offset (in pixel)
+        $('#sidebar').mCustomScrollbar('scrollTo',
+          function () {
+            // console.log(`offsetTop position: ${item.offsetTop - 100} px`)  // ! DEBUG
+            return item.offsetTop - 100
+          },
+          { scrollInertia: 0 } // default is too slow and cause issue with items at the bottom or a long list
+        )
+      }
+
+      // document.getElementById('next_button').addEventListener('click', function (e) { // the e here is the event itself
+      document.getElementById('next_button').onclick = function (e) { // the e here is the event itself
+        // console.log('Next button clicked.')  // ! DEBUG
+        let [i, item] = result.nextItem()
+        matchResultText.innerHTML = `${i + 1}/${result.length}`
+        // Scroll to the next item with offset (in pixel)
+        $('#sidebar').mCustomScrollbar('scrollTo',
+          function () {
+            // console.log(`offsetTop position: ${item.offsetTop - 100} px`)  // ! DEBUG
+            return item.offsetTop - 100
+          },
+          { scrollInertia: 0 } // default is too slow and cause issue with items at the bottom or a long list
+        )
+      }
     } else {
       pop.popover('show')
       // Hide popover after 5 sec
@@ -334,6 +429,8 @@ function scrollToLink () {
           pop.popover('hide')
         }, 5000)
       })
+
+      matchDiv.classList.remove('d-flex')
     }
   })
 }
