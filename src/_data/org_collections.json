@@ -12,8 +12,8 @@
                     "url": "/hansreich/resources/acronyms/"
                 },
                 {
-                    "name": "Terms used in Physical Organic Chemistry",
-                    "url": "https://www.qmul.ac.uk/sbcs/iupac/gtpoc/cont.html"
+                    "name": "Carbonyl Chemistry",
+                    "url": "/hansreich/resources/carbonyl/"
                 },
                 {
                     "name": "Electron Pushing/Drawing Mechanisms",
@@ -48,6 +48,10 @@
                     "url": "http://www.openmolecules.org/webreactions/index.html"
                 },
                 {
+                    "name": "Terms used in Physical Organic Chemistry",
+                    "url": "https://www.qmul.ac.uk/sbcs/iupac/gtpoc/cont.html"
+                },
+                {
                     "name": "Reaction Topics",
                     "links": [
                         {
@@ -79,6 +83,10 @@
                             "url": "https://www.organic-chemistry.org/topics/multicomponent-reactions.shtm"
                         },
                         {
+                            "name": "Organoboron Chemistry",
+                            "url": "https://organoborons.com/"
+                        },
+                        {
                             "name": "Organocatalysis-Organic Chemistry",
                             "url": "https://www.organic-chemistry.org/topics/organocatalysis.shtm"
                         },
@@ -87,8 +95,16 @@
                             "url": "/hansreich/resources/organometallic/"
                         },
                         {
+                            "name": "Pericyclic Reactions",
+                            "url": "/hansreich/resources/pericyclic/"
+                        },
+                        {
                             "name": "Photochemistry-MSU (William Reusch)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/photchem.htm"
+                        },
+                        {
+                            "name": "Reduction and Oxidation",
+                            "url": "/hansreich/resources/redox/"
                         },
                         {
                             "name": "Sonochemistry-Organic Chemistry",
@@ -164,6 +180,10 @@
                 {
                     "name": "Electronegativities of Elements-Periodic Table",
                     "url": "/hansreich/resources/fundamentals/#electronegativities"
+                },
+                {
+                    "name": "Organoboron Chemistry",
+                    "url": "https://organoborons.com/"
                 },
                 {
                     "name": "pKa Values (Water, DMSO, gas phase)",
@@ -1027,6 +1047,21 @@
                 {
                     "name": "QR Chem (presentation materials for instructors)-Neil Garg",
                     "url": "https://qrchem.net/"
+                },
+                {
+                    "name": "Awesome Cheminformatics",
+                    "description": "A curated list of awesome Cheminformatics software, resources, and libraries.",
+                    "url": "https://github.com/hsiaoyi0504/awesome-cheminformatics"
+                },
+                {
+                    "name": "Awesome Python Chemistry",
+                    "description": "A curated list of awesome Python frameworks, libraries, software and resources related to Chemistry",
+                    "url": "https://github.com/lmmentel/awesome-python-chemistry"
+                },
+                {
+                    "name": "MolSSI Education Resources",
+                    "description": "Free online tutorial materials including Programming, Software Development, and Computational Molecular Science.",
+                    "url": "https://education.molssi.org/resources.html"
                 }
             ]
         },
