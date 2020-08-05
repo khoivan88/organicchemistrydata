@@ -85,6 +85,7 @@ specific_page_js:
                   <a href="{{ item.url | url }}" {%- if item.url[0] != '/' %} target="_blank" rel="noopener"{%- endif -%}>
                     {{ item.name | safe }} {%- if '/hansreich' in item.url %}<span class="small text-danger"> (Hans Reich's Collection - DOC)</span>{%- endif -%}
                   </a>
+                  {%- if item.description -%}<span>: {{ item.description | safe }}</span>{%- endif -%}
                 </li>
                 {%- endfor %}
               </ul>
@@ -94,6 +95,7 @@ specific_page_js:
               <a href="{{ link.url | url }}" {%- if link.url[0] != '/' %} target="_blank" rel="noopener"{%- endif -%}>
                 {{ link.name }} {%- if '/hansreich' in link.url %}<span class="small text-danger"> (Hans Reich's Collection - DOC)</span>{%- endif -%}
               </a>
+              {%- if link.description -%}<span>: {{ link.description | safe }}</span>{%- endif -%}
             </li>
             {%- endif %}
             {%- endfor %}
