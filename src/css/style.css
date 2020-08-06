@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-nav .dropdown-menu {
     /* max-width: inherit; */
     max-width: 91vw;
-    max-height: 75vh;
+    max-height: calc(100vh - 112px);
     overflow: auto;
 }
 
