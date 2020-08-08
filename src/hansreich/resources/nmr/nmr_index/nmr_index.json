@@ -1,5 +1,6 @@
 {
     "tags": "nmr_index",
     "url_prefix": "/hansreich/resources/nmr/nmr_data/",
+    "sitemap_url_prefix": "/hansreich/resources/nmr/?index=",
     "sitemap_ignore": true
 }

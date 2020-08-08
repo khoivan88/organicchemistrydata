@@ -22,6 +22,19 @@ header:
                 <changefreq>{{item.data.changeFreq}}</changefreq>
             {%- endif -%}
         </url>
+    {%- else %}
+        <url>
+            <loc>{{ site.url }}{{ item.data.sitemap_url_prefix }}{%- if item.data.tags -%}{{ item.data.tags }}%2F{%- endif -%}{{ item.fileSlug | url }}</loc>
+            {%- if item.data.updated -%}
+                <lastmod>{{ item.data.updated.toISOString() }}</lastmod>
+            {%- else -%}
+                <lastmod>{{ item.date.toISOString() }}</lastmod>
+            {%- endif -%}
+            {%- if item.data.changeFreq -%}
+                <changefreq>{{item.data.changeFreq}}</changefreq>
+            {%- endif -%}
+        </url>
+
     {% endif %}
     {% endfor %}
 </urlset>

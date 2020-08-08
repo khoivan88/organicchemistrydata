@@ -1,5 +1,6 @@
 {
     "tags": "groupby",
     "url_prefix": "/hansreich/resources/syntheses/syntheses_data/",
+    "sitemap_url_prefix": "/hansreich/resources/syntheses/?index=",
     "sitemap_ignore": true
 }

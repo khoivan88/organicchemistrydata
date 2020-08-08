@@ -1,4 +1,5 @@
 {
     "img_url_prefix": "/hansreich/resources/nmr/nmr_data/img/",
-    "sitemap_ignore": true
+    "sitemap_url_prefix": "/hansreich/resources/nmr/#",
+	"sitemap_ignore": true
 }
