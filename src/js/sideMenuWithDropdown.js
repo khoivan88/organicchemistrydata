@@ -78,38 +78,45 @@ function loadContent () {
         // link.classList.toggle('active')
 
         // Split the href value into page and sections
-        [currentPath, page, section, ...rest] = link.href.split('#')
+        let [currentPath, page, section, ...rest] = link.href.split('#')
 
         let url = getDataPath() + page
         // console.log(url) // !DEBUG
-        loadPage(url, '#content .full-list')
-          .then(function () {
-            // Reload page and create new url (optional)
-            // url = window.location.href.replace(/\/#/, "#");
-            window.history.pushState(null, null, link.href)
 
-            // Scroll to top of the new content page
-            setTimeout(window.topFunction, 100)
+        // Check if this is a new page or just a different section of the same page
+        if (page != window.location.hash.split('#')[1]) {
+          loadPage(url, '#content .full-list')
+            .then(function () {
+              // Reload page and create new url (optional)
+              // url = window.location.href.replace(/\/#/, "#");
+              window.history.pushState(null, null, link.href)
 
-            // Scroll to section if exists
-            if (section) {
-              // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
-              window.elementReady('#' + CSS.escape(section))
-                .then(function (el) {
-                  // console.log(`Should be running because element with id ${section} exists`) // !DEBUG
-                  setTimeout(function () {
-                    el.scrollIntoView({ behavior: 'auto' })
-                  }, 100)
-                })
-            }
-          })
-          .catch(function (error) {
-            // console.error(error)  // !DEBUG
-            setTimeout(function () {
-              // console.log(link.href)  // !DEBUG
-              window.location.href = link.href
-            }, 1)
-          })
+              // Scroll to top of the new content page
+              setTimeout(window.topFunction, 100)
+            })
+            .catch(function (error) {
+              // console.error(error)  // !DEBUG
+              setTimeout(function () {
+                // console.log(link.href)  // !DEBUG
+                window.location.href = link.href
+              }, 1)
+            })
+        }
+
+        // Scroll to section if exists
+        if (section) {
+          // Reload page and create new url (optional)
+          window.history.pushState(null, null, link.href)
+
+          // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
+          window.elementReady('#' + CSS.escape(section))
+            .then(function (el) {
+              // console.log(`Should be running because element with id ${section} exists`) // !DEBUG
+              setTimeout(function () {
+                el.scrollIntoView({ behavior: 'auto' })
+              }, 100)
+            })
+        }
       }
 
       window.closeNavOnSmallScreen()
