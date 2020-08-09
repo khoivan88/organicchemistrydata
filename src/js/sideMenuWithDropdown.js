@@ -124,6 +124,7 @@ function loadContent () {
  * Activate Bootstrap 4 tooltip with html true
  */
 function activateTooltip () {
+  // console.log('tooltip activated')  // ! DEBUG
   // $('[data-toggle="tooltip"]').tooltip({ html: true })
   $('[data-toggle="tooltip"]').tooltip('dispose').tooltip({
     boundary: 'window', // to resolve parent div has overflow auto and scroll
@@ -222,6 +223,9 @@ function indexRedirect () {
             // Load first link as default:
             setTimeout(loadFirstLink, 500)
           }
+
+          // For pages with image to display over text (such as those in NMR section)
+          setTimeout(activateTooltip, 300)
         })
 
       // Create new url
