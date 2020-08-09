@@ -188,10 +188,11 @@ async function deepLink () {
           // Scroll to top of the new content page
           setTimeout(window.topFunction, 100)
         }
-        // Wait longer before activating tooltip on direct load
-        setTimeout(activateTooltip, 300)
       })
   }
+
+  // Wait longer before activating tooltip on direct load
+  setTimeout(activateTooltip, 300)
 }
 
 /**
