@@ -145,6 +145,12 @@ font-family: Georgia, serif;
     max-width: 95vw;
 }
 
+#sidebar table td {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
 /* ---------------------------------------------------
     Go to top Button
 ----------------------------------------------------- */
