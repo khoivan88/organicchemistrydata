@@ -9,6 +9,7 @@ title: 'NMR Spectroscopy'
 default_script:
     description: 'Load "NMR Info" index page and its "Intro" page as default'
     content: |
+        var loadPdfInFrame = true
         if (!window.location.search) {
             loadPage('nmr_index/info', '.index-content')
         }
