@@ -138,7 +138,7 @@ font-family: Georgia, serif;
     position: fixed;
     top: 110px;
     background-color: white;
-    max-width: 238px;
+    max-width: 285px;
 }
 
 #sidebar.active .index-select {
@@ -215,7 +215,7 @@ img.img-fluid {
 }
 
 #sidebar {
-    width: 250px;
+    width: 300px;
     position: fixed;
     top: 132px;
     bottom: 0px;
@@ -227,7 +227,7 @@ img.img-fluid {
     overflow: auto;
     background-color: white;
     margin-top: -30px;
-    margin-left: -250px;
+    margin-left: -300px;
 }
 
 #sidebar>div:first-child {
@@ -235,7 +235,7 @@ img.img-fluid {
 }
 
 #sidebar.active {
-    /* margin-left: -250px; */
+    /* margin-left: -300px; */
     margin-left: 0px;
     width: 100%;
 }
@@ -277,7 +277,7 @@ img.img-fluid {
 ----------------------------------------------------- */
 
 #content {
-    /* width: calc(100% - 250px); */
+    /* width: calc(100% - 300px); */
     width: 100%;
     max-height: 85vh;
     transition: all 0.3s;
@@ -290,7 +290,7 @@ img.img-fluid {
 
 #content.active {
     width: 100%;
-    /* width: calc(100% - 250px); */
+    /* width: calc(100% - 300px); */
 }
 
 a.list-group-item {
@@ -755,16 +755,16 @@ div#at4-whatsnext {
 
     #sidebar {
         margin-left: 0;
-        width: 250px;
+        width: 300px;
     }
 
     #sidebar.active {
-        margin-left: -250px;
-        width: 250px;
+        margin-left: -300px;
+        width: 300px;
     }
 
     #content {
-        width: calc(100% - 250px);
+        width: calc(100% - 300px);
     }
 
     #content.active {
