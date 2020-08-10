@@ -295,6 +295,8 @@ function loadFirstLink () {
     .then(function (firstATag) {
       let url = getDataPath() + firstATag.href.split('#')[1]
       loadPage(url, '#content .full-list')
+      window.history.pushState(null, null, firstATag.href)
+      setTimeout(loadPdfForMainContentLinks, 300)
     })
 }
 
