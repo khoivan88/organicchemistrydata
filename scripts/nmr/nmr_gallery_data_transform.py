@@ -77,7 +77,8 @@ def main(infile, outdir):
 
         # Rewrite img src to include 11ty template
         re_src = re.compile(r'src="([^"]*?)"', re.UNICODE)
-        modified_body = re_src.sub(lambda m: 'src="{{{{ (img_url_prefix + \'{}\') | url }}}}" class="img-fluid border border-dark rounded"'.format(m.group(1).lower().replace('../nmr-spectra/', '')), modified_body)
+        # modified_body = re_src.sub(lambda m: 'src="{{{{ (img_url_prefix + \'{}\') | url }}}}" class="img-fluid border border-dark rounded"'.format(m.group(1).lower().replace('../nmr-spectra/', '')), modified_body)
+        modified_body = re_src.sub(lambda m: 'src="{{{{ (img_url_prefix + \'{}\') | url }}}}" class="img-fluid border border-dark rounded"'.format(m.group(1).replace('../nmr-spectra/', '')), modified_body)
 
         # Remove unnecessary parts
         re_remove = re.compile(r'''
