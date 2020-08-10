@@ -71,10 +71,13 @@ function loadContent () {
   document.querySelectorAll('.index-content a').forEach(function (link) {
   // $('.index-content a').on('click', function (link) {
     link.onclick = function (e) {
+      // Check if the link if PDF and load into '<object></object>' tag if this page has this setting
+      let isContinued = loadPdfAndMakeUrl(e, this)
+
       // For pages WITHOUT element with selector: '#content .full-list #pageData'
-      if (!elementExisted('#content .full-list #pageData')) {
+      if (isContinued && !elementExisted('#content .full-list #pageData')) {
         e.preventDefault()
-        console.log('sidemenu link clicked!'); // !DEBUG
+        console.log('sidemenu link clicked!') // !DEBUG
         // link.classList.toggle('active')
 
         // Split the href value into page and sections
@@ -117,6 +120,8 @@ function loadContent () {
               }, 100)
             })
         }
+
+        setTimeout(loadPdfForMainContentLinks, 300)
       }
 
       window.closeNavOnSmallScreen()
@@ -180,26 +185,36 @@ async function deepLink () {
     let contentUrl = getDataPath() + hash[1]
     // console.log(`contentUrl: ${contentUrl}`) // !DEBUG
 
-    loadPage(contentUrl, '#content .full-list')
-      .then(function () {
-        if (hash[2]) {
-          // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
-          window.elementReady('#' + CSS.escape(hash[2]))
-            .then(function (el) {
-              // console.log(`Should be running because element with id ${hash[2]} exists`) // !DEBUG
-              setTimeout(function () {
-                el.scrollIntoView({ behavior: 'auto' })
-              }, 200)
-            })
-        } else {
-          // Scroll to top of the new content page
-          setTimeout(window.topFunction, 100)
-        }
-      })
+    if (hash[1].endsWith('.pdf')) {
+      loadPdf(contentUrl, '#content .full-list')
+
+      // Scroll to top of the new content page
+      setTimeout(window.topFunction, 100)
+    }
+    else {
+      loadPage(contentUrl, '#content .full-list')
+        .then(function () {
+          if (hash[2]) {
+            // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
+            window.elementReady('#' + CSS.escape(hash[2]))
+              .then(function (el) {
+                // console.log(`Should be running because element with id ${hash[2]} exists`) // !DEBUG
+                setTimeout(function () {
+                  el.scrollIntoView({ behavior: 'auto' })
+                }, 200)
+              })
+          } else {
+            // Scroll to top of the new content page
+            setTimeout(window.topFunction, 100)
+          }
+        })
+    }
   }
 
   // Wait longer before activating tooltip on direct load
   setTimeout(activateTooltip, 300)
+
+  setTimeout(loadPdfForMainContentLinks, 300)
 }
 
 /**
@@ -230,6 +245,7 @@ function indexRedirect () {
           } else {
             // Load first link as default:
             setTimeout(loadFirstLink, 500)
+            setTimeout(window.scrollTo(0, 0), 800)
           }
 
           // For pages with image to display over text (such as those in NMR section)
@@ -349,7 +365,7 @@ function scrollToLink () {
       submitButton.disabled = false
     } else {
       submitButton.disabled = true
-      matchDiv.classList.remove('d-flex')  // Hide the match result div
+      matchDiv.classList.remove('d-flex') // Hide the match result div
     }
   }
 
@@ -481,6 +497,79 @@ function changeIndex (e) {
     document.querySelector('select.index').dispatchEvent(evt)
   } else {
     document.querySelector('select.index').fireEvent('onchange')
+  }
+}
+
+/**
+ * Load PDF file into <object> tag, and inject that content to the targetElem
+ * @param {string} url
+ * @param {string} targetElem CSS selector of the target element
+ */
+function loadPdf (url, targetElem) {
+  console.log('"loadPdf()" running!')
+  let contentDiv = document.querySelector(targetElem)
+  let content = `
+    <object class="embed-pdf" data="${url}" type="application/pdf">
+      <embed src="${url}" type="application/pdf" />
+    </object>`
+  contentDiv.innerHTML = content
+}
+
+/**
+ * Check if the link is internal PDF and load into '<object></object>' tag if this page has 'loadPdfInFrame' == true
+ * 'loadPdfInFrame' is set in in the html page
+ * @param {*} event the onclick event
+ * @param {*} link the a tag that is cliked on
+ */
+function loadPdfAndMakeUrl (event, link) {
+  // Check if link contains pdf file and it is internal link
+  if (loadPdfInFrame &&
+    link.href.endsWith('.pdf') &&
+    (window.location.hostname === link.hostname || !link.hostname.length)) {
+    console.log('Load PDF file into main content')  // ! DEBUG
+    event = event || window.event
+    if (event) {
+      event.preventDefault()
+    }
+    let pdfName = new URL(link.href).pathname.split('/').filter(Boolean).pop()
+    let pdfUrl = getDataPath() + link.getAttribute('href')
+    console.log(pdfUrl)  // ! DEBUG
+    loadPdf(pdfUrl, '#content .full-list')
+
+    // Create new url with the query string
+    let newUrl = new URL(window.location.href)
+    // Remove current url hash if there is any
+    // newUrl.hash = pdfName
+    newUrl.hash = link.getAttribute('href')
+    // console.log(`"newUrl" is :${newUrl}`)  // ! DEBUG
+    window.history.pushState(null, null, newUrl.href)
+
+    // Scroll to top of the new content page
+    setTimeout(window.topFunction, 100)
+
+    return false
+  }
+  return true
+}
+
+/**
+ * For links in the main content section, load internal PDF file into '<object></object>' tag
+ * if this page has 'loadPdfInFrame' == true
+ * 'loadPdfInFrame' is set in in the html page
+ */
+function loadPdfForMainContentLinks() {
+  // console.log('"loadPdfForMainContentLinks" is running!')  // ! DEBUG
+  if (loadPdfInFrame) {
+    document.querySelectorAll('#content .full-list a[href$=".pdf"]').forEach(function (link) {
+      link.onclick = function (e) {
+        console.log('For links to PDF in the main content') // !DEBUG
+        // In some cases with links that has tooltip in the main content, the tooltip picture keep displaying
+        // This is to hide the tooltip in these cases
+        $('.tooltip').tooltip('hide')
+
+        loadPdfAndMakeUrl(e, this)
+      }
+    })
   }
 }
 
