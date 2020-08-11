@@ -217,7 +217,13 @@ landing_content: |
 {%- endfor %}
 <optgroup label="NMR Spectra Gallery">
     {%- for group in collections.nmr_gallery %}
-    <option data-url="{{ group.url | url }}" value="{{ group.fileSlug }}">{{ group.fileSlug | toTitleCase }}</option>
+    <option data-url="{{ group.url | url }}" value="{{ group.fileSlug }}">
+        {%- if group.data.title %}
+        {{ group.data.title }}
+        {%- else %}
+        {{ group.fileSlug | toTitleCase }}
+        {%- endif %}
+    </option>
     {%- endfor %}
 </optgroup>
 <optgroup label="Chemical Shift Data">
