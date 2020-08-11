@@ -121,7 +121,7 @@ function loadContent () {
             })
         }
 
-        setTimeout(loadPdfForMainContentLinks, 300)
+        setTimeout(loadPdfForMainContentLinks, 500)
       }
 
       window.closeNavOnSmallScreen()
@@ -214,7 +214,7 @@ async function deepLink () {
   // Wait longer before activating tooltip on direct load
   setTimeout(activateTooltip, 300)
 
-  setTimeout(loadPdfForMainContentLinks, 300)
+  setTimeout(loadPdfForMainContentLinks, 500)
 }
 
 /**
@@ -267,6 +267,10 @@ function indexRedirect () {
       newUrl.hash = ''
       // console.log(`"newUrl" is :${newUrl}`)  // ! DEBUG
       window.history.pushState(null, null, newUrl.href)
+
+      // In some cases with links that has tooltip in the main content, the tooltip picture keep displaying
+      // This is to hide the tooltip in these cases
+      $('.tooltip').tooltip('hide')
     }
   })
 }
@@ -296,7 +300,7 @@ function loadFirstLink () {
       let url = getDataPath() + firstATag.href.split('#')[1]
       loadPage(url, '#content .full-list')
       window.history.pushState(null, null, firstATag.href)
-      setTimeout(loadPdfForMainContentLinks, 300)
+      setTimeout(loadPdfForMainContentLinks, 500)
     })
 }
 
