@@ -121,7 +121,14 @@ function loadContent () {
             })
         }
 
-        setTimeout(loadPdfForMainContentLinks, 500)
+        // setTimeout(loadPdfForMainContentLinks, 500)
+        // wait for elementready
+        window.elementReady('#content .full-list a[href$=".pdf"]')
+          .then(function (el) {
+            // console.log(`Should be running because following element exists.\n${el} `) // !DEBUG
+            setTimeout(loadPdfForMainContentLinks, 300)
+          })
+
       }
 
       window.closeNavOnSmallScreen()
@@ -214,7 +221,13 @@ async function deepLink () {
   // Wait longer before activating tooltip on direct load
   setTimeout(activateTooltip, 300)
 
-  setTimeout(loadPdfForMainContentLinks, 500)
+  // setTimeout(loadPdfForMainContentLinks, 500)
+  // wait for elementready
+  window.elementReady('#content .full-list a[href$=".pdf"]')
+    .then(function (el) {
+      // console.log(`Should be running because following element exists.\n${el} `) // !DEBUG
+      setTimeout(loadPdfForMainContentLinks, 300)
+    })
 }
 
 /**
@@ -232,7 +245,7 @@ function indexRedirect () {
     if (url) {
       loadPage(url, '.index-content')
         .then(function (hasPageData) {
-          console.log('indexRedirect() loadPage first ".then()" call') //! DEBUG
+          // console.log('indexRedirect() loadPage first ".then()" call') //! DEBUG
           $('#sidebar').mCustomScrollbar('update')
           $('#sidebar').mCustomScrollbar('scrollTo', 'top', {
             timeout: 500,
@@ -300,7 +313,14 @@ function loadFirstLink () {
       let url = getDataPath() + firstATag.href.split('#')[1]
       loadPage(url, '#content .full-list')
       window.history.pushState(null, null, firstATag.href)
-      setTimeout(loadPdfForMainContentLinks, 500)
+
+      // setTimeout(loadPdfForMainContentLinks, 500)
+      // wait for elementready
+      window.elementReady('#content .full-list a[href$=".pdf"]')
+        .then(function (el) {
+          // console.log(`Should be running because following element exists.\n${el} `) // !DEBUG
+          setTimeout(loadPdfForMainContentLinks, 300)
+        })
     })
 }
 
@@ -477,7 +497,7 @@ function scrollToLink () {
 * data such as couplings and chemicals shifts
 */
 function injectContent () {
-  console.log('"injectContent()" ran!') // !DEBUG
+  // console.log('"injectContent()" ran!') // !DEBUG
   let mainContent = document.querySelector('#content .full-list')
   mainContent.innerHTML = ''
   mainContent.appendChild(document.getElementById('pageData'))
@@ -492,7 +512,7 @@ function injectContent () {
  * https://stackoverflow.com/a/10911718/6596203
  */
 function changeIndex (e) {
-  console.log('changeIndex() runs') // !DEBUG
+  // console.log('changeIndex() runs') // !DEBUG
   // console.log(e.dataset.value)
   document.querySelector('select.index').value = e.dataset.value
   // firing the event properly according to StackOverflow
@@ -512,7 +532,7 @@ function changeIndex (e) {
  * @param {string} targetElem CSS selector of the target element
  */
 function loadPdf (url, targetElem) {
-  console.log('"loadPdf()" running!')
+  // console.log('"loadPdf()" running!')
   let contentDiv = document.querySelector(targetElem)
   let content = `
     <object class="embed-pdf" data="${url}" type="application/pdf">
@@ -532,12 +552,12 @@ function loadPdfAndMakeUrl (event, link) {
   if (loadPdfInFrame &&
     link.href.endsWith('.pdf') &&
     (window.location.hostname === link.hostname || !link.hostname.length)) {
-    console.log('Load PDF file into main content')  // ! DEBUG
+    // console.log('Load PDF file into main content')  // ! DEBUG
     event = event || window.event
     if (event) {
       event.preventDefault()
     }
-    let pdfName = new URL(link.href).pathname.split('/').filter(Boolean).pop()
+    // let pdfName = new URL(link.href).pathname.split('/').filter(Boolean).pop()
     let pdfUrl = getDataPath() + link.getAttribute('href')
     console.log(pdfUrl)  // ! DEBUG
     loadPdf(pdfUrl, '#content .full-list')
