@@ -392,17 +392,6 @@ footer {
     float: left;
 }
 
-a.at-icon-wrapper.at-share-btn.at-svc-facebook span.at-icon-wrapper {
-    line-height: 24px !important;
-    height: 24px !important;
-    width: 24px !important;
-}
-
-a.at-icon-wrapper.at-share-btn.at-svc-facebook span.at-icon-wrapper > svg {
-    height: 24px !important;
-    width: 24px !important;
-}
-
 .menu-social-nav-container {
     padding: 0;
     list-style: none;
@@ -431,75 +420,6 @@ a.at-icon-wrapper.at-share-btn.at-svc-facebook span.at-icon-wrapper > svg {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-.addthis-animated {
-    animation-fill-mode: both;
-    animation-timing-function: ease-out;
-    animation-duration: .3s;
-}
-
-.at4-show {
-    display: block!important;
-    opacity: 1!important;
-}
-
-.addthis-smartlayers,
-div#at4-follow,
-div#at4-share,
-div#at4-thankyou,
-div#at4-whatsnext {
-    padding: 0;
-    margin: 0;
-}
-
-.at-image-sharing-tool {
-    z-index: 10 !important;
-}
-
-.at-resp-share-element {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    font-size: 0;
-    line-height: 0;
-}
-
-.at-resp-share-element .at-share-btn {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-    margin: 0 2px 5px;
-    padding: 0;
-    overflow: hidden;
-    line-height: 0;
-    text-decoration: none;
-    text-transform: none;
-    color: #fff;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-    border: 0;
-    font-family: helvetica neue,helvetica,arial,sans-serif;
-    background-color: transparent;
-}
-
-.at-resp-share-element .at-share-btn:focus,
-.at-resp-share-element .at-share-btn:hover {
-    transform: translateY(-4px);
-    color: #fff;
-    text-decoration: none;
-}
-
-.at-style-responsive .at-share-btn {
-    /* padding: 5px; */
-}
-
-.at4-visually-hidden {
-    position: absolute;
-    clip: rect(1px,1px,1px,1px);
-    padding: 0;
-    border: 0;
-    overflow: hidden;
 }
 
 #bb-footer .bb-footer__bottom .footer-bucket img {
