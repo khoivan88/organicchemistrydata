@@ -210,7 +210,8 @@
                         {# <p class="mb-1">Created by the late Prof. Hans Reich and turned over to the DOC in 2020.</p> #}
                         {%- endif -%}
                         <p class="copyright">© {{ currentDateTime.getFullYear() }} ACS Division of Organic Chemistry</p>
-                        <p class="mb-1">Last updated: {{ page.date.toLocaleDateString() }}</p>
+                        <p class="mb-1">Last updated: {% if updated -%}{{ updated.toLocaleDateString() }}{%- else -%}{{ page.date.toLocaleDateString() }}{%- endif -%}</p>
+                        {# <p class="mb-1">Last updated: {{ updated.toLocaleDateString() }}</p> #}
                         <nav class="bb-nav__footer-admin-wrap">
                             <ul id="menu-footer-admin" class="bb-nav__footer-admin">
                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2867">
