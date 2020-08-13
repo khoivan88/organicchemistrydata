@@ -7,7 +7,7 @@ const eleventyInputDir = 'src';
 const eleventyOutputDir = '_site';
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setTemplateFormats(["html", "liquid", "njk", "ejs", "md", "hbs", "mustache", "haml", "pug", "11ty.js", "pdf", "gif", "png", "ico", "webmanifest"]);
+  eleventyConfig.setTemplateFormats(["html", "liquid", "njk", "ejs", "md", "hbs", "mustache", "haml", "pug", "11ty.js", "pdf", "gif", "ico"]);
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/img");
