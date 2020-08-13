@@ -550,7 +550,8 @@ function loadPdf (url, targetElem) {
  */
 function loadPdfAndMakeUrl (event, link) {
   // Check if link contains pdf file and it is internal link
-  if (loadPdfInFrame &&
+  if (typeof loadPdfInFrame !== 'undefined' && // Checking for pages that does not have `var loadPdfInFrame` set
+    loadPdfInFrame &&
     link.href.endsWith('.pdf') &&
     (window.location.hostname === link.hostname || !link.hostname.length)) {
     // console.log('Load PDF file into main content')  // ! DEBUG
