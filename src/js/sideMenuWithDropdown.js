@@ -110,13 +110,13 @@ function loadContent () {
 
           // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
           // window.elementReady('#' + CSS.escape(section))
-            // .then(function (el) {
-              // console.log(`Should be running because element with id ${section} exists`) // !DEBUG
-              setTimeout(function () {
-                let el = document.querySelector('#' + CSS.escape(section))
-                el.scrollIntoView({ behavior: 'auto' })
-              }, 100)
-            // })
+          // .then(function (el) {
+          // console.log(`Should be running because element with id ${section} exists`) // !DEBUG
+          setTimeout(function () {
+            let el = document.querySelector('#' + CSS.escape(section))
+            el.scrollIntoView({ behavior: 'auto' })
+          }, 100)
+          // })
         } else {
           // Scroll to top of the new content page
           setTimeout(window.topFunction, 100)
@@ -129,7 +129,6 @@ function loadContent () {
             // console.log(`Should be running because following element exists.\n${el} `) // !DEBUG
             setTimeout(loadPdfForMainContentLinks, 300)
           })
-
       }
 
       window.closeNavOnSmallScreen()
@@ -198,8 +197,7 @@ async function deepLink () {
 
       // Scroll to top of the new content page
       setTimeout(window.topFunction, 100)
-    }
-    else {
+    } else {
       loadPage(contentUrl, '#content .full-list')
         .then(function () {
           if (hash[2]) {
@@ -370,13 +368,33 @@ function getElementsByXPath (xPathSelector) {
 }
 
 /**
+ * To return offset pixel of an element from the top of the content using malihu custom scrollbar
+ * Ref: https://github.com/malihu/malihu-custom-scrollbar-plugin/issues/184
+ * @param {object} el the element that you want to scroll to
+ * @param {int} offset the number of pixel offset, default to 100
+ */
+function scrollToOffset (el, offset = 90) {
+  var elTop = $(el).offset().top - $('#sidebar .mCSB_container').offset().top
+  return elTop - offset
+}
+
+/**
+ * Return a string with all regex special characters escaped
+ * Ref: https://stackoverflow.com/a/9310752/6596203
+ * @param {*} text
+ */
+function escapeRegExp (text) {
+  return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')
+}
+
+/**
  * Add simple search function and scroll to item
  */
 function scrollToLink () {
   // console.log('"scrollToLink" working!')  // !DEBUG
 
   // Instantiate Mark object
-  var instance = new Mark(document.querySelector('#sidebar'))
+  const instance = new Mark(document.querySelector('#sidebar'))
 
   // Instantiate element to display match result
   const matchDiv = document.querySelector('#matchResult')
@@ -386,6 +404,9 @@ function scrollToLink () {
   const submitButton = document.querySelector('#scrollToLinkButton')
   submitButton.disabled = true
   const inputSideMenuSearch = document.querySelector('#sideMenuSearch')
+
+  const ignoredPunctuations = ":;.,-–—‒_(){}[]!'\"+="
+  const ignoredPuncRegex = new RegExp(`[${escapeRegExp(ignoredPunctuations)}]`)
 
   inputSideMenuSearch.onkeyup = function () {
     if (inputSideMenuSearch.value.trim() !== '' && inputSideMenuSearch.value.length > 0) {
@@ -416,11 +437,36 @@ function scrollToLink () {
 
     // `translate()` was used in conjunction with input.toLowerCase() to search for case insensitive. Ref: https://stackoverflow.com/a/8474109/6596203
     // "//div[@id='navbar-left']/div//" was used to only search inside this div, otherwise, it would return the whole html body
-    var xpath = `//div[@id='navbar-left']/div//*[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '${query}')]`
+    // See this for incredible explantion on Xpath Selector: https://stackoverflow.com/a/3655588/6596203
+    // XPath Selector cheatsheet: https://devhints.io/xpath
+    // var xpath = `//div[@id='navbar-left']/div//*[text()[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '${query}')]]`
     // console.log(xpath)
 
-    let foundNodes = getElementsByXPath(xpath)
-    // console.log(`${foundNodes.length} match(es).`)  // ! DEBUG
+    // let foundNodes = getElementsByXPath(xpath)
+    // // console.log(`${foundNodes.length} match(es).`) // ! DEBUG
+    // console.log(foundNodes)
+
+    let foundNodes = []
+
+    // Highlight search termm using 'mark.js', ref: https://markjs.io/
+    // !Define option inside mark is somehow give faster executiontime
+    // See this for more detail: https://markjs.io/#mark
+    instance.mark(query, {
+      'separateWordSearch': false,
+      'acrossElements': true, // Whether to search for matches across elements
+      'ignoreJoiners': true, // Whether to also find matches that contain soft hyphen, zero width space, zero width non-joiner and zero width joiner.
+      'ignorePunctuation': ignoredPunctuations.split(''), // e.g. setting this option to ["'"] would match "Worlds", "World's" and "Wo'rlds"
+      'each': function (node) {
+        // node is the marked DOM element
+        let queryWithoutIgnoredPunctuations = query.replace(ignoredPuncRegex, '')
+        let nodeTextContent = node.textContent.replace(ignoredPuncRegex, '').toLowerCase()
+        if (queryWithoutIgnoredPunctuations.startsWith(nodeTextContent)) {
+          foundNodes.push(node)
+        }
+      }
+    })
+    // console.log(`${foundNodes.length} match(es).`) // ! DEBUG
+    // console.log(foundNodes)
 
     let result = new SearchResult(foundNodes)
     // console.log(typeof (foundNodes.snapshotLength))
@@ -434,47 +480,30 @@ function scrollToLink () {
 
       // Scroll to the first item with offset (in pixel)
       $('#sidebar').mCustomScrollbar('scrollTo',
-        function () {
-          return (result.firstItem.offsetTop) - 100
-        },
+        scrollToOffset(result.firstItem),
         { scrollInertia: 0 } // default is too slow and cause issue with items at the bottom or a long list
       )
 
-      // Highlight search termm using 'mark.js', ref: https://markjs.io/
-      // !Define option inside mark is somehow give faster executiontime
-      // See this for more detail: https://markjs.io/#mark
-      instance.mark(query, {
-        'separateWordSearch': false,
-        'acrossElements': true, // Whether to search for matches across elements
-        'ignoreJoiners': true, // Whether to also find matches that contain soft hyphen, zero width space, zero width non-joiner and zero width joiner.
-        'ignorePunctuation': ":;.,-–—‒_(){}[]!'\"+=".split('') // e.g. setting this option to ["'"] would match "Worlds", "World's" and "Wo'rlds"
-      })
-
+      // For button to go scroll to previous match
       document.getElementById('prev_button').onclick = function (e) { // the e here is the event itself
         // console.log('Prev button clicked.')  // ! DEBUG
         let [i, item] = result.prevItem()
         matchResultText.innerHTML = `${i + 1}/${result.length}`
         // Scroll to the next item with offset (in pixel)
         $('#sidebar').mCustomScrollbar('scrollTo',
-          function () {
-            // console.log(`offsetTop position: ${item.offsetTop - 100} px`)  // ! DEBUG
-            return item.offsetTop - 100
-          },
+          scrollToOffset(item),
           { scrollInertia: 0 } // default is too slow and cause issue with items at the bottom or a long list
         )
       }
 
-      // document.getElementById('next_button').addEventListener('click', function (e) { // the e here is the event itself
+      // For button to go scroll to next match
       document.getElementById('next_button').onclick = function (e) { // the e here is the event itself
         // console.log('Next button clicked.')  // ! DEBUG
         let [i, item] = result.nextItem()
         matchResultText.innerHTML = `${i + 1}/${result.length}`
         // Scroll to the next item with offset (in pixel)
         $('#sidebar').mCustomScrollbar('scrollTo',
-          function () {
-            // console.log(`offsetTop position: ${item.offsetTop - 100} px`)  // ! DEBUG
-            return item.offsetTop - 100
-          },
+          scrollToOffset(item),
           { scrollInertia: 0 } // default is too slow and cause issue with items at the bottom or a long list
         )
       }
@@ -561,7 +590,7 @@ function loadPdfAndMakeUrl (event, link) {
     }
     // let pdfName = new URL(link.href).pathname.split('/').filter(Boolean).pop()
     let pdfUrl = getDataPath() + link.getAttribute('href')
-    console.log(pdfUrl)  // ! DEBUG
+    console.log(pdfUrl) // ! DEBUG
     loadPdf(pdfUrl, '#content .full-list')
 
     // Create new url with the query string
@@ -585,7 +614,7 @@ function loadPdfAndMakeUrl (event, link) {
  * if this page has 'loadPdfInFrame' == true
  * 'loadPdfInFrame' is set in in the html page
  */
-function loadPdfForMainContentLinks() {
+function loadPdfForMainContentLinks () {
   // console.log('"loadPdfForMainContentLinks" is running!')  // ! DEBUG
   if (loadPdfInFrame) {
     document.querySelectorAll('#content .full-list a[href$=".pdf"]').forEach(function (link) {
