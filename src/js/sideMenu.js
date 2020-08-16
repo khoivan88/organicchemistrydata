@@ -63,7 +63,7 @@ function addScrollSpy () {
     // console.log(obj);  // !DEBUG
 
     // Scroll the first active a tag into view if needed
-    $(`#navbar-left .nav-item a[href="${obj.relatedTarget}"]`)[0].scrollIntoViewIfNeeded()
+    $(`#navbar-left .nav-item a[href="${obj.relatedTarget}"]`)[0].scrollIntoView({ block: 'center', inline: 'nearest' })
   })
 }
 
