@@ -1074,8 +1074,8 @@
                             "url": "https://www.scripps.edu/baran/heterocycles/"
                         },
                         {
-                            "name": "\"NMR Spectroscopy\" (Prof. Hans Reich, University of Wisconsin - Madison)",
-                            "description": "Content originated from chem 605 course",
+                            "name": "\"NMR Spectroscopy\"",
+                            "description": "Chem 605 course",
                             "url": "/hansreich/resources/nmr/"
                         },
                         {
@@ -1092,8 +1092,8 @@
                             "url": "http://faculty.scs.illinois.edu/white/index.php?p=lectures"
                         },
                         {
-                            "name": "\"Organometallic Chemistry\" (Prof. Hans Reich, University of Wisconsin - Madison)",
-                            "description": "Content originated from chem 842 course and Prof. Reich's life-long collection",
+                            "name": "\"Organometallic Chemistry\"",
+                            "description": "Chem 842 course",
                             "url": "/hansreich/resources/organometallic/"
                         }
                     ]
