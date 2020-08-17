@@ -985,10 +985,6 @@
                     "url": "https://www.chemedx.org/category/concepts/organic"
                 },
                 {
-                    "name": "Organic Synthesis Handouts-Andrew Myers (Harvard)",
-                    "url": "https://faculty.chemistry.harvard.edu/myers/pages/chem-115-handouts"
-                },
-                {
                     "name": "Chimie générale & organiqué-Gérard Dupuis",
                     "url": "https://www.faidherbe.org/site/cours/dupuis/accueil.htm"
                 },
@@ -1007,10 +1003,6 @@
                 {
                     "name": "Electron Pushing/Drawing Mechanisms",
                     "url": "/hansreich/resources/electron_pushing/"
-                },
-                {
-                    "name": "Open Source Lecture Notes-Bode Research Group (ETH-Zürich)",
-                    "url": "https://bode.ethz.ch/open-source-lecture-notes.html"
                 },
                 {
                     "name": "Organic Chemistry Practice Problems-William Reusch (MSU)",
@@ -1062,6 +1054,49 @@
                     "name": "MolSSI Education Resources",
                     "description": "Free online tutorial materials including Programming, Software Development, and Computational Molecular Science.",
                     "url": "https://education.molssi.org/resources.html"
+                },
+                {
+                    "name": "Lecture Notes",
+                    "links": [
+                        {
+                            "name": "\"Advanced Organic Chemistry\", Prof. David  Evans (Harvard)",
+                            "description": "Chem 206 course notes",
+                            "url": "https://www.dropbox.com/sh/y7ynttq7n4ojp4l/AACOWxp3jntzXvIDdM6Zzk46a?dl=0"
+                        },
+                        {
+                            "name": "\"Advanced Organic Chemistry\", Eugene Kwan (Harvard)",
+                            "description": "A set of reinterpretation of the Chem 206 course notes created by Professor David A. Evans",
+                            "url": "https://ekwan.github.io/notes.html#advanced-organic-chemistry"
+                        },
+                        {
+                            "name": "Heterocyclic Chemistry\" (Prof. Phil Baran, The Scripps Research Institute)",
+                            "description": "Also see <a href='#organic_chemistry_videos'>Organic Chemistry Videos</a> section for videos.",
+                            "url": "https://www.scripps.edu/baran/heterocycles/"
+                        },
+                        {
+                            "name": "\"NMR Spectroscopy\" (Prof. Hans Reich, University of Wisconsin - Madison)",
+                            "description": "Content originated from chem 605 course",
+                            "url": "/hansreich/resources/nmr/"
+                        },
+                        {
+                            "name": "\"Organic Synthesis\", Prof. Andrew Myers (Harvard)",
+                            "description": "Chemistry 115 Handouts, created as part of an advanced course on the synthesis of complex molecules",
+                            "url": "https://faculty.chemistry.harvard.edu/myers/pages/chem-115-handouts"
+                        },
+                        {
+                            "name": "Open Source Lecture Notes-Bode Research Group (ETH-Zürich)",
+                            "url": "https://bode.ethz.ch/open-source-lecture-notes.html"
+                        },
+                        {
+                            "name": "\"Organometallics\" (Prof. M. Christina White, University of Illinois)",
+                            "url": "http://faculty.scs.illinois.edu/white/index.php?p=lectures"
+                        },
+                        {
+                            "name": "\"Organometallic Chemistry\" (Prof. Hans Reich, University of Wisconsin - Madison)",
+                            "description": "Content originated from chem 842 course and Prof. Reich's life-long collection",
+                            "url": "/hansreich/resources/organometallic/"
+                        }
+                    ]
                 }
             ]
         },
