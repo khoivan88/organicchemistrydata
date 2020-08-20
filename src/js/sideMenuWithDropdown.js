@@ -109,14 +109,14 @@ function loadContent () {
           window.history.pushState(null, null, link.href)
 
           // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
-          // window.elementReady('#' + CSS.escape(section))
-          // .then(function (el) {
-          // console.log(`Should be running because element with id ${section} exists`) // !DEBUG
-          setTimeout(function () {
-            let el = document.querySelector('#' + CSS.escape(section))
-            el.scrollIntoView({ behavior: 'auto' })
-          }, 100)
-          // })
+          window.elementReady('#' + CSS.escape(section))
+            .then(function (el) {
+              // console.log(`Should be running because element with id ${section} exists`) // !DEBUG
+              setTimeout(function () {
+                // let el = document.querySelector('#' + CSS.escape(section))
+                el.scrollIntoView({ behavior: 'auto' })
+              }, 200)
+            })
         } else {
           // Scroll to top of the new content page
           setTimeout(window.topFunction, 100)
