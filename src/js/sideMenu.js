@@ -11,11 +11,11 @@ function checkForChanges () {
     if (marginLeft < 0) {
       // When the side menu is hiding
       // console.log('margin-left < 0')  // !DEBUG
-      $('#sidebarCollapse').children().addClass('fa-angle-double-right').removeClass('fa-angle-double-left')
+      $('#sidebarCollapse').children().addClass('icon-angle-double-right').removeClass('icon-angle-double-left')
     } else {
       // When the side menu is being displayed
       // console.log('margin-left >= 0')  // !DEBUG
-      $('#sidebarCollapse').children().addClass('fa-angle-double-left').removeClass('fa-angle-double-right')
+      $('#sidebarCollapse').children().addClass('icon-angle-double-left').removeClass('icon-angle-double-right')
     }
   }, 300)
 }

@@ -10,20 +10,18 @@
       {%- endfor %}
     {%- endif %}
 
-    <!-- Font awesome -->
-    <script defer src="https://kit.fontawesome.com/1fb64b571b.js" crossorigin="anonymous"></script>
+    <!-- Custom Font awesome -->
+    {# <script defer src="https://kit.fontawesome.com/1fb64b571b.js" crossorigin="anonymous"></script> #}
+    <link href="https://file.myfontastic.com/XLQZd9x9FBBmfHGeDWKieA/icons.css" rel="stylesheet">
+
     {# <script src="https://kit.fontawesome.com/1fb64b571b.js" crossorigin="anonymous"></script> #}
     <!-- Google Font -->
     {# <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700|Lato:400,700&display=swap" rel="stylesheet"> #}
     {# <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:italic,bold,bolditatlic|Source+Sans+Pro:italic,bold,bolditatlic|Lato:italic,bold,bolditatlic|Open+Sans:ital,wght@0,400;0,700;1,400;1,700|Josefin+Sans:300&display=swap" rel="stylesheet"> #}
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold|Lato|Open+Sans:ital,wght@0,400;0,700;1,400;1,700|Josefin+Sans:300&display=swap" rel="stylesheet">
-    {# <link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold|Lato|Open+Sans:ital,wght@0,400;0,700;1,400;1,700|Josefin+Sans:300&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"> #}
-    {# <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold|Lato|Open+Sans:ital,wght@0,400;0,700;1,400;1,700|Josefin+Sans:300&display=swap"></noscript> #}
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    {# <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> #}
-    {# <noscript><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"></noscript> #}
 
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" integrity="sha512-6qkvBbDyl5TDJtNJiC8foyEVuB6gxMBkrKy67XpqnIDxyvLLPJzmTjAj1dRJfNdmXWqD10VbJoeN4pOQqDwvRA==" crossorigin="anonymous" />
@@ -31,15 +29,11 @@
 
     <!-- Custom main CSS -->
     <link rel="stylesheet" href="{{ main_css.url | url }}">
-    {# <link rel="preload" href="{{ main_css.url | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'"> #}
-    {# <noscript><link rel="stylesheet" href="{{ main_css.url | url }}"></noscript> #}
 
 
     <!-- Custom page-specific CSS -->
     {%- if page_css %}
     <link rel="stylesheet" href="{{ page_css.url | url }}">
-    {# <link rel="preload" href="{{ page_css.url | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'"> #}
-    {# <noscript><link rel="stylesheet" href="{{ page_css.url | url }}"></noscript> #}
 
     {%- endif %}
 
