@@ -75,18 +75,37 @@ specific_page_js:
           <h3>{{ collection.title }}</h3>
           <ul>
             {%- if collection.links %}
+            {# Subsection level 1 #}
             {%- for link in collection.links %}
             {%- if link.links %}
+            {# Subsection level 2 #}
             <li>
-              <h5>{{ link.name | safe }}</h5>
+              <h5 class="mb-0">{{ link.name | safe }}</h5>
               <ul>
                 {%- for item in link.links %}
+                {%- if item.links %}
+                  {# Subsection level 3 #}
+                  <li>{{ item.name | safe }}
+                    <ul>
+                      {%- for subitem in item.links %}
+                      <li>
+                        <a href="{{ subitem.url | url }}" {%- if subitem.url[0] != '/' %} target="_blank" rel="noopener" {%- endif -%}>
+                          {{ subitem.name | safe }} {%- if '/hansreich' in subitem.url %}<span class="text-danger"> (Hans Reich's Collection -
+                            DOC)</span>{%- endif -%}
+                        </a>
+                        {%- if subitem.description -%}<span>: {{ subitem.description | safe }}</span>{%- endif -%}
+                      </li>
+                      {%- endfor %}
+                    </ul>
+                  </li>
+                {%- else %}
                 <li>
                   <a href="{{ item.url | url }}" {%- if item.url[0] != '/' %} target="_blank" rel="noopener"{%- endif -%}>
                     {{ item.name | safe }} {%- if '/hansreich' in item.url %}<span class="text-danger"> (Hans Reich's Collection - DOC)</span>{%- endif -%}
                   </a>
                   {%- if item.description -%}<span>: {{ item.description | safe }}</span>{%- endif -%}
                 </li>
+                {%- endif %}
                 {%- endfor %}
               </ul>
             </li>

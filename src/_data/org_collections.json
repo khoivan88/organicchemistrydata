@@ -565,6 +565,10 @@
                         {
                             "name": "IUPAC Glossary of Class Names of Organic Compounds and Reactive Intermediates 1995",
                             "url": "http://publications.iupac.org/pac/1995/pdf/6708x1307.pdf"
+                        },
+                        {
+                            "name": "Numbering of Ring Systems",
+                            "url": "https://www.maybridge.com/Images/pdfs/ring_numbering.pdf"
                         }
                     ]
                 },
@@ -893,69 +897,129 @@
             "description": "Links to software applications that are likely useful for a broad selection of organic chemists",
             "links": [
                 {
-                    "name": "AMSOL",
-                    "url": "https://comp.chem.umn.edu/amsol/"
-                },
-                {
-                    "name": "ChemBioDraw",
-                    "url": "https://www.perkinelmer.com/product/chemdraw-professional-chemdrawpro"
-                },
-                {
-                    "name": "ChemBioDraw Tutorial Videos by Pierre Morieux",
+                    "name": "Chemical Drawing Programs",
                     "links": [
                         {
-                            "name": "Colorful ChemDraw Collections",
-                            "url": "https://www.youtube.com/watch?v=pccebQuLr9k"
+                            "name": "ChemBioDraw",
+                            "url": "https://www.perkinelmer.com/product/chemdraw-professional-chemdrawpro"
                         },
                         {
-                            "name": "Using Hotkeys",
-                            "url": "https://www.youtube.com/watch?v=AkkpuW322qo&amp;t=324s"
+                            "name": "ChemBioDraw Tutorial Videos by Pierre Morieux",
+                            "links": [
+                                {
+                                    "name": "Colorful ChemDraw Collections",
+                                    "url": "https://www.youtube.com/watch?v=pccebQuLr9k"
+                                },
+                                {
+                                    "name": "ChemDraw Magic 4",
+                                    "description": "How to REALLY use ChemDraw 17, Using Hotkeys",
+                                    "url": "https://www.youtube.com/watch?v=AkkpuW322qo&t=6s"
+                                },
+                                {
+                                    "name": "ChemDraw Magic Tricks: Quick Catalytic Cycles",
+                                    "url": "https://www.youtube.com/watch?v=PScK1yTvDVI"
+                                },
+                                {
+                                    "name": "ChemDraw Magic 3",
+                                    "description": "Dendrimers, Delivered",
+                                    "url": "https://www.youtube.com/watch?v=H-MEpcYJBNY"
+                                },
+                                {
+                                    "name": "ChemDraw Magic 2",
+                                    "url": "https://www.youtube.com/watch?v=SSZI8rh6sNY"
+                                },
+                                {
+                                    "name": "ChemDraw Magic 1",
+                                    "url": "https://www.youtube.com/watch?v=03WNbvZLDkk"
+                                },
+                                {
+                                    "name": "All Videos by Pierre Morieux",
+                                    "url": "https://www.youtube.com/user/PierreMx3/videos"
+                                }
+                            ]
                         },
                         {
-                            "name": "ChemDraw Magic Tricks: Quick Catalytic Cycles",
-                            "url": "https://www.youtube.com/watch?v=PScK1yTvDVI"
+                            "name": "ChemDoodle",
+                            "url": "https://www.chemdoodle.com/"
                         },
                         {
-                            "name": "ChemDraw Magic 2",
-                            "url": "https://www.youtube.com/watch?v=SSZI8rh6sNY&amp;fmt=22"
-                        },
-                        {
-                            "name": "ChemDraw Magic 1",
-                            "url": "https://www.youtube.com/watch?v=03WNbvZLDkk"
-                        },
-                        {
-                            "name": "All Videos by Pierre Morieux",
-                            "url": "https://www.youtube.com/user/PierreMx3/videos"
+                            "name": "MarvinSketch: Structure Drawing Software",
+                            "url": "https://chemaxon.com/products/marvin"
                         }
                     ]
                 },
                 {
-                    "name": "ChemDoodle",
-                    "url": "https://www.chemdoodle.com/"
+                    "name": "Computational Chemistry",
+                    "links": [
+                        {
+                            "name": "AMSOL",
+                            "url": "https://comp.chem.umn.edu/amsol/"
+                        },
+                        {
+                            "name": "Wavefunction: Spartan",
+                            "url": "https://www.wavefun.com/"
+                        }
+                    ]
                 },
                 {
-                    "name": "MarvinSketch: Structure Drawing Software",
-                    "url": "https://chemaxon.com/products/marvin"
+                    "name": "Chemical Inventory and/or Electronic Lab Notebook (ELN)",
+                    "links": [
+                        {
+                            "name": "\"Open Enventory\": free, open-source chemical inventory & ELN",
+                            "links": [
+                                {
+                                    "name": "User Guides",
+                                    "url": "https://open-enventory.gitbook.io/user-guides/"
+                                },
+                                {
+                                    "name": "Original Software by Dr. Felix Rudolphi",
+                                    "url": "https://sourceforge.net/projects/enventory/"
+                                },
+                                {
+                                    "name": "Modified Version by Dr. Khoi Van",
+                                    "description": "Dr. Khoi Van added some extra functions as well as some modification for U.S.-based users. Used by Texas A&M University, labs at Baylor University, labs at MIT.",
+                                    "url": "https://github.com/khoivan88/open_enventory-modified_for_US"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "\"Sciformation\" by Dr. Felix Rudolphi",
+                            "description": "Paid software for ELN, Inventory, LIMS, with broader applications beyond chemistry",
+                            "url": "http://sciformation.com/sciformation_eln.html?lang=en"
+                        },
+                        {
+                            "name": "\"LabCup\"",
+                            "description": "Paid software for Chemical Inventory and Laboratory Management",
+                            "url": "https://labcup.net/"
+                        }
+                    ]
                 },
                 {
-                    "name": "MaxBridge",
-                    "url": "https://www.cadrerl.com/ring/"
-                },
-                {
-                    "name": "Open Enventory: free, open-source chemical inventory & ELN",
-                    "url": "https://open-enventory.gitbook.io/user-guides/"
-                },
-                {
-                    "name": "Schrödinger",
-                    "url": "https://www.schrodinger.com/drug-discovery"
-                },
-                {
-                    "name": "Vogel Scientific Software: CIARA and CALACO.",
-                    "url": "http://www.vogelscientific.com/"
-                },
-                {
-                    "name": "Wavefunction: Spartan",
-                    "url": "https://www.wavefun.com/"
+                    "name": "Others",
+                    "links": [
+                        {
+                            "name": "Awesome Cheminformatics",
+                            "description": "A curated list of Cheminformatics software, resources, and libraries.",
+                            "url": "https://github.com/hsiaoyi0504/awesome-cheminformatics"
+                        },
+                        {
+                            "name": "Awesome Python Chemistry",
+                            "description": "A curated list of Python frameworks, libraries, software and resources related to Chemistry",
+                            "url": "https://github.com/lmmentel/awesome-python-chemistry"
+                        },
+                        {
+                            "name": "MaxBridge",
+                            "url": "https://www.maxbridge.org/sample.html"
+                        },
+                        {
+                            "name": "Schrödinger",
+                            "url": "https://www.schrodinger.com/drug-discovery"
+                        },
+                        {
+                            "name": "Vogel Scientific Software: CIARA and CALACO.",
+                            "url": "http://www.vogelscientific.com/"
+                        }
+                    ]
                 }
             ]
         },
@@ -1039,16 +1103,6 @@
                 {
                     "name": "QR Chem (presentation materials for instructors)-Neil Garg",
                     "url": "https://qrchem.net/"
-                },
-                {
-                    "name": "Awesome Cheminformatics",
-                    "description": "A curated list of awesome Cheminformatics software, resources, and libraries.",
-                    "url": "https://github.com/hsiaoyi0504/awesome-cheminformatics"
-                },
-                {
-                    "name": "Awesome Python Chemistry",
-                    "description": "A curated list of awesome Python frameworks, libraries, software and resources related to Chemistry",
-                    "url": "https://github.com/lmmentel/awesome-python-chemistry"
                 },
                 {
                     "name": "MolSSI Education Resources",
@@ -1229,6 +1283,15 @@
                         {
                             "name": "Peptidelinks by James Nowick-UC Irvine",
                             "url": "http://peptidelinks.net/"
+                        }
+                    ]
+                },
+                {
+                    "name": "Other Resource Collections",
+                    "links": [
+                        {
+                            "name": "Dan Lehnherr’s Chemistry Resounces Summary",
+                            "url": "http://www.danlehnherr.com/resources.html"
                         }
                     ]
                 }
