@@ -1151,6 +1151,31 @@
                             "url": "/hansreich/resources/organometallic/"
                         }
                     ]
+                },
+                {
+                    "name": "Group Meeting Notes",
+                    "links": [
+                        {
+                            "name": "Baran Group Meetings (The Scripps Research Institute)",
+                            "url": "https://baranlab.org/research/seminars/"
+                        },
+                        {
+                            "name": "MacMillan Group Meetings (Princeton University)",
+                            "url": "https://macmillan.princeton.edu/presentations/"
+                        },
+                        {
+                            "name": "Scott Denmark Group Meetings (University of Illinois)",
+                            "url": "http://faculty.scs.illinois.edu/denmark/?page_id=5982"
+                        },
+                        {
+                            "name": "Ryan Shenvi Group Meetings (The Scripps Research Insititute)",
+                            "url": "https://www.shenvilab.org/resources"
+                        },
+                        {
+                            "name": "Marty Burke (University of Illinois)",
+                            "url": "http://faculty.scs.illinois.edu/burke/index.php?p=group_meetings"
+                        }
+                    ]
                 }
             ]
         },
