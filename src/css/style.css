@@ -9,17 +9,13 @@ html {
 
 
 body {
-    /* font-family: sans-serif; */
     position: relative;    /* for scrollspy to work properly */
-    /* top: 60px; */
-    padding-top: 130px;    /* to prevent cover of content by the nav-bar
-    /* padding-bottom: 10px;    /* to prevent cover of content by the nav-bar */
-    /* font-family: 'Source Serif Pro', serif; */
+    padding-top: 130px;    /* to prevent cover of content by the nav-bar */
     font-family: 'Open Sans', serif;
 }
 
 body section.flex-fill {
-    margin-top: -25px;
+    /* margin-top: -25px; */
 }
 
 
@@ -39,7 +35,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: white;
     z-index: 950;
     min-height: 45px;
-    /* padding-bottom: 50px; */
 }
 
 .indent {
@@ -55,8 +50,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 #navbar .nav-link {
     color: white;
-    /* font-weight: 400; */
-    /* background: transparent; */
     padding-left: 20px;
     padding-right: 20px;
     display: inline-block;
@@ -124,13 +117,9 @@ font-family: Georgia, serif;
 
 .syntheses-navbar {
     z-index: 900;
-    /* padding-top: 60px; */
     position: fixed;
     top: 102px;
     background-color: white;
-    /* z-index: 950; */
-    /* min-height: 45px; */
-    /* padding-bottom: 50px; */
 }
 
 #sidebar .index-select {
@@ -161,36 +150,11 @@ font-family: Georgia, serif;
     right: 10px;
     z-index: 1000;
     background-color: rgb(128, 128, 128, 0.5);
-    /* font-size: 18px;
-    border: none;
-    outline: none;
-    color: white; */
     cursor: pointer;
-    /* padding: 5px 10px; */
     border-radius: 4px;
 }
 #toTopButton:hover {
     background-color: #555;
-}
-
-/* ---------------------------------------------------
-    JUMBOTRON STYLE
------------------------------------------------------ */
-.jumbotron.jumbotron-fluid {
-    /* height: 80vh; */
-    /* min-height: 80vh; */
-    /* max-height: calc(100vh - 80px); */
-    /* background-size: auto 100vh; */
-    /* background-image: url(/img/collage.png);
-    background-size: cover;
-    color: black;
-    margin: 0; */
-}
-
-img.img-fluid {
-    /* max-height: calc(100vh - 150px); */
-    /* max-width: 100%; */
-    /* width: auto; */
 }
 
 
@@ -211,7 +175,6 @@ img.img-fluid {
 .wrapper {
     display: flex;
     width: 100%;
-    /* z-index: 100; */
 }
 
 #sidebar {
@@ -298,18 +261,12 @@ a.list-group-item {
     color: blue
 }
 
-
 /* ---------------------------------------------------
     Publication page
 ----------------------------------------------------- */
 .research img {
-    /* background: #ba0000; */
     border: solid 2px;
-    /* margin: auto; */
-    /* width: 100% !important; */
 }
-
-
 
 /* ---------------------------------------------------
     for malihu custom scrollbar
@@ -341,140 +298,63 @@ mark {
 /* ---------------------------------------------------
     Footer
 ----------------------------------------------------- */
-footer {
-    /* z-index: -1; */
-    /* padding-top: 70vh; */
-}
-
-#bb-footer {
-    background-color: #fff;
-    color: #333;
-}
-
-#bb-footer .bb-footer__top {
+#docdata-footer .docdata-footer__top {
     background: #3a6486;
     padding: 5px 0;
     color: #fff;
-    font-size: 16px;
-    font-weight: 500;
     text-transform: uppercase;
 }
 
-#bb-footer .bb-footer__bottom {
-    /* padding: 20px 0; */
-}
-
-#bb-footer .bb-footer__top .footer-social .social-title {
-    float: left;
+.social-title,
+.social-share {
     margin-right: 5px;
 }
 
-#bb-footer .bb-footer__top .menu-social-nav-container {
-    float: left;
-    margin: 0;
-}
-#bb-footer .bb-footer__top .menu-social-nav-container a {
+.menu-social-nav-container a {
     color: #fff;
     font-size: 32px;
     line-height: 1;
 }
 
-#bb-footer .bb-footer__top .menu-social-nav-container a:hover {
+.menu-social-nav-container a:hover {
     color: #ba0000;
 }
 
-#bb-footer .bb-footer__top .menu-social-nav-container li{
-    margin-right: 2px;
-    line-height: 1;
-}
-
-#bb-footer .bb-footer__top #social-share {
-    float: left;
-}
-
 .menu-social-nav-container {
+    margin: 0;
     padding: 0;
     list-style: none;
-    margin: 10px auto;
     display: inline-block;
 }
 
 .menu-social-nav-container li {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 2px;
 }
 
 .menu-social-nav-container li a {
-    color: #3a6486;
-    font-size: 24px;
+    font-size: 28px;
+    vertical-align: middle;
 }
 
 .menu-social-nav-container li a span {
     display: none;
 }
 
-.fa {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-#bb-footer .bb-footer__bottom .footer-bucket img {
+#docdata-footer .docdata-footer__bottom img {
     display: inline-block;
     max-width: 170px;
     max-height: 150px;
 }
 
-
-#bb-footer .privacy {
-    font-size: 12px;
-    line-height: 1;
-    /* margin-top: 40px; */
+#docdata-footer .info ul li:not(:last-child):after {
+    content: " |";
 }
 
-#bb-footer .privacy p {
-    margin-bottom: 4px;
-    font-size: 12px;
-}
-
-#bb-footer .privacy a {
-    color: #333;
-}
-
-#bb-footer .privacy .bb-nav__footer-admin-wrap {
-    display: inline-block;
-    width: 100%;
-}
-
-#bb-footer .privacy ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    margin-bottom: 0;
-}
-
-#bb-footer .privacy ul li {
-    float: left;
-}
-
-#bb-footer .privacy ul li a {
-    color: #333;
-    padding: 0 5px;
-}
-
-#bb-footer .privacy ul li:after {
-    content: "|";
-    float: right;
-}
-
-#bb-footer .privacy a:hover {
+#docdata-footer .info a:hover {
+    text-decoration: none;
     color: #ba0000;
 }
-
 
 /* Ref: https://sharingbuttons.io/ */
 .resp-sharing-button__link,
@@ -524,7 +404,8 @@ footer {
   background-color: #55acee
 }
 
-.resp-sharing-button--twitter:hover {
+.resp-sharing-button--twitter:hover,
+.resp-sharing-button--twitter:active {
   background-color: #2795e9
 }
 
@@ -532,7 +413,8 @@ footer {
   background-color: #3b5998
 }
 
-.resp-sharing-button--facebook:hover {
+.resp-sharing-button--facebook:hover,
+.resp-sharing-button--facebook:active {
   background-color: #2d4373
 }
 
@@ -540,7 +422,8 @@ footer {
   background-color: #0077b5
 }
 
-.resp-sharing-button--linkedin:hover {
+.resp-sharing-button--linkedin:hover,
+.resp-sharing-button--linkedin:active {
   background-color: #046293
 }
 
@@ -548,52 +431,9 @@ footer {
   background-color: #777
 }
 
-.resp-sharing-button--email:hover {
-  background-color: #5e5e5e
-}
-
-.resp-sharing-button--facebook {
-  background-color: #3b5998;
-  border-color: #3b5998;
-}
-
-.resp-sharing-button--facebook:hover,
-.resp-sharing-button--facebook:active {
-  background-color: #2d4373;
-  border-color: #2d4373;
-}
-
-.resp-sharing-button--twitter {
-  background-color: #55acee;
-  border-color: #55acee;
-}
-
-.resp-sharing-button--twitter:hover,
-.resp-sharing-button--twitter:active {
-  background-color: #2795e9;
-  border-color: #2795e9;
-}
-
-.resp-sharing-button--email {
-  background-color: #777777;
-  border-color: #777777;
-}
-
 .resp-sharing-button--email:hover,
 .resp-sharing-button--email:active {
-  background-color: #5e5e5e;
-  border-color: #5e5e5e;
-}
-
-.resp-sharing-button--linkedin {
-  background-color: #0077b5;
-  border-color: #0077b5;
-}
-
-.resp-sharing-button--linkedin:hover,
-.resp-sharing-button--linkedin:active {
-  background-color: #046293;
-  border-color: #046293;
+  background-color: #5e5e5e
 }
 
 
@@ -618,12 +458,6 @@ footer {
 
     .lead {
         font-size: 1.0rem !important;
-    }
-
-    #bb-footer .bb-footer__top .menu-social-nav-container a {
-        color: #fff;
-        font-size: 24px;
-        line-height: 1;
     }
 
     .dropdown-item {
@@ -667,12 +501,6 @@ footer {
 }
 
 @media only screen and (min-width: 768px){
-    #bb-footer .privacy {
-        margin-top: 0;
-        /* font-size: 14px; */
-        line-height: 18px;
-    }
-
     #sidebar {
         margin-left: 0;
         width: 300px;
