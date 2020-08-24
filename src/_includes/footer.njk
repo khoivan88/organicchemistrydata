@@ -113,9 +113,13 @@
                     <p class="mb-1">For citation, use this title:
                         "Hans Reich's Collection.{%- if title %} {{ title }}.{% endif -%}"
                     </p>
+                    <p class="mb-1"><a href="/hansreich/">About this Collection</a></p>
                     {%- endif -%}
-                    <p class="copyright mb-1">© {{ currentDateTime.getFullYear() }} ACS Division of Organic Chemistry</p>
-                    <p class="mb-1">Last updated: {% if updated -%}{{ updated.toLocaleDateString() }}{%- else -%}{{ page.date.toLocaleDateString() }}{%- endif -%}</p>
+                    {# <p class="copyright mb-1">© {{ currentDateTime.getFullYear() }} ACS Division of Organic Chemistry</p> #}
+                    <p class="mb-1">
+                        Last updated: {% if updated -%}{{ updated.toLocaleDateString() }}{%- else -%}{{ page.date.toLocaleDateString() }}{%- endif -%}.
+                        © {{ currentDateTime.getFullYear() }} ACS Division of Organic Chemistry
+                    </p>
                     <ul class="list-inline mb-1">
                         <li class="list-inline-item">
                             <a href="https://www.organicdivision.org/contact/" target="_blank" rel="noopener">Contact Us</a></li>
@@ -124,7 +128,7 @@
                         <li class="list-inline-item">
                             <a href="https://www.organicdivision.org/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></li>
                     </ul>
-                    <p class="site-credit mb-1"><a href="{{ about.url | url }}" target="_self">About this Website</a></p>
+                    <p class="mb-1"><a href="{{ about.url | url }}">About this Website</a></p>
                 </div>
             </div>
         </div>
