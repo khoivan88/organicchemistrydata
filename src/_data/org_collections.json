@@ -55,6 +55,10 @@
                     "name": "Reaction Topics",
                     "links": [
                         {
+                            "name": "Acidity and Basicity (William Reusch, Michigan State University)",
+                            "url": "https://www2.chemistry.msu.edu/faculty/reusch/AcidBase/acid-base.html"
+                        },
+                        {
                             "name": "Combinatorial Chemistry Review",
                             "url": "http://www.combichemistry.com"
                         },
@@ -99,7 +103,7 @@
                             "url": "/hansreich/resources/pericyclic/"
                         },
                         {
-                            "name": "Photochemistry-MSU (William Reusch)",
+                            "name": "Photochemistry (William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/photchem.htm"
                         },
                         {
