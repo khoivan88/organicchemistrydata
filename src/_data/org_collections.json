@@ -222,6 +222,10 @@
                             "url": "https://organicchemistrydata.org/solvents/"
                         },
                         {
+                            "name": "Solvent Miscibility Table",
+                            "url": "https://www.sigmaaldrich.com/content/dam/sigma-aldrich/research-essentials/solvents/migrationsolvents1/solvent_miscibility_table.png"
+                        },
+                        {
                             "name": "Solvent Strength Calculation",
                             "url": "https://selekt.biotage.com/blog/determining-solvent-strength-in-flash-column-chromatography"
                         },
