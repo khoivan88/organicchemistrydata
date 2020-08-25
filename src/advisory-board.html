@@ -1,0 +1,75 @@
+---
+layout: base_layout.njk
+
+page_css:
+    url: '/css/advisory-board.css'
+
+header:
+    title: "Organic Chemistry Info/Data Website Advisory Board"
+
+meta_tags:
+  - name: 'description'
+    content: 'This page contains info on the Advisory Board.'
+
+advisory_board:
+    list:
+    - name: Dr. Amanda C. Jones
+      id: amanda-jones
+      img_src: /img/Amanda-Jones.jpg
+      info: Associate Professor <br> Department of Chemistry <br> Wake Forest University <br> Winston-Salem, NC
+    - name: Dr. Ieva L. Reich
+      id: ieva-reich
+      img_src: /img/Ieva-Reich.jpg
+      info: Senior Lecturer, Emerita <br> Department of Chemistry <br> University of Wisconsin <br> Madison, WI
+    - name: Dr. Wayne Goldenberg
+      id: wayne-goldenberg
+      img_src: /img/Wayne-Goldenberg.jpg
+      info: Director - Specialty Monomers & Chemicals Division <br> Teckrez, Inc. <br> Jacksonville, FL
+    - name: Dr. Kevin Jantzi
+      id: kevin-jantzi
+      img_src: /img/Kevin-Jantzi.jpg
+      info: Chair - Department of Chemistry <br> Valparaiso University <br> Valparaiso, IN
+    - name: Dr.  Kristopher J. Kolonko
+      id:  kristopher-kolonko
+      img_src: /img/Kris-Kolonko.jpg
+      info: Stewart's Advanced Instrumentation and Technology Center Director <br> School of Science <br> Siena College <br> Albany, NY
+    - name: Debra J. Saez, Ph.D.
+      id: debra-saez
+      img_src: /img/Debra-Saez.jpg
+      info: President/CEO <br> Activated Complex, Inc. <br> Technically Inc. <br> Synthesis and Manufacturing/Specialty and Fine Organic Chemicals
+    - name: Dr. Ryan Stowe
+      id: ryan-stowe
+      img_src: /img/Ryan-Stowe.jpg
+      info: Assistant Professor <br> Department of Chemistry <br> University of Wisconsin <br> Madison, WI
+
+---
+
+<!-- Style ref: https://bbbootstrap.com/snippets/meet-our-creative-team-section-83571380 -->
+<div class="container-fluid px-5">
+    <div class="row justify-content-center">
+        <div class="col-12 text-center mb-5">
+            <h1 class="mb-0">Advisory Board</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        {%- for member in advisory_board.list %}
+        <div class="col-xl-3 col-md-6 col-12 mb-4">
+            <div class="card text-center rounded-0 border-0">
+                <div class="hex-img mt-5 mb-4">
+                    <svg viewBox="0 0 100 100" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="{{ member.id }}" patternUnits="userSpaceOnUse" width="100" height="100">
+                                <image xlink:href="{{ member.img_src }}" x="-25" width="150" height="100" />
+                            </pattern>
+                        </defs>
+                        <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#{{ member.id }})" />
+                    </svg>
+                </div>
+                <p class="lead font-weight-bold">{{ member.name }}</p>
+                <p class="position">{{ member.info | safe }}</p>
+            </div>
+        </div>
+        {%- endfor %}
+    </div>
+</div>
