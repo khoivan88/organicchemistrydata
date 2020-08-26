@@ -44,18 +44,23 @@ reich_icon_large:
     <div class="container">
         <h1 class="display-4 text-center">{{ doc_statement.title }}</h1>
         <p class="lead text-justify">
-            The idea and majority of the content of this website has come from the late
+            The concept and majority of the content of this website has come from the late
             <a href="{{ hans.bio_url | url }}" {%- if hans.target %}target="{{ hans.target }}" rel="noopener"{%- endif %}>
                 Professor Hans J. Reich
             </a>
-            who served his entire professional academic career at the University of Wisconsin-Madison.
-            Upon
+            who served his entire professional academic career at the University of Wisconsin-Madison. In addition to his numerous
+            contributions to the field of organic chemistry, Professor Reich was a pioneer in distribution of educational content
+            via the world wide web. He began teaching himself programming in the late 1990s, producing new freeware programs, WinPLT
+            and WinDNMR, which were ahead of their time. These programs managed chemical structure drawings, NMR spectra
+            annotations, and simulations cohesively. As an outgrowth of these endeavors, he began the University of
+            Wisconsin-Madison’s Organic Chemistry Information webpage in which he accumulated and curated information for the
+            broader chemistry community to use free of charge. Upon
             <a href="{{ obit.url | url }}" {%- if obit.target %}target="{{ obit.target }}" rel="noopener"{%- endif %}>
                 his untimely death in 2020</a>, the
             <a href="{{ doc.url | url }}" {%- if doc.target %}target="{{ doc.target }}" rel="noopener"{%- endif %}>
                 ACS Organic Division</a>
-            offered to assist in maintaining Professor Reich’s extensive online resources.
-            This website is a product of those efforts.<br>
+            offered to assist in maintaining Professor Reich’s extensive online resources which have impacted the organic chemistry
+            community worldwide.<br>
         </p>
         <p class="lead text-justify">
             We are grateful to the
@@ -68,9 +73,9 @@ reich_icon_large:
             We also graciously thank his wife,
             <a href="{{ ieva.url | url }}"
                 {%- if ieva.target %}target="{{ ieva.target }}" rel="noopener"{%- endif %}>
-                Dr. Ieva L. Reich</a>, and her family for supporting this project
-            where we are able to honor Professor Hans Reich’s 25+ years of website efforts
-            in support the broader organic chemistry community.
+                Dr. Ieva L. Reich</a>,
+            and her family for supporting this project where we are able to honor Professor Hans Reich’s 25+ years of website
+            efforts in support of the broader organic chemistry community.
         </p>
         <img src="{{ reich_icon_large.url }}" class="img-fluid rounded shadow my-3" alt="{{ reich_icon_large.alt }}">
     </div>
