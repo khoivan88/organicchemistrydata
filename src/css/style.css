@@ -337,10 +337,6 @@ mark {
     vertical-align: middle;
 }
 
-.menu-social-nav-container li a span {
-    display: none;
-}
-
 #docdata-footer .docdata-footer__bottom img {
     display: inline-block;
     max-width: 170px;
