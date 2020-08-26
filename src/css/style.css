@@ -14,11 +14,6 @@ body {
     font-family: 'Open Sans', serif;
 }
 
-body section.flex-fill {
-    /* margin-top: -25px; */
-}
-
-
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
@@ -26,6 +21,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .display-1, .display-2, .display-3, .display-4 {
     font-weight: bold;
+}
+
+/* Overwrite Bootstrap 4 default a tag color, its only have contrast of ~3.7. This change makes contrast about 8 */
+a {
+    color: blue;
 }
 
 .page-title-static {
