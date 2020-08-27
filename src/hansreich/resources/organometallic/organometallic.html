@@ -84,8 +84,9 @@ landing_content: |
     </div>
 
 default_script:
-    description: 'Load "Intro" index page as default for "Organometallic Chemistry" section'
-    content: |
+  list:
+    - description: 'Load "Intro" index page as default for "Organometallic Chemistry" section'
+      content: |
         if(!window.location.search) {loadPage('organometallic_index/intro', '.index-content')}
 
 ---

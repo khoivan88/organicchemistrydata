@@ -24,8 +24,10 @@
             <!-- {{ script.description | safe }} -->
             <script {%- if script.url %} src="{{ script.url | url }}"{%- endif -%}>{{ script.content | safe }}</script>
         {%- endfor %}
-        {%- if default_script %}
-            <!-- {{ default_script.description | safe }} -->
-            <script {%- if default_script.url %} src="{{ default_script.url | url }}"{%- endif -%}>{{ default_script.content | safe }}</script>
-        {%- endif %}
+    {%- endif %}
+    {%- if default_script %}
+        {%- for script in default_script.list %}
+            <!-- {{ script.description | safe }} -->
+            <script {%- if script.url %} src="{{ script.url | url }}">{%- else %}>{{ script.content | safe }}{%- endif -%}</script>
+        {%- endfor %}
     {%- endif %}

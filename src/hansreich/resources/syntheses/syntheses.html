@@ -51,8 +51,9 @@ landing_content: |
     </div>
 
 default_script:
-    description: 'Load "Names" index page as default'
-    content: |
+  list:
+    - description: 'Load "Names" index page as default'
+      content: |
         if (!window.location.search) {loadPage('groupby/names', '.index-content')}
 
 ---

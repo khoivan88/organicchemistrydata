@@ -11,10 +11,11 @@ meta_tags:
     content: 'This set of pages originates from Professor Hans Reich (UW-Madison) "Advanced Organic Chemistry" course (Chem 547). It describes chemistry of carbonyl compounds, including but not limited to these topics: enolates as nucleophiles; enolate equivalents with higher and lower reactivity; carbonyl groups as electrophiles; and controlling reactivity, regioselectivity, and stereoselectivity.'
 
 default_script:
-  description: 'Load first link as default'
-  content: |
-      let url = getDataPath() + document.querySelector('.index-content a').href.split('#')[1]
-      loadPage(url, '#content .full-list')
+  list:
+    - description: 'Load first link as default'
+      content: |
+        let url = getDataPath() + document.querySelector('.index-content a').href.split('#')[1]
+        loadPage(url, '#content .full-list')
 
 ---
 

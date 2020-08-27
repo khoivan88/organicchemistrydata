@@ -13,8 +13,9 @@ meta_tags:
 updated: 2020-02-14
 
 default_script:
-    description: 'Load "NMR Info" index page and its "Intro" page as default'
-    content: |
+  list:
+    - description: 'Load "NMR Info" index page and its "Intro" page as default'
+      content: |
         var loadPdfInFrame = true
         if (!window.location.search) {
             loadPage('nmr_index/info', '.index-content')

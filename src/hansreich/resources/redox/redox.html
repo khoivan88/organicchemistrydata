@@ -11,8 +11,9 @@ meta_tags:
     content: 'This set of pages originates from Professor Hans Reich (UW-Madison) "Advanced Organic Chemistry" course (Chem 547). It describes common reduction and oxidation in Organic Chemistry including typical reducing and oxidizing reagents, their usages, references, and examples in Total Synthesis.'
 
 default_script:
-    description: 'Load first link as default'
-    content: |
+  list:
+    - description: 'Load first link as default'
+      content: |
         let url = getDataPath() + document.querySelector('.index-content a').href.split('#')[1]
         loadPage(url, '#content .full-list')
 
