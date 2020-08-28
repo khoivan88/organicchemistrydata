@@ -103,6 +103,15 @@ function loadContent () {
             })
         }
 
+        // For display pointer to specific step in syntheses
+        if (this.dataset.top && link.dataset.left) {
+          let top = parseInt(this.getAttribute('data-top'))
+          let left = parseInt(this.getAttribute('data-left'))
+          setTimeout(function () {
+            window.showPointer(top, left)
+          }, 500)
+        }
+
         // Scroll to section if exists
         if (section) {
           // Reload page and create new url (optional)
