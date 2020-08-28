@@ -1,4 +1,4 @@
-## Purpose
+# Purpose
 
 Round 2 on fixing pages in Hans Reich's Total Syntheses section.
 
