@@ -285,6 +285,10 @@
                         {
                             "name": "Chemiplus (interactive)",
                             "url": "http://chemiplus.net"
+                        },
+                        {
+                            "name": "Resources on Periodic Table (Steven Murov)",
+                            "url": "http://murov.info/periodictables.htm"
                         }
                     ]
                 },
