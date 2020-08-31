@@ -55,7 +55,7 @@
                     "name": "Reaction Topics",
                     "links": [
                         {
-                            "name": "Acidity and Basicity (William Reusch, Michigan State University)",
+                            "name": "Acidity and Basicity (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/AcidBase/acid-base.html"
                         },
                         {
@@ -103,7 +103,7 @@
                             "url": "/hansreich/resources/pericyclic/"
                         },
                         {
-                            "name": "Photochemistry (William Reusch, Michigan State University)",
+                            "name": "Photochemistry (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/photchem.htm"
                         },
                         {
@@ -138,6 +138,16 @@
                         {
                             "name": "Monomerchem, Inc. (by Marcus Brackeen)",
                             "url": "http://www.monomerchem.com/display4.html"
+                        },
+                        {
+                            "name": "\"ReactionFlash&trade; App\" (developed by Elsevier and Prof.Erick M.Carreira, ETH-Zürich)",
+                            "description": "over 1000 named reactions, their mechanisms and examples published in peer-reviewed literature",
+                            "url": "https://www.elsevier.com/solutions/reaxys/who-we-serve/education-and-research/reactionflash"
+                        },
+                        {
+                            "name": "ReactionGuessr",
+                            "description": "a guess named reaction game, developed by Vincent Le Fouler",
+                            "url": "https://reactionguessr.herokuapp.com/"
                         }
                     ]
                 },
@@ -159,6 +169,14 @@
                         {
                             "name": "Total Synthesis of Natural Products Dojo",
                             "url": "https://w3pharm.u-shizuoka-ken.ac.jp/~yakuzo/pass-eng/pdf-eng.html"
+                        },
+                        {
+                            "name": "Prof. Dirk Trauner (New York University) group's Total syntheses problem sets",
+                            "url": "https://www.traunergroup.org/denksport"
+                        },
+                        {
+                            "name": "\"Synthesis Club Roadmap Problems\" by German Cancer Research Center",
+                            "url": "https://www.dkfz.de/en/drugs/Synthesis_Quiz.html"
                         }
                     ]
                 }
@@ -174,8 +192,12 @@
                     "url": "/hansreich/resources/fundamentals/#a_values"
                 },
                 {
-                    "name": "Bond Energies and Bond Dissociation Energies-MSU (William Reusch)",
+                    "name": "Bond Energies and Bond Dissociation Energies (Prof. William Reusch, Michigan State University)",
                     "url": "https://www2.chemistry.msu.edu/faculty/reusch/OrgPage/bndenrgy.htm"
+                },
+                {
+                    "name": "Bond Dissociation Energies (Prof. Armen Zakarian, University of California Santa Barbara)",
+                    "url": "https://labs.chem.ucsb.edu/zakarian/armen/11---bonddissociationenergy.pdf"
                 },
                 {
                     "name": "Bond Dissociation Energy Estimator by the National Renewable Energy Laboratory (NREL)",
@@ -321,7 +343,7 @@
                     "url": "http://www.tutorsville.net/formulas/"
                 },
                 {
-                    "name": "Frequency - Wavelength - Energy Converter-MSU (William Reusch)",
+                    "name": "Frequency - Wavelength - Energy Converter (Prof. William Reusch, Michigan State University)",
                     "url": "https://www2.chemistry.msu.edu/faculty/reusch/OrgPage/cnvcalc.htm"
                 },
                 {
@@ -339,7 +361,7 @@
                     "name": "General",
                     "links": [
                         {
-                            "name": "Spectroscopy-William Reusch (MSU)",
+                            "name": "Spectroscopy (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/spectro.htm"
                         },
                         {
@@ -356,11 +378,11 @@
                             "url": "/hansreich/resources/nmr/"
                         },
                         {
-                            "name": "NMR Spectroscopy-William Reusch (MSU)",
+                            "name": "NMR Spectroscopy (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/nmr/nmr1.htm"
                         },
                         {
-                            "name": "NMR Supplemental NMR Topics-William Reusch (MSU)",
+                            "name": "NMR Supplemental NMR Topics (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/nmr/nmr2.htm"
                         },
                         {
@@ -374,6 +396,10 @@
                         {
                             "name": "NMR Multiplet Guide-Nowick (UCI)",
                             "url": "https://www.chem.uci.edu/~jsnowick/groupweb/files/MultipletGuideV4.pdf"
+                        },
+                        {
+                            "name": "Dr. Glenn Facey (University of Ottawa) NMR blogs",
+                            "url": "http://u-of-o-nmr-facility.blogspot.com/"
                         }
                     ]
                 },
@@ -439,11 +465,11 @@
                     "name": "Mass Spectroscopy",
                     "links": [
                         {
-                            "name": "MS Spectroscopy-William Reusch (MSU)",
+                            "name": "MS Spectroscopy (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/MassSpec/masspec1.htm"
                         },
                         {
-                            "name": "Exact Masses & Isotope Abundance Ratios and Calculators-William Reusch (MSU)",
+                            "name": "Exact Masses & Isotope Abundance Ratios and Calculators (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/OrgPage/mass.htm"
                         },
                         {
@@ -456,7 +482,7 @@
                     "name": "UV Spectroscopy",
                     "links": [
                         {
-                            "name": "UV Spectroscopy-William Reusch (MSU)",
+                            "name": "UV Spectroscopy (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/UV-Vis/spectrum.htm"
                         }
                     ]
@@ -465,11 +491,11 @@
                     "name": "IR Spectroscopy",
                     "links": [
                         {
-                            "name": "IR Spectroscopy-William Reusch (MSU)",
+                            "name": "IR Spectroscopy (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/InfraRed/infrared.htm"
                         },
                         {
-                            "name": "IR Problems-William Reusch (MSU)",
+                            "name": "IR Problems (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/Questions/Spectroscopy/irmsprb/infrared.htm"
                         },
                         {
@@ -592,7 +618,7 @@
                     "name": "Stereochemistry",
                     "links": [
                         {
-                            "name": "Chiral Configurations-William Reusch (MSU)",
+                            "name": "Chiral Configurations (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/sterism3.htm#isom13"
                         },
                         {
@@ -617,7 +643,7 @@
                             "url": "/hansreich/resources/organolithium/"
                         },
                         {
-                            "name": "Organometallic Chemistry General-William Reusch (MSU)",
+                            "name": "Organometallic Chemistry General (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/orgmetal.htm#met10"
                         },
                         {
@@ -630,7 +656,7 @@
                     "name": "Organic Compound Special Types",
                     "links": [
                         {
-                            "name": "Heterocyclic Chemistry-William Reusch (MSU)",
+                            "name": "Heterocyclic Chemistry (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/heterocy.htm"
                         },
                         {
@@ -642,19 +668,19 @@
                             "url": "http://www.alanwood.net/pesticides/index_cn_frame.html"
                         },
                         {
-                            "name": "Polymers-William Reusch (MSU)",
+                            "name": "Polymers (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/polymers.htm#polmr1"
                         },
                         {
-                            "name": "Carbohydrates-William Reusch (MSU)",
+                            "name": "Carbohydrates (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/carbhyd.htm#carb1"
                         },
                         {
-                            "name": "Proteins and Amino Acids-William Reusch (MSU)",
+                            "name": "Proteins and Amino Acids (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/proteins.htm#aacd1"
                         },
                         {
-                            "name": "Nucleic Acids-William Reusch (MSU)",
+                            "name": "Nucleic Acids (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/nucacids.htm#nacd1"
                         },
                         {
@@ -683,8 +709,17 @@
                             "url": "https://www.cas.org/sites/default/files/documents/beyond_cassi.pdf"
                         },
                         {
+                            "name": "ChEMBL (RSC)",
+                            "description": "manually curated databases of bioactive molecules with drug-like properties (~6900 compounds, ~9800 bioactivities)",
+                            "url": "https://www.ebi.ac.uk/chembl/"
+                        },
+                        {
                             "name": "Chemical Abstract Service (CAS)",
                             "url": "https://www.cas.org/"
+                        },
+                        {
+                            "name": "ChemSpider (RSC)",
+                            "url": "http://www.chemspider.com/"
                         },
                         {
                             "name": "ChemSynthesis",
@@ -886,25 +921,30 @@
             "description": "Links to resources for doing various general laboratory procedures in organic chemistry labs",
             "links": [
                 {
-                "name": "Not Voodoo Organic Techniques/Information",
-                "url": "http://chem.chem.rochester.edu/%7Envd/index.php"
+                    "name": "Not Voodoo Organic Techniques/Information",
+                    "url": "http://chem.chem.rochester.edu/%7Envd/index.php"
                 },
                 {
-                "name": "NOP General Techniques",
-                "url": "https://www.oc-praktikum.de/nop/en-techniques"
+                    "name": "NOP General Techniques",
+                    "url": "https://www.oc-praktikum.de/nop/en-techniques"
                 },
                 {
-                "name": "NOP all Experiments",
-                "url": "https://www.oc-praktikum.de/nop/index.php?page=experiments&lang=en&subset=none&term=%25&type=title&difficulty=%25"
+                    "name": "NOP all Experiments",
+                    "url": "https://www.oc-praktikum.de/nop/index.php?page=experiments&lang=en&subset=none&term=%25&type=title&difficulty=%25"
                 },
                 {
-                "name": "ChemSpider Synthetic Procedure Pages",
-                "url": "http://cssp.chemspider.com/"
+                    "name": "ChemSpider Synthetic Procedure Pages",
+                    "url": "http://cssp.chemspider.com/"
                 },
                 {
-                "name": "Organic Syntheses",
-                "url": "https://www.organicdivision.org/OrganicSyntheses/"
+                    "name": "Organic Syntheses",
+                    "url": "https://www.organicdivision.org/OrganicSyntheses/"
+                },
+                {
+                    "name": "\"The Schlenk Line Survival Guide\" by Dr. Andryj Borys",
+                    "url": "https://schlenklinesurvivalguide.com/"
                 }
+
             ]
         },
         {
@@ -1045,7 +1085,7 @@
             "description": "Links and resources for educators and students in teaching and learning organic chemistry",
             "links": [
                 {
-                    "name": "Virtual Textbook of Organic Chemistry-William Reusch (MSU)",
+                    "name": "Virtual Textbook of Organic Chemistry (Prof. William Reusch, Michigan State University)",
                     "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/intro1.htm"
                 },
                 {
@@ -1083,10 +1123,6 @@
                 {
                     "name": "Electron Pushing/Drawing Mechanisms",
                     "url": "/hansreich/resources/electron_pushing/"
-                },
-                {
-                    "name": "Organic Chemistry Practice Problems-William Reusch (MSU)",
-                    "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Questions/problems.htm"
                 },
                 {
                     "name": "Organic Education Resources (OrganicERs.org cCWCS)",
@@ -1180,6 +1216,10 @@
                             "url": "https://macmillan.princeton.edu/presentations/"
                         },
                         {
+                            "name": "Richmond Sarpong Group Meetings (University of California Berkeley)",
+                            "url": "https://sarponggroup.com/presentations/"
+                        },
+                        {
                             "name": "Scott Denmark Group Meetings (University of Illinois)",
                             "url": "http://faculty.scs.illinois.edu/denmark/?page_id=5982"
                         },
@@ -1190,6 +1230,39 @@
                         {
                             "name": "Marty Burke (University of Illinois)",
                             "url": "http://faculty.scs.illinois.edu/burke/index.php?p=group_meetings"
+                        },
+                        {
+                            "name": "Brian Stoltz Group Meetings (California Institute of Technology)",
+                            "url": "https://stoltz2.caltech.edu/seminars2.html"
+                        }
+                    ]
+                },
+                {
+                    "name": "Questions and Problem sets",
+                    "links": [
+                        {
+                            "name": "Organic Chemistry Problems (Prof. Joseph J. Topczewski, University of Minnesota)",
+                            "description": "example problems and answers for students at the introductory graduate student level or advanced undergraduate level",
+                            "url": "https://www.organicchemproblems.com/"
+                        },
+                        {
+                            "name": "Organic Chemistry Practice Problems (Prof. William Reusch, Michigan State University)",
+                            "description": "problems and answers in most undergraduate organic chemistry courses",
+                            "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Questions/problems.htm"
+                        },
+                        {
+                            "name": "\"ReactionFlash&trade; App\" (developed by Elsevier and Prof.Erick M.Carreira, ETH-Zürich)",
+                            "description": "over 1000 named reactions, their mechanisms and examples published in peer-reviewed literature",
+                            "url": "https://www.elsevier.com/solutions/reaxys/who-we-serve/education-and-research/reactionflash"
+                        },
+                        {
+                            "name": "Advanced Problems in Organic Chemistry (APOC) (Android)",
+                            "description": "developed by Niels Sievertsen, provide over 900 challenging organic problems sets by professor Evans (Harvard). Also <a href='https://apps.apple.com/ch/app/apoc-advanced-problems-in-organic-chemistry/id1019335489?l=en' target='_blank' rel='noopener'>available for iOS</a>",
+                            "url": "https://play.google.com/store/apps/details?id=com.ionicframework.eq4303509&hl=en_US"
+                        },
+                        {
+                            "name": "Fukuyama group problem set for graduate students",
+                            "url": "http://www.f.u-tokyo.ac.jp/~fukuyama/index-e.htm"
                         }
                     ]
                 }
@@ -1333,6 +1406,31 @@
                         {
                             "name": "Dan Lehnherr’s Chemistry Resources Summary",
                             "url": "http://www.danlehnherr.com/resources.html"
+                        },
+                        {
+                            "name": "\"Meta-List of Free Organic Chem Resources\" (Prof. Alex Grenning, University of Florida)",
+                            "url": "https://t.co/L4m0fdruxl?amp=1"
+                        },
+                        {
+                            "name": "Prof. Dirk Trauner group Resource page",
+                            "url": "https://www.traunergroup.org/resources"
+                        },
+                        {
+                            "name": "Prof. Ryan Shenvi group Resource page",
+                            "url": "https://www.shenvilab.org/education"
+                        },
+                        {
+                            "name": "Prof. Richmond Sarpong group Resource page",
+                            "url": "https://sarponggroup.com/resources/"
+                        }
+                    ]
+                },
+                {
+                    "name": "Internships and Fellowships",
+                    "links": [
+                        {
+                            "name": "Interships and Fellowships by DOC",
+                            "url": "https://www.organicdivision.org/internships-fellowships/"
                         }
                     ]
                 }
