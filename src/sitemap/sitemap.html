@@ -12,12 +12,15 @@ header:
 
 <div class="container">
     <h1>{{ header.title }}</h1>
-
     {%- for item in collections.all %}
     {%- if item.data.sitemap_ignore !== true %}
         <ul class="sitemap">
             <li><a href="{{ site.url }}{{ item.url | url }}">{{ site.url }}{{ item.url | url }}</a></li>
         </ul>
-    {%- endif %}
-    {%- endfor %}
+    {%- else %}
+        <ul class="sitemap">
+            <li><a href="{{ site.url }}{{ item.data.sitemap_url_prefix }}{%- if item.data.tags -%}{{ item.data.tags }}%2F{%- endif -%}{{ item.fileSlug | url }}">{{ site.url }}{{ item.data.sitemap_url_prefix }}{%- if item.data.tags -%}{{ item.data.tags }}%2F{%- endif -%}{{ item.fileSlug | url }}</a></li>
+        </ul>
+    {% endif %}
+    {% endfor %}
 </div>
