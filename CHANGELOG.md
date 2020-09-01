@@ -1,5 +1,63 @@
 # CHANGELOG
 
+**More detailed changes can be found in the [commit list of the repo](https://github.com/khoivan88/organicchemistrydata/commits/master)**
+
+## 2020-08-31
+
+- Add lazy loading for images in the site
+- Add multiple resources to 'Links' page
+- Change a tag link color to make give it more constrast, in an effort to make the site more accessible
+- Compress all gif images (saved about 80 MB)
+
+## 2020-08-24
+
+- Add lazy loading for images in the site
+- Add Advisory Board page and link to it in the footer
+- Add meta tags and descriptions to multiple pages in 'Reich Collection'
+- Fix multiple broken links to 'Total Syntheses' section for pages in 'Organometallic', 'Redox', 'Carbonyl chemistry', etc.
+- Change 'Reich collection' logo, provided by the Advisory Board
+- Change text in 'Reich Collection' landing page, provided by the Advisory Board
+
+
+## 2020-08-11
+
+- Add 'NMR gallery' into 'Reich Collection' > 'NMR'
+- Add tooltip to display compounds' structure upon hovering mouse over the name or formula in 'NMR gallery'
+- Add option to display last update date if exists in the footer
+- Add Google Search engine for the site (thanks to Joe Ward for setting it up)
+- Modify [sitemap.xml](/src/sitemap/sitemap.njk) file to include dynamically loaded pages to submit to google search index
+- Upgrade search function for pages using 'sidemenu_with_dropdown_template':
+  - Display number of found queries
+  - Display button to go to the next found item or go back to the previous one
+- Fix variety of codes in pages in 'NMR' section to HTML 5 code and remove bad codes
+
+## 2020-07-31
+
+- Add 'NMR' section into 'Hans Reich collection'
+- Add chemical shift and coupling pages into 'Reich Collection' > 'NMR'
+- Move solvent page to its own page without template for faster loading
+- Add submenu items for top navbar
+- Change style for Hans Reich quote on 'Reich Collection' landing page
+
+## 2020-07-22
+
+- Add 'Carbonyl chemistry' section into 'Hans Reich collection'
+- Add 'Redox chemistry' section into 'Hans Reich collection'
+- Add 'Pericyclic reactions' section into 'Hans Reich collection'
+- Add 'Fundamentals of Organic Chemistry' section into 'Hans Reich collection'
+- Add sections in Hans Reich's Chem 547 course into: 'Organometallic'
+
+## 2020-07-19
+
+- Add [additional instruction](/docs/editing_links_in_organometallic.md) on how to edit broken links in 'Reich' > 'Organometallic' section
+- Add red text indication to internal Hans Reich pages to the 'Links' page
+- Add 'Organic Reference Resolver' on 'Links' page
+- Add 'Organometallic' section into 'Hans Reich Collection'
+- Add search and scroll to found query for all pages using 'side_menu_with_dropdown' template
+- Add instruction for citation title for pages in Hans Reich collection in the footer
+- Change: redesign 'Total Syntheses' to have index page inside the side menu
+- Change: remove some extra code in 'Total Syntheses' index pages; and split large pages to multiple pages (e.g. 'Reaction types' and 'Reagent types')
+
 ## 2020-07-07
 
 - Create and Update `CONTRIBUTING.md`
