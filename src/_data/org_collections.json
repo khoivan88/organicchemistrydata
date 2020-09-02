@@ -1201,6 +1201,11 @@
                             "name": "\"Organometallic Chemistry\"",
                             "description": "Chem 842 course",
                             "url": "/hansreich/resources/organometallic/"
+                        },
+                        {
+                            "name": "Aliphatic C&ndash;H oxidation (Prof. M. Christina White, University of Illinois)",
+                            "description": "graduate or advanced undergraduate level lecture. Also <a href='http://faculty.scs.illinois.edu/white/img/News/Aliphatic%20C-H%20hydroxylation.August31.Chinese.pdf' target='_blank' rel='noopener'>available in Chinese</a>.",
+                            "url": "http://faculty.scs.illinois.edu/white/img/News/Aliphatic%20C-H%20hydroxylation%20chemistry%20Final.August31.pdf"
                         }
                     ]
                 },
