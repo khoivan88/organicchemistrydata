@@ -177,6 +177,11 @@
                         {
                             "name": "\"Synthesis Club Roadmap Problems\" by German Cancer Research Center",
                             "url": "https://www.dkfz.de/en/drugs/Synthesis_Quiz.html"
+                        },
+                        {
+                            "name": "\"Synthesis Workshop\" by Dr. Matthew Horwitz",
+                            "description": "an open access video podcast, including four complementary modules - Total Synthesis, Named Reactions, Research Spotlights, and Culture of Chemistry",
+                            "url": "https://synthesis-workshop.com"
                         }
                     ]
                 }
@@ -1291,16 +1296,21 @@
                     "url": "http://www.ch.ic.ac.uk/video/"
                 },
                 {
-                    "name": "Protein Data Bank Videos",
-                    "url": "https://pdb101.rcsb.org/learn/videos"
-                },
-                {
-                    "name": "Heterocyclic Chemistry @Scripps Lectures 2019 by Phil Baran",
+                    "name": "Heterocyclic Chemistry @Scripps Lectures 2019 by Prof. Phil Baran",
                     "url": "https://www.youtube.com/channel/UCqfuQDFKYu63EmnCsNNOHSQ"
                 },
                 {
-                    "name": "Organomettallics @Scripps Lectures 2019 by Keary Engle",
+                    "name": "Organomettallics @Scripps Lectures 2019 by Prof. Keary Engle",
                     "url": "https://www.youtube.com/playlist?list=PL_BHDFhSGkPaL1sFvYFQ8rl7cMgeFN2JJ"
+                },
+                {
+                    "name": "\"Synthesis Workshop\" by Dr. Matthew Horwitz",
+                    "description": "an open access video podcast, including four complementary modules - Total Synthesis, Named Reactions, Research Spotlights, and Culture of Chemistry",
+                    "url": "https://synthesis-workshop.com"
+                },
+                {
+                    "name": "Protein Data Bank Videos",
+                    "url": "https://pdb101.rcsb.org/learn/videos"
                 }
             ]
 
