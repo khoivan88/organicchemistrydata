@@ -38,4 +38,5 @@ jobs:
         remote_path: ${{ secrets.DEPLOY_PATH }}
         remote_host: ${{ secrets.DEPLOY_HOST }}
         remote_user: ${{ secrets.DEPLOY_USER_KV }}
+        remote_port: ${{ secrets.DEPLOY_SSH_PORT }}
         remote_key: ${{ secrets.DEPLOY_KEY_KV }}
