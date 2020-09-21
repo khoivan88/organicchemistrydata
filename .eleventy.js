@@ -26,29 +26,29 @@ module.exports = function (eleventyConfig) {
   //     return imgPath;
   //   },
   // });
-  eleventyConfig.addPlugin(lazyImagesPlugin, {
-    transformImgPath: (src, options) => {
-      const isAbsoluteUri =
-        src.startsWith('/') ||
-        src.startsWith('http://') ||
-        src.startsWith('https://') ||
-        src.startsWith('data:');
+  // eleventyConfig.addPlugin(lazyImagesPlugin, {
+  //   transformImgPath: (src, options) => {
+  //     const isAbsoluteUri =
+  //       src.startsWith('/') ||
+  //       src.startsWith('http://') ||
+  //       src.startsWith('https://') ||
+  //       src.startsWith('data:');
 
-      // If the file path is relative to the output document
-      if (src.startsWith('./') || src.startsWith('../') || !isAbsoluteUri) {
-        const lastSlashPosition = options.outputPath.lastIndexOf('/');
-        const outputDir = options.outputPath.substring(0, lastSlashPosition + 1);
-        return `${outputDir}${src}`.replace(eleventyOutputDir, eleventyInputDir);
-      }
+  //     // If the file path is relative to the output document
+  //     if (src.startsWith('./') || src.startsWith('../') || !isAbsoluteUri) {
+  //       const lastSlashPosition = options.outputPath.lastIndexOf('/');
+  //       const outputDir = options.outputPath.substring(0, lastSlashPosition + 1);
+  //       return `${outputDir}${src}`.replace(eleventyOutputDir, eleventyInputDir);
+  //     }
 
-      // // If the file path is relative to the project root
-      // if (src.startsWith('/') && !src.startsWith('//')) {
-      //   return `.${src}`;
-      // }
+  //     // // If the file path is relative to the project root
+  //     // if (src.startsWith('/') && !src.startsWith('//')) {
+  //     //   return `.${src}`;
+  //     // }
 
-      return src;
-    },
-  });
+  //     return src;
+  //   },
+  // });
   // Minify HTML output
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
     if( outputPath.endsWith(".html") ) {
