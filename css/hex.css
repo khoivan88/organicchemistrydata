@@ -1,0 +1,157 @@
+body {
+    padding-top: 58px;
+}
+
+
+/* ---------------------------------------------------
+    JUMBOTRON STYLE
+----------------------------------------------------- */
+.jumbotron.jumbotron-fluid {
+	padding-top: 0px;
+	padding-bottom: 1rem;
+}
+
+.hex-container {
+	background:rgb(58, 100, 134);
+	margin: auto;
+}
+
+.hex-col {
+	padding-top: 2.5%;
+}
+.hex-holder {
+  position: relative;
+  width: 82%;
+  height: 65px;
+  vertical-align: center;
+  background-color: white;
+  color: rgb(186, 0, 0);
+  margin: 10px 0;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+.hex-holder.open {
+  height: 130px;
+  align-items: start !important;
+}
+
+.hex-holder.open .hex-content-detail {
+    padding-top: 10px !important;
+}
+
+/* .hex-holder:hover {
+	background-color: rgb(58, 100, 134);
+	color: white;
+} */
+
+.hex-content {
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	font-weight: bold;
+    height: 56px;
+    text-align: center;
+    color: rgb(186, 0, 0);
+    /* padding: 0px 5px; */
+}
+
+.hex-holder .dropdown-menu {
+    background-color: transparent;
+    position: inherit;
+}
+
+.hex-content-detail {
+    font-size: 14px;
+    max-height: 105px;
+    overflow-y: auto;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: black;
+}
+
+.hex-content-detail a{
+    color: white;
+}
+
+
+/* hexagon */
+@media screen and (min-width: 576px) {
+    .hex-container {
+        /* background: url('/img/orgn-bkg.jpg') no-repeat; */
+        background: url('/organicchemistrydata/img/orgn-bkg.jpg');
+        /* background: url('/img/orgn-bkg.jpg'); */
+        /* background-repeat: repeat-y; */
+        /* max-width: 1400px; */
+        margin: auto;
+    }
+
+    .hex-holder {
+    position: relative;
+    width: 170px;
+    height: 98.15px;
+    background-color: white;
+    color: rgb(186, 0, 0);
+    margin: 49.07px 0;
+    border-left: 0px;
+    border-right: 0px;
+    }
+
+    .hex-holder:before,
+    .hex-holder:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        left: 0;
+        border-left: 85px solid transparent;
+        border-right: 85px solid transparent;
+    }
+
+    .hex-holder:before {
+        bottom: 100%;
+        border-bottom: 49.07px solid white;
+    }
+
+    .hex-holder:after {
+        top: 100%;
+        width: 0;
+        border-top: 49.07px solid white;
+    }
+
+    .hex-holder:hover {
+        background-color: #0E2D46;
+        color: white;
+    }
+
+    .hex-holder:hover:before {
+        bottom: 100%;
+        border-bottom: 49.07px solid #0E2D46;
+    }
+
+    .hex-holder:hover:after {
+        top: 100%;
+        width: 0;
+        border-top: 49.07px solid #0E2D46;
+    }
+
+    .hex-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        height: 56px;
+    }
+
+    .hex-content-detail {
+        display: none;
+    }
+
+    .hex-holder:hover .hex-content-detail {
+        display: block;
+        color: white;
+    }
+
+    .hex-holder:hover .hex-content {
+        display: none;
+    }
+
+}

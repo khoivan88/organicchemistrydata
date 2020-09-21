@@ -1,0 +1,19 @@
+.card {
+    background-color: #E8EAF6;
+    padding-top: 0px;
+    /* cursor: pointer; */
+    border-top: 4px solid #ba0000 !important;
+    transition: 0.5s;
+    height: auto;
+    min-height: 460px;
+}
+
+.card:hover {
+    box-shadow: 0 0 2px 2px #ba0000;
+    transition: 0.5s;
+}
+
+svg {
+    height: 200px;
+    width: 240px
+}
