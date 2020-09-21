@@ -194,7 +194,7 @@
             "links": [
                 {
                     "name": "A-Values",
-                    "url": "/hansreich/resources/fundamentals/#a_values"
+                    "url": "/hansreich/resources/fundamentals/?page=a_values"
                 },
                 {
                     "name": "Bond Energies and Bond Dissociation Energies (Prof. William Reusch, Michigan State University)",
@@ -210,7 +210,7 @@
                 },
                 {
                     "name": "Electronegativities of Elements-Periodic Table",
-                    "url": "/hansreich/resources/fundamentals/#electronegativities"
+                    "url": "/hansreich/resources/fundamentals/?page=electronegativities"
                 },
                 {
                     "name": "Organoboron Chemistry",

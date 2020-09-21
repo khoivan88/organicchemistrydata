@@ -7,6 +7,6 @@ _site/
 
 .vscode
 .DS_Store
-.lazyimages.json
+# .lazyimages.json
 
 dev/
