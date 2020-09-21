@@ -1,85 +1,44 @@
 ---
 layout: hansreich_base_layout.njk
 
-header:
-    title: 'Total Syntheses'
-
-title: 'Total Syntheses'
-
-id: 'syntheses-info'
-
 specific_page_js:
     list:
     - description: 'Control side menu and toogle button'
       url: '/js/sideMenu.js'
-    - description: 'Dynamic loading pages in Total Syntheses section'
-      url: '/js/synthesesPages.js'
-
+    - description: 'Dynamic loading of Index and Main Content'
+      url: '/js/sideMenuWithDropdown.js'
+    - description: 'To highlight search term'
+      url: 'https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js'
 ---
-
-{# <div class="container-fluid d-flex justify-content-center mx-0 bg-white">
-    <nav class="navbar syntheses-navbar navbar-expand-lg navbar-light w-100">
-        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle {{ title }} page indices">
-            <a class="navbar-text d-inline d-md-none" href="#">Index</a>
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarSupportedContent2">
-            <ul class="nav nav-pills justify-content-center">
-                <li class="nav-item">
-                    <a href="{{ '/hansreich/resources/syntheses' | url }}" class="nav-link"
-                        data-toggle="collapse" data-target="#navbarSupportedContent2.show">Intro</a>
-                </li>
-                {%- for group in collections.groupby %}
-                    <li class="nav-item">
-                        <a href="#{{ group.fileSlug }}" class="nav-link" data-groupedby="{{ group.fileSlug }}"
-                            data-toggle="collapse" data-target="#navbarSupportedContent2.show">{{ group.fileSlug | toTitleCase }}</a>
-                    </li>
-                {%- endfor %}
-            </ul>
-        </div>
-    </nav>
-</div> #}
 
 <div class="wrapper">
     <!-- Sidebar -->
     <nav id="sidebar" class="align-items-start px-0 pt-3 pb-4">
-        <!-- <div class="sidebar-header text-center">
-            <h6 class="d-inline-flex align-self-center my-1">List</h6>
-        </div> -->
-        <div class="input-group pt-2 px-1">
-            {# <div class="input-group-prepend">
-                <label class="input-group-text" for="indexInputGroup">Group by</label>
-            </div> #}
+        <div class="index-select pt-2 px-1 w-100">
             <select class="index custom-select" id="indexInputGroup">
-                <option selected>Choose...</option>
-                {# <option data-url="index.html">All</option>
-                <option data-url="animals.html">Animals</option>
-                <option data-url="cars.html">Cars</option>
-                <option data-url="motorcycles.html">Motorcycles</option>
-                <option data-url="plants.html">Plants</option> #}
-                <optgroup label="Group by">
-                {%- for group in collections.groupby %}
-                    {%- if group.fileSlug != 'information' %}
-                    <option data-url="{{ group.url | url }}">{{ group.fileSlug | toTitleCase }}</option>
-                    {%- endif %}
-                {%- endfor -%}
-                </optgroup>
-                <optgroup label="Details">
-                {%- for group in collections.groupby %}
-                    {%- if group.fileSlug == 'information' %}
-                    <option data-url="{{ group.url | url }}">{{ group.fileSlug | toTitleCase }}</option>
-                    {%- endif %}
-                {%- endfor -%}
-                </optgroup>
+                {{ content | safe }}
             </select>
+            <div class="container px-0">
+                <form id="scrollToLinkForm">
+                    <div class="input-group input-group-sm mb-3">
+                        <input id="sideMenuSearch" type="text" class="form-control border-right-0" placeholder="Search term" aria-label="Search term" aria-describedby="scrollToLinkButton" autocomplete="off">
+                        <div class="input-group-append">
+                            <div id="matchResult" class="d-none border-top border-bottom">
+                                <span class="input-group-text px-1 py-0 border-0 bg-transparent" id="matchText"></span>
+                                <button class="btn btn-sm px-1 py-0 border-0" type="button" id="prev_button"><i class="icon-angle-up" aria-hidden="true"></i></button>
+                                <button class="btn btn-sm px-1 py-0 border-0" type="button" id="next_button"><i class="icon-angle-down" aria-hidden="true"></i></button>
+                            </div>
+                            <button class="btn btn-outline-dark" type="submit" id="scrollToLinkButton"><i class="icon-search" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
 
-        <div id="navbar-left" class="container-fluid py-5">
-            <div class="syntheses-groupedby w-100">
-            </div>
 
+        <div id="navbar-left" class="container-fluid mt-5 py-5">
+            <div class="index-content w-100">
+            </div>
         </div>
     </nav>
 
@@ -88,12 +47,11 @@ specific_page_js:
         <button type="button" id="sidebarCollapse"
             class="btn btn-info d-inline-block ml-auto mr-3"
             title="Toggle List">
-            <i class="fas fa-angle-double-left"></i>
+            <i class="icon-angle-double-left"></i>
         </button>
 
         <div class="full-list container px-3 mx-0 pb-5">
-            <!-- <div class="tab-pane fade show active" id="home"> -->
-            {{ content | safe }}
+            {{ landing_content | safe }}
         </div>
     </div>
 

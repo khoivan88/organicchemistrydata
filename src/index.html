@@ -9,7 +9,7 @@ header:
 
 nav_items:
   list:
-    - url: '/hansreich'
+    - url: '/hansreich/'
       title: "Hans Reich's collection"
 
 meta_tags:
@@ -34,8 +34,10 @@ specific_page_js:
 
               {# <a href="#description-{{ collection.id }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle d-inline d-sm-none"></a> #}
               {# <button class="btn btn-link dropdown-toggle d-inline d-sm-none mx-0 px-2" type="button" id="dropdownMenuButton-{{ collection.id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button> #}
-              <button class="nav-link dropdown-toggle btn btn-link d-inline d-sm-none mx-0 px-2" type="button" id="dropdownMenuButton-{{ collection.id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-              <div class="hex-content-detail dropdown-menu dropdown-menu-right text-center px-1 my-0 py-0 border-0" aria-labelledby="dropdownMenuButton-{{ collection.id }}">
+              <button class="nav-link dropdown-toggle btn btn-link d-inline d-sm-none mx-0 px-2"
+                type="button" id="dropdownMenuButton-{{ collection.id }}" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" aria-label="Expand details on '{{ collection.title }}' menu"></button>
+              <div class="hex-content-detail dropdown-menu dropdown-menu-right text-center px-1 my-0 py-0 border-0">
                 {# <span class="hex-content-detail text-center px-1"> #}
                   {# <ul class="list-unstyled">
                     {%- for link in collection.links %}

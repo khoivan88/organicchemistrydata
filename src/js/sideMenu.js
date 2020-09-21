@@ -11,11 +11,11 @@ function checkForChanges () {
     if (marginLeft < 0) {
       // When the side menu is hiding
       // console.log('margin-left < 0')  // !DEBUG
-      $('#sidebarCollapse').children().addClass('fa-angle-double-right').removeClass('fa-angle-double-left')
+      $('#sidebarCollapse').children().addClass('icon-angle-double-right').removeClass('icon-angle-double-left')
     } else {
       // When the side menu is being displayed
       // console.log('margin-left >= 0')  // !DEBUG
-      $('#sidebarCollapse').children().addClass('fa-angle-double-left').removeClass('fa-angle-double-right')
+      $('#sidebarCollapse').children().addClass('icon-angle-double-left').removeClass('icon-angle-double-right')
     }
   }, 300)
 }
@@ -39,7 +39,7 @@ function closeNavOnSmallScreen () {
  * Put footer section at the end of pages with toggle side menu
  */
 function adjustFooterPosition () {
-  let footer = document.querySelector('footer#bb-footer')
+  let footer = document.querySelector('footer#docdata-footer')
   let fullList = document.querySelector('.full-list')
   let references = document.querySelector('#references')
   if (fullList || references) {
@@ -63,7 +63,7 @@ function addScrollSpy () {
     // console.log(obj);  // !DEBUG
 
     // Scroll the first active a tag into view if needed
-    $(`#navbar-left .nav-item a[href="${obj.relatedTarget}"]`)[0].scrollIntoViewIfNeeded()
+    $(`#navbar-left .nav-item a[href="${obj.relatedTarget}"]`)[0].scrollIntoView({ block: 'center', inline: 'nearest' })
   })
 }
 
@@ -95,7 +95,7 @@ $(document).ready(function () {
 
   // Use minimal scroll bar theme
   $('#sidebar').mCustomScrollbar({
-    theme: 'minimal-dark', // http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollbar_themes_demo.html
+    theme: 'minimal-dark' // http://manos.malihu.gr/repository/custom-scrollbar/demo/examples/scrollbar_themes_demo.html
     // Other setting: http://manos.malihu.gr/jquery-custom-content-scroller/#configuration-section
     // mouseWheel: {
     //   scrollAmount: 300,

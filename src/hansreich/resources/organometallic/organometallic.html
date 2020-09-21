@@ -1,0 +1,101 @@
+---
+layout: side_menu_with_dropdown.njk
+
+header:
+    title: 'Organometallic Chemistry'
+
+title: 'Organometallic Chemistry'
+
+meta_tags:
+  - name: 'description'
+    content: 'This set of pages originates from Professor Hans Reich (UW-Madison) "Advanced Organic Chemistry" (Chem 547) and "Organometallic Chemistry" (Chem 842) courses. It includes introduction of Organometallic chemistry and the uses of various metal in Organic Chemistry such as: Boron, Copper, Lithium, Zinc, Tin, Silicon, Aluminum, Sulfur, Selenium, Palladium and other transition metals, etc.'
+
+landing_content: |
+    <div class="container">
+        <p class="text-justify">
+            This is Prof. Hans Reich's collection of various topics on Organometallic Chemistry.
+            Most of this content originated from his Chem 842 Course at the University of Wisconsin - Madison.
+            Please choose a specific topic on the side menu for more detailed info.
+        </p>
+        <p>Below is a general outline:</p>
+        <ul>
+            <li>Organometallic Chemistry - Introduction</li>
+            <li>Organolithium Chemistry
+                <ul>
+                    <li>Methods for preparing organolithium reagents</li>
+                        <ul>
+                            <li>Li/H exchange, C-H acidities, kinetic and thermodynamic control, chelation</li>
+                            <li>Reduction of halides (Cl, Br, I) and sulfides (PhS) using Li or Li<SUP>+</SUP>ArH<SUP>-</SUP></li>
+                            <li>Li/M exchange (M = Br, I, Sn, Hg, Se, Te)</li>
+                            <li>Shapiro reaction - tosylhydrazones and lithium reagents</li>
+                            <li>Addition of RLi to multiple bonds (C=O, C=C, CC)</li>
+                        </ul>
+                    <li>Structure and dynamics in solid and solution</li>
+                        <ul>
+                            <li>Aggregation - reactivity effects of donors</li>
+                            <li>structural effect on reactivity - delocalization, ion pair structure</li>
+                            <li>Stereochemistry of organolithium reagents</li>
+                        </ul>
+                    <li>Synthetic applications of organolithium reagents</li>
+                </ul>
+            </li>
+            <li>Organocopper and Organozinc Chemistry
+                <ul>
+                    <li>Organocopper Chemistry</li>
+                    <li>Organozinc Chemistry</li>
+                    <li>Asymmetric synthesis using Zn and Cu reagents</li>
+                </ul>
+            </li>
+            <li>Organotin and Organosilicon Chemistry
+                <ul>
+                    <li>Comparison of C, Si, Ge and Sn</li>
+                    <li>Preparation of organosilicon compounds and reagents</li>
+                    <li>Electrophilic and nucleophilic cleavage of C-Si bonds (Peterson, Brook)</li>
+                    <li>Preparation and uses of tin reagents (R<SUB>3</SUB>SnH, R<SUB>3</SUB>SnLi, R<SUB>3</SUB>SnSnR<SUB>3</SUB>, etc)</li>
+                    <li>Formation of C-Sn bonds</li>
+                    <li>Electrophilic, nucleophilic and radical substitution of C-Sn bonds, stereochemistry</li>
+                </ul>
+            </li>
+            <li>Organoboron, Organoaluminum
+                <ul>
+                    <li>Preparation of organoboranes</li>
+                    <li>Typical reactions of organoboranes</li>
+                    <li>Organoaluminum chemistry</li>
+                    <li>Organoindium chemistry</li>
+                </ul>
+            </li>
+            <li>Organosulfur and Organoselenium Chemistry
+                <ul>
+                    <li>Comparison of S/Se/Te</li>
+                    <li>Selenium reagents (PhSeX, PhSeSePh, PhSeM, etc)</li>
+                    <li>Selenoxide elimination</li>
+                    <li>Selenium electrophiles</li>
+                    <li>-Lithio sulfides and selenides</li>
+                </ul>
+            </li>
+            <li>Phosphorus, Arsenic, Antimony, Bismuth
+                <ul>
+                    <li>General features</li>
+                    <li>The Wittig, Horner and related reactions</li>
+                </ul>
+            </li>
+            <li>The Halogens, and Others</li>
+        </ul>
+    </div>
+
+default_script:
+  list:
+    - description: 'Load "Intro" index page as default for "Organometallic Chemistry" section'
+      content: |
+        if(!window.location.search) {loadPage('organometallic_index/intro', '.index-content')}
+
+---
+
+{# <option selected>Choose...</option> #}
+{# <optgroup label="Group by"> #}
+    {%- for group in collections.organometallic_index %}
+    <option {%- if loop.first %} selected{%- endif %} data-url="{{ group.url | url }}" value="{{ group.fileSlug }}">
+        {{ group.fileSlug | toTitleCase }}
+    </option>
+    {%- endfor -%}
+{# </optgroup> #}

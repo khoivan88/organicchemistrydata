@@ -10,7 +10,7 @@ doc:
 #    logo_url: "/img/logo@2x.jpg"
 
 about:
-    url: '/about'
+    url: '/about/'
 
 ---
 
@@ -26,9 +26,6 @@ about:
     <!--source: https://stackoverflow.com/a/42333464-->
     <div id="nav-placeholder">
         <nav id="navbar" class="navbar fixed-top navbar-expand-sm py-0 navbar-dark">
-            {# <a class="navbar-brand py-1" href="{{ homepage_logo.url | url }}"{%-if homepage_logo.target %} target="{{ homepage_logo.target }}"{%- endif %}>
-                <img src="{{ homepage_logo.src | url }}" height="50" alt="Organic Chemistry Data Site - Logo" loading="lazy">
-            </a> #}
 
             {%- include 'global_logo.njk' -%}
 
@@ -68,11 +65,6 @@ about:
             </div>
         </nav>
     </div>
-    {# <script>
-    $(function(){
-      $("#nav-placeholder").load("navbar.html");
-    });
-    </script> #}
 
     <!--end of Navigation bar-->
 

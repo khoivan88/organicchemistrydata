@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="robots" content="noindex,nofollow" />
+	<title>NMR Spectroscopy</title>
+	<script language="JavaScript">
+		// Begin
+		function dayofyear(mnth, dy) {
+			var daysbefore = new Array(0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334);
+			return daysbefore[mnth - 1] + dy;
+		}
+		function printhighlight(mnth, dy, delay, addtext) {
+			var today = new Date();
+			if (dayofyear(today.getMonth() + 1, today.getDate()) < dayofyear(mnth, dy) + delay) {
+				//This clause blocks the highlight before the start date
+				if (dayofyear(today.getMonth() + 1, today.getDate()) > dayofyear(mnth, dy) - 1) {
+					document.write('<b><i><font color="#FF0000">' + addtext + '</font></i></b>');
+				}
+				//this will screw up around year's end
+			}
+			//else
+			//{document.write ('<b><i><font color="#FF0000">' + 'old' + '</font></i></b>');}
+		}
+		// End
+	</script>
+	<style type='text/css'>
+		h2 {
+			font-size: 9pt;
+			color: #990000;
+			font-weight: bold;
+		}
+
+		#fnt0 {
+			font-family: arial, verdana, helvetica;
+			font-size: 9pt;
+			color: #990000;
+			font-weight: bold;
+		}
+
+		#fnt {
+			font-family: arial, verdana, helvetica;
+			font-size: 8pt;
+		}
+
+		#fnt2 {
+			font-family: arial, verdana, helvetica;
+			font-size: 7pt;
+		}
+
+	</style>
+</head>
+
+<body text="#000000" link="#0000ff" vlink="#551a8b" alink="#ff0000">
+	<div id='fnt'>
+		<h3 align="center">
+			Structure Determination Using NMR
+		</h3>
+		<h4 align="center">
+			by Hans J. Reich
+		</h4>
+		<!-- =============General=============== -->
+		<h2>
+			&nbsp;&nbsp;General
+		</h2>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="syllabus.htm" target="main">Syllabus</a> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="nmr-biblio.htm" target="main">NMR Bibliography</a>
+		<!--TODO: IR-->
+		<!--TODO: UV-->
+		<!--TODO: MS-->
+		<!-- ===============Proton=============== -->
+		<h2>
+			&nbsp;&nbsp;Proton NMR (HMR)
+		</h2>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-00-nmr.htm" target="main">5.00 - NMR experiment</a>, <a
+			href="Notes-05-HMR-v26-part1.pdf" target="main">PDF 0-2</a> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-01-integration.htm" target="main">5.01 - Integration</a> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-02-delta.htm" target="main">5.02 - Chemical Shifts (<i>&delta;</i>)</a>
+		<span id='fnt2'> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-02-delta.htm#05-hmr-02-delta-calcdelta"
+				target="main">Calculation</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+				href="05-hmr-02-delta.htm#05-hmr-02-delta-electronegativity" target="main">Shift effects</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-02-delta.htm#05-hmr-02-delta-anisotropy"
+				target="main">Anisotropy</a>, <a href="05-hmr-02-delta.htm#05-hmr-02-delta-aromatic"
+				target="main">Aromatic</a>, <a href="05-hmr-02-delta.htm#05-hmr-02-delta-asis" target="main">ASIS</a>
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-02-delta.htm#05-hmr-02-delta-OH"
+				target="main">OH</a>, <a href="05-hmr-02-delta.htm#05-hmr-02-delta-N-H" target="main">NH</a>, <a
+				href="05-hmr-02-delta.htm#05-hmr-02-delta-SH" target="main">SH, SeH, TeH</a>, <a
+				href="05-hmr-02-delta.htm#05-hmr-02-delta-FH" target="main">FH</a>
+			<!-- <a href="notes-5-hmr-2-shift.pdf" target="main">(old PDF)</a> -->
+		</span> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-03-jcoupl.htm" target="main">5.03 - Coupling (<i>J</i>)</a>, <a
+			href="Notes-05-HMR-v26-part2.pdf" target="main">PDF 3-6</a>
+		<!-- <a href="notes-5-hmr-3-coupling.pdf" target="main">(old PDF)</a> -->
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-04-2j.htm" target="main">5.04 - Geminal <i>J</i></a>
+		<!-- <a href="notes-5-hmr-4-gem-coupling.pdf" target="main">(old PDF)</a>  -->
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-05-3j.htm" target="main">5.05 - Vicinal <i>J</i></a> <span id='fnt2'>
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-05-3j.htm#05-hmr-05-3j-karplus"
+				target="main">Karplus Equation</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ring stereochem: <a
+				href="05-hmr-05-3j.htm#05-hmr-05-3j-cyclohexane" target="main">6</a>, <a
+				href="05-hmr-05-3j.htm#05-hmr-05-3j-cyclopentane" target="main">5</a>, <a
+				href="05-hmr-05-3j.htm#05-hmr-05-3j-cyclobutane" target="main">4</a>, <a
+				href="05-hmr-05-3j.htm#05-hmr-05-3j-cyclopropane" target="main">3</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-05-3j.htm#05-hmr-05-3j-acyclic"
+				target="main">Acyclic stereochem</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-05-3j.htm#05-hmr-05-3j-allylic"
+				target="main">Allylic</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-05-3j.htm#05-hmr-05-3j-olefinic"
+				target="main">Olefin stereochem</a> </span>
+		<!-- <a href="notes-5-hmr-5-vic-coupling.pdf " target="main">(old PDF)</a> -->
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-06-4j.htm" target="main">5.06 - Long-range <i>J</i></a> <span id='fnt2'>
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-06-4j.htm#05-hmr-06-4j-w"
+				target="main">W-coupling</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-06-4j.htm#05-hmr-06-4j-allylic"
+				target="main">Allylic</a>, <a href="05-hmr-06-4j.htm#05-hmr-06-4j-benzylic" target="main">Benzylic</a>
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-06-4j.htm#05-hmr-06-4j-meta"
+				target="main">Arom meta/para</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-06-4j.htm#05-hmr-06-4j-homoallylic"
+				target="main">Homoallylic</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-06-4j.htm#05-hmr-06-4j-alkynes"
+				target="main">Alkynes, Allenes</a> </span>
+		<!-- <a href="notes-5-hmr-6-longrange-coupling.pdf" target="main">(old PDF)</a> -->
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-07-pople.htm" target="main">5.07 - Spin nomenclature</a>, <a
+			href="Notes-05-HMR-v26-part3.pdf" target="main">PDF 7-16</a> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-08-symmetry.htm" target="main">5.08 - NMR symmetry</a>
+		<!-- <a href="notes-5-hmr-8-symmetry.pdf" target="main">(old PDF)</a> -->
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-09-2ndorder.htm" target="main">5.09 - Second order</a> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-10-ax-ab.htm" target="main">5.10 - AX and AB</a>
+		<!-- <a href="notes-5-hmr-9-AB-AX.pdf" target="main">(old PDF)</a> -->
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-11-ab2.htm" target="main">5.11 - AX<sub>2</sub> and AB<sub>2</sub></a>
+		<!-- <a href="notes-5-hmr-11-AX2-AB2.pdf" target="main">(old PDF)</a> -->
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-12-abx.htm" target="main">5.12 - ABX</a>,
+		<!-- <a href="notes-5-hmr-12-ABX.pdf" target="main">(old PDF)</a> -->
+		<span id='fnt2'> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-12-abx.htm" target="main">AMX, ABX</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-12-abx.htm#solving ABX"
+				target="main">Solving ABX</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-12-abx.htm#5-Line ABX" target="main">5-Line
+				ABX</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-12-abx.htm#Types-of-ABX" target="main">Types
+				of ABX</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-12-abx.htm#ABXYZ" target="main">ABXYZ</a>
+		</span> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-13-abx3.htm" target="main">5.13 - ABX<sub>3</sub></a>
+		<!-- <a href="notes-5-hmr-13-ABX3.pdf" target="main">(old PDF)</a> -->
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-14-a2b2.htm" target="main">5.14 - A<sub>2</sub>B<sub>2</sub></a>
+		<!-- <a href="notes-5-hmr-14-15-A2B2.pdf" target="main">(old PDF)</a> -->
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-15-aabb.htm" target="main">5.15 - AA'BB'</a> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="05-hmr-16-virt-coupl.htm" target="main">5.16 - Virtual coupling</a>
+		<!-- <a href="notes-5-hmr-16-virtual-coupling.pdf" target="main">(old PDF)</a> -->
+		<!--===============Proton Data========-->
+		<h2>
+			&nbsp;&nbsp;H-NMR Data (HDATA)
+		</h2>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="h-data/hdata.htm" target="main">9.1 - Proton shifts</a> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="nmr-solvents.htm" target="main">9.4 - NMR solvents</a> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="notes-9-hmr-5-curphy-morrison.pdf" target="main">9.5 - Shift calculations
+			sp<sup>3</sup></a> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="notes-9-hmr-6-vinyl-aryl-shifts.pdf" target="main">9.6 - Shift calculations
+			sp<sup>2</sup></a> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="h-data/h-coupling.htm" target="main">9.7 - <i>J</i>(H-H) data</a>
+		<hr>
+		<!--===============Gallery========-->
+
+		<!--
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="09-hdata-8-gallery-cont.htm" target="contents">Structures</a> <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="../NMR-Spectra/NMR-content.htm#structures" target="contents">Structures</a> <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="../NMR-Spectra/NMR-content.htm#names-simple" target="contents">Complexity</a> <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;<a href="../NMR-Spectra/NMR-content.htm#molform" target="contents">Molecular formulas</a> ~~> &nbsp;&nbsp;&nbsp;&nbsp;<a href="../NMR-Spectra/NMR-Index.htm" target="_blank"><b>9.8 - Spectra Gallery</b></a><i><b> New: </b></i>2017-02
+
+	<hr> -->
+		<!--=============Carbon=============-->
+		<h2>
+			&nbsp;&nbsp;Carbon NMR (CMR)
+		</h2>
+		<!--TODO: 6.0 - CMR HTML-->
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="06-cmr-01-spectra.htm" target="main">6.1 - Spectra</a>,
+		<!-- <a href="notes-6-cmr.pdf" target="main">(old PDF)</a> -->
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="06-cmr-02-shifts.htm" target="main">6.2 - Chemical Shifts</a> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="06-cmr-03-shift-effects.htm" target="main">6.3 - sp<sup>3</sup> Carbons</a>
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="06-cmr-04-shifts-vinyl.htm" target="main">6.4 - sp<sup>2</sup> Carbons</a> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="06-cmr-05-1jch.htm" target="main">6.5 - One-bond <i>J</i>(CH)</a>
+		<!-- <sup>1</sup>J C-H</a> -->
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="06-cmr-06-2jch.htm" target="main">6.6 - Two, three-bond <i>J</i>(CH)</a>
+		<!-- <sup>2,3</sup>J C-H</a> -->
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="06-cmr-07-4jch.htm" target="main">6.7 - Long-range <i>J</i>(CH)</a>
+		<!-- <sup>4</sup>J C-H</a> -->
+		<!--TODO: 6.0 - Carbon=carbon coupling-->
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="06-cmr-08-c-assign.htm" target="main">6.8 - Assignment</a>
+		<!--=============Carbon data===========-->
+		<h2>
+			&nbsp;&nbsp;Carbon Data (CDATA)
+		</h2>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="c13-data/cdata.htm" target="main">10.4 - C-13 Shift data</a> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="10-cdata-05-jch.htm" target="main">10.5 - J(C-H) data</a> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<a href="10-cdata-06-jcc.htm" target="main">10.6 - J(C-C) data</a>
+		<!--==========Multinuclear==========-->
+		<h2>
+			&nbsp;&nbsp;Multinuclear NMR
+		</h2>
+		<!--TODO: 7-Multinuclear-->
+		&nbsp;&nbsp;&nbsp;&nbsp;<p>7.1 - Nuclear properties</p>
+		<!-- <br>&nbsp;&nbsp;&nbsp;&nbsp;7.1 - <a href="07-multi-01-nuclear.htm" target=main>Nuclear properties</a> -->
+		<span id='fnt2'> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-01-nuclear.htm" target="main">Summary</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-01-nuclear.htm#07-multi-01-nuclear-fundamentals"
+				target="main">Fundamentals</a> </span> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<p>7.2 - Effects on H, C NMR</p> <span id='fnt2'> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-02-effects.htm" target="main">100% Spin 1/2 Nuclei</a>
+			<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-02-effects.htm#07-multi-02-effects-spin-half-100" target=main>100% Spin 1/2 Nuclei</a> -->
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-02-effects.htm#07-multi-02-effects-satellites"
+				target="main">Low Abundance Spin 1/2 Nuclei</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-02-effects.htm#07-multi-02-effects-size-J"
+				target="main">Size of J for Spin 1/2 Nuclei</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-02-effects.htm#07-multi-02-effects-virtcoupl"
+				target="main">Second Order Effects</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-02-effects.htm#07-multi-02-effects-quad"
+				target="main">Coupling with Quadrupolar Nuclei</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-02-effects.htm#07-multi-02-effects-deuteration"
+				target="main">Deuteration</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-02-effects.htm#07-multi-02-effects-boron"
+				target="main">Effects of Boron</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-02-effects.htm#07-multi-02-effects-nitrogen"
+				target="main">Effects of Nitrogen (in progress)</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-02-effects.htm#07-multi-02-effects-isotope-shifts"
+				target="main">Isotope Shifts</a> </span>
+		<!-- &nbsp;&nbsp;&nbsp;&nbsp;7.3 - <a href="07-multi-03-halfspin.htm" target=main>Other Spin 1/2 Nuclei</a> -->
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<p>7.3 - Other Spin 1/2 Nuclei</p> <span id='fnt2'> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-03-halfspin.htm" target="main">100% Spin 1/2
+				Nuclei</a>
+			<!--  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-03-halfspin.htm#07-multi-03-halfspin-100" target=main>100% Spin 1/2 Nuclei</a> -->
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-03-halfspin.htm#07-multi-03-halfspin-low-abundance"
+				target="main">Low Abundance Spin 1/2 Nuclei</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-03-halfspin.htm#07-multi-03-halfspin-isotope-shifts"
+				target="main">Isotope Shifts</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-03-halfspin.htm#07-multi-03-halfspin-relaxation"
+				target="main">Relaxation</a> </span> <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<p>7.4 - Quadrupolar nuclei</p>
+		<!-- &nbsp;&nbsp;&nbsp;&nbsp;7.4 - <a href="07-multi-04-quadrupolar.htm" target=main>Quadrupolar nuclei</a> -->
+		<span id='fnt2'> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-04-quadrupolar.htm" target="main">Fundamentals -
+				Symmetry</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="07-multi-04-quadrupolar.htm#07-multi-04-quadrupolar-summary"
+				target="main">Summary</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<p>11.1 - NMR Nuclei:</p> <br>
+			<span id='fnt2'>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="11-multi-main.htm" target="main">Main group</a> <br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="11-multi-trans.htm" target="main">Transition metals</a> <br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="11-multi-actin.htm" target="main">Actinides</a> <br>
+			</span>
+			&nbsp;&nbsp;&nbsp;&nbsp;<p>11.2 - Shift and J data</p> <br>
+			<span id='fnt2'>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="11-f-data.htm" target="_top">F-19</a>, <a
+					href="11-p-data.htm" target="_top">P-31</a>, <a href="11-se-data.htm" target="_top">Se-77</a>, <a
+					href="http://www.chemistry.sdsu.edu/research/BNMR/" target="_top">B-11</a>
+			</span>
+			<!--==========Topics==========-->
+			<h2>
+				&nbsp;&nbsp;Topics in NMR
+			</h2>
+			&nbsp;&nbsp;&nbsp;&nbsp;<a href="08-tech-01-relax.htm" target="main">8.1 - Relaxation</a>
+			<!-- <a href="notes-8-tech-1-relax.pdf" target="main">old PDF</a>  -->
+			<span id='fnt2'> <br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="08-tech-01-relax.htm#08-tech-01-relax-t1t2"
+					target="main">T<sub>1</sub>, T<sub>2</sub></a> <br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="08-tech-01-relax.htm#08-tech-01-relax-sr"
+					target="main">SR</a>, <a href="08-tech-01-relax.htm#08-tech-01-relax-csa" target="main">CSA</a>, <a
+					href="08-tech-01-relax.htm#08-tech-01-relax-qr" target="main">QR</a>, <a
+					href="08-tech-01-relax.htm#08-tech-01-relax-sc" target="main">SC</a>, <a
+					href="08-tech-01-relax.htm#08-tech-01-relax-dd" target="main">DD</a> </span> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<a href="08-tech-02-noe.htm" target="main">8.2 - NOE</a>
+			<!-- <a href="notes-8-tech-2-NOE.pdf" target="main">old PDF</a> -->
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<a href="08-tech-03-dnmr.htm" target="main">8.3 - DNMR</a> <span id='fnt2'> <br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="08-tech-03-dnmr.htm#08-tech-03-dnmr-temp"
+					target="main">Temperature measurement</a> <br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+					href="08-tech-03-dnmr.htm#08-tech-03-dnmr-thermodynamics" target="main">Thermodynamic parameters</a>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="08-tech-03-dnmr.htm#08-tech-03-dnmr-single"
+					target="main">Single bond rotation</a> <br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="08-tech-03-dnmr.htm#08-tech-03-dnmr-double"
+					target="main">Double bond rotation</a> <br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="08-tech-03-dnmr.htm#08-tech-03-dnmr-inversion"
+					target="main">Inversion</a> <br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+					href="08-tech-03-dnmr.htm#08-tech-03-dnmr-annulene-db-shift" target="main">Double bond shift</a>
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+					href="08-tech-03-dnmr.htm#08-tech-03-dnmr-p-ligand-au" target="main">Ligand exchange</a> </span>
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<a href="08-tech-04-EXSY.htm" target="main">8.4 - Saturation Transfer</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<a href="08-tech-05-saunders.htm" target="main">8.5 - Saunders Isotope Shifts</a>
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<a href="08-tech-07-lis.htm" target="main">8.7 - Shift reagents</a> <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;<a href="08-tech-09-2D.htm" target="main">8.9 - Multipulse NMR - 2D</a>
+			<!--TODO: 8.10 - Solids-->
+			<!--===============Exams===============================-->
+			<!--NOTE: removed for Jen 2020-03-18-->
+			<h2>
+				&nbsp;&nbsp;Exams, Problems
+			</h2>
+&nbsp;&nbsp;&nbsp;<a href="../chem605/EX-1-09-10.pdf" target="main">Practice Exam 1 (2010)</a>, <a
+	href="../chem605/EX-1-09-10-answer.pdf" target="main">Answer</a><br /> &nbsp;&nbsp;&nbsp;<a
+	href="../chem605/EX-1-10-11.pdf" target="main">Practice Exam 1 (2011)</a>, <a
+	href="../chem605/EX-1-10-11-answer.pdf" target="main">Answer</a><br /> &nbsp;&nbsp;&nbsp;<a
+	href="../chem605/EX-1-11-12.pdf" target="main">Practice Exam 1 (2012)</a>, <a
+	href="../chem605/EX-1-11-12-answer.pdf" target="main">Answer</a><br /> &nbsp;&nbsp;&nbsp;<a
+	href="../chem605/EX-2-09-10.pdf" target="main">Practice Exam 2 (2010)</a>, <a
+	href="../chem605/EX-2-09-10-answer.pdf" target="main">Answer</a><br /> &nbsp;&nbsp;&nbsp;<a
+	href="../chem605/EX-2-10-11.pdf" target="main">Practice Exam 2 (2011)</a>, <a
+	href="../chem605/EX-2-10-11-answer.pdf" target="main">Answer</a><br /> &nbsp;&nbsp;&nbsp;<a
+	href="../chem605/EX-2-11-12.pdf" target="main">Practice Exam 2 (2012)</a>, <a
+	href="../chem605/EX-2-11-12-answer.pdf" target="main">Answer</a><br /> &nbsp;&nbsp;&nbsp;<a
+	href="../chem605/EX-2-12-13.pdf" target="main">Practice Exam 2 (2013)</a>, <a
+	href="../chem605/EX-2-12-13-answer.pdf" target="main">Answer</a><br /> &nbsp;&nbsp;&nbsp;<a
+	href="../chem605/EX-3-09-10.pdf" target="main">Practice Exam 3 (2010)</a>, <a
+	href="../chem605/EX-3-09-10-answer.pdf" target="main">Answer</a><br /> &nbsp;&nbsp;&nbsp;<a
+	href="../chem605/EX-3-11-12.pdf" target="main">Practice Exam 3 (2012)</a>, <a
+	href="../chem605/EX-3-11-12-answer.pdf" target="main">Answer</a><br /> &nbsp;&nbsp;&nbsp;<a
+	href="../chem605/EX-3-12-13.pdf" target="main">Practice Exam 3 (2013)</a>, <a
+	href="../chem605/EX-3-12-13-answer.pdf" target="main">Answer</a><br />
+&nbsp;&nbsp;&nbsp;<a href="../chem605/ps-5-answer.pdf" target="main">Problem Set 5 Answer</a> <br>
+&nbsp;&nbsp;&nbsp;<a href="../chem605/ps-07-answer.pdf" target="main">Problem Set 7 Answer</a> <br>
+&nbsp;&nbsp;&nbsp;<a href="../chem605/ps-08-answer.pdf" target="main">Problem Set 8 answer (partial)</a> <br>
+&nbsp;&nbsp;&nbsp;<a href="../chem605/ps-09-answer.pdf" target="main">Problem Set 9 Answer</a> <br>
+&nbsp;&nbsp;&nbsp;<a href="../chem605/ps-10-answer.pdf" target="main">Problem Set 10 Answer</a> <br>
+&nbsp;&nbsp;&nbsp;<a href="../chem605/ps-11-answer-2014.pdf" target="main">Problem Set 11 Answer</a> <br>
+&nbsp;&nbsp;&nbsp;<a href="../chem605/ps-12-answer-2014.pdf" target="main">Problem Set 12 Answer</a> <br>
+&nbsp;&nbsp;&nbsp;<a href="../chem605/ps-13-answer-2014.pdf" target="main">Problem Set 13 Answer</a> <br>			<!--=============NMR Data============-->
+			<h2>
+				&nbsp;&nbsp;NMR Data
+			</h2>
+			&nbsp;&nbsp;&nbsp;<a href="nmr-solvents.htm" target="main">NMR Solvents</a> <br>
+			&nbsp;&nbsp;&nbsp;<a href="http://nmrweb.chem.ox.ac.uk/nmr-acronyms.aspx" target="main">NMR Acronyms</a>
+			<br>
+			&nbsp;&nbsp;&nbsp;<a
+				href="http://www-usr.rider.edu/~grushow/nmr/NMR_tutor/periodic_table/nmr_pt_frameset.html"
+				target="main">NMR Periodic Table</a>
+			<!--  -->
+			<!-- ----------------below relocated
+<br>&nbsp;&nbsp;&nbsp;Multinuclear: </a><a href="Se-data.htm" target="_top">Se-77</a>,
+  <a href="F-data.htm" target="_top">F-19</a>,
+  <a href="P-data.htm" target="_top">P-31</a>
+ -->
+			<!-- ========Spectra Excercises============ -->
+			<h2>
+				&nbsp;&nbsp;Spectra Excercises
+			</h2>
+			&nbsp;&nbsp;&nbsp;<a href="https://www.chem.uci.edu/~jsnowick/organicspectroscopy/index.html"
+				target="_top">James Nowick, UC Irvine</a> <br>
+			&nbsp;&nbsp;&nbsp;<a href="https://webspectra.chem.ucla.edu/" target="_top">Craig Merlic, UCLA</a> <br>
+			&nbsp;&nbsp;&nbsp;<a href="https://www.nd.edu/~smithgrp/structure/workbook.html" target="_top">Bradley
+				Smith, Notre Dame</a>
+	</div>
+</body>
+
+</html>

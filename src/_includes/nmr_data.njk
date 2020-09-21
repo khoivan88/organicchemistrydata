@@ -1,0 +1,75 @@
+---
+# layout: hansreich_base_layout.njk
+
+# specific_page_js:
+#     list:
+#     - description: Control side menu and toogle button
+#       url: '/js/sideMenu.js'
+---
+
+{% block content %}
+<!-- Sidebar -->
+<div class="sidebar-header text-center">
+    <p class="d-inline-flex align-self-center my-1 font-weight-bold">List</p>
+</div>
+
+<ul class="nav nav-pills flex-column">
+    {%- for item in items.list %}
+        {%- if item.menu_heading %}
+            <h5 class="text-white bg-dark my-0 py-1 px-1">{{ item.title }}</h5>
+        {%- else %}
+            <li class="nav-item border-bottom">
+            {# {%- if item.extra %}
+                <a href="{{ item.url | url }}"
+            {% else %} #}
+                <a href="#{{ item.id }}" class="nav-link px-1 py-1">{{ item.title | safe }}</a>
+            </li>
+        {%- endif %}
+    {%- endfor %}
+</ul>
+
+<div id="pageData" class="full-list container px-0 mx-0">
+    <ul class="list-group list-group-flush">
+        {%- block extratop -%}
+            {%- if extra_top %}
+            {# {%- for item in extra_top %} #}
+                {{ content | safe }}
+                {# {{ item.content | safe }} #}
+            {# {%- endfor %} #}
+            {%- endif %}
+        {%- endblock %}
+        {%- for item in items.list %}
+            {%- if (item.id != 'references') and (not item.leave_empty) and (not item.menu_heading) %}
+            <li class="list-group-item py-5" id="{{ item.id }}">
+                {%- if display_link or item.display_link %}
+                    {# <a id="{{ item.id }}" class="list-group-item" href="{{ item.url | url }}" target="{{ item.target }}"> #}
+                    <h4>{{ item.title | safe }}</h4>
+                    {# </a> #}
+                {%- endif %}
+                {%- if item.extra %}
+                    {# <h4>{{ item.title }}</h4> #}
+                    <p>{%- if item.title | startsWithVowel %}An{%- else %}A{%- endif %}
+                        <a href="{{ item.url | url }}" {% if item.target %}target="{{ item.target }}"{% endif %}>{{ item.title }}</a>
+                        is available as a PDF file.
+                    </p>
+                {%- endif %}
+                {%- if item.external_link %}
+                    <p> A link to this external source is
+                        <a href="{{ item.url | url }}" {% if item.target %}target="{{ item.target }}"{% endif %}>here</a>.
+                    </p>
+                {%- endif %}
+                {%- if not (item.extra or item.external_link) %}
+                    {% if item.url %}
+                        <img src="{{ item.url | url }}" class="img-fluid" alt="{{ item.title }}">
+                    {% else %}
+                        {% set img_url = data_path + item.id + gif_type %}
+                        <img src="{{ img_url | url }}" class="img-fluid" alt="{{ item.title }}">
+                    {%- endif %}
+                {%- endif %}
+            </li>
+            {%- endif %}
+        {%- endfor %}
+    </ul>
+</div>
+
+{% endblock %}

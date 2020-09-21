@@ -1,0 +1,38 @@
+---
+layout: hansreich_base_layout.njk
+
+specific_page_js:
+    list:
+    - description: 'Control side menu and toogle button'
+      url: '/js/sideMenu.js'
+    - description: 'Dynamic loading of Index and Main Content'
+      url: '/js/sideMenuWithDropdown.js'
+
+---
+
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="align-items-start px-0 pt-3 pb-4">
+        <div id="navbar-left" class="container-fluid mt-3">
+            <div class="index-content w-100">
+            {{ content | safe }}
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="content" class="py-5">
+        <button type="button" id="sidebarCollapse"
+            class="btn btn-info d-inline-block ml-auto mr-3"
+            title="Toggle List">
+            <i class="icon-angle-double-left"></i>
+        </button>
+
+        <div class="full-list container px-3 mx-0 pb-5">
+            {{ landing_content | safe }}
+        </div>
+    </div>
+
+</div>
+
+

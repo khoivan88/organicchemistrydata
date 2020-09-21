@@ -1,5 +1,5 @@
 {
-    "url_prefix": "/links",
+    "url_prefix": "/links/",
     "title": "Menu",
     "list": [
         {
@@ -12,24 +12,24 @@
                     "url": "/hansreich/resources/acronyms/"
                 },
                 {
-                    "name": "Terms used in Physical Organic Chemistry",
-                    "url": "https://www.qmul.ac.uk/sbcs/iupac/gtpoc/cont.html"
+                    "name": "Carbonyl Chemistry",
+                    "url": "/hansreich/resources/carbonyl/"
                 },
                 {
                     "name": "Electron Pushing/Drawing Mechanisms",
-                    "url": "/hansreich/resources/electron_pushing"
+                    "url": "/hansreich/resources/electron_pushing/"
                 },
                 {
                     "name": "Named Reactions",
-                    "url": "/hansreich/resources/syntheses/#named_reactions"
+                    "url": "/hansreich/resources/syntheses/"
                 },
                 {
                     "name": "Named Reagents",
-                    "url": "/hansreich/resources/named_reagents"
+                    "url": "/hansreich/resources/named_reagents/"
                 },
                 {
                     "name": "Named Rules and Effects",
-                    "url": "/hansreich/resources/named_effects"
+                    "url": "/hansreich/resources/named_effects/"
                 },
                 {
                     "name": "Organic Reactions",
@@ -48,8 +48,16 @@
                     "url": "http://www.openmolecules.org/webreactions/index.html"
                 },
                 {
+                    "name": "Terms used in Physical Organic Chemistry",
+                    "url": "https://www.qmul.ac.uk/sbcs/iupac/gtpoc/cont.html"
+                },
+                {
                     "name": "Reaction Topics",
                     "links": [
+                        {
+                            "name": "Acidity and Basicity (Prof. William Reusch, Michigan State University)",
+                            "url": "https://www2.chemistry.msu.edu/faculty/reusch/AcidBase/acid-base.html"
+                        },
                         {
                             "name": "Combinatorial Chemistry Review",
                             "url": "http://www.combichemistry.com"
@@ -79,12 +87,28 @@
                             "url": "https://www.organic-chemistry.org/topics/multicomponent-reactions.shtm"
                         },
                         {
+                            "name": "Organoboron Chemistry",
+                            "url": "https://organoborons.com/"
+                        },
+                        {
                             "name": "Organocatalysis-Organic Chemistry",
                             "url": "https://www.organic-chemistry.org/topics/organocatalysis.shtm"
                         },
                         {
-                            "name": "Photochemistry-MSU (William Reusch)",
+                            "name": "Organometallic Chemistry",
+                            "url": "/hansreich/resources/organometallic/"
+                        },
+                        {
+                            "name": "Pericyclic Reactions",
+                            "url": "/hansreich/resources/pericyclic/"
+                        },
+                        {
+                            "name": "Photochemistry (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/photchem.htm"
+                        },
+                        {
+                            "name": "Reduction and Oxidation",
+                            "url": "/hansreich/resources/redox/"
                         },
                         {
                             "name": "Sonochemistry-Organic Chemistry",
@@ -114,6 +138,16 @@
                         {
                             "name": "Monomerchem, Inc. (by Marcus Brackeen)",
                             "url": "http://www.monomerchem.com/display4.html"
+                        },
+                        {
+                            "name": "\"ReactionFlash&trade; App\" (developed by Elsevier and Prof.Erick M.Carreira, ETH-Zürich)",
+                            "description": "over 1000 named reactions, their mechanisms and examples published in peer-reviewed literature",
+                            "url": "https://www.elsevier.com/solutions/reaxys/who-we-serve/education-and-research/reactionflash"
+                        },
+                        {
+                            "name": "ReactionGuessr",
+                            "description": "a guess named reaction game, developed by Vincent Le Fouler",
+                            "url": "https://reactionguessr.herokuapp.com/"
                         }
                     ]
                 },
@@ -122,7 +156,7 @@
                     "links": [
                         {
                             "name": "Natural Product Syntheses",
-                            "url": "/hansreich/resources/syntheses"
+                            "url": "/hansreich/resources/syntheses/"
                         },
                         {
                             "name": "Totally Synthetic Blog (by Docherty/Taber)",
@@ -135,6 +169,19 @@
                         {
                             "name": "Total Synthesis of Natural Products Dojo",
                             "url": "https://w3pharm.u-shizuoka-ken.ac.jp/~yakuzo/pass-eng/pdf-eng.html"
+                        },
+                        {
+                            "name": "Prof. Dirk Trauner (New York University) group's Total syntheses problem sets",
+                            "url": "https://www.traunergroup.org/denksport"
+                        },
+                        {
+                            "name": "\"Synthesis Club Roadmap Problems\" by German Cancer Research Center",
+                            "url": "https://www.dkfz.de/en/drugs/Synthesis_Quiz.html"
+                        },
+                        {
+                            "name": "\"Synthesis Workshop\" by Dr. Matthew Horwitz",
+                            "description": "an open access video podcast, including four complementary modules - Total Synthesis, Named Reactions, Research Spotlights, and Culture of Chemistry",
+                            "url": "https://synthesis-workshop.com"
                         }
                     ]
                 }
@@ -147,15 +194,35 @@
             "links": [
                 {
                     "name": "A-Values",
-                    "url": "/hansreich/resources/a_values/"
+                    "url": "/hansreich/resources/fundamentals/#a_values"
+                },
+                {
+                    "name": "Bond Energies and Bond Dissociation Energies (Prof. William Reusch, Michigan State University)",
+                    "url": "https://www2.chemistry.msu.edu/faculty/reusch/OrgPage/bndenrgy.htm"
+                },
+                {
+                    "name": "Bond Dissociation Energies (Prof. Armen Zakarian, University of California Santa Barbara)",
+                    "url": "https://labs.chem.ucsb.edu/zakarian/armen/11---bonddissociationenergy.pdf"
+                },
+                {
+                    "name": "Bond Dissociation Energy Estimator by the National Renewable Energy Laboratory (NREL)",
+                    "url": "https://bde.ml.nrel.gov"
                 },
                 {
                     "name": "Electronegativities of Elements-Periodic Table",
-                    "url": "/hansreich/resources/electronegativities"
+                    "url": "/hansreich/resources/fundamentals/#electronegativities"
+                },
+                {
+                    "name": "Organoboron Chemistry",
+                    "url": "https://organoborons.com/"
                 },
                 {
                     "name": "pKa Values (Water, DMSO, gas phase)",
                     "url": "/hansreich/resources/pka/"
+                },
+                {
+                    "name": "Properties of Common Organic Compounds (Steven Murov)",
+                    "url": "http://murov.info/orgcmpds.htm"
                 },
                 {
                     "name": "Nucleophile/Electrophile Reactivity",
@@ -183,7 +250,11 @@
                     "links": [
                         {
                             "name": "Solvent Properties Table",
-                            "url": "https://organicdivision.org/solvents"
+                            "url": "https://organicchemistrydata.org/solvents/"
+                        },
+                        {
+                            "name": "Solvent Miscibility Table",
+                            "url": "https://www.sigmaaldrich.com/content/dam/sigma-aldrich/research-essentials/solvents/migrationsolvents1/solvent_miscibility_table.png"
                         },
                         {
                             "name": "Solvent Strength Calculation",
@@ -236,13 +307,21 @@
                         },
                         {
                             "name": "Elements Database (interactive)",
-                            "url": " [http://www.elementsdatabase.com"
+                            "url": "http://www.elementsdatabase.com"
                         },
                         {
                             "name": "Chemiplus (interactive)",
                             "url": "http://chemiplus.net"
+                        },
+                        {
+                            "name": "Resources on Periodic Table (Steven Murov)",
+                            "url": "http://murov.info/periodictables.htm"
                         }
                     ]
+                },
+                {
+                    "name": "Photophysical Properties of Photosensitizers and Quenchers (Steven Murov)",
+                    "url": "http://murov.info/photophys.htm"
                 },
                 {
                     "name": "Physical Constants",
@@ -269,6 +348,10 @@
                     "url": "http://www.tutorsville.net/formulas/"
                 },
                 {
+                    "name": "Frequency - Wavelength - Energy Converter (Prof. William Reusch, Michigan State University)",
+                    "url": "https://www2.chemistry.msu.edu/faculty/reusch/OrgPage/cnvcalc.htm"
+                },
+                {
                     "name": "Chemistry Data Tables (Wired Chemist)",
                     "url": "http://www.wiredchemist.com/chemistry/data"
                 }
@@ -283,7 +366,7 @@
                     "name": "General",
                     "links": [
                         {
-                            "name": "Spectroscopy-William Reusch (MSU)",
+                            "name": "Spectroscopy (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/spectro.htm"
                         },
                         {
@@ -297,14 +380,14 @@
                     "links": [
                         {
                             "name": "NMR Spectroscopy",
-                            "url": "/NMRresources/nmr/"
+                            "url": "/hansreich/resources/nmr/"
                         },
                         {
-                            "name": "NMR Spectroscopy-William Reusch (MSU)",
+                            "name": "NMR Spectroscopy (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/nmr/nmr1.htm"
                         },
                         {
-                            "name": "NMR Supplemental NMR Topics-William Reusch (MSU)",
+                            "name": "NMR Supplemental NMR Topics (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/nmr/nmr2.htm"
                         },
                         {
@@ -318,6 +401,10 @@
                         {
                             "name": "NMR Multiplet Guide-Nowick (UCI)",
                             "url": "https://www.chem.uci.edu/~jsnowick/groupweb/files/MultipletGuideV4.pdf"
+                        },
+                        {
+                            "name": "Dr. Glenn Facey (University of Ottawa) NMR blogs",
+                            "url": "http://u-of-o-nmr-facility.blogspot.com/"
                         }
                     ]
                 },
@@ -325,24 +412,24 @@
                     "name": "NMR Data",
                     "links": [
                         {
-                            "name": "¹H NMR Shifts",
-                            "url": "/NMRresources/nmr/h-data/hdata.htm"
+                            "name": "<sup>1</sup>H NMR Shifts",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F1H_shift"
                         },
                         {
-                            "name": "¹³C NMR Shifts",
-                            "url": "/NMRresources/nmr/c13-data/cdata.htm"
+                            "name": "<sup>13</sup>C NMR Shifts",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F13C_shift"
                         },
                         {
-                            "name": "Coupling: 𝘑(H-H)",
-                            "url": "/NMRresources/nmr/h-data/h-coupling.htm"
+                            "name": "Coupling: <i>J</i><sub>(H&ndash;H)</sub>",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F1H_coupling"
                         },
                         {
-                            "name": "Coupling: 𝘑(C-H)",
-                            "url": "/NMRresources/nmr/10-cdata-05-jch.htm"
+                            "name": "Coupling: <i>J</i><sub>(C&ndash;C)</sub> and <i>J</i><sub>(C&ndash;H)</sub>",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F13C_coupling"
                         },
                         {
                             "name": "NMR Solvents",
-                            "url": "/NMRresources/nmr/nmr-solvents.htm"
+                            "url": "/hansreich/resources/nmr/#nmr-solvents/"
                         }
                     ]
                 },
@@ -350,20 +437,28 @@
                     "name": "Multinuclear NMR Data:",
                     "links": [
                         {
-                            "name": "F-19",
-                            "url": "/NMRresources/nmr/11-f-data.htm"
+                            "name": "<sup>19</sup>F NMR Shift",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F19F_shift"
                         },
                         {
-                            "name": "P-31",
-                            "url": "/NMRresources/nmr/11-p-data.htm"
+                            "name": "<sup>19</sup>F NMR Coupling Constant",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F19F_coupling"
                         },
                         {
-                            "name": "B-11",
-                            "url": "http://www.chemistry.sdsu.edu/research/BNMR/"
+                            "name": "<sup>31</sup>P NMR Shift",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F31P_shift"
                         },
                         {
-                            "name": "Se-77",
-                            "url": "/NMRresources/nmr/11-se-data.htm"
+                            "name": "<sup>31</sup>P NMR Coupling Constant",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F31P_coupling"
+                        },
+                        {
+                            "name": "<sup>11</sup>B",
+                            "url": "https://www.chemistry.sdsu.edu/research/BNMR/"
+                        },
+                        {
+                            "name": "<sup>77</sup>Se NMR Shift",
+                            "url": "/hansreich/resources/nmr/?index=nmr_index%2F77Se_shift"
                         },
                         {
                             "name": "NMR Periodic Table",
@@ -375,11 +470,11 @@
                     "name": "Mass Spectroscopy",
                     "links": [
                         {
-                            "name": "MS Spectroscopy-William Reusch (MSU)",
+                            "name": "MS Spectroscopy (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/MassSpec/masspec1.htm"
                         },
                         {
-                            "name": "Exact Masses & Isotope Abundance Ratios and Calculators-William Reusch (MSU)",
+                            "name": "Exact Masses & Isotope Abundance Ratios and Calculators (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/OrgPage/mass.htm"
                         },
                         {
@@ -392,7 +487,7 @@
                     "name": "UV Spectroscopy",
                     "links": [
                         {
-                            "name": "UV Spectroscopy-William Reusch (MSU)",
+                            "name": "UV Spectroscopy (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/UV-Vis/spectrum.htm"
                         }
                     ]
@@ -401,12 +496,12 @@
                     "name": "IR Spectroscopy",
                     "links": [
                         {
-                            "name": "IR Spectroscopy-William Reusch (MSU)",
+                            "name": "IR Spectroscopy (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Spectrpy/InfraRed/infrared.htm"
                         },
                         {
-                            "name": "IR Problems-William Reusch (MSU)",
-                            "url": "http://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/Questions/Spectroscopy/irmsprb/infrared.htm"
+                            "name": "IR Problems (Prof. William Reusch, Michigan State University)",
+                            "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/Questions/Spectroscopy/irmsprb/infrared.htm"
                         },
                         {
                             "name": "IR Problems/Training (Colby College)",
@@ -512,11 +607,15 @@
                         },
                         {
                             "name": "IUPAC Compendium of Chemical Terminology (the Gold Book)",
-                            "url": "http://goldbook.iupac.org/"
+                            "url": "https://goldbook.iupac.org/"
                         },
                         {
                             "name": "IUPAC Glossary of Class Names of Organic Compounds and Reactive Intermediates 1995",
-                            "url": "https://www.iupac.org/publications/pac/1995/pdf/6708x1307.pdf"
+                            "url": "http://publications.iupac.org/pac/1995/pdf/6708x1307.pdf"
+                        },
+                        {
+                            "name": "Numbering of Ring Systems",
+                            "url": "https://www.maybridge.com/Images/pdfs/ring_numbering.pdf"
                         }
                     ]
                 },
@@ -524,7 +623,7 @@
                     "name": "Stereochemistry",
                     "links": [
                         {
-                            "name": "Chiral Configurations-William Reusch (MSU)",
+                            "name": "Chiral Configurations (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/sterism3.htm#isom13"
                         },
                         {
@@ -549,7 +648,7 @@
                             "url": "/hansreich/resources/organolithium/"
                         },
                         {
-                            "name": "Organometallic Chemistry General-William Reusch (MSU)",
+                            "name": "Organometallic Chemistry General (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/orgmetal.htm#met10"
                         },
                         {
@@ -562,7 +661,7 @@
                     "name": "Organic Compound Special Types",
                     "links": [
                         {
-                            "name": "Heterocyclic Chemistry-William Reusch (MSU)",
+                            "name": "Heterocyclic Chemistry (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/heterocy.htm"
                         },
                         {
@@ -574,19 +673,19 @@
                             "url": "http://www.alanwood.net/pesticides/index_cn_frame.html"
                         },
                         {
-                            "name": "Polymers-William Reusch (MSU)",
+                            "name": "Polymers (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/polymers.htm#polmr1"
                         },
                         {
-                            "name": "Carbohydrates-William Reusch (MSU)",
+                            "name": "Carbohydrates (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/carbhyd.htm#carb1"
                         },
                         {
-                            "name": "Proteins and Amino Acids-William Reusch (MSU)",
+                            "name": "Proteins and Amino Acids (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/proteins.htm#aacd1"
                         },
                         {
-                            "name": "Nucleic Acids-William Reusch (MSU)",
+                            "name": "Nucleic Acids (Prof. William Reusch, Michigan State University)",
                             "url": "https://www2.chemistry.msu.edu/faculty/reusch/VirtTxtJml/nucacids.htm#nacd1"
                         },
                         {
@@ -615,8 +714,17 @@
                             "url": "https://www.cas.org/sites/default/files/documents/beyond_cassi.pdf"
                         },
                         {
+                            "name": "ChEMBL (RSC)",
+                            "description": "manually curated databases of bioactive molecules with drug-like properties (~6900 compounds, ~9800 bioactivities)",
+                            "url": "https://www.ebi.ac.uk/chembl/"
+                        },
+                        {
                             "name": "Chemical Abstract Service (CAS)",
                             "url": "https://www.cas.org/"
+                        },
+                        {
+                            "name": "ChemSpider (RSC)",
+                            "url": "http://www.chemspider.com/"
                         },
                         {
                             "name": "ChemSynthesis",
@@ -624,7 +732,7 @@
                         },
                         {
                             "name": "eMolecules (suppliers)",
-                            "url": "http://www.emolecules.com/index.php"
+                            "url": "https://www.emolecules.com/"
                         },
                         {
                             "name": "OSIRIS Property Explorer",
@@ -636,7 +744,7 @@
                         },
                         {
                             "name": "RCSB Protein Databank",
-                            "url": "http://www.rcsb.org/pdb/"
+                            "url": "https://www.rcsb.org/"
                         },
                         {
                             "name": "Reaxys",
@@ -698,7 +806,7 @@
             "links": [
                 {
                     "name": "Dow Lab Safety Academy",
-                    "url": "https://corporate.dow.com/en-us/science-and-sustainability/lab-safety"
+                    "url": "https://corporate.dow.com/en-us/science-and-sustainability/innovation/safety-at-dow.html"
                 },
                 {
                     "name": "Lab Safety Institute",
@@ -709,16 +817,16 @@
                     "url": "https://www.osha.gov/chemicaldata/"
                 },
                 {
-                    "name": "Handling and Disposal of Chemicals",
+                    "name": "Prudent Practices in the Laboratory (Free download, PDF)",
                     "url": "https://www.nap.edu/catalog/4911/prudent-practices-in-the-laboratory-handling-and-disposal-of-chemicals"
                 },
                 {
-                    "name": "Lab Safety Video Links--UC San Diego",
-                    "url": "https://blink.ucsd.edu/safety/research-lab/laboratory/videos.html"
+                    "name": "UCLA: Health & Safety",
+                    "url": "https://www.chemistry.ucla.edu/health-safety"
                 },
                 {
-                    "name": "UCLA Health & Safety",
-                    "url": "https://www.chemistry.ucla.edu/health-safety"
+                    "name": "UC San Diego-Lab Safety Video Links",
+                    "url": "https://blink.ucsd.edu/safety/research-lab/laboratory/videos.html"
                 }
             ]
         },
@@ -749,7 +857,7 @@
                 },
                 {
                     "name": "International Isotope Society",
-                    "url": "http://www.intl-isotope-soc.org/"
+                    "url": "https://intl-isotope-soc.org/"
                 },
                 {
                     "name": "International Society of Heterocyclic Chemistry",
@@ -800,7 +908,7 @@
                 },
                 {
                     "name": "ACS Online Publications",
-                    "url": "http://pubs.acs.org/about.html"
+                    "url": "https://pubs.acs.org/action/showPublications?pubType=journal"
                 },
                 {
                     "name": "The Goodman's Group List-University of Cambridge",
@@ -808,7 +916,7 @@
                 },
                 {
                     "name": "Reference Resolver",
-                    "url": "http://chemsearch.kovsky.net"
+                    "url": "https://chemsearch.kovsky.net/"
                 }
             ]
         },
@@ -818,25 +926,30 @@
             "description": "Links to resources for doing various general laboratory procedures in organic chemistry labs",
             "links": [
                 {
-                "name": "Not Voodoo Organic Techniques/Information",
-                "url": "http://chem.chem.rochester.edu/%7Envd/index.php"
+                    "name": "Not Voodoo Organic Techniques/Information",
+                    "url": "http://chem.chem.rochester.edu/%7Envd/index.php"
                 },
                 {
-                "name": "NOP General Techniques",
-                "url": "https://www.oc-praktikum.de/nop/en-techniques"
+                    "name": "NOP General Techniques",
+                    "url": "https://www.oc-praktikum.de/nop/en-techniques"
                 },
                 {
-                "name": "NOP all Experiments",
-                "url": "https://www.oc-praktikum.de/nop/index.php?page=experiments&lang=en&subset=none&term=%25&type=title&difficulty=%25"
+                    "name": "NOP all Experiments",
+                    "url": "https://www.oc-praktikum.de/nop/index.php?page=experiments&lang=en&subset=none&term=%25&type=title&difficulty=%25"
                 },
                 {
-                "name": "ChemSpider Synthetic Procedure Pages",
-                "url": "http://cssp.chemspider.com/"
+                    "name": "ChemSpider Synthetic Procedure Pages",
+                    "url": "http://cssp.chemspider.com/"
                 },
                 {
-                "name": "Organic Syntheses",
-                "url": "https://www.organicdivision.org/OrganicSyntheses/"
+                    "name": "Organic Syntheses",
+                    "url": "https://www.organicdivision.org/OrganicSyntheses/"
+                },
+                {
+                    "name": "\"The Schlenk Line Survival Guide\" by Dr. Andryj Borys",
+                    "url": "https://schlenklinesurvivalguide.com/"
                 }
+
             ]
         },
         {
@@ -845,73 +958,129 @@
             "description": "Links to software applications that are likely useful for a broad selection of organic chemists",
             "links": [
                 {
-                    "name": "3D Organic Chemistry Animations",
-                    "url": "https://www.chemtube3d.com/"
-                },
-                {
-                    "name": "AMSOL",
-                    "url": "https://comp.chem.umn.edu/amsol/"
-                },
-                {
-                    "name": "ChemBioDraw",
-                    "url": "https://www.perkinelmer.com/category/chemdraw"
-                },
-                {
-                    "name": "ChemBioDraw Tutorial Videos by Pierre Morieux",
+                    "name": "Chemical Drawing Programs",
                     "links": [
                         {
-                            "name": "Colorful ChemDraw Collections",
-                            "url": "https://www.youtube.com/watch?v=pccebQuLr9k"
+                            "name": "ChemBioDraw",
+                            "url": "https://www.perkinelmer.com/product/chemdraw-professional-chemdrawpro"
                         },
                         {
-                            "name": "Using Hotkeys",
-                            "url": "https://www.youtube.com/watch?v=AkkpuW322qo&amp;t=324s"
+                            "name": "ChemBioDraw Tutorial Videos by Pierre Morieux",
+                            "links": [
+                                {
+                                    "name": "Colorful ChemDraw Collections",
+                                    "url": "https://www.youtube.com/watch?v=pccebQuLr9k"
+                                },
+                                {
+                                    "name": "ChemDraw Magic 4",
+                                    "description": "How to REALLY use ChemDraw 17, Using Hotkeys",
+                                    "url": "https://www.youtube.com/watch?v=AkkpuW322qo&t=6s"
+                                },
+                                {
+                                    "name": "ChemDraw Magic Tricks: Quick Catalytic Cycles",
+                                    "url": "https://www.youtube.com/watch?v=PScK1yTvDVI"
+                                },
+                                {
+                                    "name": "ChemDraw Magic 3",
+                                    "description": "Dendrimers, Delivered",
+                                    "url": "https://www.youtube.com/watch?v=H-MEpcYJBNY"
+                                },
+                                {
+                                    "name": "ChemDraw Magic 2",
+                                    "url": "https://www.youtube.com/watch?v=SSZI8rh6sNY"
+                                },
+                                {
+                                    "name": "ChemDraw Magic 1",
+                                    "url": "https://www.youtube.com/watch?v=03WNbvZLDkk"
+                                },
+                                {
+                                    "name": "All Videos by Pierre Morieux",
+                                    "url": "https://www.youtube.com/user/PierreMx3/videos"
+                                }
+                            ]
                         },
                         {
-                            "name": "ChemDraw Magic Tricks: Quick Catalytic Cycles",
-                            "url": "https://www.youtube.com/watch?v=PScK1yTvDVI"
+                            "name": "ChemDoodle",
+                            "url": "https://www.chemdoodle.com/"
                         },
                         {
-                            "name": "ChemDraw Magic 2",
-                            "url": "https://www.youtube.com/watch?v=SSZI8rh6sNY&amp;fmt=22"
-                        },
-                        {
-                            "name": "ChemDraw Magic 1",
-                            "url": "https://www.youtube.com/watch?v=03WNbvZLDkk"
-                        },
-                        {
-                            "name": "All Videos by Pierre Morieux",
-                            "url": "https://www.youtube.com/user/PierreMx3/videos"
+                            "name": "MarvinSketch: Structure Drawing Software",
+                            "url": "https://chemaxon.com/products/marvin"
                         }
                     ]
                 },
                 {
-                    "name": "ChemDoodle",
-                    "url": "https://www.chemdoodle.com/"
+                    "name": "Computational Chemistry",
+                    "links": [
+                        {
+                            "name": "AMSOL",
+                            "url": "https://comp.chem.umn.edu/amsol/"
+                        },
+                        {
+                            "name": "Wavefunction: Spartan",
+                            "url": "https://www.wavefun.com/"
+                        }
+                    ]
                 },
                 {
-                    "name": "MarvinSketch: Structure Drawing Software",
-                    "url": "https://chemaxon.com/products/marvin"
+                    "name": "Chemical Inventory and/or Electronic Lab Notebook (ELN)",
+                    "links": [
+                        {
+                            "name": "\"Open Enventory\": free, open-source chemical inventory & ELN",
+                            "links": [
+                                {
+                                    "name": "User Guides",
+                                    "url": "https://open-enventory.gitbook.io/user-guides/"
+                                },
+                                {
+                                    "name": "Original Software by Dr. Felix Rudolphi",
+                                    "url": "https://sourceforge.net/projects/enventory/"
+                                },
+                                {
+                                    "name": "Modified Version by Dr. Khoi Van",
+                                    "description": "Dr. Khoi Van added some extra functions as well as some modification for U.S.-based users. Used by Texas A&M University, labs at Baylor University, labs at MIT.",
+                                    "url": "https://github.com/khoivan88/open_enventory-modified_for_US"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "\"Sciformation\" by Dr. Felix Rudolphi",
+                            "description": "Paid software for ELN, Inventory, LIMS, with broader applications beyond chemistry",
+                            "url": "http://sciformation.com/sciformation_eln.html?lang=en"
+                        },
+                        {
+                            "name": "\"LabCup\"",
+                            "description": "Paid software for Chemical Inventory and Laboratory Management",
+                            "url": "https://labcup.net/"
+                        }
+                    ]
                 },
                 {
-                    "name": "MaxBridge",
-                    "url": "https://www.cadrerl.com/ring/"
-                },
-                {
-                    "name": "Open Enventory: free, open-source chemical inventory & ELN",
-                    "url": "https://open-enventory.gitbook.io/user-guides/"
-                },
-                {
-                    "name": "Schrödinger",
-                    "url": "https://www.schrodinger.com/drug-discovery"
-                },
-                {
-                    "name": "Vogel Scientific Software: CIARA and CALACO.",
-                    "url": "http://www.vogelscientific.com/"
-                },
-                {
-                    "name": "Wavefunction: Spartan",
-                    "url": "https://www.wavefun.com/"
+                    "name": "Others",
+                    "links": [
+                        {
+                            "name": "Awesome Cheminformatics",
+                            "description": "A curated list of Cheminformatics software, resources, and libraries.",
+                            "url": "https://github.com/hsiaoyi0504/awesome-cheminformatics"
+                        },
+                        {
+                            "name": "Awesome Python Chemistry",
+                            "description": "A curated list of Python frameworks, libraries, software and resources related to Chemistry",
+                            "url": "https://github.com/lmmentel/awesome-python-chemistry"
+                        },
+                        {
+                            "name": "MaxBridge",
+                            "url": "https://www.maxbridge.org/sample.html"
+                        },
+                        {
+                            "name": "Schrödinger",
+                            "url": "https://www.schrodinger.com/drug-discovery"
+                        },
+                        {
+                            "name": "Vogel Scientific Software: CIARA and CALACO.",
+                            "url": "http://www.vogelscientific.com/"
+                        }
+                    ]
                 }
             ]
         },
@@ -921,7 +1090,7 @@
             "description": "Links and resources for educators and students in teaching and learning organic chemistry",
             "links": [
                 {
-                    "name": "Virtual Textbook of Organic Chemistry-William Reusch (MSU)",
+                    "name": "Virtual Textbook of Organic Chemistry (Prof. William Reusch, Michigan State University)",
                     "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/intro1.htm"
                 },
                 {
@@ -929,12 +1098,8 @@
                     "url": "/hansreich/resources/acronyms/"
                 },
                 {
-                    "name": "Challenging Problems in Organic Chemistry-David Evans (Harvard)",
-                    "url": "http://evans.rc.fas.harvard.edu/problems/index.cgi"
-                },
-                {
                     "name": "ChemTube (3D Organic Chemistry Animations)",
-                    "url": "http://www.chemtube3d.com/"
+                    "url": "https://www.chemtube3d.com/"
                 },
                 {
                     "name": "Chemistry by Design-Jón Njarðarson (Arizona)",
@@ -943,10 +1108,6 @@
                 {
                     "name": "Chemical Educational Xchange (by JCE)",
                     "url": "https://www.chemedx.org/category/concepts/organic"
-                },
-                {
-                    "name": "Organic Synthesis Handouts-Andrew Myers (Harvard)",
-                    "url": "https://faculty.chemistry.harvard.edu/myers/pages/chem-115-handouts"
                 },
                 {
                     "name": "Chimie générale & organiqué-Gérard Dupuis",
@@ -966,15 +1127,7 @@
                 },
                 {
                     "name": "Electron Pushing/Drawing Mechanisms",
-                    "url": "/epush/"
-                },
-                {
-                    "name": "Open Source Lecture Notes-Bode Research Group (ETH-Zürich)",
-                    "url": "https://bode.ethz.ch/open-source-lecture-notes.html"
-                },
-                {
-                    "name": "Organic Chemistry Practice Problems-William Reusch (MSU)",
-                    "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Questions/problems.htm"
+                    "url": "/hansreich/resources/electron_pushing/"
                 },
                 {
                     "name": "Organic Education Resources (OrganicERs.org cCWCS)",
@@ -1007,6 +1160,121 @@
                 {
                     "name": "QR Chem (presentation materials for instructors)-Neil Garg",
                     "url": "https://qrchem.net/"
+                },
+                {
+                    "name": "MolSSI Education Resources",
+                    "description": "Free online tutorial materials including Programming, Software Development, and Computational Molecular Science.",
+                    "url": "https://education.molssi.org/resources.html"
+                },
+                {
+                    "name": "Lecture Notes",
+                    "links": [
+                        {
+                            "name": "\"Advanced Organic Chemistry\", Prof. David  Evans (Harvard)",
+                            "description": "Chem 206 course notes",
+                            "url": "https://www.dropbox.com/sh/y7ynttq7n4ojp4l/AACOWxp3jntzXvIDdM6Zzk46a?dl=0"
+                        },
+                        {
+                            "name": "\"Advanced Organic Chemistry\", Eugene Kwan (Harvard)",
+                            "description": "A set of reinterpretation of the Chem 206 course notes created by Professor David A. Evans",
+                            "url": "https://ekwan.github.io/notes.html#advanced-organic-chemistry"
+                        },
+                        {
+                            "name": "Heterocyclic Chemistry\" (Prof. Phil Baran, The Scripps Research Institute)",
+                            "description": "Also see <a href='#organic_chemistry_videos'>Organic Chemistry Videos</a> section for videos.",
+                            "url": "https://www.scripps.edu/baran/heterocycles/"
+                        },
+                        {
+                            "name": "\"NMR Spectroscopy\"",
+                            "description": "Chem 605 course",
+                            "url": "/hansreich/resources/nmr/"
+                        },
+                        {
+                            "name": "\"Organic Synthesis\", Prof. Andrew Myers (Harvard)",
+                            "description": "Chemistry 115 Handouts, created as part of an advanced course on the synthesis of complex molecules",
+                            "url": "https://faculty.chemistry.harvard.edu/myers/pages/chem-115-handouts"
+                        },
+                        {
+                            "name": "Open Source Lecture Notes-Bode Research Group (ETH-Zürich)",
+                            "url": "https://bode.ethz.ch/open-source-lecture-notes.html"
+                        },
+                        {
+                            "name": "\"Organometallics\" (Prof. M. Christina White, University of Illinois)",
+                            "url": "http://faculty.scs.illinois.edu/white/index.php?p=lectures"
+                        },
+                        {
+                            "name": "\"Organometallic Chemistry\"",
+                            "description": "Chem 842 course",
+                            "url": "/hansreich/resources/organometallic/"
+                        },
+                        {
+                            "name": "Aliphatic C&ndash;H oxidation (Prof. M. Christina White, University of Illinois)",
+                            "description": "graduate or advanced undergraduate level lecture. Also <a href='http://faculty.scs.illinois.edu/white/img/News/Aliphatic%20C-H%20hydroxylation.August31.Chinese.pdf' target='_blank' rel='noopener'>available in Chinese</a>.",
+                            "url": "http://faculty.scs.illinois.edu/white/img/News/Aliphatic%20C-H%20hydroxylation%20chemistry%20Final.August31.pdf"
+                        }
+                    ]
+                },
+                {
+                    "name": "Group Meeting Notes",
+                    "links": [
+                        {
+                            "name": "Baran Group Meetings (The Scripps Research Institute)",
+                            "url": "https://baranlab.org/research/seminars/"
+                        },
+                        {
+                            "name": "MacMillan Group Meetings (Princeton University)",
+                            "url": "https://macmillan.princeton.edu/presentations/"
+                        },
+                        {
+                            "name": "Richmond Sarpong Group Meetings (University of California Berkeley)",
+                            "url": "https://sarponggroup.com/presentations/"
+                        },
+                        {
+                            "name": "Scott Denmark Group Meetings (University of Illinois)",
+                            "url": "http://faculty.scs.illinois.edu/denmark/?page_id=5982"
+                        },
+                        {
+                            "name": "Ryan Shenvi Group Meetings (The Scripps Research Insititute)",
+                            "url": "https://www.shenvilab.org/resources"
+                        },
+                        {
+                            "name": "Marty Burke (University of Illinois)",
+                            "url": "http://faculty.scs.illinois.edu/burke/index.php?p=group_meetings"
+                        },
+                        {
+                            "name": "Brian Stoltz Group Meetings (California Institute of Technology)",
+                            "url": "https://stoltz2.caltech.edu/seminars2.html"
+                        }
+                    ]
+                },
+                {
+                    "name": "Questions and Problem sets",
+                    "links": [
+                        {
+                            "name": "Organic Chemistry Problems (Prof. Joseph J. Topczewski, University of Minnesota)",
+                            "description": "example problems and answers for students at the introductory graduate student level or advanced undergraduate level",
+                            "url": "https://www.organicchemproblems.com/"
+                        },
+                        {
+                            "name": "Organic Chemistry Practice Problems (Prof. William Reusch, Michigan State University)",
+                            "description": "problems and answers in most undergraduate organic chemistry courses",
+                            "url": "https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/Questions/problems.htm"
+                        },
+                        {
+                            "name": "\"ReactionFlash&trade; App\" (developed by Elsevier and Prof.Erick M.Carreira, ETH-Zürich)",
+                            "description": "over 1000 named reactions, their mechanisms and examples published in peer-reviewed literature",
+                            "url": "https://www.elsevier.com/solutions/reaxys/who-we-serve/education-and-research/reactionflash"
+                        },
+                        {
+                            "name": "Advanced Problems in Organic Chemistry (APOC) (Android)",
+                            "description": "developed by Niels Sievertsen, provide over 900 challenging organic problems sets by professor Evans (Harvard). Also <a href='https://apps.apple.com/ch/app/apoc-advanced-problems-in-organic-chemistry/id1019335489?l=en' target='_blank' rel='noopener'>available for iOS</a>",
+                            "url": "https://play.google.com/store/apps/details?id=com.ionicframework.eq4303509&hl=en_US"
+                        },
+                        {
+                            "name": "Fukuyama group problem set for graduate students",
+                            "url": "http://www.f.u-tokyo.ac.jp/~fukuyama/index-e.htm"
+                        }
+                    ]
                 }
             ]
         },
@@ -1026,6 +1294,19 @@
                 {
                     "name": "Chemistry Video-clip Library",
                     "url": "http://www.ch.ic.ac.uk/video/"
+                },
+                {
+                    "name": "Heterocyclic Chemistry @Scripps Lectures 2019 by Prof. Phil Baran",
+                    "url": "https://www.youtube.com/channel/UCqfuQDFKYu63EmnCsNNOHSQ"
+                },
+                {
+                    "name": "Organomettallics @Scripps Lectures 2019 by Prof. Keary Engle",
+                    "url": "https://www.youtube.com/playlist?list=PL_BHDFhSGkPaL1sFvYFQ8rl7cMgeFN2JJ"
+                },
+                {
+                    "name": "\"Synthesis Workshop\" by Dr. Matthew Horwitz",
+                    "description": "an open access video podcast, including four complementary modules - Total Synthesis, Named Reactions, Research Spotlights, and Culture of Chemistry",
+                    "url": "https://synthesis-workshop.com"
                 },
                 {
                     "name": "Protein Data Bank Videos",
@@ -1063,8 +1344,8 @@
                             "url": "http://www-jmg.ch.cam.ac.uk/data/c2k/"
                         },
                         {
-                            "name": "Hans Reich's Organic Chemistry Info (now housed by the DOC)",
-                            "url": ""
+                            "name": "Hans Reich's Organic Chemistry Info",
+                            "url": "/hansreich/"
                         },
                         {
                             "name": "Organic Chemistry Portal",
@@ -1109,7 +1390,7 @@
                         },
                         {
                             "name": "Organic-Reaction.com (Covers some patents, Literature, and chemistry relavent to Medchem)",
-                            "url": "https://www.organic-reaction.com"
+                            "url": "https://organic-reaction.com"
                         }
                     ]
                 },
@@ -1131,6 +1412,40 @@
                         {
                             "name": "Peptidelinks by James Nowick-UC Irvine",
                             "url": "http://peptidelinks.net/"
+                        }
+                    ]
+                },
+                {
+                    "name": "Other Resource Collections",
+                    "links": [
+                        {
+                            "name": "Dan Lehnherr’s Chemistry Resources Summary",
+                            "url": "http://www.danlehnherr.com/resources.html"
+                        },
+                        {
+                            "name": "\"Meta-List of Free Organic Chem Resources\" (Prof. Alex Grenning, University of Florida)",
+                            "url": "https://t.co/L4m0fdruxl?amp=1"
+                        },
+                        {
+                            "name": "Prof. Dirk Trauner group Resource page",
+                            "url": "https://www.traunergroup.org/resources"
+                        },
+                        {
+                            "name": "Prof. Ryan Shenvi group Resource page",
+                            "url": "https://www.shenvilab.org/education"
+                        },
+                        {
+                            "name": "Prof. Richmond Sarpong group Resource page",
+                            "url": "https://sarponggroup.com/resources/"
+                        }
+                    ]
+                },
+                {
+                    "name": "Internships and Fellowships",
+                    "links": [
+                        {
+                            "name": "Interships and Fellowships by DOC",
+                            "url": "https://www.organicdivision.org/internships-fellowships/"
                         }
                     ]
                 }

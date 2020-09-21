@@ -4,16 +4,24 @@ layout: hansreich_base_layout.njk
 header:
     title: "Hans Reich's Organic Chemistry Info/Data"
 
+meta_tags:
+  - name: 'description'
+    content: 'This page is the homepage of Professor Hans Reich (UW-Madison) collection including: pKa, total syntheses, NMR, and organometallic chemistry, etc.'
+
 doc_statement:
-    title: "About this Collection of Data/Info-The Hans Reich Collection"
+    title: "About the Hans Reich Collection"
 
 obit:
     title: 'Professor Hans J Reich Obituary'
     url: 'https://www.cressfuneralservice.com/obituary/Hans-Reich'
     target: '_blank'
 
+blockquote_image:
+    src: '/img/hansreich.jpg'
+    alt: 'Hans Reich headshot'
+
 hans:
-    bio_url: /hansreich/about_reich
+    bio_url: /hansreich/about_reich/
 
 ieva:
     title: 'Ieva L. Reich'
@@ -27,23 +35,32 @@ uwmadison:
         url: 'https://chem.wisc.edu/'
         target: '_blank'
 
+reich_icon_large:
+    url: '/img/reich_icon_large.png'
+    alt: 'Reich Site Icon'
+
 ---
 <div class="jumbotron jumbotron-fluid pt-1 pb-3">
     <div class="container">
         <h1 class="display-4 text-center">{{ doc_statement.title }}</h1>
         <p class="lead text-justify">
-            The idea and majority of the content of this website has come from the late
+            The concept and majority of the content of this website has come from the late
             <a href="{{ hans.bio_url | url }}" {%- if hans.target %}target="{{ hans.target }}" rel="noopener"{%- endif %}>
                 Professor Hans J. Reich
             </a>
-            who served his entire professional academic career at the University of Wisconsin-Madison.
-            Upon
+            who served his entire professional academic career at the University of Wisconsin-Madison. In addition to his numerous
+            contributions to the field of organic chemistry, Professor Reich was a pioneer in distribution of educational content
+            via the world wide web. He began teaching himself programming in the late 1990s, producing new freeware programs, WinPLT
+            and WinDNMR, which were ahead of their time. These programs managed chemical structure drawings, NMR spectra
+            annotations, and simulations cohesively. As an outgrowth of these endeavors, he began the University of
+            Wisconsin-Madison’s Organic Chemistry Information webpage in which he accumulated and curated information for the
+            broader chemistry community to use free of charge. Upon
             <a href="{{ obit.url | url }}" {%- if obit.target %}target="{{ obit.target }}" rel="noopener"{%- endif %}>
                 his untimely death in 2020</a>, the
             <a href="{{ doc.url | url }}" {%- if doc.target %}target="{{ doc.target }}" rel="noopener"{%- endif %}>
                 ACS Organic Division</a>
-            offered to assist in maintaining Professor Reich’s extensive online resources.
-            This website is a product of those efforts.<br>
+            offered to assist in maintaining Professor Reich’s extensive online resources which have impacted the organic chemistry
+            community worldwide.<br>
         </p>
         <p class="lead text-justify">
             We are grateful to the
@@ -52,36 +69,42 @@ uwmadison:
             (especially
             <a href="{{ uwmadison.chemistry.url | url }}"
                 {%- if uwmadison.chemistry.target %}target="{{ uwmadison.chemistry.target }}" rel="noopener"{%- endif %}>
-                the Chemistry department</a>) for their support in this project.
+                the Chemistry Department</a>) for their support in this project.
             We also graciously thank his wife,
             <a href="{{ ieva.url | url }}"
                 {%- if ieva.target %}target="{{ ieva.target }}" rel="noopener"{%- endif %}>
-                Dr. Ieva L. Reich</a>, and her family for supporting this project
-            where we are able to honor Professor Hans Reich’s 25+ years of website efforts
-            in support the broader organic chemistry community.
+                Dr. Ieva L. Reich</a>,
+            and her family for supporting this project where we are able to honor Professor Hans Reich’s 25+ years of website
+            efforts in support of the broader organic chemistry community.
         </p>
+        <img src="{{ reich_icon_large.url }}" class="img-fluid rounded shadow my-3" alt="{{ reich_icon_large.alt }}">
     </div>
 </div>
 
-<div class="container bg-secondary text-white">
-    <blockquote class="blockquote text-center">
-        <p>
-            "[This] is a collection of Web pages containing information useful to teachers, researchers, and students
-            in organic chemistry, biochemistry, and medicinal chemistry. The pages have been selected for ease of use, broad
-            applicability, and quality of coverage. Topics will include structural information, organic reactions,
-            nomenclature, physical properties, and spectroscopic data. These Web pages will be updated when possible and
-            additional Web pages will be added as they become available."
-        </p>
-        <footer class="blockquote-footer text-light">Professor Hans Reich in
-            <cite title="Source Title">
-                <a href="https://doi.org/10.1021/ed082p495" target="_blank" rel="noopener" class="text-warning">J. Chem. Educ. 2005, 82, 3, 495</a>
-            </cite>
-        </footer>
-    </blockquote>
+<div class="container mx-auto row bg-dark shadow rounded-lg">
+    <div class="d-flex align-items-top pt-3 pt-md-5 justify-content-center col-12 col-md-3 col-lg-2">
+        <img class="blockquote-custom-img" src="{{ blockquote_image.src | url }}" alt="{{ blockquote_image.alt }}">
+    </div>
+    <div class="col-12 col-md-9 col-lg-10">
+        <blockquote class="blockquote blockquote-custom text-white pt-5 px-1 px-md-3 px-lg-5 mb-0">
+            <p class="font-weight-light text-justify">
+                [This] is a collection of Web pages containing information useful to teachers, researchers, and students
+                in organic chemistry, biochemistry, and medicinal chemistry. The pages have been selected for ease of use, broad
+                applicability, and quality of coverage. Topics will include structural information, organic reactions,
+                nomenclature, physical properties, and spectroscopic data. These Web pages will be updated when possible and
+                additional Web pages will be added as they become available."
+            </p>
+            <footer class="blockquote-footer text-center text-light p-3 mt-4 border-top border-light">Professor Hans Reich in
+                <cite title="Source Title">
+                    <a href="https://doi.org/10.1021/ed082p495" target="_blank" rel="noopener" class="text-warning">J. Chem. Educ. 2005, 82, 3, 495</a>
+                </cite>
+            </footer>
+        </blockquote>
+    </div>
 </div>
 
 <div class="container py-3">
-    <p class="lead text-justify"">
+    <p class="lead text-justify">
         We encourage others who have collected data useful to organic chemists or who regularly use web sites
         that provide such data to contribute their information to this collection. If you have material to contribute, please
         <a href="https://www.organicdivision.org/contact/" target="_blank" rel="noopener">complete this form</a>

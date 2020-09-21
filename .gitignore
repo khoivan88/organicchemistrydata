@@ -6,5 +6,6 @@ _site/
 *venv*/
 
 .vscode
+.DS_Store
 
 dev/

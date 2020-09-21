@@ -1,0 +1,620 @@
+items:
+  list:
+  - id: hdata05
+    title: -Explanation
+  - id: hdata04
+    title: -Reference Abbreviations
+  - id: hdata00
+    title: "-Shift Table 1: \u03B4 -10 to 2"
+  - id: hdata01
+    title: "-Shift Table 2: \u03B4 2 to 6"
+  - id: hdata02
+    title: "-Shift Table 3: \u03B4 6 to 10"
+  - id: hdata03
+    title: "-Shift Table 4: \u03B4 10 to 20"
+  - id: hdata06
+    title: Acetal
+  - id: hdata09
+    title: Acetylene
+  - id: hdata07
+    title: "Acetylene tables (X-C\u2261C-H)"
+  - id: hdata08
+    title: "Acetylene tables (X-C\u2261C-Me)"
+  - id: hdata13
+    title: "Acetylene tables (X-CH<sub>2</sub>-C\u2261C-CH<sub>3</sub>)"
+  - id: hdata12
+    title: "Acetylene tables (X-CH<sub>2</sub>-C\u2261C-H)"
+  - id: hdata10
+    title: Acridine
+  - id: hdata11
+    title: Adamantane
+  - id: hdata14
+    title: Alcohol
+  - id: hdata15
+    title: Aldehyde
+  - id: hdata16
+    title: Alkane
+  - id: hdata23
+    title: Alkene
+  - id: hdata22
+    title: Alkene, 1,1-Disubstituted
+  - id: hdata20
+    title: Alkene, <i>cis</i>-Disubstituted
+  - id: hdata19
+    title: Alkene, <i>trans</i>-Disubstituted
+  - id: hdata18
+    title: Alkene, Monosubstituted (C-Li)
+  - id: hdata17
+    title: Alkene, Monosubstituted (F-N)
+  - id: hdata21
+    title: Alkene, Substituent Effects
+  - id: hdata24
+    title: Alkene, Vinyl Halide
+  - id: hdata09
+    leave_empty: true
+    title: Alkyne
+  - id: hdata25
+    title: Allene
+  - id: hdata30
+    title: Allene Oxide
+  - id: hdata26
+    title: Allyl
+  - id: hdata27
+    title: Aluminum
+  - id: hdata73
+    title: Amides
+  - id: hdata28
+    title: Amidine
+  - id: hdata29
+    title: Amidine
+  - id: hdata31
+    title: Amine
+  - id: hdata32
+    title: Amine, N-Hydroxy
+  - id: hdata33
+    title: Amino Acid
+  - id: hdata34
+    title: Ammonium
+  - id: hdata74
+    title: Anhydride
+  - id: hdata35
+    title: Anthracene
+  - id: hdata36
+    title: Antimony
+  - id: hdata37
+    title: Aromatic, Benzenoid
+  - id: hdata39
+    title: Aromatic, Larger rings
+  - id: hdata40
+    title: Arsenic
+  - id: hdata41
+    title: Azide
+  - id: hdata42
+    title: Azo
+  - id: hdata42
+    leave_empty: true
+    title: Azoxy
+  - id: hdata43
+    title: Azulene
+  - id: hdata44
+    title: Benzene
+  - id: hdata38
+    title: Benzene - Substituent Effects
+  - id: hdata45
+    title: Benzocycloalkanes
+  - id: hdata46
+    title: Benzofuran
+  - id: hdata51
+    title: Benzothiophene
+  - id: hdata49
+    title: Benzyl
+  - id: hdata50
+    title: Beryllium
+  - id: hdata47
+    title: Bicyclo[1.1.0]
+  - id: hdata48
+    title: Bicyclo[1.1.1]
+  - id: hdata55
+    title: Bicyclo[2.1.0]
+  - id: hdata54
+    title: Bicyclo[2.1.1]
+  - id: hdata52
+    title: Bicyclo[2.2.1]
+  - id: hdata53
+    title: Bicyclo[2.2.2]
+  - id: hdata61
+    title: Bicyclo[3.1.0]
+  - id: hdata60
+    title: Bicyclo[3.1.1]
+  - id: hdata56
+    title: Bicyclo[3.3.1]
+  - id: hdata63
+    title: Bicyclo[4.1.0]
+  - id: hdata64
+    title: Bicyclo[5.1.0]
+  - id: hdata65
+    title: Bicyclo[6.1.0]
+  - id: hdata57
+    title: Bifluoride
+  - id: hdata58
+    title: Bismuth
+  - id: hdata59
+    title: Borane
+  - id: hdata62
+    title: Bunte Salts
+  - id: hdata66
+    title: Cadmium
+  - id: hdata67
+    title: Carbamate
+  - id: hdata68
+    title: Carbene
+  - id: hdata69
+    title: Carbonate
+  - id: hdata70
+    title: Carbonium
+  - id: hdata71
+    title: Carboxylic Acid
+  - id: hdata72
+    title: Carboxylic Acid Halides
+  - id: hdata73
+    leave_empty: true
+    title: Carboxylic Amides
+  - id: hdata74
+    leave_empty: true
+    title: Carboxylic Anhydride
+  - id: hdata75
+    title: Carboxylic Ester
+  - id: hdata81
+    title: Carboxylic Ester, di
+  - id: hdata76
+    title: Carboxylic Imides
+  - id: hdata77
+    title: Carboxylic Thioester
+  - id: hdata80
+    title: Copper
+  - id: hdata78
+    title: Coumarin
+  - id: hdata83
+    title: Crown ethers
+  - id: hdata79
+    title: Cyanate
+  - id: hdata82
+    title: Cyanide
+  - id: hdata84
+    title: Cyclobutane
+  - id: hdata85
+    title: Cyclobutane, Heterocycles
+  - id: hdata86
+    title: Cycloheptane
+  - id: hdata87
+    title: Cycloheptane, Heterocycles
+  - id: hdata88
+    title: Cyclohexane
+  - id: hdata89
+    title: Cyclohexane
+  - id: hdata90
+    title: Cyclohexane, Heterocycles
+  - id: hdata91
+    title: Cyclohexanone
+  - id: hdata92
+    title: Cyclohexene
+  - id: hdata93
+    title: Cyclooctane
+  - id: hdata94
+    title: Cyclopentadiene
+  - id: hdata95
+    title: Cyclopentane
+  - id: hdata96
+    title: Cyclopentane, Heterocycles
+  - id: hdata97
+    title: Cyclopropane
+  - id: hdata100
+    title: Cyclopropane, Heterocycles
+  - id: hdata99
+    title: Cyclopropane, methylene
+  - id: hdata98
+    title: Cyclopropane, monosubstituted
+  - id: hdata98
+    leave_empty: true
+    title: Cyclopropane, trisubstituted
+  - id: hdata102
+    title: Cyclopropanone
+  - id: hdata101
+    title: Cyclopropene
+  - id: hdata103
+    title: Decalin
+  - id: hdata42
+    leave_empty: true
+    title: Diazene
+  - id: hdata42
+    leave_empty: true
+    title: Diazene oxide
+  - id: hdata104
+    title: Diazo
+  - id: hdata106
+    title: Diene
+  - id: hdata105
+    title: Diene, 2-Substituted
+  - id: hdata109
+    title: Diselenide
+  - id: hdata108
+    title: Enal
+  - id: hdata107
+    title: Enamine
+  - id: hdata110
+    title: Enoate Ester
+  - id: hdata111
+    title: Enoic Acid
+  - id: hdata115
+    title: Enoic Amide
+  - id: hdata112
+    title: Enol
+  - id: hdata114
+    title: Enol Phosphate
+  - id: hdata113
+    title: Enolates
+  - id: hdata116
+    title: Enone
+  - id: hdata117
+    title: Enone (cont)
+  - id: hdata121
+    title: Episulfide
+  - id: hdata123
+    title: Epoxide
+  - id: hdata75
+    leave_empty: true
+    title: Ester
+  - id: hdata122
+    title: Ether
+  - id: hdata118
+    title: Fulvene
+  - id: hdata119
+    title: Furan
+  - id: hdata120
+    title: Germane
+  - id: hdata124
+    title: Gold
+  - id: hdata155
+    title: Grignard Reagents
+  - id: hdata125
+    title: Halide
+  - id: hdata129
+    title: Halides, Poly
+  - id: hdata126
+    title: Haloketone
+  - id: hdata128
+    title: Halonium ions
+  - id: hdata127
+    title: Hydrazine
+  - id: hdata135
+    title: Hydrazone
+  - id: hdata133
+    title: Hydrogen
+  - id: hdata131
+    title: Hydroxylamine
+  - id: hdata132
+    title: Hypofluorite
+  - id: hdata134
+    title: Imidazole
+  - id: hdata130
+    title: Imine
+  - id: hdata136
+    title: Imonium
+  - id: hdata137
+    title: Indane
+  - id: hdata141
+    title: Indium
+  - id: hdata138
+    title: Indole
+  - id: hdata139
+    title: Iron
+  - id: hdata142
+    title: Isocyanate
+  - id: hdata140
+    title: Isocyanide
+  - id: hdata142
+    leave_empty: true
+    title: Isoselenocyanate
+  - id: hdata142
+    leave_empty: true
+    title: Isothiocyanate
+  - id: hdata169
+    title: Isoxazole
+  - id: hdata143
+    title: Ketal
+  - id: hdata144
+    title: Ketene
+  - id: hdata144
+    leave_empty: true
+    title: Ketene Acetals
+  - id: hdata148
+    title: Ketoester, Beta
+  - id: hdata145
+    title: Ketone
+  - id: hdata146
+    title: Ketone, Di
+  - id: hdata147
+    title: Ketone, Halo
+  - id: hdata147
+    leave_empty: true
+    title: Ketone, Hydroxy
+  - id: hdata149
+    title: Lactam
+  - id: hdata150
+    title: Lactones
+  - id: hdata151
+    title: Lead
+  - id: hdata190
+    title: Lead
+  - id: hdata152
+    title: Lithium
+  - id: hdata155
+    leave_empty: true
+    title: Magnesium
+  - id: hdata157
+    title: Meisenheimer Salts
+  - id: hdata247
+    title: Mercaptan
+  - id: hdata156
+    title: Mercury
+  - id: hdata226
+    title: Mesylate
+  - id: hdata154
+    title: Methyl Shifts (C, Si, Ge, Sn, Met)
+  - id: hdata153
+    title: Methyl Shifts (Halg, O, N )
+  - id: hdata159
+    title: Naphthalene
+  - id: hdata158
+    title: Naphthalene, polysubstituted
+  - id: hdata160
+    title: Neopentyl
+  - id: hdata161
+    title: Nitrate Ester
+  - id: hdata162
+    title: Nitriles
+  - id: hdata163
+    title: Nitro
+  - id: hdata165
+    title: Nitrone
+  - id: hdata167
+    title: Nitronic ester
+  - id: hdata166
+    title: Nitroso
+  - id: hdata164
+    title: Nucleoside
+  - id: hdata168
+    title: Ortho Ester
+  - id: hdata168
+    leave_empty: true
+    title: Ortho Thioester
+  - id: hdata169
+    leave_empty: true
+    title: Oxazole
+  - id: hdata169
+    leave_empty: true
+    title: Oxazolidine
+  - id: hdata170
+    title: Oxime
+  - id: hdata171
+    title: Oxonium Ions
+  - id: hdata175
+    title: Penicillin
+  - id: hdata172
+    title: Perbromate Ester
+  - id: hdata172
+    leave_empty: true
+    title: Perchlorate Ester
+  - id: hdata173
+    title: Peroxide
+  - id: hdata174
+    title: Phenanthrene
+  - id: hdata180
+    title: Phenazine
+  - id: hdata181
+    title: Phenol
+  - id: hdata182
+    title: Phosphaalkyne
+  - id: hdata183
+    title: Phosphate
+  - id: hdata176
+    title: Phosphine
+  - id: hdata176
+    leave_empty: true
+    title: Phosphine Borane
+  - id: hdata177
+    title: Phosphine Oxide
+  - id: hdata177
+    leave_empty: true
+    title: Phosphine Sulfide
+  - id: hdata178
+    title: Phosphite
+  - id: hdata179
+    title: Phosphole
+  - id: hdata179
+    leave_empty: true
+    title: Phospholene
+  - id: hdata189
+    title: Phosphonate
+  - id: hdata184
+    title: Phosphonium
+  - id: hdata184
+    leave_empty: true
+    title: Phosphonium Ylide
+  - id: hdata185
+    title: Phosphorane
+  - id: hdata186
+    title: Phthalimide
+  - id: hdata187
+    title: Platinum
+  - id: hdata190
+    leave_empty: true
+    title: Plumbane
+  - id: hdata191
+    title: Protecting Groups
+  - id: hdata188
+    title: Purine
+  - id: hdata196
+    title: Pyrazine
+  - id: hdata197
+    title: Pyrazole
+  - id: hdata192
+    title: Pyrene
+  - id: hdata193
+    title: Pyridazine
+  - id: hdata194
+    title: Pyridine
+  - id: hdata195
+    title: Pyridone
+  - id: hdata198
+    title: Pyrimidine
+  - id: hdata199
+    title: Pyrone
+  - id: hdata200
+    title: Pyrrole
+  - id: hdata201
+    title: Pyrylium
+  - id: hdata204
+    title: Quinoline
+  - id: hdata202
+    title: Quinone
+  - id: hdata203
+    title: Quinoxaline
+  - id: hdata205
+    title: Selenadiazole
+  - id: hdata206
+    title: Selenide
+  - id: hdata207
+    title: Selenium
+  - id: hdata208
+    title: Selenol
+  - id: hdata211
+    title: Selenonium
+  - id: hdata209
+    title: Selenophene
+  - id: hdata210
+    title: Selenoxide
+  - id: hdata201
+    leave_empty: true
+    title: Selininium
+  - id: hdata212
+    title: Silane
+  - id: hdata215
+    title: Silyl ether
+  - id: hdata213
+    title: Spiro
+  - id: hdata214
+    title: Stannane
+  - id: hdata217
+    title: Sugars (furanose)
+  - id: hdata216
+    title: Sugars (pyranose)
+  - id: hdata218
+    title: Sulfates
+  - id: hdata219
+    title: Sulfenate
+  - id: hdata220
+    title: Sulfide
+  - id: hdata221
+    title: Sulfilimine
+  - id: hdata221
+    leave_empty: true
+    title: Sulfimide
+  - id: hdata224
+    title: Sulfinate
+  - id: hdata222
+    title: Sulfine
+  - id: hdata224
+    leave_empty: true
+    title: Sulfinic Acid
+  - id: hdata223
+    title: Sulfite
+  - id: hdata225
+    title: Sulfonamide
+  - id: hdata226
+    leave_empty: true
+    title: Sulfonate
+  - id: hdata227
+    title: Sulfonate, thio
+  - id: hdata228
+    title: Sulfone
+  - id: hdata229
+    title: Sulfonium
+  - id: hdata230
+    title: Sulfonyl Halide
+  - id: hdata231
+    title: Sulfoxide
+  - id: hdata229
+    leave_empty: true
+    title: Sulfoxonium
+  - id: hdata232
+    title: Sulfur
+  - id: hdata233
+    title: Sultone
+  - id: hdata234
+    title: Tellurium
+  - id: hdata234
+    leave_empty: true
+    title: Tellurol
+  - id: hdata235
+    title: Tellurophene
+  - id: hdata236
+    title: Tetrahedrane
+  - id: hdata237
+    title: Tetrahydrofuran
+  - id: hdata238
+    title: Tetrazole
+  - id: hdata239
+    title: Thallium
+  - id: hdata201
+    leave_empty: true
+    title: Thiapyrylium
+  - id: hdata240
+    title: Thiazole
+  - id: hdata241
+    title: Thioacetal
+  - id: hdata242
+    title: Thioaldehyde
+  - id: hdata246
+    title: Thioaldehyde S-oxide
+  - id: hdata245
+    title: Thioamide
+  - id: hdata243
+    title: Thiocarboxylic Acid
+  - id: hdata244
+    title: Thiocyanate
+  - id: hdata247
+    leave_empty: true
+    title: Thiol
+  - id: hdata248
+    title: Thiophene
+  - id: hdata251
+    title: Thiopyrone
+  - id: hdata214
+    leave_empty: true
+    title: Tin
+  - id: hdata252
+    title: Triazine
+  - id: hdata253
+    title: Triazole
+  - id: hdata226
+    leave_empty: true
+    title: Triflate
+  - id: hdata254
+    title: Tropone
+  - id: hdata249
+    title: Tungsten
+  - id: hdata250
+    title: Urea
+  - id: hdata67
+    leave_empty: true
+    title: Urethane
+  - id: hdata17
+    leave_empty: true
+    title: Vinyl Groups
+  - id: hdata257
+    title: Water
+  - id: hdata256
+    title: Xylylene, ortho-
+  - id: hdata255
+    title: Zinc

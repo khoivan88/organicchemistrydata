@@ -1,0 +1,26 @@
+items:
+  list:
+  - id: f-data01
+    title: -Fluorine Shifts Overview
+  - id: f-data00
+    title: -Reference compounds
+  - id: f-data03
+    title: "<sup>19</sup>F Shifts \u03B4 -100 to 100"
+  - id: f-data02
+    title: "<sup>19</sup>F Shifts \u03B4 -500 to -100"
+  - id: f-data04
+    title: "<sup>19</sup>F Shifts \u03B4 100 to 600"
+  - id: f-data07
+    title: Fluorine-Boron Coupling
+  - id: f-data10
+    title: Fluorine-Carbon Coupling
+  - id: f-data05
+    title: Fluorine-Fluorine Coupling
+  - id: f-data06
+    title: Fluorine-Phosphorus Coupling
+  - id: f-data08
+    title: Fluorine-Proton Coupling
+  - id: f-data09
+    title: Fluorine-Proton Coupling (cont)
+  - id: f-data11
+    title: Fluorine-Silicon Coupling

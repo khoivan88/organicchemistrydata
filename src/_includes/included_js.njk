@@ -1,7 +1,4 @@
-    <!-- Main JS-->
-    <script src="{{ '/js/main.js' | url }}"></script>
-
-    <!-- Optional JavaScript -->
+    <!-- Bootstrap Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     {# <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> #}
 
@@ -11,17 +8,26 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
+    <!-- Main JS-->
+    <script src="{{ '/js/main.js' | url }}"></script>
     <!-- clickToSection JS-->
     <script src="{{ '/js/clickToSection.js' | url }}"></script>
     <!-- For Social Media Share Button-->
     <script src="{{ '/js/shareToSocialMedia.js' | url }}"></script>
     <!-- jQuery Custom Scroller CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin@3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js" integrity="sha512-2hIlk2fL+NNHkULe9gGdma/T5vSYk80U5tvAFSy3dGEl8XD4h2i6frQvHv5B+bm/Itmi8nJ6krAcj5FWFcBGig==" crossorigin="anonymous"></script>
+    {# <script src="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin@3.1.5/jquery.mCustomScrollbar.concat.min.js" integrity="sha256-WrXxn5vUpN3PFCNfwWhO7+fPv7wz8KH85mGxPeQwkr4=" crossorigin="anonymous"></script> #}
 
     {%- if specific_page_js %}
         <!-- Page Specific JS-->
         {%- for script in specific_page_js.list %}
-            <!-- {{ script.description }} -->
-            <script src="{{ script.url | url }}"></script>
+            <!-- {{ script.description | safe }} -->
+            <script {%- if script.url %} src="{{ script.url | url }}"{%- endif -%}>{{ script.content | safe }}</script>
+        {%- endfor %}
+    {%- endif %}
+    {%- if default_script %}
+        {%- for script in default_script.list %}
+            <!-- {{ script.description | safe }} -->
+            <script {%- if script.url %} src="{{ script.url | url }}">{%- else %}>{{ script.content | safe }}{%- endif -%}</script>
         {%- endfor %}
     {%- endif %}

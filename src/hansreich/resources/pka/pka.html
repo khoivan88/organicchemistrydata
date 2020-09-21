@@ -1,11 +1,17 @@
 ---
 #layout: hansreich_base_layout.njk
-layout: page_with_side_menu.njk
+layout: side_menu_one_page.njk
 
 header:
     title: 'Bordwell pKa Table'
 
 title: 'Bordwell pKa Table'
+
+updated: 2017-10-27
+
+meta_tags:
+  - name: 'description'
+    content: 'This page by Professor Hans Reich (UW-Madison) provides a collection of common structural motifs in Organic Chemistry and their corresponding pKa values.'
 
 data_path: &data_path 'pka_data/'
 
@@ -104,15 +110,21 @@ items:
     - <<: *pka_general
       leave_empty: true
     - id: pka_dmso_compilation
-      title: pKa Values in DMSO Compilation
+      title: pKa Values in DMSO Compilation (by Reich and Bordwell)
       extra: true
       url: 'pka_data/pka-compilation-reich-bordwell.pdf'
       target: '_blank'
       display_link: true
-    - id: pka_water_compilation
-      title: pKa Values in Water Compilation
+    - id: pka_water_compilation_williams
+      title: pKa Values in Water Compilation (by R. Williams)
       extra: true
       url: 'pka_data/pka-compilation-williams.pdf'
+      target: '_blank'
+      display_link: true
+    - id: pka_water_compilation_evans
+      title: pKa Values Compilation (by Dave Evans and D. H. Ripin)
+      extra: true
+      url: 'pka_data/evans_pKa_table.pdf'
       target: '_blank'
       display_link: true
     - id: ka-water
@@ -364,13 +376,16 @@ items:
           their determination in water, DMSO and the gas phase and use these to
           predict a compounds reactivity, solubility, and other physical
           characteristics. More information on pKa&#39;s can be obtained elsewhere (e.g
-          <a href="https://en.wikipedia.org/wiki/Acid_dissociation_constant" target="_blank">Wikipedia pKa</a>). In
+          <a href="https://en.wikipedia.org/wiki/Acid_dissociation_constant" target="_blank" rel="noopener">Wikipedia pKa</a>). In
           short, the stronger the acid, the smaller the pKa value and
           strong acids have weak conjugate bases. pKa values describe the point
           where the acid is 50% dissociated (i.e. deprotonated).
           Below are tables that include determined pKa values for various acids as
           determined in water, DMSO and in the gas Phase.
           These tables are compiled in PDF files below.
+        </p>
+        <p>For a more comprehensive discussion on this topic, please see <a href="https://www2.chemistry.msu.edu/faculty/reusch/AcidBase/acid-base.html" target="_blanl" rel="noopener">Acidity and Basicity</a>
+          by professor William Reusch, Michigan State University.
         </p>
     </div>
   </li>

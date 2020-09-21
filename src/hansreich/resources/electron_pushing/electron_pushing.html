@@ -1,10 +1,14 @@
 ---
-layout: page_with_side_menu.njk
+layout: side_menu_one_page.njk
 
 header:
     title: 'Electron Pushing in Organic Chemistry'
 
 title: 'Electron Pushing in Organic Chemistry'
+
+meta_tags:
+  - name: 'description'
+    content: 'This set of pages originates from Professor Hans Reich (UW-Madison) Advanced Organic Chemistry course (Chem 547). It describes electron pushing arrows: the movement of a pair of electrons from an electron rich site (a lone pair of electrons or a bond) to an electron poor site. A set of common electron-pushing mechanisms are also provided here.'
 
 data_path: &data_path 'electron_pushing_data/'
 gif_type: &gif_type '.gif'
@@ -111,74 +115,60 @@ display_link: false
 
       <p>This handout deals with electron pushing arrows: the movement of a pair of electrons from an electron rich site
         (a lone pair of electrons or a bond) to an electron poor site. Electron pushing arrows are used as a
-        &#34;bookkeeping&#34; device to easily keep track of bonding and formal charges when interconverting resonance
+        "bookkeeping" device to easily keep track of bonding and formal charges when interconverting resonance
         structures or depicting reactions. Used properly, they have tremendous value not just for understanding
         reactions, but also for for predicting chemical reactivity</p>
       <p>There are two fundamental types of electron pushing processes:</p>
-      &nbsp;&nbsp;<br>
-      <img src="{{ (data_path + 'epush-1-00.gif') | url }}" alt="" class="img-fluid">
-
-      <p>In each case, the formal charge becomes one unit more positive at the starting atom and one unit more negative
+      <img src="{{ (data_path + 'epush-1-00.gif') | url }}" alt="Two fundamental types of electron pushing processes: bond breaking and bond making" class="img-fluid">
+      
+      <p class="pt-4">In each case, the formal charge becomes one unit more positive at the starting atom and one unit more negative
         at the terminal atom.</p>
       <p>A third very commonly used type, Bond Movement, is used to depict synchronous processes. A Bond Movement arrow
         starts at a &sigma; or &pi; bond, and ends at a sextet atom, forming a new &sigma; or &pi; bond:</p>
-      &nbsp;&nbsp;<br>
-      <img src="{{ (data_path + 'epush-1-01.gif') | url }}" alt="" class="img-fluid">
-
-      <p>It is really shorthand for consecutive or simultaneous bond breaking and bond making processes:</p>
-      &nbsp;&nbsp;<br>
-      <img src="{{ (data_path + 'epush-1-02.gif') | url }}" alt="" class="img-fluid">
-
-      <p>When a Bond Making or Bond Movement arrow ends at an octet atom, then a Bond Breaking or a second Bond Movement
-        processes has to &#34;clear out&#34; the extra pair of electron. If this cannot be done in an electronically
+      <img src="{{ (data_path + 'epush-1-01.gif') | url }}" alt="Third type of electron pushing processes: Bond Movement" class="img-fluid">
+      
+      <p class="pt-4">It is really shorthand for consecutive or simultaneous bond breaking and bond making processes:</p>
+      <img src="{{ (data_path + 'epush-1-02.gif') | url }}" alt="Bond Movement electron pushing is shorthand for consecutive or simultaneous bond breaking and bond making processes" class="img-fluid">
+      
+      <p class="pt-4">When a Bond Making or Bond Movement arrow ends at an octet atom, then a Bond Breaking or a second Bond Movement
+        processes has to "clear out" the extra pair of electron. If this cannot be done in an electronically
         reasonable fashion, then the process is not feasible. In this way a series of electron movements can be strung
         together. Again, all of the central carbons have no change in their charges or number of bonds, the first and
         last atoms change as for Bond Making and Bond Breaking processes. Note that the last arrow in a chain
         <b>must</b> be either a bond making arrow terminating at a sextet atom, or a bond breaking arrow.</p>
-      &nbsp;&nbsp;<br>
-      <img src="{{ (data_path + 'epush-1-03.gif') | url }}" alt="" class="img-fluid">
-
-      <p><b><span style="font-size:11pt;">Common problems with electron pushing</span></b></p>
+      <img src="{{ (data_path + 'epush-1-03.gif') | url }}" alt="a series of electron movements can be strung together" class="img-fluid">
+      
+      <p class="pt-4"><b>Common problems with electron pushing</b></p>
 
       <p>Watch for violations of the octet rule - always specifically draw in all of the atoms (including hydrogens and
         lone pairs) at any atom undergoing a transformation.</p>
       <p>Draw arrows in the right direction (from donor to acceptor). We may think of a proton as attacking a double
         bond, but in electron-pushing terms, it is the double bond that is attacking the proton.</p>
+      <img src="{{ (data_path + 'epush-1-04.gif') | url }}" alt="Draw arrows in the right direction: from donor to acceptor" class="img-fluid">
 
-      &nbsp;&nbsp;<br>
-      <img src="{{ (data_path + 'epush-1-04.gif') | url }}" alt="" class="img-fluid">
-
-      <p>Clearly distinguish formal positive charge and electron deficiency (a sextet atom). Cationic species like
+      <p class="pt-4">Clearly distinguish formal positive charge and electron deficiency (a sextet atom). Cationic species like
         oxonium ions, ammonium ions and the like are usually NOT electrophilic at the atom bearing the formal positive
         charge. Each of the species below has electrophilic properties, but the positively charged O and N atoms are not
         electrophilic - it is the atoms attached to O and N that are electrophilic and thus subject to attack by bases
         and nucleophiles.</p>
+      <img src="{{ (data_path + 'epush-1-05.gif') | url }}" alt="Oxonium ions, ammonium ions and the like are usually NOT electrophilic at the atom bearing the formal positive charge. It is the atoms attached to O and N that are electrophilic and thus subject to attack by bases and nucleophiles." class="img-fluid">
 
-      &nbsp;&nbsp;<br>
-      <img src="{{ (data_path + 'epush-1-05.gif') | url }}" alt="" class="img-fluid">
-
-      <p>However, this stricture has to be relaxed for heavier elements like P and S which are capable of forming
+      <p class="pt-4">However, this structure has to be relaxed for heavier elements like P and S which are capable of forming
         compounds that formally violate the octet rule</p>
+      <img src="{{ (data_path + 'epush-1-06.gif') | url }}" alt="Exceptions of octet rule for heavier elements like P and S" class="img-fluid">
 
-      &nbsp;&nbsp;<br>
-      <img src="{{ (data_path + 'epush-1-06.gif') | url }}" alt="" class="img-fluid">
-
-      <p>Similarly, make a clear distinction between formal negative charges and lone pairs of electrons - they are not
+      <p class="pt-4">Similarly, make a clear distinction between formal negative charges and lone pairs of electrons - they are not
         always synonymous. For boron and aluminum ate complexes, there are no lone pairs. Any donor character arises
         from the sigma bonds attached to the negatively charged atom.</p>
       <p>For delocalized structures, you must pick a specific resonance structure to do any electron pushing - the
-        &#34;dotted line&#34; formulas and circle structures for aromatic systems do not work, since bonds and electron
+        "dotted line" formulas and circle structures for aromatic systems do not work, since bonds and electron
         pairs are not shown.</p>
+      <img src="{{ (data_path + 'epush-1-07.gif') | url }}" alt="Dotted line notation does not work for any electron pushing" class="img-fluid">
 
-      &nbsp;&nbsp;<br>
-      <img src="{{ (data_path + 'epush-1-07.gif') | url }}" alt="" class="img-fluid">
-
-      <p>Do not combine multiple steps into one long series of arrows. An experienced chemist may be able to get away
+      <p class="pt-4">Do not combine multiple steps into one long series of arrows. An experienced chemist may be able to get away
         with this sort of behavior, but such mechanisms are confusing and can contain fatal errors. If a reaction
         involves a true intermediate, your mechanism should reflect that.</p>
-
-      &nbsp;&nbsp;<br>
-      <img src="{{ (data_path + 'epush-1-08.gif') | url }}" alt="" class="img-fluid">
+      <img src="{{ (data_path + 'epush-1-08.gif') | url }}" alt="Combining multiple steps into one long series of arrows is usually a bad practice" class="img-fluid">
 
     </div>
   </li>
@@ -197,7 +187,7 @@ display_link: false
         AlCl<sub>3</sub>, MeAlCl<sub>2</sub>, Me<sub>2</sub>AlCl, LiClO<sub>4</sub>, etc</p>
       <p>&nbsp;&nbsp;&nbsp;Ag<sup>+</sup> (special affinity for Cl, Br, I), Hg<sup>++</sup> (special affinity for S, C=C,
         C&#8801;C)</p>
-      <p>&nbsp;&nbsp;In addition to these inorganic Lewis acids, there are many chiral &#34;designer&#34; Lewis acids for
+      <p>&nbsp;&nbsp;In addition to these inorganic Lewis acids, there are many chiral "designer" Lewis acids for
         initiating acid catalyzed reactions with asymmetric induction:</p>
 
       &nbsp;&nbsp;<br>
@@ -236,7 +226,6 @@ display_link: false
         Reaction,<br>&nbsp;&nbsp;&nbsp; Leuckhart-Wallach Reaction,<br>&nbsp;&nbsp;&nbsp; Meyer-Schuster
         Rearrangement,<br>&nbsp;&nbsp;&nbsp; Rupe Reaction</p>
 
-      <p><a href="http://orgchem.chem.uconn.edu/namereact/named.html" target="_blank">Name Reactions</a></p>
       <!-- BJM-Also add link to the new Name reactions page on this site  -->
 
       <p><b>&nbsp;&nbsp;Carbenium Ions with unusual properties</b></p>

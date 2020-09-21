@@ -40,7 +40,7 @@ Database of Nucleophilicities and Electrophilicities [https://www.cup.lmu.de/oc/
 Mayr's Reactivity Scales Poster 2020 [https://www.cup.lmu.de/oc/mayr/2020_MayrPoster.pdf]
 Mayr's Reactivity Scales Poster 2016 [https://www.cup.lmu.de/oc/mayr/ReactScalesPoster.pdf]
 Reactivity Scales for Organocatalytic Reactions Poster [https://www.cup.lmu.de/oc/mayr/ReactScalesPoster%20OrgCatOrgMetCarbanions.pdf]
-A-Values [https://khoivan88.github.io/organicchemistrydata/resources/a_values/]
+A-Values [https://khoivan88.github.io/organicchemistrydata/resources/fundamentals/#a_values]
 Solvents
 Solvent Properties Table [https://organicdivision.org/solvents]
 Solvent Strength Calculation [https://selekt.biotage.com/blog/determining-solvent-strength-in-flash-column-chromatography]
@@ -87,7 +87,7 @@ Literature Sources
 ACS Organic Division's Links to Organic Journals [https://www.organicdivision.org/journals/]
 Organic Reactions [https://www.organicdivision.org/organicreactions/]
 Organic Syntheses [https://www.organicdivision.org/OrganicSyntheses/]
-ACS Online Publications [http://pubs.acs.org/about.html]
+ACS Online Publications [https://pubs.acs.org/action/showPublications?pubType=journal]
 The Goodman's Group List-University of Cambridge  [http://www-jmg.ch.cam.ac.uk/data/c2k/cj/organic.html]
 Reference Resolver [http://chemsearch.kovsky.net]
 Useful Software

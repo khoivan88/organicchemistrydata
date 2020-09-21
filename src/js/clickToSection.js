@@ -45,7 +45,12 @@
 
         // Add the state to history as-per normal anchor links
         if (HISTORY_SUPPORT && pushToHistory) {
-          history.pushState({}, document.title, location.pathname + href)
+          // Modify to make new link include query string if exists
+          let newUrl = new URL(location)
+          newUrl.search = window.location.search
+          newUrl.hash = href
+          // console.log(newUrl.href)  // ! DEBUG
+          history.pushState({}, document.title, newUrl.href)
         }
       }
 

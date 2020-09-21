@@ -3,8 +3,8 @@ main_css:
     url: "/css/style.css"
 
 homepage_logo:
-    url: '/img/ReichSiteIcon.jpg'
-    href: '/hansreich'
+    url: '/img/reich_icon.png'
+    href: '/hansreich/'
 
 doc:
     url: "https://www.organicdivision.org/"
@@ -17,13 +17,13 @@ reich_related:
     title: 'Prof. Hans J Reich'
     list:
     - title: 'About Prof. Hans Reich'
-      url: '/hansreich/about_reich'
+      url: '/hansreich/about_reich/'
     - title: 'Awards'
       url: '/hansreich/about_reich/#awards'
     - title: 'Research'
-      url: '/hansreich/research'
+      url: '/hansreich/research/'
     - title: 'Publications'
-      url: '/hansreich/publications'
+      url: '/hansreich/publications/'
     # -
     #     title: 'Ieva L. Reich'
     #     url: 'https://www2.chem.wisc.edu/areas/reich/group/students/reich-il.htm'
@@ -38,42 +38,65 @@ reich_related:
 resources:
     title: "Reich Collection"
     list:
-    - title: 'A-Values'
-      url: '/hansreich/resources/a_values'
-    - title: 'Advanced Organic Chem'
-      url: '/hansreich/resources/adv_org'
-      disabled: 'disabled'
+    # - title: 'A-Values'
+    #   url: '/hansreich/resources/fundamentals/#a_values'
+    # - title: 'Advanced Organic Chem'
+    #   url: '/hansreich/resources/adv_org'
+    #   disabled: 'disabled'
     - title: 'Acronyms'
-      url: '/hansreich/resources/acronyms'
-    - title: 'Electron Pushing'
-      url: '/hansreich/resources/electron_pushing'
-    - title: 'Electronegativities'
-      url: '/hansreich/resources/electronegativities'
+      url: '/hansreich/resources/acronyms/'
+    - title: 'Carbonyl Chemistry'
+      url: '/hansreich/resources/carbonyl/'
+    # - title: 'Electron Pushing'
+    #   url: '/hansreich/resources/electron_pushing/'
+    # - title: 'Electronegativities'
+    #   url: '/hansreich/resources/fundamentals/#electronegativities'
+    - title: 'Fundamentals of Organic Chemistry'
+      url: '/hansreich/resources/fundamentals/'
+      id: 'fundamentals'    # ! REQUIRED if there is a sublist
+      list:
+      - title: 'A-Values'
+        url: '/hansreich/resources/fundamentals/#a_values'
+      - title: 'Electronegativities'
+        url: '/hansreich/resources/fundamentals/#electronegativities'
+      - title: 'Electron Pushing'
+        url: '/hansreich/resources/electron_pushing/'
+      - title: 'Nomenclature'
+        url: '/hansreich/resources/nomenclature/'
     - title: 'Named Reagents'
-      url: '/hansreich/resources/named_reagents'
+      url: '/hansreich/resources/named_reagents/'
     - title: 'Named Rules and Effects'
-      url: '/hansreich/resources/named_effects'
+      url: '/hansreich/resources/named_effects/'
     - title: 'Natural Product Syntheses'
-      url: '/hansreich/resources/syntheses'
+      url: '/hansreich/resources/syntheses/'
       #disabled: 'disabled'
-    - title: 'NMR'
-      url: 'https://organicchemistrydata.org/NMRresources/nmr/'
-      target: '_blank'
-      #disabled: 'disabled'
-    - title: 'Nomenclature'
-      url: '/hansreich/resources/nomenclature'
-    - title: 'Organolithium Reagents'
-      url: '/hansreich/resources/organolithium'
-    - title: 'pKa'
-      url: '/hansreich/resources/pka'
-    - title: 'Reactive Intermediates'
-      url: '/hansreich/resources/reactive_intermediates'
-    - title: 'Solvents'
-      url: '/hansreich/resources/org_solvents'
+    - title: 'NMR Info/Data'
+      url: '/hansreich/resources/nmr/'
+      #url: 'https://organicchemistrydata.org/NMRresources/nmr/'
       #target: '_blank'
+      #disabled: 'disabled'
+    # - title: 'Nomenclature'
+    #   url: '/hansreich/resources/nomenclature/'
+    - title: 'Organometallic Chemistry'
+      url: '/hansreich/resources/organometallic/'
+      id: 'organometallic'    # ! REQUIRED if there is a sublist
+      list:
+      - title: 'Organolithium Reagents'
+        url: '/hansreich/resources/organolithium/'
+    - title: 'Pericyclic Reactions'
+      url: '/hansreich/resources/pericyclic/'
+    - title: 'pKa'
+      url: '/hansreich/resources/pka/'
+    - title: 'Reactive Intermediates'
+      url: '/hansreich/resources/reactive_intermediates/'
+    - title: 'Reduction and Oxidation'
+      url: '/hansreich/resources/redox/'
+    # - title: 'Solvents'
+    #   url: 'https://organicchemistrydata.org/solvents/'
+    #   target: '_blank'
 
 about:
-    url: '/hansreich'
+    url: '/hansreich/'
 
 ---
 
@@ -94,29 +117,63 @@ about:
             </div>
 
             <a class="navbar-brand py-1 d-none d-sm-block" href="{{ homepage_logo.href | url }}" target="_self">
-                <img src="{{ homepage_logo.url | url }}" height="50" alt="DOC Logo" loading="lazy">
+                <img src="{{ homepage_logo.url | url }}" height="50" alt="Hans Reich Collection Logo" loading="lazy">
             </a>
 
             <div class="navbar-nav" id="hansreichCollection">
               <ul class="navbar-nav">
                   <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle pl-0 pl-sm-3" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ resources.title }}</a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                          {%- for resource in resources.list %}
-                          <a class="dropdown-item {{ resource.disabled }}" href="{{ resource.url | url }}"
-                              target="{% if resource.target %}{{ resource.target }}{% else %}{{ '_self' }}{% endif %}">
+                      <ul class="dropdown-menu shadow" aria-labelledby="navbarDropdown1">
+                        {%- for resource in resources.list %}
+                          {%- if resource.list %}
+                            <!-- Level two dropdown-->
+                            {# Refs:
+                              https://bootstrapious.com/p/bootstrap-multilevel-dropdown;
+                              http://jsfiddle.net/R3JKz/15/
+                              https://www.codeply.com/p/g6AXWHBNIK
+                            #}
+                            <div class="navbar-hover d-block d-md-flex flex-row align-items-center">
+                              <li class="flex-grow-1"><a href="{{ resource.url | url }}" {%- if resource.target %} target="{{ resource.target }}"{%- endif %}
+                                    class="dropdown-item pr-3 pr-md-0">{{ resource.title }}</a></li>
+                              <li class="dropdown-submenu text-center dropright">
+                                <a class="dropdown-toggle px-3 text-dark" href="#" id="{{ resource.id }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                                <ul class="dropdown-menu shadow ml-0 pl-3 pl-md-0" aria-labelledby="{{ resource.id }}">
+                                  <li>
+                                    <a class="dropdown-item {{ resource.disabled }}" href="{{ resource.url  | url }}"
+                                      {%- if resource.target %} target="{{ resource.target }}"{%- endif %}>
+                                      General Info
+                                    </a>
+                                  </li>
+                                {%- for subitem in resource.list %}
+                                  <li>
+                                    <a class="dropdown-item {{ subitem.disabled }}" href="{{ subitem.url  | url }}"
+                                      {%- if subitem.target %} target="{{ subitem.target }}"{%- endif %}>
+                                      {{ subitem.title }}
+                                    </a>
+                                  </li>
+                                {%- endfor %}
+                                </ul>
+                              </li>
+                            </div>
+                            <!-- End Level two -->
+                          {%- else %}
+                            <li><a class="dropdown-item {{ resource.disabled }}" href="{{ resource.url | url }}"
+                              {%- if resource.target %} target="{{ resource.target }}"{%- endif %}>
                               {{ resource.title }}
-                          </a>
-                          {%- endfor %}
-                          <div class="dropdown-divider"></div>
-                          {%- for item in reich_related.list %}
-                          <a class="dropdown-item" href="{{ item.url | url }}"
-                              target="{% if item.target %}{{ item.target }}{% else %}{{ '_self' }}{% endif %}">
-                              {{ item.title }}
-                          </a>
-                          {%- endfor %}
+                            </a></li>
+                          {%- endif %}
+                        {%- endfor %}
 
-                      </div>
+
+                        <div class="dropdown-divider"></div>
+                        {%- for item in reich_related.list %}
+                        <a class="dropdown-item" href="{{ item.url | url }}"
+                            {%- if item.target %} target="{{ item.target }}"{%- endif %}>
+                            {{ item.title }}
+                        </a>
+                        {%- endfor %}
+                      </ul>
                   </li>
               </ul>
             </div>
@@ -133,7 +190,7 @@ about:
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                             {%- for item in reich_related.list %}
                             <a class="dropdown-item" href="{{ item.url | url }}"
-                                target="{% if item.target %}{{ item.target }}{% else %}{{ '_self' }}{% endif %}">
+                                {%- if item.target %} target="{{ item.target }}"{%- endif %}>
                                 {{ item.title }}
                             </a>
                             {%- endfor %}

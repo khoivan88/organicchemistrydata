@@ -1,0 +1,113 @@
+items:
+  list:
+  - id: se-data00
+    title: '- Selenium Shifts Overview'
+  - id: se-data01
+    title: -<sup>77</sup>Se Shifts -500 to 700 ppm
+  - id: se-data02
+    title: -<sup>77</sup>Se Shifts 700 to 2200 ppm
+  - id: se-data03
+    title: Carbon Diselenide
+  - id: se-data07
+    title: Carbonyl selenide
+  - id: se-data11
+    title: Carboxylic amides seleno
+  - id: se-data05
+    title: Carboxylic esters, seleno
+  - id: se-data04
+    title: Diselenide
+  - id: se-data12
+    title: Hyposelenite
+  - id: se-data10
+    title: Ketone, seleno
+  - id: se-data06
+    title: Lithio selenides
+  - id: se-data17
+    title: Phosphate selenide
+  - id: se-data14
+    title: Phosphinate, seleno
+  - id: se-data13
+    title: Phosphine selenide
+  - id: se-data15
+    title: Phosphinite, seleno
+  - id: se-data16
+    title: Pyrylium salts, seleno
+  - id: se-data27
+    title: Selenates
+  - id: se-data08
+    title: Selenenamides
+  - id: se-data09
+    title: Selenenic acids
+  - id: se-data34
+    title: Selenenyl Azides
+  - id: se-data33
+    title: Selenenyl bromides
+  - id: se-data32
+    title: Selenenyl chlorides
+  - id: se-data45
+    title: Selenenyl sulfides
+  - id: se-data21
+    title: Selenide dibromide
+  - id: se-data21
+    leave_empty: true
+    title: Selenide dichloride
+  - id: se-data30
+    title: Selenide, alkynyl
+  - id: se-data18
+    title: Selenide, aryl alkyl
+  - id: se-data29
+    title: Selenide, dialkyl
+  - id: se-data19
+    title: Selenide, diaryl
+  - id: se-data23
+    title: Selenide, silyl
+  - id: se-data31
+    title: Selenide, vinyl
+  - id: se-data22
+    title: Selenimides
+  - id: se-data28
+    title: Seleninate amides
+  - id: se-data25
+    title: Seleninate esters
+  - id: se-data24
+    title: Seleninic acids
+  - id: se-data46
+    title: Seleninium
+  - id: se-data20
+    title: Selenites
+  - id: se-data40
+    title: Selenoacetals
+  - id: se-data26
+    title: Selenocyanates
+  - id: se-data40
+    leave_empty: true
+    title: Selenoketals
+  - id: se-data39
+    title: Selenolates
+  - id: se-data39
+    leave_empty: true
+    title: Selenols
+  - id: se-data43
+    title: Selenones
+  - id: se-data36
+    title: Selenonium salts
+  - id: se-data42
+    title: Selenonium ylides
+  - id: se-data38
+    title: Selenophenes
+  - id: se-data44
+    title: Selenoxides
+  - id: se-data37
+    title: Selenuranes
+  - id: se-data10
+    leave_empty: true
+    title: Selone
+  - id: se-data47
+    title: Silyl selenides
+  - id: se-data41
+    title: Tetraselenides
+  - id: se-data41
+    leave_empty: true
+    title: Triselenides
+  - id: se-data35
+    title: Urea, seleno

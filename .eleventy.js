@@ -1,9 +1,13 @@
 const fs = require("fs");
-// const lazyImagesPlugin = require('eleventy-plugin-lazyimages');  // https://www.npmjs.com/package/eleventy-plugin-lazyimages
+const lazyImagesPlugin = require('eleventy-plugin-lazyimages');  // https://www.npmjs.com/package/eleventy-plugin-lazyimages
 const htmlmin = require("html-minifier");  // https://www.11ty.dev/docs/config/#transforms-example-minify-html-output
 
+// For eleventy-plugin-lazyimage, These are the default values, set them to match your 11ty config
+const eleventyInputDir = 'src';
+const eleventyOutputDir = '_site';
+
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setTemplateFormats(["html", "liquid", "njk", "ejs", "md", "hbs", "mustache", "haml", "pug", "11ty.js", "pdf", "gif"]);
+  eleventyConfig.setTemplateFormats(["html", "liquid", "njk", "ejs", "md", "hbs", "mustache", "haml", "pug", "11ty.js", "pdf", "gif", "ico"]);
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/img");
@@ -13,7 +17,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setQuietMode(true);
 
   // Plugins
-  // // LazyImage loading plugin
+  // LazyImage loading plugin
   // eleventyConfig.addPlugin(lazyImagesPlugin, {
   //   transformImgPath: (imgPath) => {
   //     if (imgPath.startsWith('/') && !imgPath.startsWith('//')) {
@@ -22,6 +26,29 @@ module.exports = function (eleventyConfig) {
   //     return imgPath;
   //   },
   // });
+  eleventyConfig.addPlugin(lazyImagesPlugin, {
+    transformImgPath: (src, options) => {
+      const isAbsoluteUri =
+        src.startsWith('/') ||
+        src.startsWith('http://') ||
+        src.startsWith('https://') ||
+        src.startsWith('data:');
+
+      // If the file path is relative to the output document
+      if (src.startsWith('./') || src.startsWith('../') || !isAbsoluteUri) {
+        const lastSlashPosition = options.outputPath.lastIndexOf('/');
+        const outputDir = options.outputPath.substring(0, lastSlashPosition + 1);
+        return `${outputDir}${src}`.replace(eleventyOutputDir, eleventyInputDir);
+      }
+
+      // // If the file path is relative to the project root
+      // if (src.startsWith('/') && !src.startsWith('//')) {
+      //   return `.${src}`;
+      // }
+
+      return src;
+    },
+  });
   // Minify HTML output
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
     if( outputPath.endsWith(".html") ) {

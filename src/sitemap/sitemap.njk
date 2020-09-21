@@ -9,17 +9,31 @@ header:
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for page in collections.all %}
+    {%- for item in collections.all %}
+    {%- if item.data.sitemap_ignore !== true %}
         <url>
-            <loc>{{ site.url }}{{ page.url | url }}</loc>
-            {%- if page.data.updated -%}
-                <lastmod>{{ page.data.updated.toISOString() }}</lastmod>
+            <loc>{{ site.url }}{{ item.url | url }}</loc>
+            {%- if item.data.updated -%}
+                <lastmod>{{ item.data.updated.toISOString() }}</lastmod>
             {%- else -%}
-                <lastmod>{{ page.date.toISOString() }}</lastmod>
+                <lastmod>{{ item.date.toISOString() }}</lastmod>
             {%- endif -%}
-            {%- if page.data.changeFreq -%}
-                <changefreq>{{page.data.changeFreq}}</changefreq>
+            {%- if item.data.changeFreq -%}
+                <changefreq>{{item.data.changeFreq}}</changefreq>
             {%- endif -%}
         </url>
+    {%- else %}
+        <url>
+            <loc>{{ site.url }}{{ item.data.sitemap_url_prefix }}{%- if item.data.tags -%}{{ item.data.tags }}%2F{%- endif -%}{{ item.fileSlug | url }}</loc>
+            {%- if item.data.updated -%}
+                <lastmod>{{ item.data.updated.toISOString() }}</lastmod>
+            {%- else -%}
+                <lastmod>{{ item.date.toISOString() }}</lastmod>
+            {%- endif -%}
+            {%- if item.data.changeFreq -%}
+                <changefreq>{{item.data.changeFreq}}</changefreq>
+            {%- endif -%}
+        </url>
+    {% endif %}
     {% endfor %}
 </urlset>

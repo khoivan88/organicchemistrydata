@@ -6,6 +6,10 @@ header:
 
 title: 'Links'
 
+meta_tags:
+  - name: 'description'
+    content: 'This is collection of web pages containing useful information/data for organic chemists. The links and data can be used to learn how to complete various organic reactions and understand the products (spectroscopy) and mechanisms of those reactions.'
+
 specific_page_js:
   list:
     - description: Control side menu and toogle button
@@ -23,7 +27,7 @@ specific_page_js:
   <!-- Sidebar -->
   <nav id="sidebar" class="px-0 pt-2 pb-4">
     <div class="sidebar-header text-center">
-      <h6 class="d-inline-flex align-self-center my-1">List</h6>
+      <p class="d-inline-flex align-self-center my-1 font-weight-bold">List</p>
     </div>
 
     <div id="navbar-left">
@@ -35,12 +39,33 @@ specific_page_js:
         {%- endfor %}
       </ul>
     </div>
+
+    <!-- Organic Reference Resolver -->
+    <div class="container mt-5 px-1">
+      <form action="https://chemsearch.kovsky.net/index.php" target="_blank" rel="noopener">
+          <div class="form-group">
+            <p class="text-center mb-0">
+              <a href="https://chemsearch.kovsky.net" target="_blank" rel="noopener">
+                <img src="{{ '/img/ref_resolver_logo_small.png' | url }}" width="164"
+                  alt="Organic chemistry reference resolver" title="chemsearch.kovsky.net" class="rounded">
+              </a>
+            </p>
+            <div class="d-flex flex-row w-100 mx-0">
+              <input type="text" name="q" class="form-control" placeholder="Search reference"
+                aria-label="Search Organic Chemistry Reference Resolver">
+              <button class="btn btn-dark" type="submit" value="Search" aria-label="Submit search to Organic Chemistry Reference Resolver"><i class="icon-search"></i></button>
+            </div>
+            <p class="my-0 small text-center">Created by <a href="http://kovsky.net" class="text-decoration-none" target="_blank" rel="noopener">Oleksandr
+              Zhurakovskyi</a></p>
+          </div>
+      </form>
+    </div>
   </nav>
 
 
   <div id="content">
     <button type="button" id="sidebarCollapse" class="btn btn-info d-inline-block ml-auto mr-3" title="Toggle List">
-      <i class="fas fa-angle-double-left"></i>
+      <i class="icon-angle-double-left"></i>
     </button>
 
     <div class="full-list container px-0 mx-0">
@@ -50,18 +75,47 @@ specific_page_js:
           <h3>{{ collection.title }}</h3>
           <ul>
             {%- if collection.links %}
+            {# Subsection level 1 #}
             {%- for link in collection.links %}
             {%- if link.links %}
+            {# Subsection level 2 #}
             <li>
-              <h5>{{ link.name | safe }}</h5>
+              <h4 class="mb-0">{{ link.name | safe }}</h4>
               <ul>
                 {%- for item in link.links %}
-                <li><a href="{{ item.url | url }}" {%- if item.url[0] != '/' %} target="_blank" rel="noopener"{%- endif -%}>{{ item.name }}</a></li>
+                {%- if item.links %}
+                  {# Subsection level 3 #}
+                  <li>{{ item.name | safe }}
+                    <ul>
+                      {%- for subitem in item.links %}
+                      <li>
+                        <a href="{{ subitem.url | url }}" {%- if subitem.url[0] != '/' %} target="_blank" rel="noopener" {%- endif -%}>
+                          {{ subitem.name | safe }} {%- if '/hansreich' in subitem.url %}<span class="text-danger"> (Hans Reich's Collection -
+                            DOC)</span>{%- endif -%}
+                        </a>
+                        {%- if subitem.description -%}<span>: {{ subitem.description | safe }}</span>{%- endif -%}
+                      </li>
+                      {%- endfor %}
+                    </ul>
+                  </li>
+                {%- else %}
+                <li>
+                  <a href="{{ item.url | url }}" {%- if item.url[0] != '/' %} target="_blank" rel="noopener"{%- endif -%}>
+                    {{ item.name | safe }} {%- if '/hansreich' in item.url %}<span class="text-danger"> (Hans Reich's Collection - DOC)</span>{%- endif -%}
+                  </a>
+                  {%- if item.description -%}<span>: {{ item.description | safe }}</span>{%- endif -%}
+                </li>
+                {%- endif %}
                 {%- endfor %}
               </ul>
             </li>
             {% else %}
-            <li><a href="{{ link.url | url }}" {%- if link.url[0] != '/' %} target="_blank" rel="noopener"{%- endif -%}>{{ link.name }}</a></li>
+            <li>
+              <a href="{{ link.url | url }}" {%- if link.url[0] != '/' %} target="_blank" rel="noopener"{%- endif -%}>
+                {{ link.name }} {%- if '/hansreich' in link.url %}<span class="text-danger"> (Hans Reich's Collection - DOC)</span>{%- endif -%}
+              </a>
+              {%- if link.description -%}<span>: {{ link.description | safe }}</span>{%- endif -%}
+            </li>
             {%- endif %}
             {%- endfor %}
             {%- endif %}

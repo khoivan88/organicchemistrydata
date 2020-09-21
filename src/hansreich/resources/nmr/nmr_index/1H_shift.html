@@ -1,0 +1,840 @@
+---
+layout: nmr_data.njk
+
+data_path: &data_path 'nmr_data/h_data/'
+gif_type: &gif_type '.gif'
+
+extra_top:
+  explanation: &explanation
+    id: explanation
+    title: Explanation
+  ref_abbr: &ref_abbr
+    id: reference_abbr
+    title: Reference Abbreviations
+
+items:
+  list:
+  - <<: *explanation
+    leave_empty: true
+  - <<: *ref_abbr
+    leave_empty: true
+  # - id: hdata05
+  #   title: -Explanation
+  # - id: hdata04
+  #   title: -Reference Abbreviations
+  - id: hdata00
+    title: "-Shift Table 1: \u03B4 -10 to 2"
+  - id: hdata01
+    title: "-Shift Table 2: \u03B4 2 to 6"
+  - id: hdata02
+    title: "-Shift Table 3: \u03B4 6 to 10"
+  - id: hdata03
+    title: "-Shift Table 4: \u03B4 10 to 20"
+  - id: hdata06
+    title: Acetal
+  - id: hdata09
+    title: Acetylene
+  - id: hdata07
+    title: "Acetylene tables (X-C\u2261C-H)"
+  - id: hdata08
+    title: "Acetylene tables (X-C\u2261C-Me)"
+  - id: hdata13
+    title: "Acetylene tables (X-CH<sub>2</sub>-C\u2261C-CH<sub>3</sub>)"
+  - id: hdata12
+    title: "Acetylene tables (X-CH<sub>2</sub>-C\u2261C-H)"
+  - id: hdata10
+    title: Acridine
+  - id: hdata11
+    title: Adamantane
+  - id: hdata14
+    title: Alcohol
+  - id: hdata15
+    title: Aldehyde
+  - id: hdata16
+    title: Alkane
+  - id: hdata23
+    title: Alkene
+  - id: hdata22
+    title: Alkene, 1,1-Disubstituted
+  - id: hdata20
+    title: Alkene, <i>cis</i>-Disubstituted
+  - id: hdata19
+    title: Alkene, <i>trans</i>-Disubstituted
+  - id: hdata18
+    title: Alkene, Monosubstituted (C-Li)
+  - id: hdata17
+    title: Alkene, Monosubstituted (F-N)
+  - id: hdata21
+    title: Alkene, Substituent Effects
+  - id: hdata24
+    title: Alkene, Vinyl Halide
+  - id: hdata09
+    leave_empty: true
+    title: Alkyne
+  - id: hdata25
+    title: Allene
+  - id: hdata30
+    title: Allene Oxide
+  - id: hdata26
+    title: Allyl
+  - id: hdata27
+    title: Aluminum
+  - id: hdata73
+    title: Amides
+  - id: hdata28
+    title: Amidine
+  - id: hdata29
+    title: Amidine
+  - id: hdata31
+    title: Amine
+  - id: hdata32
+    title: Amine, N-Hydroxy
+  - id: hdata33
+    title: Amino Acid
+  - id: hdata34
+    title: Ammonium
+  - id: hdata74
+    title: Anhydride
+  - id: hdata35
+    title: Anthracene
+  - id: hdata36
+    title: Antimony
+  - id: hdata37
+    title: Aromatic, Benzenoid
+  - id: hdata39
+    title: Aromatic, Larger rings
+  - id: hdata40
+    title: Arsenic
+  - id: hdata41
+    title: Azide
+  - id: hdata42
+    title: Azo
+  - id: hdata42
+    leave_empty: true
+    title: Azoxy
+  - id: hdata43
+    title: Azulene
+  - id: hdata44
+    title: Benzene
+  - id: hdata38
+    title: Benzene - Substituent Effects
+  - id: hdata45
+    title: Benzocycloalkanes
+  - id: hdata46
+    title: Benzofuran
+  - id: hdata51
+    title: Benzothiophene
+  - id: hdata49
+    title: Benzyl
+  - id: hdata50
+    title: Beryllium
+  - id: hdata47
+    title: Bicyclo[1.1.0]
+  - id: hdata48
+    title: Bicyclo[1.1.1]
+  - id: hdata55
+    title: Bicyclo[2.1.0]
+  - id: hdata54
+    title: Bicyclo[2.1.1]
+  - id: hdata52
+    title: Bicyclo[2.2.1]
+  - id: hdata53
+    title: Bicyclo[2.2.2]
+  - id: hdata61
+    title: Bicyclo[3.1.0]
+  - id: hdata60
+    title: Bicyclo[3.1.1]
+  - id: hdata56
+    title: Bicyclo[3.3.1]
+  - id: hdata63
+    title: Bicyclo[4.1.0]
+  - id: hdata64
+    title: Bicyclo[5.1.0]
+  - id: hdata65
+    title: Bicyclo[6.1.0]
+  - id: hdata57
+    title: Bifluoride
+  - id: hdata58
+    title: Bismuth
+  - id: hdata59
+    title: Borane
+  - id: hdata62
+    title: Bunte Salts
+  - id: hdata66
+    title: Cadmium
+  - id: hdata67
+    title: Carbamate
+  - id: hdata68
+    title: Carbene
+  - id: hdata69
+    title: Carbonate
+  - id: hdata70
+    title: Carbonium
+  - id: hdata71
+    title: Carboxylic Acid
+  - id: hdata72
+    title: Carboxylic Acid Halides
+  - id: hdata73
+    leave_empty: true
+    title: Carboxylic Amides
+  - id: hdata74
+    leave_empty: true
+    title: Carboxylic Anhydride
+  - id: hdata75
+    title: Carboxylic Ester
+  - id: hdata81
+    title: Carboxylic Ester, di
+  - id: hdata76
+    title: Carboxylic Imides
+  - id: hdata77
+    title: Carboxylic Thioester
+  - id: hdata80
+    title: Copper
+  - id: hdata78
+    title: Coumarin
+  - id: hdata83
+    title: Crown ethers
+  - id: hdata79
+    title: Cyanate
+  - id: hdata82
+    title: Cyanide
+  - id: hdata84
+    title: Cyclobutane
+  - id: hdata85
+    title: Cyclobutane, Heterocycles
+  - id: hdata86
+    title: Cycloheptane
+  - id: hdata87
+    title: Cycloheptane, Heterocycles
+  - id: hdata88
+    title: Cyclohexane
+  - id: hdata89
+    title: Cyclohexane
+  - id: hdata90
+    title: Cyclohexane, Heterocycles
+  - id: hdata91
+    title: Cyclohexanone
+  - id: hdata92
+    title: Cyclohexene
+  - id: hdata93
+    title: Cyclooctane
+  - id: hdata94
+    title: Cyclopentadiene
+  - id: hdata95
+    title: Cyclopentane
+  - id: hdata96
+    title: Cyclopentane, Heterocycles
+  - id: hdata97
+    title: Cyclopropane
+  - id: hdata100
+    title: Cyclopropane, Heterocycles
+  - id: hdata99
+    title: Cyclopropane, methylene
+  - id: hdata98
+    title: Cyclopropane, monosubstituted
+  - id: hdata98
+    leave_empty: true
+    title: Cyclopropane, trisubstituted
+  - id: hdata102
+    title: Cyclopropanone
+  - id: hdata101
+    title: Cyclopropene
+  - id: hdata103
+    title: Decalin
+  - id: hdata42
+    leave_empty: true
+    title: Diazene
+  - id: hdata42
+    leave_empty: true
+    title: Diazene oxide
+  - id: hdata104
+    title: Diazo
+  - id: hdata106
+    title: Diene
+  - id: hdata105
+    title: Diene, 2-Substituted
+  - id: hdata109
+    title: Diselenide
+  - id: hdata108
+    title: Enal
+  - id: hdata107
+    title: Enamine
+  - id: hdata110
+    title: Enoate Ester
+  - id: hdata111
+    title: Enoic Acid
+  - id: hdata115
+    title: Enoic Amide
+  - id: hdata112
+    title: Enol
+  - id: hdata114
+    title: Enol Phosphate
+  - id: hdata113
+    title: Enolates
+  - id: hdata116
+    title: Enone
+  - id: hdata117
+    title: Enone (cont)
+  - id: hdata121
+    title: Episulfide
+  - id: hdata123
+    title: Epoxide
+  - id: hdata75
+    leave_empty: true
+    title: Ester
+  - id: hdata122
+    title: Ether
+  - id: hdata118
+    title: Fulvene
+  - id: hdata119
+    title: Furan
+  - id: hdata120
+    title: Germane
+  - id: hdata124
+    title: Gold
+  - id: hdata155
+    title: Grignard Reagents
+  - id: hdata125
+    title: Halide
+  - id: hdata129
+    title: Halides, Poly
+  - id: hdata126
+    title: Haloketone
+  - id: hdata128
+    title: Halonium ions
+  - id: hdata127
+    title: Hydrazine
+  - id: hdata135
+    title: Hydrazone
+  - id: hdata133
+    title: Hydrogen
+  - id: hdata131
+    title: Hydroxylamine
+  - id: hdata132
+    title: Hypofluorite
+  - id: hdata134
+    title: Imidazole
+  - id: hdata130
+    title: Imine
+  - id: hdata136
+    title: Imonium
+  - id: hdata137
+    title: Indane
+  - id: hdata141
+    title: Indium
+  - id: hdata138
+    title: Indole
+  - id: hdata139
+    title: Iron
+  - id: hdata142
+    title: Isocyanate
+  - id: hdata140
+    title: Isocyanide
+  - id: hdata142
+    leave_empty: true
+    title: Isoselenocyanate
+  - id: hdata142
+    leave_empty: true
+    title: Isothiocyanate
+  - id: hdata169
+    title: Isoxazole
+  - id: hdata143
+    title: Ketal
+  - id: hdata144
+    title: Ketene
+  - id: hdata144
+    leave_empty: true
+    title: Ketene Acetals
+  - id: hdata148
+    title: Ketoester, Beta
+  - id: hdata145
+    title: Ketone
+  - id: hdata146
+    title: Ketone, Di
+  - id: hdata147
+    title: Ketone, Halo
+  - id: hdata147
+    leave_empty: true
+    title: Ketone, Hydroxy
+  - id: hdata149
+    title: Lactam
+  - id: hdata150
+    title: Lactones
+  - id: hdata151
+    title: Lead
+  - id: hdata190
+    title: Lead
+  - id: hdata152
+    title: Lithium
+  - id: hdata155
+    leave_empty: true
+    title: Magnesium
+  - id: hdata157
+    title: Meisenheimer Salts
+  - id: hdata247
+    title: Mercaptan
+  - id: hdata156
+    title: Mercury
+  - id: hdata226
+    title: Mesylate
+  - id: hdata154
+    title: Methyl Shifts (C, Si, Ge, Sn, Met)
+  - id: hdata153
+    title: Methyl Shifts (Halg, O, N )
+  - id: hdata159
+    title: Naphthalene
+  - id: hdata158
+    title: Naphthalene, polysubstituted
+  - id: hdata160
+    title: Neopentyl
+  - id: hdata161
+    title: Nitrate Ester
+  - id: hdata162
+    title: Nitriles
+  - id: hdata163
+    title: Nitro
+  - id: hdata165
+    title: Nitrone
+  - id: hdata167
+    title: Nitronic ester
+  - id: hdata166
+    title: Nitroso
+  - id: hdata164
+    title: Nucleoside
+  - id: hdata168
+    title: Ortho Ester
+  - id: hdata168
+    leave_empty: true
+    title: Ortho Thioester
+  - id: hdata169
+    leave_empty: true
+    title: Oxazole
+  - id: hdata169
+    leave_empty: true
+    title: Oxazolidine
+  - id: hdata170
+    title: Oxime
+  - id: hdata171
+    title: Oxonium Ions
+  - id: hdata175
+    title: Penicillin
+  - id: hdata172
+    title: Perbromate Ester
+  - id: hdata172
+    leave_empty: true
+    title: Perchlorate Ester
+  - id: hdata173
+    title: Peroxide
+  - id: hdata174
+    title: Phenanthrene
+  - id: hdata180
+    title: Phenazine
+  - id: hdata181
+    title: Phenol
+  - id: hdata182
+    title: Phosphaalkyne
+  - id: hdata183
+    title: Phosphate
+  - id: hdata176
+    title: Phosphine
+  - id: hdata176
+    leave_empty: true
+    title: Phosphine Borane
+  - id: hdata177
+    title: Phosphine Oxide
+  - id: hdata177
+    leave_empty: true
+    title: Phosphine Sulfide
+  - id: hdata178
+    title: Phosphite
+  - id: hdata179
+    title: Phosphole
+  - id: hdata179
+    leave_empty: true
+    title: Phospholene
+  - id: hdata189
+    title: Phosphonate
+  - id: hdata184
+    title: Phosphonium
+  - id: hdata184
+    leave_empty: true
+    title: Phosphonium Ylide
+  - id: hdata185
+    title: Phosphorane
+  - id: hdata186
+    title: Phthalimide
+  - id: hdata187
+    title: Platinum
+  - id: hdata190
+    leave_empty: true
+    title: Plumbane
+  - id: hdata191
+    title: Protecting Groups
+  - id: hdata188
+    title: Purine
+  - id: hdata196
+    title: Pyrazine
+  - id: hdata197
+    title: Pyrazole
+  - id: hdata192
+    title: Pyrene
+  - id: hdata193
+    title: Pyridazine
+  - id: hdata194
+    title: Pyridine
+  - id: hdata195
+    title: Pyridone
+  - id: hdata198
+    title: Pyrimidine
+  - id: hdata199
+    title: Pyrone
+  - id: hdata200
+    title: Pyrrole
+  - id: hdata201
+    title: Pyrylium
+  - id: hdata204
+    title: Quinoline
+  - id: hdata202
+    title: Quinone
+  - id: hdata203
+    title: Quinoxaline
+  - id: hdata205
+    title: Selenadiazole
+  - id: hdata206
+    title: Selenide
+  - id: hdata207
+    title: Selenium
+  - id: hdata208
+    title: Selenol
+  - id: hdata211
+    title: Selenonium
+  - id: hdata209
+    title: Selenophene
+  - id: hdata210
+    title: Selenoxide
+  - id: hdata201
+    leave_empty: true
+    title: Selininium
+  - id: hdata212
+    title: Silane
+  - id: hdata215
+    title: Silyl ether
+  - id: hdata213
+    title: Spiro
+  - id: hdata214
+    title: Stannane
+  - id: hdata217
+    title: Sugars (furanose)
+  - id: hdata216
+    title: Sugars (pyranose)
+  - id: hdata218
+    title: Sulfates
+  - id: hdata219
+    title: Sulfenate
+  - id: hdata220
+    title: Sulfide
+  - id: hdata221
+    title: Sulfilimine
+  - id: hdata221
+    leave_empty: true
+    title: Sulfimide
+  - id: hdata224
+    title: Sulfinate
+  - id: hdata222
+    title: Sulfine
+  - id: hdata224
+    leave_empty: true
+    title: Sulfinic Acid
+  - id: hdata223
+    title: Sulfite
+  - id: hdata225
+    title: Sulfonamide
+  - id: hdata226
+    leave_empty: true
+    title: Sulfonate
+  - id: hdata227
+    title: Sulfonate, thio
+  - id: hdata228
+    title: Sulfone
+  - id: hdata229
+    title: Sulfonium
+  - id: hdata230
+    title: Sulfonyl Halide
+  - id: hdata231
+    title: Sulfoxide
+  - id: hdata229
+    leave_empty: true
+    title: Sulfoxonium
+  - id: hdata232
+    title: Sulfur
+  - id: hdata233
+    title: Sultone
+  - id: hdata234
+    title: Tellurium
+  - id: hdata234
+    leave_empty: true
+    title: Tellurol
+  - id: hdata235
+    title: Tellurophene
+  - id: hdata236
+    title: Tetrahedrane
+  - id: hdata237
+    title: Tetrahydrofuran
+  - id: hdata238
+    title: Tetrazole
+  - id: hdata239
+    title: Thallium
+  - id: hdata201
+    leave_empty: true
+    title: Thiapyrylium
+  - id: hdata240
+    title: Thiazole
+  - id: hdata241
+    title: Thioacetal
+  - id: hdata242
+    title: Thioaldehyde
+  - id: hdata246
+    title: Thioaldehyde S-oxide
+  - id: hdata245
+    title: Thioamide
+  - id: hdata243
+    title: Thiocarboxylic Acid
+  - id: hdata244
+    title: Thiocyanate
+  - id: hdata247
+    leave_empty: true
+    title: Thiol
+  - id: hdata248
+    title: Thiophene
+  - id: hdata251
+    title: Thiopyrone
+  - id: hdata214
+    leave_empty: true
+    title: Tin
+  - id: hdata252
+    title: Triazine
+  - id: hdata253
+    title: Triazole
+  - id: hdata226
+    leave_empty: true
+    title: Triflate
+  - id: hdata254
+    title: Tropone
+  - id: hdata249
+    title: Tungsten
+  - id: hdata250
+    title: Urea
+  - id: hdata67
+    leave_empty: true
+    title: Urethane
+  - id: hdata17
+    leave_empty: true
+    title: Vinyl Groups
+  - id: hdata257
+    title: Water
+  - id: hdata256
+    title: Xylylene, ortho-
+  - id: hdata255
+    title: Zinc
+
+display_link: true
+---
+{%- block extra_top %}
+<li class="list-group-item py-5" id="{{ extra_top.explanation.id }}">
+  <h4 class="pb-3">{{ extra_top.explanation.title | safe }}</h4>
+  <p>For tables of data see Acetylene: Alkene; Allyl; Allene; Benzene; Benzyl; Cyclopropane;
+    Cyclohexane; Diene; Naphthalene; Neopentyl. Methyl chemical shifts are listed in several Methyl
+    tables. Heterocycles are listed under Cycloalkanes, Heterocyles: Bicyclo[x.y.z];
+    as well as under specific names (e.g., Pyridine; Furan; etc).</p>
+  <p>Chemical shifts marked with an asterisk (2.42*, 2.47*) have not been unambiguously assigned.</p>
+  <p>A references such as JOC-89-4436 is a coded form of <i>J. Org. Chem.</i> <b>1989</b>, <i>54</i>, 4436.
+    An asterisk next to a reference (*JOC-78-233) indicates that the paper has <sup>1</sup>H data for numerous other related
+    compounds.</p>
+  <p>Numbers in prentheses next to a chemical shift are coupling constants (usually <i>J</i><sub>H-H</sub> but sometimes
+    <i>J</i><sub>H-C</sub> or <i>J</i><sub>H-X</sub> if the molecule contains a spin 1/2 nucleus X (e.g. P, F, Sn, Se)</p>
+  <h5>Acknowledgments</h5>
+  <p>This website is made possible by a generous allocation of server space and bandwidth from, previously, the
+    Department of Chemistry at the University of Wisconsin, and, now, the ACS Division of Organic Chemistry.
+    The National Science Foundation is acknowledged for financial support to Professor Hans Reich who created the
+    database of NMR.
+    Dr. Khoi Van (Assistant Webmaster of the ACS Division of Organic Chemistry) is
+    acknowledged for his extensive volunteer efforts in converting Professor Reich's database out of frames into its
+    current website (responsive form) in June 2020.</p>
+</li>
+
+<li class="list-group-item py-5" id="{{ extra_top.ref_abbr.id }}">
+  <h4 class="pb-3">{{ extra_top.ref_abbr.title | safe }}</h4>
+  <p>A references such as JOC-89-4436 is a coded form of <i>J. Org. Chem.</i> <b>1989</b>, <i>54</i>, 4436 (89 is the
+    <i>year</i>). This could also be coded as JOC-(54)-4436 (<i>volume</i> in parentheses).</p>
+  <div class="table-responsive">
+    <table class="table table-striped table-sm">
+      <tbody>
+        <tr>
+          <td>ACIE</td>
+          <td>Angew. Chem. Int. Ed. Engl.</td>
+        </tr>
+        <tr>
+          <td>ACS</td>
+          <td>Acta Chimica Scandinavica</td>
+        </tr>
+        <tr>
+          <td>AMR</td>
+          <td>Advances in Magentic Resonance</td>
+        </tr>
+        <tr>
+          <td>Ann</td>
+          <td>Justus Liebig's Annalen.</td>
+        </tr>
+        <tr>
+          <td>ASV</td>
+          <td>Aldrich Spectral Viewer</td>
+        </tr>
+        <tr>
+          <td>BCSJ</td>
+          <td>Bull. Chem. Soc. Jap.</td>
+        </tr>
+        <tr>
+          <td>BER</td>
+          <td>Chem. Ber.</td>
+        </tr>
+        <tr>
+          <td>CC</td>
+          <td>J. Chem. Soc., Chem. Commun,</td>
+        </tr>
+        <tr>
+          <td>CEJ</td>
+          <td>Chemistry - A European Journal</td>
+        </tr>
+        <tr>
+          <td>CJC</td>
+          <td>Can. J. Chem.</td>
+        </tr>
+        <tr>
+          <td>EJC</td>
+          <td>European Journal of Chemistry</td>
+        </tr>
+        <tr>
+          <td>EJIC</td>
+          <td>European Journal of Inorganic Chemistry</td>
+        </tr>
+        <tr>
+          <td>Friebolin</td>
+          <td>Frebolin, H. "Basic One- and Two-Dimensional NMR Spectroscopy,"" 2nd Ed. VCH Publishers, New York, 1993.
+            Heterocycles</td>
+        </tr>
+        <tr>
+          <td>HET</td>
+          <td>Heterocycles</td>
+        </tr>
+        <tr>
+          <td>Hesse</td>
+          <td>Hesse, M.; Meier, H.; Zech, B. "Spektroscopische Methoden in der Organischen Chemie", Thieme, 1987.</td>
+        </tr>
+        <tr>
+          <td>IC</td>
+          <td>Inorg. Chem.</td>
+        </tr>
+        <tr>
+          <td>JA</td>
+          <td>J. Am. Chem, Soc.</td>
+        </tr>
+        <tr>
+          <td>JCSP2</td>
+          <td>J. Chem. Soc. Perk. II</td>
+        </tr>
+        <tr>
+          <td>JMR</td>
+          <td>J. Magn. Res.</td>
+        </tr>
+        <tr>
+          <td>JMS</td>
+          <td>J. Mol. Spectr.</td>
+        </tr>
+        <tr>
+          <td>JOC</td>
+          <td>J. Org. Chem.</td>
+        </tr>
+        <tr>
+          <td>JOMC</td>
+          <td>J. Organomet. Chem.</td>
+        </tr>
+        <tr>
+          <td>JPC</td>
+          <td>J. Phys. Chem.</td>
+        </tr>
+        <tr>
+          <td>MGMC</td>
+          <td>Main Group Metal Chem</td>
+        </tr>
+        <tr>
+          <td>MRC</td>
+          <td>Magnetic Resonance in Chemistry</td>
+        </tr>
+        <tr>
+          <td>NMRShiftDB</td>
+          <td><a href="https://nmrshiftdb.nmr.uni-koeln.de/" target="_blank"
+              rel="noopener">https://nmrshiftdb.nmr.uni-koeln.de/</a></td>
+        </tr>
+        <tr>
+          <td>OL</td>
+          <td>Organic Letters</td>
+        </tr>
+        <tr>
+          <td>OMR</td>
+          <td>Org. Magn. Res.</td>
+        </tr>
+        <tr>
+          <td>ORGMET</td>
+          <td>Organometallics</td>
+        </tr>
+        <tr>
+          <td>Pretsch</td>
+          <td>Tables of Spectral Data for Structure Determination of Organic Compounds</td>
+        </tr>
+        <tr>
+          <td>Reich</td>
+          <td>Results from the author's research</td>
+        </tr>
+        <tr>
+          <td>RTC</td>
+          <td>Rec. Trav. Chim.</td>
+        </tr>
+        <tr>
+          <td>SC</td>
+          <td>Synthetic Communications</td>
+        </tr>
+        <tr>
+          <td>SDBS</td>
+          <td><a href="https://sdbs.db.aist.go.jp/sdbs/cgi-bin/cre_index.cgi" target="_blank" rel="noopener">Web
+              Spectral Database for Organic Compounds</td>
+        </tr>
+        <tr>
+          <td>S</td>
+          <td>Sadler Spectra Collection</td>
+        </tr>
+        <tr>
+          <td>SL</td>
+          <td>Synlett</td>
+        </tr>
+        <tr>
+          <td>TET</td>
+          <td>Tetrahedron</td>
+        </tr>
+        <tr>
+          <td>TL</td>
+          <td>Tetrahedron Lett</td>
+        </tr>
+        <tr>
+          <td>V</td>
+          <td>Varian Spectra Catalog</td>
+        </tr>
+        <tr>
+          <td>ZOK</td>
+          <td>Zh. Org. Khim (Journal of Organic Chemistry of the USSR)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</li>
+
+{%- endblock %}
