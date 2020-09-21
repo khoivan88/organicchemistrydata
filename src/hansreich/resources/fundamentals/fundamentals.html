@@ -15,19 +15,29 @@ default_script:
   list:
     - description: 'Load first link as default'
       content: |
-        let url = getDataPath() + document.querySelector('.index-content a').href.split('#')[1]
+        // let url = getDataPath() + document.querySelector('.index-content a').href.split('#')[1]
+        let urlParams = new URLSearchParams(document.querySelector('.index-content a').search)
+        let page = urlParams.get('page')
+        let url = getDataPath() + page
         loadPage(url, '#content .full-list')
 
 ---
 <p class="lead">Fundamentals of Organic Chemistry</p>
 <ol class="pl-3">
-    <li><a href="#tools00">Symbolic Notation</a></li>
+    <!-- <li><a href="#tools00">Symbolic Notation</a></li>
     <li><a href="#tools04">Bond Formation in Organic Chemistry</a></li>
     <li><a href="#tools05">Synthons for C-C Bond Formation</a></li>
     <li><a href="#tools06">Nucleophiles and Electrophiles</a></li>
     <li><a href="#a_values">A-Values</a></li>
     <li><a href="#electronegativities">Electronegativities</a></li>
-    <li><a href="#halogen">References on Fluorine and Iodine in Organic Chemistry</a></li>
+    <li><a href="#halogen">References on Fluorine and Iodine in Organic Chemistry</a></li> -->
+    <li><a href="?page=tools00">Symbolic Notation</a></li>
+    <li><a href="?page=tools04">Bond Formation in Organic Chemistry</a></li>
+    <li><a href="?page=tools05">Synthons for C-C Bond Formation</a></li>
+    <li><a href="?page=tools06">Nucleophiles and Electrophiles</a></li>
+    <li><a href="?page=a_values">A-Values</a></li>
+    <li><a href="?page=electronegativities">Electronegativities</a></li>
+    <li><a href="?page=halogen">References on Fluorine and Iodine in Organic Chemistry</a></li>
 </ol>
 <p>Also see:</p>
 <ul class="pl-3">

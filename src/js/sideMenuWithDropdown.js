@@ -81,13 +81,22 @@ function loadContent () {
         // link.classList.toggle('active')
 
         // Split the href value into page and sections
-        let [currentPath, page, section, ...rest] = link.href.split('#')
+        // let [currentPath, page, section, ...rest] = link.href.split('#')
+        let linkUrl = new URL(link.href)
+        // console.log(`deepLink linkUrl: ${linkUrl}`) // !DEBUG
 
-        let url = getDataPath() + page
-        // console.log(url) // !DEBUG
+        // Load the index page using query string
+        if (linkUrl.search) {
+          var urlParams = new URLSearchParams(linkUrl.search)
+          var page = urlParams.get('page')
+          var section = page.split('#')[1] || null
+          var url = getDataPath() + page
+          // console.log(url) // !DEBUG
+        }
 
         // Check if this is a new page or just a different section of the same page
-        if (page != window.location.hash.split('#')[1]) {
+        // if (page != window.location.hash.split('#')[1]) {
+        if (linkUrl.search !== window.location.search) {
           loadPage(url, '#content .full-list')
             .then(function () {
               // Reload page and create new url (optional)
@@ -173,58 +182,95 @@ async function deepLink () {
 
   // Load the index page using query string
   if (currentUrl.search) {
-    let urlParams = new URLSearchParams(currentUrl.search)
+    var urlParams = new URLSearchParams(currentUrl.search)
     let indexPage = urlParams.get('index')
+    let [page, section] = urlParams.get('page').split('#')
 
-    // Mark dropdown option in side menu 'selected'
-    document.querySelector('select.index').value = indexPage.split('/')[1]
+    if (indexPage) {
+      console.log(`deepLink indexPage: ${indexPage}`) // !DEBUG
+      // Mark dropdown option in side menu 'selected'
+      document.querySelector('select.index').value = indexPage.split('/')[1]
 
-    var hasPageData = await loadPage(indexPage, '.index-content')
-    if (hasPageData) {
-      injectContent()
+      var hasPageData = await loadPage(indexPage, '.index-content')
+      if (hasPageData) {
+        injectContent()
 
-      // Scroll to section if exists
-      if (currentUrl.hash) {
-        // console.log(`Should be running because element with id ${currentUrl.hash} exists`) // !DEBUG
-        setTimeout(function () {
-          document.querySelector(currentUrl.hash).scrollIntoView()
-        }, 300)
+        // Scroll to section if exists
+        if (currentUrl.hash) {
+          // console.log(`Should be running because element with id ${currentUrl.hash} exists`) // !DEBUG
+          setTimeout(function () {
+            document.querySelector(currentUrl.hash).scrollIntoView()
+          }, 300)
+        }
+      }
+    } else if (page) {
+      // const hash = currentUrl.hash.split('#')
+      // console.log(`deepLink hash: ${hash}`) // !DEBUG
+      console.log(`deepLink page: ${page}`) // !DEBUG
+
+      let contentUrl = getDataPath() + page
+      // console.log(`contentUrl: ${contentUrl}`) // !DEBUG
+
+      if (page.endsWith('.pdf')) {
+        loadPdf(contentUrl, '#content .full-list')
+
+        // Scroll to top of the new content page
+        setTimeout(window.topFunction, 100)
+      } else {
+        loadPage(contentUrl, '#content .full-list')
+          .then(function () {
+            if (section) {
+              // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
+              window.elementReady('#' + CSS.escape(section))
+                .then(function (el) {
+                  // console.log(`Should be running because element with id ${section} exists`) // !DEBUG
+                  setTimeout(function () {
+                    el.scrollIntoView({ behavior: 'auto' })
+                  }, 200)
+                })
+            } else {
+              // Scroll to top of the new content page
+              setTimeout(window.topFunction, 100)
+            }
+          })
       }
     }
   }
 
-  // Load the content page into main content and scroll to subsection if exists
-  if (currentUrl.hash && !hasPageData) {
-    const hash = currentUrl.hash.split('#')
-    // console.log(`deepLink hash: ${hash}`) // !DEBUG
+  // // Load the content page into main content and scroll to subsection if exists
+  // // if (currentUrl.hash && !hasPageData) {
+  // if (currentUrl.search && !hasPageData) {
+  //   const hash = currentUrl.hash.split('#')
+  //   // console.log(`deepLink hash: ${hash}`) // !DEBUG
+  //   let page, section = currentUrl.search.get
 
-    let contentUrl = getDataPath() + hash[1]
-    // console.log(`contentUrl: ${contentUrl}`) // !DEBUG
+  //   let contentUrl = getDataPath() + hash[1]
+  //   // console.log(`contentUrl: ${contentUrl}`) // !DEBUG
 
-    if (hash[1].endsWith('.pdf')) {
-      loadPdf(contentUrl, '#content .full-list')
+  //   if (hash[1].endsWith('.pdf')) {
+  //     loadPdf(contentUrl, '#content .full-list')
 
-      // Scroll to top of the new content page
-      setTimeout(window.topFunction, 100)
-    } else {
-      loadPage(contentUrl, '#content .full-list')
-        .then(function () {
-          if (hash[2]) {
-            // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
-            window.elementReady('#' + CSS.escape(hash[2]))
-              .then(function (el) {
-                // console.log(`Should be running because element with id ${hash[2]} exists`) // !DEBUG
-                setTimeout(function () {
-                  el.scrollIntoView({ behavior: 'auto' })
-                }, 200)
-              })
-          } else {
-            // Scroll to top of the new content page
-            setTimeout(window.topFunction, 100)
-          }
-        })
-    }
-  }
+  //     // Scroll to top of the new content page
+  //     setTimeout(window.topFunction, 100)
+  //   } else {
+  //     loadPage(contentUrl, '#content .full-list')
+  //       .then(function () {
+  //         if (hash[2]) {
+  //           // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
+  //           window.elementReady('#' + CSS.escape(hash[2]))
+  //             .then(function (el) {
+  //               // console.log(`Should be running because element with id ${hash[2]} exists`) // !DEBUG
+  //               setTimeout(function () {
+  //                 el.scrollIntoView({ behavior: 'auto' })
+  //               }, 200)
+  //             })
+  //         } else {
+  //           // Scroll to top of the new content page
+  //           setTimeout(window.topFunction, 100)
+  //         }
+  //       })
+  //   }
+  // }
 
   // Wait longer before activating tooltip on direct load
   setTimeout(activateTooltip, 300)

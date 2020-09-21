@@ -1,5 +1,5 @@
 {
     "img_url_prefix": "/hansreich/resources/fundamentals/fundamentals_data/img/",
-    "sitemap_url_prefix": "/hansreich/resources/fundamentals/#",
+    "sitemap_url_prefix": "/hansreich/resources/fundamentals/?page=",
 	"sitemap_ignore": true
 }
