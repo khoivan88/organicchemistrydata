@@ -1,14 +1,19 @@
 window.loadFirstLink = loadFirstLink
 
+const ocdHeaders = new Headers({
+  'x-ocd-auth': 'ocd_internal_request'
+});
 /**
  * It downloads HTML as text and then feeds it to the innerHTML of your container element.
  * Ref: https://stackoverflow.com/a/52349344/6596203
  * @param {String} url - address for the HTML to fetch
- * @return {String} the resulting HTML string fragment
+ * @return {Promise} the resulting HTML string fragment
 */
 function fetchHtmlAsText (url) {
   return new Promise((resolve, reject) => {
-    fetch(url)
+    fetch(url, {
+      headers: ocdHeaders
+    })
       .then(function (response) {
         if (response.ok) { // if HTTP-status is 200-299
           // get the response body (the method explained below)
