@@ -369,7 +369,8 @@ function loadFirstLink () {
   console.log('"loadFirstLink()" working!') // !DEBUG
   window.elementReady('.index-content a:first-of-type')
     .then(function (firstATag) {
-      let url = getDataPath() + firstATag.href.split('#')[1]
+      let urlParams = new URLSearchParams(firstATag.search)
+      let url = getDataPath() + urlParams.get('page')
       loadPage(url, '#content .full-list')
       window.history.pushState(null, null, firstATag.href)
 
@@ -712,7 +713,12 @@ $(document).ready(function () {
 
   // If user provides a url with hash (e.g. 'example.com/#something') then try to load the correct page
   // ! IMPORTANT that this is after `indexRedirect()` or window will reload the first link
-  deepLink()
+  if (document.location.search) {
+    deepLink()
+  } else {
+    // Else load the first link in the side menu
+    loadFirstLink()
+  }
 
   if (document.querySelector('#scrollToLinkForm')) {
     scrollToLink()

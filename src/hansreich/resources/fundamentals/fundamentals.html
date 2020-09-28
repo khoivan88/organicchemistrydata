@@ -13,15 +13,6 @@ meta_tags:
 
 title: 'Fundamentals of Organic Chemistry'
 
-default_script:
-  list:
-    - description: 'Load first link as default'
-      content: |
-        let urlParams = new URLSearchParams(document.querySelector('.index-content a').search)
-        let page = urlParams.get('page')
-        let url = getDataPath() + page
-        loadPage(url, '#content .full-list')
-
 ---
 <p class="lead">Fundamentals of Organic Chemistry</p>
 <ol class="pl-3">
