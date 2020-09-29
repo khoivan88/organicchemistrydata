@@ -1,5 +1,5 @@
 {
     "img_url_prefix": "/hansreich/resources/redox/redox_data/img/",
-    "sitemap_url_prefix": "/hansreich/resources/redox/#",
+    "sitemap_url_prefix": "/hansreich/resources/redox/?page=",
 	"sitemap_ignore": true
 }
