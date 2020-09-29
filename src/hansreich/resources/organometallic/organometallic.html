@@ -87,7 +87,11 @@ default_script:
   list:
     - description: 'Load "Intro" index page as default for "Organometallic Chemistry" section'
       content: |
-        if(!window.location.search) {loadPage('organometallic_index/intro', '.index-content')}
+        let urlParams = new URLSearchParams(window.location.search)
+        let indexPage = urlParams.get('index')
+        if(!indexPage) {
+            loadPage('organometallic_index/intro/', '.index-content')
+        }
 
 ---
 
