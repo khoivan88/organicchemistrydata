@@ -54,7 +54,11 @@ default_script:
   list:
     - description: 'Load "Names" index page as default'
       content: |
-        if (!window.location.search) {loadPage('groupby/names', '.index-content')}
+        let urlParams = new URLSearchParams(window.location.search)
+        let indexPage = urlParams.get('index')
+        if(!indexPage) {
+            loadPage('groupby/names/', '.index-content')
+        }
     - description: 'Load showPointer.js'
       url: '/js/showPointer.js'
 
