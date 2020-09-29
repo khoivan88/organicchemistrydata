@@ -677,7 +677,7 @@ function loadPdfAndMakeUrl (event, link) {
  */
 function loadPdfForMainContentLinks () {
   // console.log('"loadPdfForMainContentLinks" is running!')  // ! DEBUG
-  if (loadPdfInFrame) {
+  if (typeof loadPdfInFrame !== 'undefined') {
     document.querySelectorAll('#content .full-list a[href$=".pdf"]').forEach(function (link) {
       link.onclick = function (e) {
         console.log('For links to PDF in the main content') // !DEBUG
