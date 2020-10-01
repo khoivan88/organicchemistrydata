@@ -71,6 +71,9 @@ function elementExisted (selector) {
   return (typeof (el) !== 'undefined' && el != null)
 }
 
+/**
+ * Get all links in side menu and set function running on each link click
+ */
 function loadContent () {
   // console.log('"loadContent()" working') // !DEBUG
   document.querySelectorAll('.index-content a').forEach(function (link) {
@@ -80,7 +83,10 @@ function loadContent () {
       let isContinued = loadPdfAndMakeUrl(e, this)
 
       // For pages WITHOUT element with selector: '#content .full-list #pageData'
-      if (isContinued && !elementExisted('#content .full-list #pageData')) {
+      if (isContinued
+        && !elementExisted('#content .full-list #pageData')
+        && (window.location.hostname === link.hostname || !link.hostname.length)  // if the link is internal link
+      ) {
         e.preventDefault()
         console.log('sidemenu link clicked!') // !DEBUG
         // link.classList.toggle('active')
@@ -94,19 +100,32 @@ function loadContent () {
         if (linkUrl.search) {
           var urlParams = new URLSearchParams(linkUrl.search)
           var page = urlParams.get('page')
-          var section = page.split('#')[1] || null
+          // var section = page.split('#')[1] || null
+          var section = linkUrl.hash.replace('#', '')
           var url = getDataPath() + page
           // console.log(url) // !DEBUG
         }
 
+        // Create new url with the query string
+        var newUrl = new URL(window.location.href)
+        var currentParams = new URLSearchParams(newUrl.search)
+
         // Check if this is a new page or just a different section of the same page
         // if (page != window.location.hash.split('#')[1]) {
-        if (linkUrl.search !== window.location.search) {
+        if (page !== currentParams.get('page')) {
+          // Get the current url 'search' part (might contain 'index') and add `page=` parameter
+          let newParams = new URLSearchParams(window.location.search)
+          newParams.set('page', page)
+          newUrl.search = newParams
+          // console.log(`"newUrl" is :${newUrl}`)  // ! DEBUG
+
           loadPage(url, '#content .full-list')
             .then(function () {
+              console.log(`Load page: ${page}`)
               // Reload page and create new url (optional)
-              // url = window.location.href.replace(/\/#/, "#");
-              window.history.pushState(null, null, link.href)
+              if (!section) {
+                window.history.pushState(null, null, newUrl.href)
+              }
             })
             .catch(function (error) {
               // console.error(error)  // !DEBUG
@@ -128,21 +147,24 @@ function loadContent () {
 
         // Scroll to section if exists
         if (section) {
-          // Reload page and create new url (optional)
-          window.history.pushState(null, null, link.href)
+          // Reload page and create new url with new hash:
+          newUrl.hash = section
+          window.history.pushState(null, null, newUrl.href)
 
           // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
           window.elementReady('#' + CSS.escape(section))
             .then(function (el) {
               // console.log(`Should be running because element with id ${section} exists`) // !DEBUG
-              setTimeout(function () {
-                // let el = document.querySelector('#' + CSS.escape(section))
-                el.scrollIntoView({ behavior: 'auto' })
-              }, 200)
+              // console.log(el)  // !DEBUG
+              el.scrollIntoView({ behavior: 'auto' })
             })
         } else {
           // Scroll to top of the new content page
           setTimeout(window.topFunction, 100)
+
+          // Reload page and create new url for new URL without hash:
+          newUrl.hash = ''
+          window.history.pushState(null, null, newUrl.href)
         }
 
         // setTimeout(loadPdfForMainContentLinks, 500)
@@ -189,8 +211,10 @@ async function deepLink () {
   if (currentUrl.search) {
     var urlParams = new URLSearchParams(currentUrl.search)
     let indexPage = urlParams.get('index')
-    let [page, section] = urlParams.get('page').split('#')
+    let page = urlParams.get('page')
+    let section = currentUrl.hash
 
+    // Load index page into side menu
     if (indexPage) {
       console.log(`deepLink indexPage: ${indexPage}`) // !DEBUG
       // Mark dropdown option in side menu 'selected'
@@ -201,14 +225,17 @@ async function deepLink () {
         injectContent()
 
         // Scroll to section if exists
-        if (currentUrl.hash) {
-          // console.log(`Should be running because element with id ${currentUrl.hash} exists`) // !DEBUG
+        if (section) {
+          // console.log(`Should be running because element with id ${section} exists`) // !DEBUG
           setTimeout(function () {
-            document.querySelector(currentUrl.hash).scrollIntoView()
-          }, 300)
+            document.querySelector(section).scrollIntoView()
+          }, 500)
         }
       }
-    } else if (page) {
+    }
+
+    // Load the main content page
+    if (page) {
       // const hash = currentUrl.hash.split('#')
       // console.log(`deepLink hash: ${hash}`) // !DEBUG
       console.log(`deepLink page: ${page}`) // !DEBUG
@@ -229,7 +256,7 @@ async function deepLink () {
               window.elementReady('#' + CSS.escape(section))
                 .then(function (el) {
                   // console.log(`Should be running because element with id ${section} exists`) // !DEBUG
-                  setTimeout(function () {
+                  setTimeout(function (el) {
                     el.scrollIntoView({ behavior: 'auto' })
                   }, 200)
                 })
@@ -299,8 +326,9 @@ function indexRedirect () {
   const select = document.querySelector('.index')
 
   // Retrieve the page url related to the selected option and force a redirection to this page.
-  select.addEventListener('change', function () {
+  select.addEventListener('change', function (e) {
     let url = this.options[this.selectedIndex].dataset.url
+    // console.log(e.detail.text())
     if (url) {
       loadPage(url, '.index-content')
         .then(function (hasPageData) {
@@ -312,11 +340,18 @@ function indexRedirect () {
             scrollInertia: 0
           })
 
+          var scrollToTop = true
+          if (typeof (e.detail) !== 'undefined') {
+            scrollToTop = e.detail.scrollToTop
+          }
+
           if (hasPageData) {
             injectContent()
-          } else {
+          } else if (scrollToTop) {
             // Load first link as default:
             setTimeout(loadFirstLink, 500)
+            // Scroll to top as default
+            console.log('scroll to top!')  // !DEBUG
             setTimeout(window.scrollTo(0, 0), 800)
           }
 
@@ -370,9 +405,18 @@ function loadFirstLink () {
   window.elementReady('.index-content a:first-of-type')
     .then(function (firstATag) {
       let urlParams = new URLSearchParams(firstATag.search)
-      let url = getDataPath() + urlParams.get('page')
+      let page = urlParams.get('page')
+      let url = getDataPath() + page
       loadPage(url, '#content .full-list')
-      window.history.pushState(null, null, firstATag.href)
+
+      // Get the current url 'search' part (might contain 'index') and add `page=` parameter
+      let newParams = new URLSearchParams(window.location.search)
+      newParams.set('page', page)
+      // Create new url with the query string
+      let newUrl = new URL(window.location.href)
+      newUrl.search = newParams
+      // console.log(`"newUrl" is :${newUrl}`)  // ! DEBUG
+      window.history.pushState(null, null, newUrl.href)
 
       // setTimeout(loadPdfForMainContentLinks, 500)
       // wait for elementready
@@ -438,6 +482,18 @@ function scrollToOffset (el, offset = 90) {
   var elTop = $(el).offset().top - $('#sidebar .mCSB_container').offset().top
   return elTop - offset
 }
+
+/**
+ * Scroll to a specific place on the sidemenu using element ID
+ * @param {String} element : the element css selector that needs to be scrolled to
+ */
+function sideMenuScroll (element) {
+  $('#sidebar').mCustomScrollbar('scrollTo',
+    scrollToOffset(element),
+    { scrollInertia: 0 } // default is too slow and cause issue with items at the bottom or a long list
+  )
+}
+
 
 /**
  * Return a string with all regex special characters escaped
@@ -602,19 +658,28 @@ function injectContent () {
  * https://stackoverflow.com/a/2856602/6596203;
  * https://stackoverflow.com/a/10911718/6596203
  */
-function changeIndex (e) {
+function changeIndex(e, scrollToTop=true) {
   // console.log('changeIndex() runs') // !DEBUG
   // console.log(e.dataset.value)
   document.querySelector('select.index').value = e.dataset.value
+
   // firing the event properly according to StackOverflow
   // http://stackoverflow.com/questions/2856513/how-can-i-trigger-an-onchange-event-manually
-  if ('createEvent' in document) {
-    var evt = document.createEvent('HTMLEvents')
-    evt.initEvent('change', false, true)
-    document.querySelector('select.index').dispatchEvent(evt)
-  } else {
-    document.querySelector('select.index').fireEvent('onchange')
-  }
+  // if ('createEvent' in document) {
+  //   var evt = document.createEvent('HTMLEvents')
+  //   evt.initEvent('change', false, true)
+  //   document.querySelector('select.index').dispatchEvent(evt)
+  // } else {
+  //   document.querySelector('select.index').fireEvent('onchange')
+  // }
+
+  // https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
+  var event = new CustomEvent('change', {
+    bubbles: true,
+    cancelable: true,
+    detail: { 'scrollToTop': scrollToTop }
+  })
+  document.querySelector('select.index').dispatchEvent(event)
 }
 
 /**
@@ -640,25 +705,28 @@ function loadPdf (url, targetElem) {
  */
 function loadPdfAndMakeUrl (event, link) {
   // Check if link contains pdf file and it is internal link
-  if (typeof loadPdfInFrame !== 'undefined' && // Checking for pages that does not have `var loadPdfInFrame` set
-    loadPdfInFrame &&
-    link.href.endsWith('.pdf') &&
-    (window.location.hostname === link.hostname || !link.hostname.length)) {
+  if (typeof loadPdfInFrame !== 'undefined' // Checking for pages that does not have `var loadPdfInFrame` set
+    && loadPdfInFrame
+    && link.href.endsWith('.pdf')
+    && (window.location.hostname === link.hostname || !link.hostname.length)  // if the PDF file link is internal link
+  ) {
     // console.log('Load PDF file into main content')  // ! DEBUG
     event = event || window.event
     if (event) {
       event.preventDefault()
     }
-    // let pdfName = new URL(link.href).pathname.split('/').filter(Boolean).pop()
-    let pdfUrl = getDataPath() + link.getAttribute('href')
+    let pdfRelativeUrl = link.getAttribute('href')
+    let pdfUrl = getDataPath() + pdfRelativeUrl
     console.log(pdfUrl) // ! DEBUG
     loadPdf(pdfUrl, '#content .full-list')
 
     // Create new url with the query string
     let newUrl = new URL(window.location.href)
+    let newParams = new URLSearchParams(window.location.search)
+    newParams.set('page', pdfRelativeUrl)
+    newUrl.search = newParams
     // Remove current url hash if there is any
-    // newUrl.hash = pdfName
-    newUrl.hash = link.getAttribute('href')
+    newUrl.hash = ''
     // console.log(`"newUrl" is :${newUrl}`)  // ! DEBUG
     window.history.pushState(null, null, newUrl.href)
 

@@ -16,9 +16,13 @@ default_script:
   list:
     - description: 'Load "NMR Info" index page and its "Intro" page as default'
       content: |
+        // Set 'loadPdfInFrame' to true for loading PDF file in frame for this section
         var loadPdfInFrame = true
-        if (!window.location.search) {
-            loadPage('nmr_index/info', '.index-content')
+        // Load the 'info' index page as the default index page if the url does not contain any index page
+        let urlParams = new URLSearchParams(window.location.search)
+        let indexPage = urlParams.get('index')
+        if(!indexPage) {
+            loadPage('nmr_index/info/', '.index-content')
         }
 
 landing_content: |
