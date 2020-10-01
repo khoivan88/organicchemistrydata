@@ -24,7 +24,7 @@ jobs:
       uses: TartanLlama/actions-eleventy@v1.2
       with:
         # If set to `true`, `npm install` will be run before Eleventy is invoked
-        install_dependencies: false
+        install_dependencies: true
 
     # Transfer files to the server
     - name: rsync deployments
