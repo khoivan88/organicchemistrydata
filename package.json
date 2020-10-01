@@ -4,7 +4,8 @@
   "description": "Testing Eleventy",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d _site"
+    "deploy": "gh-pages -d _site",
+    "build": "env NODE_ENV=production npx eleventy",
   },
   "homepage": "/reich_demo",
   "author": "Khoi Van",
