@@ -827,6 +827,15 @@
                 {
                     "name": "UC San Diego-Lab Safety Video Links",
                     "url": "https://blink.ucsd.edu/safety/research-lab/laboratory/videos.html"
+                },
+                {
+                    "name": "Safety Data Sheet (SDS) lookup by ChemInfo",
+                    "description": "SDS quick lookup by brand, catalog number, or CAS number from Acros, Maybridge, Fisher, TCI, Fluorochem",
+                    "url": "http://www.cheminfo.org/Chemistry/MSDS_lookup/index.html"
+                },
+                {
+                    "name": "Safety Data Sheet (SDS) lookup by ChemicalSafety",
+                    "url": "https://chemicalsafety.com/sds-search/"
                 }
             ]
         },
@@ -1067,6 +1076,21 @@
                             "name": "Awesome Python Chemistry",
                             "description": "A curated list of Python frameworks, libraries, software and resources related to Chemistry",
                             "url": "https://github.com/lmmentel/awesome-python-chemistry"
+                        },
+                        {
+                            "name": "Cheminfo.org",
+                            "description": "variety of tools for cheminformatics, including but not limited to: SDS lookup, search by exact mass in Pubchem, Wikipedia Chemical view, etc.",
+                            "url": "http://www.cheminfo.org/"
+                        },
+                        {
+                            "name": "Search by exact mass in Pubchem",
+                            "description": "Search Pubchem database for compounds using provided exact mass",
+                            "url": "http://www.cheminfo.org/Chemistry/Database/PubChem/Search_by_exact_mass_in_PubChem/index.html"
+                        },
+                        {
+                            "name": "Chemcalc.org",
+                            "description": "collection of mass calculators: molecular formula to exact mass; mass to prediction of molecular formula; proteins/polymer mass distributions analyses; Mass spec exercises",
+                            "url": "https://www.chemcalc.org/"
                         },
                         {
                             "name": "MaxBridge",
