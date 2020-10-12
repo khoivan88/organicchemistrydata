@@ -39,6 +39,17 @@ function loadPage (url, targetElem) {
         if (targetElem === '.index-content') {
           loadContent()
         }
+
+        // Add to the page title if the loading page has a title
+        const pageTitleRegex = /(?<=<title>)(.*)(?=<\/title>)/
+        let newPageTitle = pageTitleRegex.exec(responseText)
+        if (newPageTitle) {
+          // console.log(`New page title: ${newPageTitle[1]}`)  // !DEBUG
+          // Capture the base title, the text before '–' and append the new page title
+          document.title = document.title.split('–')[0] + ' – ' + newPageTitle[1]
+        }
+
+        // return a bool of if there is "pageData" section ('Reich' > 'NMR' > 'Chemical shift and Coupling Constant'),
         var pageDataRe = /id=['"]pageData['"]/
         resolve(pageDataRe.test(responseText))
       })

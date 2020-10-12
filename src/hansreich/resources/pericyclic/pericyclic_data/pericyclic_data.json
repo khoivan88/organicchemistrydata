@@ -1,5 +1,6 @@
 {
     "img_url_prefix": "/hansreich/resources/pericyclic/pericyclic_data/img/",
+    "layout": "simple_html.njk",
     "sitemap_url_prefix": "/hansreich/resources/pericyclic/?page=",
 	"sitemap_ignore": true
 }
