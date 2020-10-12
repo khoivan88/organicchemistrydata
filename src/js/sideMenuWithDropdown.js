@@ -269,7 +269,7 @@ async function deepLink () {
                   // console.log(`Should be running because element with id ${section} exists`) // !DEBUG
                   setTimeout(function (el) {
                     el.scrollIntoView({ behavior: 'auto' })
-                  }, 200)
+                  }, 300)
                 })
             } else {
               // Scroll to top of the new content page
