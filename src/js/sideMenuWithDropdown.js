@@ -41,7 +41,8 @@ function loadPage (url, targetElem) {
         }
 
         // Add to the page title if the loading page has a title
-        const pageTitleRegex = /(?<=<title>)(.*)(?=<\/title>)/
+        // const pageTitleRegex = /(?<=<title>)(.*)(?=<\/title>)/  // Works fine in Chrome and Firefox but not Safari
+        const pageTitleRegex = /<title>(.*)(?=<\/title>)/  // change to work in Safari as well
         let newPageTitle = pageTitleRegex.exec(responseText)
         if (newPageTitle) {
           // console.log(`New page title: ${newPageTitle[1]}`)  // !DEBUG
