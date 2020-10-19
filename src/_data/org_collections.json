@@ -1065,6 +1065,21 @@
                     ]
                 },
                 {
+                    "name": "Diagram Drawing Programs",
+                    "links": [
+                        {
+                            "name": "Chemix",
+                            "description": "online editor for drawing science lab diagrams and school experiment apparatus.",
+                            "url": "https://chemix.org/"
+                        },
+                        {
+                            "name": "Biorender",
+                            "description": "online editor for drawing science diagrams with a library of life science related icons.",
+                            "url": "https://biorender.com/"
+                        }
+                    ]
+                },
+                {
                     "name": "Others",
                     "links": [
                         {
@@ -1099,6 +1114,11 @@
                         {
                             "name": "Schrödinger",
                             "url": "https://www.schrodinger.com/drug-discovery"
+                        },
+                        {
+                            "name": "Splotch.io",
+                            "description": "mobile app for organizing and annotating TLC data.",
+                            "url": "https://splotch.io/"
                         },
                         {
                             "name": "Vogel Scientific Software: CIARA and CALACO.",
