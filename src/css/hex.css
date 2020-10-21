@@ -7,8 +7,7 @@ body {
     JUMBOTRON STYLE
 ----------------------------------------------------- */
 .jumbotron.jumbotron-fluid {
-	padding-top: 0px;
-	padding-bottom: 1rem;
+    padding: 0rem 1rem 2rem 1rem;
 }
 
 .hex-container {
