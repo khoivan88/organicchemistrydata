@@ -10,10 +10,10 @@
 
 .card:hover {
     box-shadow: 0 0 2px 2px #ba0000;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
-svg {
+.card svg {
     height: 200px;
     width: 240px
 }
