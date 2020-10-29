@@ -179,6 +179,9 @@ function loadContent () {
           window.history.pushState(null, null, newUrl.href)
         }
 
+        // Mark sidebar link as active:
+        markSidebarLinkActive(e)
+
         // setTimeout(loadPdfForMainContentLinks, 500)
         // wait for elementready
         window.elementReady('#content .full-list a[href$=".pdf"]')
@@ -264,13 +267,15 @@ async function deepLink () {
         loadPage(contentUrl, '#content .full-list')
           .then(function () {
             if (section) {
+              // console.log(`Should be running because element with id ${section} exists`) // !DEBUG
+
               // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
-              window.elementReady('#' + CSS.escape(section))
+              window.elementReady('#' + CSS.escape(section.indexOf('#') == 0 ? section.substring(1) : section))
                 .then(function (el) {
                   // console.log(`Should be running because element with id ${section} exists`) // !DEBUG
-                  setTimeout(function (el) {
+                  // setTimeout(function (el) {
                     el.scrollIntoView({ behavior: 'auto' })
-                  }, 300)
+                  // }, 100)
                 })
             } else {
               // Scroll to top of the new content page
@@ -278,43 +283,11 @@ async function deepLink () {
             }
           })
       }
+
+      // Mark sidebar link as active:
+      setTimeout(markSidebarLinkActive, 300)
     }
   }
-
-  // // Load the content page into main content and scroll to subsection if exists
-  // // if (currentUrl.hash && !hasPageData) {
-  // if (currentUrl.search && !hasPageData) {
-  //   const hash = currentUrl.hash.split('#')
-  //   // console.log(`deepLink hash: ${hash}`) // !DEBUG
-  //   let page, section = currentUrl.search.get
-
-  //   let contentUrl = getDataPath() + hash[1]
-  //   // console.log(`contentUrl: ${contentUrl}`) // !DEBUG
-
-  //   if (hash[1].endsWith('.pdf')) {
-  //     loadPdf(contentUrl, '#content .full-list')
-
-  //     // Scroll to top of the new content page
-  //     setTimeout(window.topFunction, 100)
-  //   } else {
-  //     loadPage(contentUrl, '#content .full-list')
-  //       .then(function () {
-  //         if (hash[2]) {
-  //           // Have to use `CSS.escape()` for element with ID starts with number, ref: https://drafts.csswg.org/cssom/#the-css.escape()-method
-  //           window.elementReady('#' + CSS.escape(hash[2]))
-  //             .then(function (el) {
-  //               // console.log(`Should be running because element with id ${hash[2]} exists`) // !DEBUG
-  //               setTimeout(function () {
-  //                 el.scrollIntoView({ behavior: 'auto' })
-  //               }, 200)
-  //             })
-  //         } else {
-  //           // Scroll to top of the new content page
-  //           setTimeout(window.topFunction, 100)
-  //         }
-  //       })
-  //   }
-  // }
 
   // Wait longer before activating tooltip on direct load
   setTimeout(activateTooltip, 300)
@@ -429,6 +402,9 @@ function loadFirstLink () {
       newUrl.search = newParams
       // console.log(`"newUrl" is :${newUrl}`)  // ! DEBUG
       window.history.pushState(null, null, newUrl.href)
+
+      // Mark sidebar link as active:
+      setTimeout(markSidebarLinkActive, 300)
 
       // setTimeout(loadPdfForMainContentLinks, 500)
       // wait for elementready
@@ -780,6 +756,32 @@ window.onpopstate = function () {
   // Because we are calling `deepLink()` on this event, accidentally, we don't need 'onclick="setTimeout(deepLink, 10)"'
   // on internal links in 'nmr_data' folder anymore.
   deepLink()
+}
+
+/**
+ * Mark a link (page) on sidebar as active to mark current page
+ * @param {event} e event e, most likely a link on click
+ */
+function markSidebarLinkActive(e) {
+  console.log('markSidebarLinkActive() running');  // ! DEBUG
+  // console.log(e.currentTarget);  // ! DEBUG
+  const active = document.querySelector('#sidebar .page-active')
+  // Remove `page-active` class in other elements.
+  if(active){
+    active.classList.remove('page-active')
+    active.removeAttribute('aria-current')
+  }
+  if (typeof e !== 'undefined') {
+    e.currentTarget.classList.add('page-active')
+    e.currentTarget.setAttribute("aria-current", "location")
+  } else {
+    let page = new URLSearchParams(window.location.search).get('page')
+    let link = document.querySelector(`#sidebar a[href*="${page}"]`)
+    if(link){
+      link.classList.add('page-active')
+      link.setAttribute('aria-current', 'location')
+    }
+  }
 }
 
 $(document).ready(function () {

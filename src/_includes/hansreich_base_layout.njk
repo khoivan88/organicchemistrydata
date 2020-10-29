@@ -24,33 +24,14 @@ reich_related:
       url: '/hansreich/research/'
     - title: 'Publications'
       url: '/hansreich/publications/'
-    # -
-    #     title: 'Ieva L. Reich'
-    #     url: 'https://www2.chem.wisc.edu/areas/reich/group/students/reich-il.htm'
-    #     target: '_blank'
-    # -
-    #     title: 'Former Students'
-    #     url: '/former_students'
-    # -
-    #     title: 'Pictures'
-    #     url: '/pictures'
 
 resources:
     title: "Reich Collection"
     list:
-    # - title: 'A-Values'
-    #   url: '/hansreich/resources/fundamentals/#a_values'
-    # - title: 'Advanced Organic Chem'
-    #   url: '/hansreich/resources/adv_org'
-    #   disabled: 'disabled'
     - title: 'Acronyms'
       url: '/hansreich/resources/acronyms/'
     - title: 'Carbonyl Chemistry'
       url: '/hansreich/resources/carbonyl/'
-    # - title: 'Electron Pushing'
-    #   url: '/hansreich/resources/electron_pushing/'
-    # - title: 'Electronegativities'
-    #   url: '/hansreich/resources/fundamentals/#electronegativities'
     - title: 'Fundamentals of Organic Chemistry'
       url: '/hansreich/resources/fundamentals/'
       id: 'fundamentals'    # ! REQUIRED if there is a sublist
@@ -75,8 +56,6 @@ resources:
       #url: 'https://organicchemistrydata.org/NMRresources/nmr/'
       #target: '_blank'
       #disabled: 'disabled'
-    # - title: 'Nomenclature'
-    #   url: '/hansreich/resources/nomenclature/'
     - title: 'Organometallic Chemistry'
       url: '/hansreich/resources/organometallic/'
       id: 'organometallic'    # ! REQUIRED if there is a sublist
@@ -91,9 +70,6 @@ resources:
       url: '/hansreich/resources/reactive_intermediates/'
     - title: 'Reduction and Oxidation'
       url: '/hansreich/resources/redox/'
-    # - title: 'Solvents'
-    #   url: 'https://organicchemistrydata.org/solvents/'
-    #   target: '_blank'
 
 about:
     url: '/hansreich/'
@@ -105,9 +81,6 @@ about:
     {% include "header.njk" %}
 
   <body class="d-flex flex-column min-vh-100">
-    <header>
-    </header>
-
     <!--Navigation bar-->
     <!--source: https://stackoverflow.com/a/42333464-->
     <div id="nav-placeholder">
@@ -134,43 +107,53 @@ about:
                               https://www.codeply.com/p/g6AXWHBNIK
                             #}
                             <div class="navbar-hover d-block d-md-flex flex-row align-items-center">
-                              <li class="flex-grow-1"><a href="{{ resource.url | url }}" {%- if resource.target %} target="{{ resource.target }}"{%- endif %}
-                                    class="dropdown-item pr-3 pr-md-0">{{ resource.title }}</a></li>
+                              <li class="flex-grow-1 {%- if page.url == resource.url %} nav-active{%- endif %}">
+                                <a href="{{ resource.url | url }}" {%- if resource.target %} target="{{ resource.target }}"{%- endif %}
+                                  class="dropdown-item pr-3 pr-md-0">{{ resource.title }}
+                                </a>
+                              </li>
                               <li class="dropdown-submenu text-center dropright">
                                 <a class="dropdown-toggle px-3 text-dark" href="#" id="{{ resource.id }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                                 <ul class="dropdown-menu shadow ml-0 pl-3 pl-md-0" aria-labelledby="{{ resource.id }}">
                                   <li>
-                                    <a class="dropdown-item {{ resource.disabled }}" href="{{ resource.url  | url }}"
+                                    <a class="dropdown-item {{ resource.disabled }}"
+                                      href="{{ resource.url  | url }}"
                                       {%- if resource.target %} target="{{ resource.target }}"{%- endif %}>
                                       General Info
                                     </a>
                                   </li>
-                                {%- for subitem in resource.list %}
-                                  <li>
+                                  {%- for subitem in resource.list %}
+                                  <li {%- if page.url == subitem.url %} class="nav-active"{%- endif %}>
                                     <a class="dropdown-item {{ subitem.disabled }}" href="{{ subitem.url  | url }}"
-                                      {%- if subitem.target %} target="{{ subitem.target }}"{%- endif %}>
+                                      {%- if subitem.target %} target="{{ subitem.target }}"{%- endif %}
+                                      {%- if page.url == subitem.url %} aria-current="page"{%- endif %}>
                                       {{ subitem.title }}
                                     </a>
                                   </li>
-                                {%- endfor %}
+                                  {%- endfor %}
                                 </ul>
                               </li>
                             </div>
                             <!-- End Level two -->
                           {%- else %}
-                            <li><a class="dropdown-item {{ resource.disabled }}" href="{{ resource.url | url }}"
-                              {%- if resource.target %} target="{{ resource.target }}"{%- endif %}>
-                              {{ resource.title }}
-                            </a></li>
+                            <li {%- if page.url == resource.url %} class="nav-active"{%- endif %}>
+                              <a class="dropdown-item {{ resource.disabled }}" href="{{ resource.url | url }}"
+                                {%- if resource.target %} target="{{ resource.target }}"{%- endif %}
+                                {%- if page.url == resource.url %} aria-current="page"{%- endif %}>
+                                {{ resource.title }}
+                              </a>
+                            </li>
                           {%- endif %}
                         {%- endfor %}
 
 
                         <div class="dropdown-divider"></div>
                         {%- for item in reich_related.list %}
-                        <a class="dropdown-item" href="{{ item.url | url }}"
-                            {%- if item.target %} target="{{ item.target }}"{%- endif %}>
-                            {{ item.title }}
+                        <a class="dropdown-item {%- if page.url == item.url %} nav-active{%- endif %}"
+                          href="{{ item.url | url }}"
+                          {%- if item.target %} target="{{ item.target }}"{%- endif %}
+                          {%- if page.url == item.url %} aria-current="page"{%- endif %}>
+                          {{ item.title }}
                         </a>
                         {%- endfor %}
                       </ul>
@@ -224,7 +207,6 @@ about:
         {%- endblock %}
 
         {% include "goToTopButton.njk" %}
-
     </section>
 
     {% include "footer.njk" %}

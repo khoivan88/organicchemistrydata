@@ -62,6 +62,15 @@ a {
     overflow: auto;
 }
 
+/* To highlight active page on navbar */
+.nav-active {
+    background-color: #dff7ff;
+    font-weight: bold;
+}
+.nav-active a {
+    font-weight: bold;
+}
+
 .dropdown-submenu.dropright .dropdown-toggle:after {
     /* Rotate the caret-right symbol down */
     transform: rotate(90deg);
@@ -212,6 +221,11 @@ font-family: Georgia, serif;
     /* font-size: 1.1em; */
     /* display: block; */
     font-family: 'Roboto', sans-serif;
+}
+
+#sidebar .page-active {
+    font-weight: bold;
+    color: black;
 }
 
 #sidebarCollapse {

@@ -2,11 +2,18 @@
 
 **More detailed changes can be found in the [commit list of the repo](https://github.com/khoivan88/organicchemistrydata/commits/master)**
 
+## 2020-11-01
+
+- Change: Switch to `?page=` for pages in collection with dynamic loading. Earlier use of `#` was not indexed by Google search
+- Add: `aria-current="page"` for menu to increase accessibility for users with screen readers
+- Add: `aria-current="location"` for side menu links to increase accessibility for users with screen readers
+- Add highlight for current page in collection's menu on topnav as well as for links on side menu if applicable
+
 ## 2020-08-31
 
 - Add lazy loading for images in the site
 - Add multiple resources to 'Links' page
-- Change a tag link color to make give it more constrast, in an effort to make the site more accessible
+- Change a tag link color to make give it more contrast, in an effort to make the site more accessible
 - Compress all gif images (saved about 80 MB)
 
 ## 2020-08-24
