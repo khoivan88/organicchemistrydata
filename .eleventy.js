@@ -17,16 +17,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setQuietMode(true);
 
   // Plugins
-  // LazyImage loading plugin
-  // eleventyConfig.addPlugin(lazyImagesPlugin, {
-  //   transformImgPath: (imgPath) => {
-  //     if (imgPath.startsWith('/') && !imgPath.startsWith('//')) {
-  //       return `./src${imgPath}`;
-  //     }
-  //     return imgPath;
-  //   },
-  // });
-  eleventyConfig.addPlugin(lazyImagesPlugin, {
+  // LazyImage loading plugin run in production mode only because it takes a long time to run and not neccessary in testing mode
+  if (process.env.NODE_ENV == 'production') {
+    eleventyConfig.addPlugin(lazyImagesPlugin, {
     transformImgPath: (src, options) => {
       const isAbsoluteUri =
         src.startsWith('/') ||
@@ -43,12 +36,13 @@ module.exports = function (eleventyConfig) {
 
       // // If the file path is relative to the project root
       // if (src.startsWith('/') && !src.startsWith('//')) {
-      //   return `.${src}`;
-      // }
+        //   return `.${src}`;
+        // }
 
       return src;
-    },
-  });
+      },
+    });
+  }
   // Minify HTML output
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
     if( outputPath.endsWith(".html") ) {
