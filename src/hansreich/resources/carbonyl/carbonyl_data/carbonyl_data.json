@@ -1,6 +1,6 @@
 {
     "img_url_prefix": "/hansreich/resources/carbonyl/carbonyl_data/img/",
-    "layout": "simple_html.njk",
+    "layout": "layouts/simple_html.njk",
     "sitemap_url_prefix": "/hansreich/resources/carbonyl/?page=",
     "sitemap_ignore": true
 }

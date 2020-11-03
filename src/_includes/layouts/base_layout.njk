@@ -16,7 +16,7 @@ about:
 
 <!doctype html>
 <html lang="en">
-    {% include "header.njk" %}
+    {% include "partials/header.njk" %}
 
   <body class="d-flex flex-column min-vh-100">
     <!--Navigation bar-->
@@ -24,7 +24,7 @@ about:
     <div id="nav-placeholder">
         <nav id="navbar" class="navbar fixed-top navbar-expand-sm py-0 navbar-dark">
 
-            {%- include 'global_logo.njk' -%}
+            {%- include 'partials/global_logo.njk' -%}
 
             <button class="navbar-toggler align-self-start py-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1,#sitenav-submenu1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -58,7 +58,7 @@ about:
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form> #}
 
-                {% include "global_navlinks.njk" %}
+                {% include "partials/global_navlinks.njk" %}
             </div>
         </nav>
     </div>
@@ -76,13 +76,13 @@ about:
             {{ content | safe }}
         {%- endblock %}
 
-        {% include "goToTopButton.njk" %}
+        {% include "partials/goToTopButton.njk" %}
 
     </section>
 
-    {% include "footer.njk" %}
+    {% include "partials/footer.njk" %}
 
-    {% include "included_js.njk" %}
+    {% include "partials/included_js.njk" %}
 
   </body>
 
