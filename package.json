@@ -1,7 +1,7 @@
 {
-  "name": "static-site-template",
+  "name": "OrganicChemistryData",
   "version": "1.0.0",
-  "description": "Testing Eleventy",
+  "description": "11ty build for OrganicChemistryData.org",
   "main": "index.js",
   "scripts": {
     "deploy": "gh-pages -d _site",
@@ -12,7 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
-    "eleventy-plugin-lazyimages": "^2.0.1",
+    "eleventy-plugin-lazyimages": "^2.1.0",
     "html-minifier": "^4.0.0"
   }
 }
