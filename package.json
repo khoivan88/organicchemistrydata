@@ -11,7 +11,7 @@
   "author": "Khoi Van",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy": "^1.0.2",
     "eleventy-plugin-lazyimages": "^2.1.0",
     "html-minifier": "^4.0.0"
   }
